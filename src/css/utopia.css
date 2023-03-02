@@ -23,7 +23,7 @@
 }
 
 body {
-	background: #eee;
+	background: #B79268;
 	font-family: STAWAlternate;
 	font-size: 14px;
 	color: #333;
@@ -170,7 +170,7 @@ textarea {
 }
 
 .u-search-header-text {
-	background: #eee;
+	background: #B79268;
 	padding: 0.2em;
 	float: left;
 }
@@ -213,7 +213,7 @@ textarea {
 
 .u-search-size-text {
 	float: left;
-	background: #eee;
+	background: #B79268;
 	padding: 0.2em;
 	margin: 0 0.3em;
 }
@@ -243,11 +243,11 @@ textarea {
 		width: 347px;
 		padding-left: 9px;
 	}
-	
+
 	.u-search-results.u-search-cols-0 {
 		margin-right: 0;
 	}
-	
+
 	.u-search-results.u-search-cols-1 {
 		width: 347px;
 	}
@@ -268,7 +268,7 @@ textarea {
 		width: 1567px;
 	}
 	.u-fleet {
-		background: #eee;
+		background: #b79268;
 	}
 }
 
