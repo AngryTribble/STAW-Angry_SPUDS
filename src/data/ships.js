@@ -3101,7 +3101,7 @@ module.exports = [
 		agility: 2,
 		hull: 6,
 		shields: 4,
-		cost: 20,
+		cost: 29,
 		text: "<b>WHEN ATTACKING:</b> If this ship is Cloaked, place an [aux] Token beside it.\n\nDisable up to 2 Shields on the defending ship.",
 		unique: true,
 		factions: [
