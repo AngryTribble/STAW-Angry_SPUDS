@@ -19,7 +19,7 @@
 .set-list li {
 	font-size: 1.5em;
 	padding: 0.2em;
-	color: #8888ff;
+	color: #53565A;
 	cursor: pointer;
 }
 
@@ -32,7 +32,7 @@
 }
 
 a {
-	color: #8888ff;
+	color: #53565A;
 	text-decoration: none;
 }
 
@@ -60,7 +60,7 @@ a {
 .mission-list li {
 	font-size: 1.5em;
 	padding: 0.2em;
-	color: #8888ff;
+	color: #53565A;
 	cursor: pointer;
 }
 
@@ -73,5 +73,5 @@ a {
 }
 
 .dummy-class {
-	
+
 }
