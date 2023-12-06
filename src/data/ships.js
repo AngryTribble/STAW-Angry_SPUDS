@@ -1012,7 +1012,7 @@ module.exports = [
 			"weapon",
 			"crew"
 		],
-		text: "Usable in Star Trek Alliance.\n(Captain Skill 2+).",
+		text: "",
 		alliance: true,
 		attack: 4,
 		agility: 2,
@@ -3409,7 +3409,6 @@ module.exports = [
 		gameId: 1,
 		set: [
 			"2017core",
-			"80000"
 		],
 		name: "Federation Starship",
 		class: "Galaxy Class",
@@ -3425,7 +3424,7 @@ module.exports = [
 			"crew",
 			"crew"
 		],
-		text: "Usable in Star Trek Alliance.\n(Captain Skill 5+).\n\nCard and model did not come with Star Trek Alliance.",
+		text: "",
 		alliance: true,
 		attack: 4,
 		agility: 1,
@@ -3488,7 +3487,6 @@ module.exports = [
 			"2017core",
 			"OP4Prize",
 			"72011",
-			"80000"
 		],
 		name: "Federation Starship",
 		class: "Nebula Class",
@@ -3504,7 +3502,7 @@ module.exports = [
 			"crew",
 			"crew"
 		],
-		text: "Usable in Star Trek Alliance.\n(Captain Skill 5+).\n\nCard and model did not come with Star Trek Alliance.",
+		text: "",
 		alliance: true,
 		attack: 4,
 		agility: 1,
@@ -3542,7 +3540,7 @@ module.exports = [
 			"weapon",
 			"crew"
 		],
-		text: "Usable in Star Trek Alliance.\n(Captain Skill 5+).\n\nCard and model did not come with Star Trek Alliance.",
+		text: "",
 		alliance: true,
 		attack: 4,
 		agility: 1,
@@ -3920,8 +3918,7 @@ module.exports = [
 		gameId: 1,
 		set: [
 			"72011wp",
-			"71801",
-			"80000"
+			"71801"
 		],
 		name: "Federation Starship",
 		class: "Oberth Class",
@@ -3935,7 +3932,7 @@ module.exports = [
 			"tech",
 			"crew"
 		],
-		text: "Usable in Star Trek Alliance.\n(Captain Skill 2+).\n\nCard and model did not come with Star Trek Alliance.",
+		text: "",
 		alliance: true,
 		attack: 2,
 		agility: 3,
@@ -5634,7 +5631,6 @@ module.exports = [
 			"71120",
 			"72253",
 			"72284p",
-			"80000",
 			"75011"
 		],
 		name: "Federation Starship",
@@ -5651,7 +5647,7 @@ module.exports = [
 			"crew",
 			"crew"
 		],
-		text: "Usable in Star Trek Alliance.\n(Captain Skill 5+).\n\nCard and model did not come with Star Trek Alliance.",
+		text: "",
 		alliance: true,
 		attack: 4,
 		agility: 1,
@@ -5824,7 +5820,6 @@ module.exports = [
 		set: [
 			"71121",
 			"72235p",
-			"80000",
 			"75011"
 		],
 		name: "Federation Starship",
@@ -5839,7 +5834,7 @@ module.exports = [
 			"weapon",
 			"crew"
 		],
-		text: "Usable in Star Trek Alliance.\n(Captain Skill 2+).\n\nCard and model did not come with Star Trek Alliance.",
+		text: "",
 		alliance: true,
 		attack: 2,
 		agility: 2,
@@ -6328,7 +6323,7 @@ module.exports = [
 		agility: 2,
 		hull: 4,
 		shields: 3,
-		cost: 18,
+		cost: 16,
 		text: "\r\n      ",
 		unique: false,
 		factions: [
@@ -6651,7 +6646,6 @@ module.exports = [
 			"71268",
 			"72282",
 			"71221",
-			"80000",
 			"75011"
 		],
 		name: "Federation Starship",
@@ -6668,7 +6662,7 @@ module.exports = [
 			"weapon",
 			"crew"
 		],
-		text: "Usable in Star Trek Alliance.\n(Captain Skill 4+).\n\nCard and model did not come with Star Trek Alliance.",
+		text: "",
 		alliance: true,
 		attack: 3,
 		agility: 2,
@@ -7088,7 +7082,7 @@ module.exports = [
 			"crew",
 			"crew"
 		],
-		text: "Usable in Star Trek Alliance.\n(Captain Skill 2+).",
+		text: "",
 		attack: 3,
 		agility: 1,
 		hull: 5,
@@ -7239,7 +7233,7 @@ module.exports = [
 		agility: 2,
 		hull: 4,
 		shields: 3,
-		cost: 18,
+		cost: 16,
 		text: "",
 		unique: false,
 		factions: [
@@ -7294,7 +7288,6 @@ module.exports = [
 		gameId: 1,
 		set: [
 			"71276",
-			"80000"
 		],
 		name: "Federation Starship",
 		class: "Nova Class",
@@ -7309,7 +7302,7 @@ module.exports = [
 			"weapon",
 			"crew"
 		],
-		text: "Usable in Star Trek Alliance.\n(Captain Skill 2+).\n\nCard and model did not come with Star Trek Alliance.",
+		text: "",
 		alliance: true,
 		attack: 2,
 		agility: 2,
@@ -8573,8 +8566,7 @@ module.exports = [
 		gameId: 1,
 		set: [
 			"u_s_s_yaeger",
-			"72231",
-			"80000"
+			"72231"
 		],
 		name: "Federation Starship",
 		class: "Saber Class",
@@ -8589,7 +8581,7 @@ module.exports = [
 			"weapon",
 			"crew"
 		],
-		text: "Usable in Star Trek Alliance.\n(Captain Skill 4+).\n\nCard and model did not come with Star Trek Alliance.",
+		text: "",
 		alliance: true,
 		attack: 3,
 		agility: 2,
@@ -9908,8 +9900,7 @@ module.exports = [
 		gameId: 1,
 		set: [
 			"71531",
-			"72271",
-			"80000"
+			"72271"
 		],
 		name: "Federation Starship",
 		class: "Sovereign Class",
@@ -9925,7 +9916,7 @@ module.exports = [
 			"crew",
 			"crew"
 		],
-		text: "Usable in Star Trek Alliance.\n(Captain Skill 8+).\n\nCard and model did not come with Star Trek Alliance.",
+		text: "",
 		alliance: true,
 		attack: 5,
 		agility: 1,
@@ -11709,8 +11700,7 @@ module.exports = [
 		id: "S041",
 		gameId: 1,
 		set: [
-			"71802",
-			"80000"
+			"71802"
 		],
 		name: "Federation Starship",
 		class: "Prometheus Class",
@@ -11727,7 +11717,7 @@ module.exports = [
 			"weapon",
 			"crew"
 		],
-		text: "Usable in Star Trek Alliance.\n(Captain Skill 8+).\n\nCard and model did not come with Star Trek Alliance.",
+		text: "",
 		alliance: true,
 		attack: 5,
 		agility: 1,
@@ -11993,7 +11983,6 @@ module.exports = [
 		gameId: 1,
 		set: [
 			"72001p",
-			"80000"
 		],
 		name: "Federation Starship",
 		class: "Intrepid Class",
@@ -12009,7 +11998,7 @@ module.exports = [
 			"weapon",
 			"crew"
 		],
-		text: "Usable in Star Trek Alliance.\n(Captain Skill 5+).\n\nCard and model did not come with Star Trek Alliance.",
+		text: "",
 		alliance: true,
 		attack: 4,
 		agility: 2,
@@ -12876,7 +12865,7 @@ module.exports = [
 			"weapon",
 			"crew"
 		],
-		text: "Usable in Star Trek Alliance.\n(Captain Skill 2+).",
+		text: "",
 		alliance: true,
 		attack: 4,
 		agility: 2,

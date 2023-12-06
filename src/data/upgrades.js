@@ -1,5 +1,447 @@
 module.exports = [
 	{
+		type: "talent",
+		id: "E230",
+		set: [
+			"80003"
+		],
+		name: "Independent",
+		cost: 5,
+		text: "<b>WHEN ATTACKING OR DEFENDING:</b> If there are no friendly ships within range of this ship. \n\n You may convert 1 [blank] result to a [hit] result or a [evade] result.",
+		unique: true,
+		range: "1 - 2",
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "talent",
+		id: "E229",
+		set: [
+			"80003"
+		],
+		name: "Suspicious",
+		cost: 3,
+		text: "<b>COMBAT PHASE:</b> Target a Friendly Ship within Range \n\n Move 1 [battlestations], [evade], [scan], or blue [target-lock] Token from beside the target and place that Token beside this ship.",
+		OnePerShip: true,
+		range: "1 - 2",
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "talent",
+		id: "E228",
+		set: [
+			"80003"
+		],
+		name: "Opportunistic",
+		cost: 3,
+		text: "<b>WHEN ATTACKING: MODIFY ATTACK DICE STEP:</b> If the opposing ship has a lower captain skill than ship ship. \n\n You may convert 1 [blank] or [battlestations] result to a [hit] result.",
+		OnePerShip: true,
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "talent",
+		id: "E227",
+		set: [
+			"80003"
+		],
+		name: "Ambush Tactics",
+		cost: 3,
+		text: "<b>WHEN ATTACKING WHILE CLOAKED:</b> Place 3 [time] Tokens on this card. \n\n You may convert up to 3 [battlestations] results into [hit] results.",
+		shipRomulan: true,
+		OnePerShip: true,
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "talent",
+		id: "E226",
+		set: [
+			"80003"
+		],
+		name: "Evasive",
+		cost: 2,
+		text: "<b>EXECUTE MANEUVER STEP:</b> When you would execute a 1 [bank-left] or 1 [bank-right] maneuver, place 2 [time] Tokens on this card. \n\n You may use the 1 [turn-left] or 1 [turn-right] template instead.",
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "talent",
+		id: "E225",
+		set: [
+			"80003"
+		],
+		name: "Anticipation",
+		cost: 2,
+		text: "<b>REVEAL DIAL STEP:</b> Discard this card. \n\n Change this ship's revealed maneuver to any green or white maneuver instead.",
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "crew",
+		id: "C404",
+		set: [
+			"80003"
+		],
+		name: "Tactical Officer",
+		cost: 4,
+		text: "<b>WHEN ATTACKING:</b>  \n If you are outside the target's Primary Firing Arc. \n\n Add 1 [hit] result.",
+		OnePerShip: true,
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "crew",
+		id: "C403",
+		set: [
+			"80003"
+		],
+		name: "Sub-Commander",
+		cost: 5,
+		text: "<b>EXECUTE MANEUVER STEP:</b> If this ship performed a green or white maneuver that did not overlap a ship or obstacle. \n\n Place 1 [evade] Token beside this ship.",
+		OnePerShip: true,
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "crew",
+		id: "C402",
+		set: [
+			"80003"
+		],
+		name: "Ops Officer",
+		cost: 4,
+		text: "<b>ACTION:</b> Place 1 [scan] Token beside this ship. You may also choose 1 opposing ship within range and remove 1 [scan], [battlestations] or [evade] Token from beside that ship.",
+		OnePerShip: true,
+		range: "1 - 2",
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "crew",
+		id: "C401",
+		set: [
+			"80003"
+		],
+		name: "Engineer",
+		cost: 3,
+		text: "<b>END PHASE:</b> Disable this card to choose one of the following effects: \n\n *Repair 1 shield \n\n *Remove 1 [time] Token from one of this ship's Upgrade cards.",
+		OnePerShip: true,
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "crew",
+		id: "C400",
+		set: [
+			"80003"
+		],
+		name: "Science Officer",
+		cost: 2,
+		text: "You may spend [evade] Tokens as if they were [scan] Tokens.",
+		OnePerShip: true,
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "crew",
+		id: "C399",
+		set: [
+			"80003"
+		],
+		name: "Helmsman",
+		cost: 2,
+		text: "<b>ACTIVATION PHASE:</b> Place 2 [time] Tokens on this card. \n\n This ship may make a green maneuver.",
+		OnePerShip: true,
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "weapon",
+		id: "W239",
+		set: [
+			"80003"
+		],
+		name: "Singularity Leak",
+		cost: 5,
+		text: "<b>ACTIVATION PHASE:</b> When any ship performs a maneuver and ends within range 1 of you, you must roll 1 Attack die. \n\n On a [hit] or [crit] result, that ship suffers 1 damage.",
+		unique: true,
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "weapon",
+		id: "W238",
+		set: [
+			"80003"
+		],
+		name: "Heavy Disruptor",
+		cost: 5,
+		text: "<b>ATTACK:</b> Gain 1 [aux] Token and target an opposing ship. \n\n <b>MODIFY ATTACK DICE STEP:</b> If the target has a printed Agility Value of 0 or 1, add 1 [crit] result.",
+		attack: "4",
+		range: "2 - 3",
+		FrontArc: true,
+		dderidexLimit: true,
+		OnePerShip: true,
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "weapon",
+		id: "W237",
+		set: [
+			"80003"
+		],
+		name: "Heavy Plasma Torpedo",
+		cost: 5,
+		text: "<b>ATTACK:</b> Place 3 [time] Tokens on this card, 1 [aux] Token beside this ship, and target an opposing ship. \n\n <b>MODIFY ATTACK DICE STEP:</b> If the target has a printed Agility Value of 0, convert all your [hit] results to [crit] results.",
+		attack: "4",
+		range: "1 - 2",
+		FrontArc: true,
+		shipRomulan: true,
+		OnePerShip: true,
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "weapon",
+		id: "W236",
+		set: [
+			"80003"
+		],
+		name: "Enhanced Torpedoes",
+		cost: 3,
+		text: "<b>ATTACK:</b> Spend this ship's [target-lock] Token, place 3 [time] Tokens on this card and target an opposing ship. \n\n Convert up to 2 [blank] results into [hit] results.",
+		attack: "5",
+		range: "2 - 3",
+		FrontArc: true,
+		RearArc: true,
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "weapon",
+		id: "W235",
+		set: [
+			"80003"
+		],
+		name: "Ventral Disruptors",
+		cost: 3,
+		text: "<b>ATTACK:</b> Target an opposing ship. This ship may fire this [weapon] in any direction. \n\n You may convert 1 [battlestations] result to a [hit] result.",
+		attack: "3",
+		range: "1",
+		OnePerShip: true,
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "weapon",
+		id: "W234",
+		set: [
+			"80003"
+		],
+		name: "Integrated Cloak",
+		cost: 2,
+		text: "<b>AFTER ATTACKING:</b> If you destroy the target. \n\n You may perform a free [cloak] action. If you already have a [cloak] Token, you may flip it to its green side.",
+		shipRomulan: true,
+		OnePerShip: true,
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "tech",
+		id: "T295",
+		set: [
+			"80003"
+		],
+		name: "Advanced Cloaking",
+		cost: 4,
+		text: "<b>WHEN ATTACKING:</b> If this ship is Cloaked and does not have an [aux] Token beside it, place an [aux] Token beside this ship. \n\n This ship's [cloak] Token does not flip to its red side this attack.",
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "tech",
+		id: "T294",
+		set: [
+			"80003"
+		],
+		name: "Ventral Thrusters",
+		cost: 4,
+		text: "<b>WHEN THIS SHIP PERFORMS A [sensor-echo] ACTION:</b> You may move sideways using the 1 [bank-left] or 1 [bank-right] template insead. \n<hr> <b>ACTIVATION PHASE:</b> Discard this card. \n\n Perform a free [sensor-echo] action, even if you are not cloaked. You may move sideways using the 1 [bank-left] or 1 [bank-right] template instead.",
+		OnePerShip: true,
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "tech",
+		id: "T293",
+		set: [
+			"80003"
+		],
+		name: "Muon Feedback Beam",
+		cost: 3,
+		text: "<b>END PHASE:</b> If you are not cloaked, choose a ship within range. \n\n Remove 1 [aux] Token beside this ship and place it beside the chosen ship.",
+		range: "1",
+		OnePerShip: true,
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "tech",
+		id: "T292",
+		set: [
+			"80003"
+		],
+		name: "Deep Cloak",
+		cost: 3,
+		text: "<b>COMBAT PHASE:</b> If you are cloaked opposing ships that do not have any [scan] Tokens beside their ship can only target you if they are within range.",
+		range: "1 - 2",
+		shipRomulan: true,
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "tech",
+		id: "T291",
+		set: [
+			"80003"
+		],
+		name: "Molecular Phase Inverter",
+		cost: 2,
+		text: "<b>EXECUTE MANEUVER STEP:</b> When you overlap an obstacle, place 2 [time] Tokens on this card. \n\n You do not skip your perform action step.",
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "tech",
+		id: "T290",
+		set: [
+			"80003"
+		],
+		name: "Plasma Coil Overcharge",
+		cost: 2,
+		text: "You may treat all of your [straight] maneuvers as green. \n<hr> <b>EXECUTE MANEUVER STEP:</b> If this ship performs a [bank-left] or [bank-right], you may discard this card. \n\n Treat that maneuver as green.",
+		OnePerShip: true,
+		alliance: true,
+		factions: [
+			"romulan"
+		]
+	},
+	{
+		type: "talent",
+		id: "E224",
+		set: [
+			"80003"
+		],
+		name: "Cunning",
+		cost: 5,
+		text: "<b>WHEN ATTACK:</b> If this ship has no active shields. \n\n You may convert 1 [blank] into 1 [hit] result. \n<hr> <b>WHEN DEFENDING:</b> If this ship has no active shields. \n\n You may reroll 1 [blank] result.",
+		OnePerShip: true,
+		alliance: true,
+		factions: [
+			"klingon"
+		]
+	},
+	{
+		type: "crew",
+		id: "C398",
+		set: [
+			"80003"
+		],
+		name: "Engineer",
+		cost: 4,
+		text: "<b>END PHASE:</b> If you do not have a [aux] Token, you may gain 1 [aux] Token to choose on of the following effects: \n\n *Repair 1 hull damage. \n\n *Flip one face-up damage card face-down.",
+		OnePerShip: true,
+		alliance: true,
+		factions: [
+			"klingon"
+		]
+	},
+	{
+		type: "weapon",
+		id: "W233",
+		set: [
+			"80003"
+		],
+		name: "Disruptor Sweep",
+		cost: 4,
+		text: "The Attack Value of this [weapon] is this ship's Primary Weapn Value -1. \n<hr> <b>ATTACK:</b> Disable this card and target all opposing ships. \n\n Make a separate attack roll against each target ship.",
+		attack: "*",
+		OnePerShip: true,
+		FrontArc: true,
+		range: "1 - 2",
+		alliance: true,
+		factions: [
+			"klingon"
+		]
+	},
+	{
+		type: "tech",
+		id: "T289",
+		set: [
+			"80003"
+		],
+		name: "Thruster Efficiency",
+		cost: 5,
+		text: "<b>EXECUTE MANEUVER STEP:</b> Place 3 [time] Tokens on this card. \n\n Treat a red maneuver as white, or a white maneuver as green.",
+		OnePerShip: true,
+		kvortLimit: true,
+		brelLimit: true,
+		alliance: true,
+		factions: [
+			"klingon"
+		]
+	},
+
+	{
 		type: "weapon",
 		id: "W232",
 		set: [

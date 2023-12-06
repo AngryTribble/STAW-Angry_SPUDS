@@ -17,11 +17,10 @@ module.exports = [
 	},
 	{
 		type: "set",
-		id: "80000",
-		gameId: 1,
-		name: "Alliance Tools",
-		releaseDate: "2020-01-31",
-		parentSet: "Tools"
+		id: "80003",
+		name: "Part III",
+		releaseDate: "2023-07-05",
+		parentSet: "Alliance"
 	},
 	{
 		type: "set",
