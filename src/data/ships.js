@@ -4321,7 +4321,7 @@ module.exports = [
 		agility: 1,
 		hull: 5,
 		shields: 3,
-		cost: 28,
+		cost: 24,
 		text: "When defending, During the Modify Defense dice step, you may re-roll one of your defense dice. If you do so, place an Auxiliary Power Token beside your ship.",
 		unique: true,
 		factions: [
@@ -4799,7 +4799,7 @@ module.exports = [
 		agility: 1,
 		hull: 5,
 		shields: 3,
-		cost: 28,
+		cost: 24,
 		text: "When defending, during the Compare Results step, you may discard 1 of your non-disabled Upgrades to cancel 1 [hit] or [crit] result.",
 		unique: true,
 		factions: [
@@ -5095,7 +5095,7 @@ module.exports = [
 		agility: 0,
 		hull: 1,
 		shields: 1,
-		cost: 24,
+		cost: 21,
 		skill: 6,
 		text: "Attack Squadron Tokens: 5\n\nIf you attack during a round in which you performed a ([come-about]) Come About Maneuver, during the Modify Attack Dice step, you may re-roll all of your blank results.",
 		unique: true,
@@ -5125,7 +5125,7 @@ module.exports = [
 		agility: 0,
 		hull: 1,
 		shields: 1,
-		cost: 20,
+		cost: 17,
 		skill: 5,
 		text: "Attack Squadron Tokens: 4",
 		unique: false,
@@ -5769,7 +5769,7 @@ module.exports = [
 		agility: 1,
 		hull: 5,
 		shields: 3,
-		cost: 28,
+		cost: 24,
 		text: "Any ship attacking you at Range 1 rolls 1 less attack die.",
 		unique: true,
 		factions: [
@@ -9399,7 +9399,7 @@ module.exports = [
 		agility: 1,
 		hull: 4,
 		shields: 3,
-		cost: 22,
+		cost: 20,
 		text: "If you performed a Maneuver of 3 or higher this round, during the Roll Attack Dice step of the Combat Phase, you may add +1 attack die.  If you do so, place an Auxiliary Power Token beside your ship.",
 		unique: true,
 		factions: [
@@ -9813,7 +9813,7 @@ module.exports = [
 		agility: 2,
 		hull: 6,
 		shields: 4,
-		cost: 30,
+		cost: 29,
 		text: "During the Roll Attack Dice step of the Combat Phase, you may roll +1 attack die.  If you do so, suffer 1 damage to your Hull.",
 		unique: true,
 		factions: [
@@ -12914,7 +12914,7 @@ module.exports = [
 		agility: 1,
 		hull: 5,
 		shields: 3,
-		cost: 28,
+		cost: 24,
 		text: "<b>ACTION:</b> Place a [scan] Token and an Auxiliary Power Token beside your ship.",
 		unique: true,
 		factions: [
