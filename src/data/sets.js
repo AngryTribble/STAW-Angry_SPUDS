@@ -1,6 +1,30 @@
 module.exports = [
 	{
 		type: "set",
+		id: "75016",
+		gameId: 1,
+		name: "These Are The Voyages",
+		releaseDate: "2024-02-21",
+		parentSet: "Faction Pack"
+	},
+	{
+		type: "set",
+		id: "75015",
+		gameId: 1,
+		name: "Adversaries of the Delta Quadrant",
+		releaseDate: "2024-02-21",
+		parentSet: "Faction Pack"
+	},
+	{
+		type: "set",
+		id: "75014",
+		gameId: 1,
+		name: "Lost In The Delta Quadrant",
+		releaseDate: "2024-02-21",
+		parentSet: "Faction Pack"
+	},
+	{
+		type: "set",
 		id: "75013",
 		gameId: 1,
 		name: "Ships of the Line",

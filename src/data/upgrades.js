@@ -1,5 +1,2015 @@
 module.exports = [
 	{
+		type: "question",
+		id: "Q037",
+		gameId: 1,
+		set: [
+			"75016"
+		],
+		name: "Kirk Admiral Slot",
+		cost: 0,
+		text: "<b>HOW TO USE:</b> Equip this card to the ship you wish to have a 2nd Admiral placed on.  \n\n\n <b>UTOPIA USE ONLY</b>",
+		unique: true,
+		shipFederation: true,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "question",
+		id: "Q036",
+		gameId: 1,
+		set: [
+			"75016"
+		],
+		name: "Systems Upgrade",
+		cost: 2,
+		text: "This card may fill a [weapon_text] or [tech_text] Slot. <hr> Add 1 [tech_text] to this ship's Upgrade Bar and Increase this ship's Shield Value by +1.",
+		OnePerShip: true,
+		shipFederation: true,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "question",
+		id: "Q035",
+		gameId: 1,
+		set: [
+			"75016"
+		],
+		name: "Tactical Data Link",
+		cost: 1,
+		text: "This card may fill a [weapon_text] or [tech_text] Slot. <hr> <b>WHEN A FRIENDLY SHIP WITHIN RANGE IS ATTACKING:</b> If the defending ship has this ship's Red [target-lock] Token beside it. \n\n That friendly ship may re-roll 1 attack die.",
+		OnePerShip: true,
+		sovereignLimit: true,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "question",
+		id: "Q034",
+		gameId: 1,
+		set: [
+			"75016"
+		],
+		name: "Tea, Earl Grey, Hot",
+		cost: 1,
+		text: "This Upgrade may be equipped to a ship without requiring an Upgrade slot. <hr> <b>WHENEVER A [battlestations] TOKEN WOULD BE PLACED BESIDE THIS SHIP:</b> Place 1 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Token on this card. \n\n You may place a [scan] Token and [evade] Token beside this ship instead and then, remove 1 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Token from another card equipped to this ship.",
+		OnePerShip: true,
+		costFederation: "+1",
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "tech",
+		id: "T312",
+		set: [
+			"75016"
+		],
+		name: "Tuesday (Tech)",
+		cost: 0,
+		text: "<b>HOW TO USE:</b> Utilize this card to give discount to [tech_text] upgrade for It Won't Be Installed Until Tuesday [talent_text] Upgrade.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "tech",
+		id: "T311",
+		set: [
+			"75016"
+		],
+		name: "Navigational Deflector",
+		cost: 2,
+		text: "<b>WHENEVER THIS SHIP WOULD SUFFER DAMAGE FROM AN OBSTACLE (INCLUDING MINEFIELD OBSTACLES):</b> Disable this card. \n\n This ship may roll its defense dice against that Obstacle and add 1 [evade].",
+		OnePerShip: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "tech",
+		id: "T310",
+		set: [
+			"75016"
+		],
+		name: "Micro Power Relays",
+		cost: 3,
+		text: "<b>ACTION:</b> \n\n Repair 1 non-critical damage to this ship's Hull. <hr> <b>ACTION:</b> \n\n Flip all face-up damage cards assigned to this ship face down.",
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "tech",
+		id: "T309",
+		set: [
+			"75016"
+		],
+		name: "Enhanced Tractor Emitters",
+		cost: 2,
+		text: "Add the 'Tractor' Action to this ship's Action Bar. <hr> <b>AFTER THIS SHIP PERFORMS THE 'TRACTOR' ACTION:</b> Disable this card. \n\n Place either an [evade] or <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside the target ship.",
+		OnePerShip: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "tech",
+		id: "T308",
+		set: [
+			"75016"
+		],
+		name: "Transporter Room",
+		cost: 2,
+		text: "Add the 'Transport' Action to this ship's Action Bar. <hr> <b>WHENEVER A FRIENDLY SHIP WITHIN RANGE WOULD BE DESTROYED:</b> Discard this card. \n\n Redeploy a [crew_text] Upgrade equipped to the target ship to this ship ignoring this ship's restrictions.",
+		OnePerShip: true,
+		range: "1 - 2",
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "weapon",
+		id: "W251",
+		set: [
+			"75016"
+		],
+		name: "Tuesday (Weapon)",
+		cost: 0,
+		text: "<b>HOW TO USE:</b> Utilize this card to give discount to [weapon_text] upgrade for It Won't Be Installed Until Tuesday [talent_text] Upgrade.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "weapon",
+		id: "W250",
+		set: [
+			"75016"
+		],
+		name: "Mark VI Photon Torpedoes",
+		cost: 2,
+		text: "<b>ATTACK:</b> If this ship has a [target-lock] Token on the defending ship, disable this card and target that opposing ship: \n\n <b>MODIFY DEFENSE DICE STEP:</b> Convert 1 [battlestations] or 1 [evade] into 1 [blank]. \n\n <b>DEAL DAMAGE STEP:</b> If the defending ship is hit, you may acquire a [target-lock] on the Defending Ship.",
+		attack: "4",
+		range: "2 - 3",
+		alliance: false,
+		FrontArc: true,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "weapon",
+		id: "W249",
+		set: [
+			"75016"
+		],
+		name: "Type 8 Phaser Array",
+		cost: 2,
+		text: "<b>WHEN ATTACKING WITH YOUR PRIMARY WEAPON:</b> \n\n Roll +1 attack die.",
+		OnePerShip: true,
+		attackConstraint: "3-",
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "weapon",
+		id: "W248",
+		set: [
+			"75016"
+		],
+		name: "Photonic Torpedoes",
+		cost: 2,
+		text: "<b>ATTACK:</b> If this ship has a [target-lock] Token on the defending ship, place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on the card and target that opposing ship: \n\n If equipped to an <img src='img/text/fed-nx.png' width='20' height='20'>, you may convert 1 [battlestations] into 1 [hit].",
+		attack: "4",
+		range: "2 - 3",
+		alliance: false,
+		FrontArc: true,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "weapon",
+		id: "W247",
+		set: [
+			"75016"
+		],
+		name: "Phase Cannons",
+		cost: 2,
+		text: "<b>WHEN ATTACKING WITH YOUR PRIMARY WEAPON:</b> \n\n You may perform a second attack with your Primary Weapon.",
+		OnePerShip: true,
+		alliance: false,
+		nxLimit: true,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "talent",
+		id: "E237",
+		set: [
+			"75016"
+		],
+		name: "It Won't Be Installed Until Tuesday",
+		cost: 3,
+		text: "This Upgrade may be equipped to a Captain without requiring an [talent_text] Upgrade slot. <hr> <b>GATHER FORCES STEP:</b> Select 1 [tech_text] Upgrade, 1 [weapon_text] Upgrade, and/or 1 [crew_text] Upgrade equipped to this ship. \n\n The selected Upgrades cost -2 SP each. <hr> <b>START OF THE GAME:</b> You must place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on each Upgrade selected during Gather Forces Step.",
+		unique: true,
+		captainFederation: true,
+		csConstraint: "5-",
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "talent",
+		id: "E236",
+		set: [
+			"75016"
+		],
+		name: "Fly Her Apart Then!",
+		cost: 2,
+		text: "<b>WHENEVER YOU WUOLD PLACE AN <img src='img/stuff/effect_auxilary.png' width='18' height='16'> TOKEN BESIDE THIS SHIP:</b> \n\n This ship may suff 1 [hit] instead. <hr> <b>ACTION:</b> \n\n Perform a 4 <img src='img/stuff/maneuver_bank_left_red.png' width='20' height='20'>, 5 <img src='img/stuff/maneuver_straight_red.png' width='20' height='20'>, or 4 <img src='img/stuff/maneuver_bank_right_red.png' width='20' height='20'> Maneuver.",
+		unique: true,
+		alliance: false,
+		captainFederation: true,
+		excelsiorLimit: true,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "talent",
+		id: "E235",
+		set: [
+			"75016"
+		],
+		name: "To Boldly Go...",
+		cost: 3,
+		text: "<b>PREPARE GATHERED CARDS STEP:</b> \n\n Place a number of <img src='img/text/mission-token.png' width='18' height='18' title='Mission Token'> Tokens on this card equal to the number of other <img src='img/text/unique.png' width='20' height='20' title='Unique'> cards equipped to this ship. <hr> <b>EACH TIME YOU WOULD REMOVE AN <img src='img/stuff/effect_auxilary.png' width='18' height='16'> TOKEN FROM BESIDE THIS SHIP:</b> Spend a <img src='img/text/mission-token.png' width='20' height='20' title='Mission Token'> Token on this card. \n\n Place a [battlestations], [scan], or [evade] Token beside this ship.",
+		unique: true,
+		alliance: false,
+		captainFederation: true,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "talent",
+		id: "E234",
+		set: [
+			"75016"
+		],
+		name: "Explore Strange New Worlds...",
+		cost: 2,
+		text: "<b>ACTION: </b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Place a <img src='img/text/mission-token.png' width='18' height='18' title='Mission Token'> Token on this card for each Non-Minefield Obstacle within Range. <hr> <b>WHEN ATTACKING OR DEFENDING: </b> If this ship is within Range of a Non-Minefield Obstacle: Spend a <img src='img/text/mission-token.png' width='18' height='18' title='Mission Token'> Token on this card. \n\n Add 1 [battlestations]. ",
+		unique: true,
+		range: "1 - 2",
+		alliance: false,
+		captainFederation: true,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "talent",
+		id: "E233",
+		set: [
+			"75016"
+		],
+		name: "These Are The Voyages...",
+		cost: 4,
+		text: "<b>EACH TIME THIS SHIP PERFORM A MANUVER WITH A SPEED OF 3 OR GREATER:</b> \n\n Place a <img src='img/text/mission-token.png' width='18' height='18' title='Mission Token'> Token on this card. <hr> <b>ACTIVATION PHASE:</b> Spend a <img src='img/text/mission-token.png' width='18' height='18' title='Mission Token'> Token \n\n Perform the Action listed on a [crew_text] Upgrade equipped to this ship as a Free Action.",
+		unique: true,
+		alliance: false,
+		captainFederation: true,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C483",
+		set: [
+			"75016"
+		],
+		name: "Tuesday (Crew)",
+		cost: 0,
+		text: "<b>HOW TO USE:</b> Utilize this card to give discount to [crew_text] upgrade for It Won't Be Installed Until Tuesday [talent_text] Upgrade.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C482",
+		set: [
+			"75016"
+		],
+		name: "Orfil Solis",
+		cost: 2,
+		text: "<b>ACTION:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Perform either a 1 <img src='img/stuff/maneuver_turn_left_red.png' width='20' height='20'> or 1 <img src='img/stuff/maneuver_turn_right_red.png' width='20' height='20'> Maneuver. <b>(Night Shift)</b> Treat that Maneuver as a White Maneuver instead. \n\n <b>(Lower Decks)</b>",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C481",
+		set: [
+			"75016"
+		],
+		name: "Lian T'Su",
+		cost: 2,
+		text: "<b>WHENEVER AN OPPOSING SHIP ACQUIRES A</b> [target-lock] <b>ON THIS SHIP:</b> \n If there is a [scan] Token beside this ship: \n\n Place an [evade] Token beside this ship. <hr> <b>(Night Shift) WHEN DEFENDING: MODIFY ATTACK DICE STEP:</b> Spend a [scan] Token beside this ship. \n\n The attacking ship cannot spend its [target-lock] Token. \n\n <b>(Lower Decks)</b>",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C480",
+		set: [
+			"75016"
+		],
+		name: "Sonya Gomez",
+		cost: 2,
+		text: "<b>ACTION:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Repair 1 Hull or Shield on this ship. \n <b>(Nightshift)</b> In addition, place 1 [scan] Token beside this ship. \n\n <b>(Lower Decks)</b>",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C479",
+		set: [
+			"75016"
+		],
+		name: "Selar",
+		cost: 2,
+		text: "<b>DEAL DAMAGE STEP:</b> If this ship would suffer any Critical Damage: \n Discard this card. \n\n Discard all 'Jostled Navigator' and 'Injured Captain' damage cards that would be assigned to this ship and do not resolve their effects. <hr> <b>(Night Shift) PLANNING PHASE:</b> Place an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship. \n\n Place a [scan] Token beside this ship and remove 1 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Token from the Captain and a [crew_text] Upgrade equipped to this ship.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation",
+			"vulcan"
+		]
+	},
+	{
+		type: "crew",
+		id: "C478",
+		set: [
+			"75016"
+		],
+		name: "Leah Brahms",
+		cost: 4,
+		text: "<b>WHENEVER THIS SHIP WOULD EXECUTE A RED MANEUVER:</b> Disable this card. \n\n Treat this Maneuver as a White Maneuver instead. If this card is equipped to a <img src='img/text/fed-galaxy.png' width='20' height='20'> ship, You may increase or decrease the Speed of that Maneuver by 1 (Min 1).",
+		unique: true,
+		shipFederation: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C477",
+		set: [
+			"75016"
+		],
+		name: "Miles O'Brien",
+		cost: 2,
+		text: "You may equip the 'Transporter Room' [tect_text] Upgrade to this ship without requiring an Upgrade Slot. <hr> <b>FREE ACTION:</b> Disable this card. <b>(Night Shift)</b> place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens instead. \n\n Perform the TRANSPORT Action as a Free Action.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C476",
+		set: [
+			"75016"
+		],
+		name: "Tasha Yar",
+		cost: 3,
+		text: "Add 1 [weapon_text] Upgrade to this ship's Upgrade Bar. <hr> <b>WHEN ATTACKING: MODIFY ATTACK DICE STEP:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Re-roll up to 3 of your attack dice.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C475",
+		set: [
+			"75016"
+		],
+		name: "Ro Laren",
+		cost: 4,
+		text: "<b>COMBAT PHASE:</b> Disable this card, spend [battlestations] Token beside this ship, and target an opposing ship within Range. \n\n The target ship can only attack in the Initiative Order with its Printed Captain Skill Number on the Captain equipped to it (a ship without a Captain equipped to it, is treated as having a Printed Captain Skill Number of 1) and cannot cancel attacks from this ship this game round.",
+		unique: true,
+		alliance: false,
+		range: "1 - 3",
+		factions: [
+			"federation",
+			"bajoran"
+		]
+	},
+	{
+		type: "crew",
+		id: "C474",
+		set: [
+			"75016"
+		],
+		name: "Wesley Crusher",
+		cost: 2,
+		text: "<b>ACTIVATION PHASE:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. <hr> <b>CONTINUOUS EFFECT:</b> Apply the effect(s) based on the listed Token(s) beside this ship: \n\n [evade] - <b>WHEN DEFENDING:</b> Re-roll 1 [blank]. \n [scan] - Opoosing ships within Range have -2 Captain Skill. \n [battlestations] - <b>WHEN ATTACKING:</b> Re-roll 1 [blank]. \n\n <b>(Lower Decks)</b>",
+		unique: true,
+		range: "1 - 2",
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C473",
+		set: [
+			"75016"
+		],
+		name: "Alyssa Ogawa",
+		cost: 1,
+		text: "<b>END PHASE:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Remove a <img src='img/stuff/effect_disable.png' width='20' height='16'> Token from a [crew_text] Upgrade with <b>(Lower Decks)</b> Keyword and then, place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on that Upgrade. \n\n\n <b>(Lower Decks)</b>",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C472",
+		set: [
+			"75016"
+		],
+		name: "Sito Jaxa",
+		cost: 1,
+		text: "<b>ACTIVATION PHASE:</b> Disable this card. \n\n The Captain equipped to this ship cannot be affected by opposing cards this game round. <hr> <b>AT ANY TIME:</b> Disable this card. \n\n Swap a [battlestations], [evade], or [scan] Token beside this ship with 1 of the other listed Tokens. \n\n\n <b>(Lower Decks)</b>",
+		unique: true,
+		alliance: false,
+		captainFederation: true,
+		factions: [
+			"federation",
+			"bajoran"
+		]
+	},
+	{
+		type: "crew",
+		id: "C471",
+		set: [
+			"75016"
+		],
+		name: "Taurik",
+		cost: 2,
+		text: "<b>END PHASE:</b> Disable this card and spend a [scan] Token beside this ship. \n\n Repair 1 Shield on this ship. If there is any <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Tokens beside this ship, you may Repair 1 Hull on this ship instead. \n\n\n <b>(Lower Decks)</b>",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation",
+			"vulcan"
+		]
+	},
+	{
+		type: "crew",
+		id: "C470",
+		set: [
+			"75016"
+		],
+		name: "Sam Lavelle",
+		cost: 1,
+		text: "<b>ACTION:</b> Disable this card. \n\n Perform a Red Maneuver on this ship's Maneuver Dial. \n\n\n <b>(Lower Decks)</b>",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C469",
+		set: [
+			"75016"
+		],
+		name: "Kell Perim",
+		cost: 3,
+		text: "<b>WHENEVER YOU REMOVE A <img src='img/stuff/effect_disable.png' width='20' height='16'> TOKEN FROM 1 OF YOUR <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> UPGRADES:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Place an [evade] Token beside this ship.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C468",
+		set: [
+			"75016"
+		],
+		name: "Padraig Daniels",
+		cost: 3,
+		text: "This ship can maintain 2 Blue  [target-lock] Tokens. <hr> <b>WHENEVER YOU ACQUIRE A  [target-lock]:</b> \n\n You may acquire a  [target-lock] on an additional opposing ship, if able.",
+		unique: true,
+		alliance: false,
+		shipFederation: true,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C467",
+		set: [
+			"75016"
+		],
+		name: "Sean Hawk",
+		cost: 2,
+		text: "<b>AFTER AN OPPOSING SHIP WITHIN RANGE EXECUTES A MANEUVER:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n You may rotate your Maneuver Dial to a Maneuver of the same Speed as the opposing ship.",
+		unique: true,
+		alliance: false,
+		range: "1 - 3",
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C466",
+		set: [
+			"75016"
+		],
+		name: "Worf",
+		cost: 2,
+		text: "<b>CHECK FOR POWER STRAIN STEP:</b> If this ship performed a [straight] Maneuver. \n\n Remove an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token from beside this ship. <hr> <b>WHEN ATTACKING OR DEFENDING:</b> Place an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship. \n\n Re-roll up to 2 [blank].",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation",
+			"klingon"
+		]
+	},
+	{
+		type: "crew",
+		id: "C465",
+		set: [
+			"75016"
+		],
+		name: "Katherine Pulaski",
+		cost: 3,
+		text: "<b>PLANNING PHASE:</b> Discard this card. \n\n Remove all <img src='img/stuff/effect_disable.png' width='20' height='16'> and/or <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens from the Captain equipped to this ship. <hr> <b>FREE ACTION:</b> Disable 'Data' or a [tech_text] Upgrade equipped to this ship. \n\n Remove a <img src='img/stuff/effect_time_token.png' width='20' height='16'> from up to 2 <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [crew_text] Upgrades equipped to this ship.",
+		unique: true,
+		alliance: false,
+		captainFederation: true,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C464",
+		set: [
+			"75016"
+		],
+		name: "Beverly Crusher",
+		cost: 2,
+		text: "<b>WHENEVER A</b> [crew_text]<b> UPGRADE EQUIPPED TO THIS SHIP WOULD BE DISABLED:</b> \n\n You may disable this card instead. <hr> <b>WHENEVER A</b> [crew_text] <b>UPGRADE EQUIPPED TO THIS SHIP WOULD BE DISCARDED:</b> \n\n You may discard this card instead.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C463",
+		set: [
+			"75016"
+		],
+		name: "Reginald Barclay",
+		cost: 1,
+		text: "Add 1 [tech_text] to this ship's Upgrade Bar. This slot can only be filled by [question_text] Upgrades. <hr> <b>(NIGHT SHIFT) PLANNING PHASE:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Increase the Range of cards equipped to this ship that target friendly ships by 1 (Max Range 3) this game round.",
+		unique: true,
+		shipFederation: true,
+		range: "1 - 2",
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C462",
+		set: [
+			"75016"
+		],
+		name: "Deanna Troi",
+		cost: 3,
+		text: "<b>ACTION:</b> Discard this card and target a ship within Range. \n\n Disable the Captain or a [crew_text] Upgrade equipped to the target ship and then, place a [battlestations] Token beside your ship. In addition if the target ship is Cloaked, flip its [cloak] Token over to its Red Side.",
+		unique: true,
+		range: "1 - 2",
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C461",
+		set: [
+			"75016"
+		],
+		name: "Tuvok",
+		cost: 2,
+		text: "<b>PLANNING PHASE:</b> \n\n Place a [scan] Token beside this ship. \n\n\n <b>(Lower Decks)</b>",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation",
+			"vulcan"
+		]
+	},
+	{
+		type: "crew",
+		id: "C460",
+		set: [
+			"75016"
+		],
+		name: "Dmitri Valtane",
+		cost: 3,
+		text: "<b>WHEN ATTACKING:</b> If there is a [scan] Token beside this ship. \n\n You may re-roll up to 2 of your attack dice. \n\n\n <b>(Lower Decks)</b>",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C459",
+		set: [
+			"75016"
+		],
+		name: "Janice Rand",
+		cost: 2,
+		text: "<b>WHENEVER YOU PERFORM THE ACTION LISTED ON A <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [talent_text] Upgrade:</b> Disable this card. \n\n Place a [battlestations] Token beside this ship. ",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C458",
+		set: [
+			"75016"
+		],
+		name: "Lojur",
+		cost: 2,
+		text: "<b>WHEN ATTACKING WITH A [weapon_text] UPGRADE: </b> \n\n You may disable this card instead of that Upgrade.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C457",
+		set: [
+			"75016"
+		],
+		name: "Demora Sulu",
+		cost: 2,
+		text: "<b>ACTION:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Perform either a 1 <img src='img/stuff/maneuver_bank_left_white.png' width='20' height='20'> or 1 <img src='img/stuff/maneuver_bank_right_white.png' width='20' height='20'> Maneuver.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C456",
+		set: [
+			"75016"
+		],
+		name: "Sonak",
+		cost: 1,
+		text: "<b>WHENEVER THIS SHIP WOULD REPAIR ANY OF ITS HULL OR SHIELDS:</b> Disable this card. \n\n Place 2 [scan] Tokens beside this ship instead.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation",
+			"vulcan"
+		]
+	},
+	{
+		type: "crew",
+		id: "C455",
+		set: [
+			"75016"
+		],
+		name: "Ilia",
+		cost: 2,
+		text: "This ship does not skip its Perform Action Step when overlapping another ship's base.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C454",
+		set: [
+			"75016"
+		],
+		name: "Saavik",
+		cost: 2,
+		text: "<b>WHEN DEFENDING:</b> If there is a Planet Obstacle within Range. \n\n Convert 1 [blank] to [evade]. <hr> <b>AT ANY TIME:</b> Disable this card. \n\n You may replace a [scan] or [battlestations] Token beside your ship with an [evade] Token.",
+		unique: true,
+		range: "1 - 2",
+		alliance: false,
+		factions: [
+			"federation",
+			"vulcan"
+		]
+	},
+	{
+		type: "crew",
+		id: "C453",
+		set: [
+			"75016"
+		],
+		name: "Valeris",
+		cost: 3,
+		text: "<b>CHECK FOR POWER STRAIN STEP:</b> If this ship performed a Geen Maneuver. \n\n Place an [evade] Token beside this ship.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation",
+			"vulcan"
+		]
+	},
+	{
+		type: "crew",
+		id: "C452",
+		set: [
+			"75016"
+		],
+		name: "Montgomery Scott",
+		cost: 3,
+		text: "<b>WHENEVEER YOU WOULD PLACE AN <img src='img/stuff/effect_auxilary.png' width='18' height='16'> TOKEN BESIDE THIS SHIP:</b> \n\n Place that Token on this card(max 2). <hr> <b>ACTION:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target a ship with a [hook] equipped within range. \n\n If that ship is this ship or a friendly ship, it performs a 2 <img src='img/stuff/maneuver_straight_white.png' width='20' height='20'>. If that ship is an opposing ship, Place any <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Tokens from this card beside the target ship.",
+		unique: true,
+		range: "1 - 2",
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C451",
+		set: [
+			"75016"
+		],
+		name: "Nyota Uhura",
+		cost: 4,
+		text: "<b>COMBAT PHASE:</b> Disable this card and target each opposing ship within Range that have any of the following Tokens beside them: [battlestations], [scan], or [evade]. \n\n Discard all of the listed Tokens beside the target ship(s) until only 1 Token remains beside each ship.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C450",
+		set: [
+			"75016"
+		],
+		name: "Leonard McCoy",
+		cost: 2,
+		text: "<b>END PHASE:</b> Spend a [scan] Token beside this ship. \n\n Remove a <img src='img/stuff/effect_disable.png' width='20' height='16'> Token from a [crew] Upgrade equipped to this ship.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C449",
+		set: [
+			"75016"
+		],
+		name: "Rivers",
+		cost: 1,
+		text: "<b>AFTER SUFFERING ANY DAMAGE TO YOUR HULL:</b> Discard this card and place 1 <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship. \n\n Repair 1 Hull on this ship.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C449",
+		set: [
+			"75016"
+		],
+		name: "Hoshi Sato",
+		cost: 3,
+		text: "<b>ACTIVATION PHASE:</b> Disable this card and target a ship within Range. \n\n Decrease the Range of all Upgrades equipped to the target ship by 1 this game round. (Min Range 1)",
+		unique: true,
+		range: "1 - 3",
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C448",
+		set: [
+			"75016"
+		],
+		name: "Phlox",
+		cost: 2,
+		text: "<b>FREEE ACTION:</b> Disable this card. \n\n Remove all <img src='img/stuff/effect_disable.png' width='20' height='16'> Tokens from each of your other [crew_text] Upgrades equipped to this sihp.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C447",
+		set: [
+			"75016"
+		],
+		name: "Porthos",
+		cost: 2,
+		text: "This card may be equipped to a ship with 'Jonathan Archer' equipped without requiring an Upgrade Slot. <hr> <b>COMBAT PHASE:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Remove a <img src='img/stuff/effect_disable.png' width='20' height='16'> Token from the <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> Captain or a <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [crew_text] Upgrade equipped to this ship.",
+		unique: true,
+		alliance: false,
+		captainFederation: true,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C446",
+		set: [
+			"75016"
+		],
+		name: "J. Hayes",
+		cost: 3,
+		text: "Increase the Captain Skill of the Captain equipped to this ship by 1. <hr> <b>ACTION:</b> Discard this card and target an opposing ship within Range. \n\n Discard a [crew_text] Upgrade equipped to the target ship.",
+		unique: true,
+		alliance: false,
+		range: "1 - 2",
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C445",
+		set: [
+			"75016"
+		],
+		name: "Charles Tucker III",
+		cost: 3,
+		text: "<b>AFTER THIS SHIP EXECTUES A MANEUVER:</b> \n Disable this card. \n\n Remove an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token from beside this ship. If you do, you may perform an additional Maneuver with a Speed of 1 on your Maneuver Dial.",
+		unique: true,
+		alliance: false,
+		hullConstraint: "3-",
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C444",
+		set: [
+			"75016"
+		],
+		name: "Malcolm Reed",
+		cost: 3,
+		text: "You may equip the 'Phase Cannons' [weapon_text] Upgrade to this ship for free without requiring an Upgrade Slot. <hr> <b>ACTION:</b> \n\n You may convert 1 [blank] to 1 [hit] and 1 [battlestations] to 1 [hit] When Attacking this game round.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C443",
+		set: [
+			"75016"
+		],
+		name: "Travis Mayweather",
+		cost: 3,
+		text: "<b>ACTION:</b \n\n Perform a 1 <img src='img/stuff/maneuver_impulse_roll_red.png' width='20' height='20'> Maneuver and then, place an [evade] Token beside this ship.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C442",
+		set: [
+			"75016"
+		],
+		name: "Geordi La Forge",
+		cost: 2,
+		text: "<b>ACTION:</b> \n\n Perform a Green Maneuver on this ship's Maneuver Dial.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C441",
+		set: [
+			"75016"
+		],
+		name: "Data",
+		cost: 3,
+		text: "<b> COMBAT PHASE:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and spend a [scan] Token beside this ship. \n\n Repair 1 Shield on this ship. If this card is equipped to a <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> Ship, Repair 2 Shields instead.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C440",
+		set: [
+			"75016"
+		],
+		name: "William T. Riker",
+		cost: 4,
+		text: "Add 1 [crew_text] to this ship's Upgrade Bar. <hr> <b>FREE ACTION:</b> Disable this card. \n\n Perform the Action listed on the Captain, [talent_text], or [crew_text] Upgrade equipped to this ship as a Free Action. <hr> <b>(First Officer) IF THE CAPTAIN EQUIPPED TO THIS SHIP IS DISCARDED:</b> \n\n Flip this card over and equip it as the Captain.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C439",
+		set: [
+			"75016"
+		],
+		name: "Hikaru Sulu",
+		cost: 3,
+		text: "<b>ACTION:</b> \n\n Roll +2 defense dice and convert 1 [battlestations] to [evade] when defending this game round.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C438",
+		set: [
+			"75016"
+		],
+		name: "Pavel Chekov",
+		cost: 3,
+		text: "<b>CHECK FOR POWER STRAIN STEP:</b> If this ship performed a White Maneuver. \n\n Remove an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token from beside this ship. If equipped to a <img src='img/text/fed-miranda.png' width='20' height='20'>, place a [scan] Token beside this ship. <hr> <b>(First Officer) IF THE CAPTAIN EQUIPPED TO THIS SHIP IS DISCARDED: \n\n Flip this card over and equip this card as the Captain.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C437",
+		set: [
+			"75016"
+		],
+		name: "Mr. Spock",
+		cost: 5,
+		text: "<b>WHEN ATTACKING:</b> If there is a [scan] Token beside this ship. \n\n Convert each [battlestations] into [hit]. If equipped to a <img src='img/text/fed-constitution-refit.png' width='18' height='18' title='Constitution Refit Class'>, this attack cannot be cancelled. <hr> <b>(First Officer) IF THE CAPTAIN EQUIPPED TO THIS SHIP IS DISCARDED: </b> \n\n Flip this card over and equip this card as the Captain.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation",
+			"vulcan"
+		]
+	},
+	{
+		type: "crew",
+		id: "C436",
+		set: [
+			"75016"
+		],
+		name: "T'Pol",
+		cost: 3,
+		text: "Add 1 [crew_text] to this ship's Upgrade Bar. <hr> <b>ACTION:</b> \n\n Increase the Captain Skill Number of the Captain equipped to this ship by 2 and then palce a [scan] Token beside this ship. <hr> <b>(First Officer) IF THE CAPTAIN EQUIPPED TO THIS SHIP IS DISCARDED:</b> \n\n Flip this card over and equip this card as the Captain.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation",
+			"vulcan"
+		]
+	},
+	{
+		type: "question",
+		id: "Q033",
+		set: [
+			"75015"
+		],
+		name: "Photonic Field Generator",
+		cost: 2,
+		text: "This card counts as a [weapon_text] Upgrade for a [tech_text] Upgrade. <hr> You may perform Actions listed on <b>?</b> Upgrades equipped to this ship even if you have any <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Tokens beside this ship. <hr> Opposing ships within Range cannot Discard or Disable other <img src='img/text/faction-indy.png' width='20' height='20'> <b>?</b> Upgrades equipped to this ship.",
+		range: "1 - 2",
+		unique: true,
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "question",
+		id: "Q032",
+		set: [
+			"75015"
+		],
+		name: "Kejal",
+		cost: 3,
+		text: "This card counts as a [crew_text] Upgrade for a [tech_text] Upgrade. <hr> <b>ACTION:</b> \n\n You may remove a <img src='img/stuff/effect_disable.png' width='20' height='16'> Token from a <b>?</b> Upgrade equipped to this ship and repair 1 Hull or Shield on this ship.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "question",
+		id: "Q031",
+		set: [
+			"75015"
+		],
+		name: "Weiss",
+		cost: 2,
+		text: "This card counts as a [crew_text] Upgrade for a [tech_text] Upgrade. <hr> <b>ACTION:</b> Disable this card and target an opposing ship within Range. \n\n Disable 1 [crew_text] Upgrade equipped to the target ship and place an [evade] Token beside this ship.",
+		range: "1 - 2",
+		unique: true,
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "tech",
+		id: "T307",
+		set: [
+			"75015"
+		],
+		name: "Monotanium Armor Plating",
+		cost: 3,
+		text: "<b>WHENEVER AN OPPONENT SHIP WOULD PLACE A RED</b> [target-lock]<b> TOKEN BESIDE THIS SHIP:</b> Roll 2 Defense dice. \n\n If you roll at least 1 [evade], discard the [target-lock] Token (and the matching Blue [target-lock] Token beside the opposing ship). <hr> <b>ACTION:</b> Disable this card. \n\n Remove each Red [target-lock] Token beside this ship (and the matching Blue [target-lock] Tokens beside the opposing ship(s)).",
+		OnePerShip: true,
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "tech",
+		id: "T306",
+		set: [
+			"75015"
+		],
+		name: "Improved Deflector Screens",
+		cost: 4,
+		text: "Discard this Upgrade when all of this ship's Shields have been destroyed. <hr> <b>WHEN DEFENDING: COMPARE RESULTS STEP:</b> If you have any Active Shields. \n\n Cancel 1 [hit] or [crit].",
+		OnePerShip: true,
+		hullConstraint: "3-",
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "tech",
+		id: "T305",
+		set: [
+			"75015"
+		],
+		name: "Stealth Mode",
+		cost: 3,
+		text: "<b>ACTIVATION PHASE:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Perform a [sensor-echo] Action as a Free Action.",
+		OnePerShip: true,
+		hirogenLimit: true,
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "tech",
+		id: "T304",
+		set: [
+			"75015"
+		],
+		name: "Translocator",
+		cost: 3,
+		text: "<b>ACTION:</b> Discard this card and target an opposing ship within Range. \n\n Steal 1 [tech_text] or [weapon_text] Upgrade equipped to the target ship and equip it to this ship ignoring this ship's restrictions.",
+		range: "1",
+		OnePerShip: true,
+		shipIndependent: true,
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "tech",
+		id: "T303",
+		set: [
+			"75015"
+		],
+		name: "Refractive Shielding",
+		cost: 4,
+		text: "Increase this  ship's Shield and Agility Values by 1. <hr> <b>WHEN DEFENDING:</b> If this ship has Active Shields and the attacking ship within Rnage does not have any [scan] Tokens beside it. \n\n Skip the Modify Attack Dice Step.",
+		range: "2 - 3",
+		OnePerShip: true,
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "tech",
+		id: "T302",
+		set: [
+			"75015"
+		],
+		name: "Regenerative Shielding",
+		cost: 3,
+		text: "Increase this ship's Shield Valuue by 1. <hr> <b>END PHASE:</b> \n\n You may repair 1 Shield on this ship.",
+		OnePerShip: true,
+		numiriLimit: true,
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "weapon",
+		id: "W246",
+		set: [
+			"75015"
+		],
+		name: "Grapplers",
+		cost: 2,
+		text: "The Attack Value of this [weapon_text] is this ship's Primary Weapon +1. <hr> <b>ATTACK:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target an opposing ship. \n\n If the defending ship has no Active Shields, you may re-roll each of your [blank]. If this attack hits, the defending ship cannot perform a Maneuver with a Speed greater than 1 during the next game round.",
+		range: "1",
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "weapon",
+		id: "W245",
+		set: [
+			"75015"
+		],
+		name: "Targeted Phaser Strike",
+		cost: 2,
+		text: "<b>ATTACK:</b> If this ship has a [target-lock] Token on the defending ship, place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target that opposing ship. \n\n <b>DEAL DAMAGE STEP:</b> Apply the effect based on which of the defending ship's arcs you are in: \n * <img src='img/text/forward-arc.png' width='20' height='20'>: Discard 1 [crew_text] Upgrade equipped to the defending ship. \n * <img src='img/text/rear-arc.png' width='20' height='20'>: Discard 1 [weapon_text] Upgrade equipped to the defending ship. \n * Non-<img src='img/text/forward-arc.png' width='20' height='20'> and Non-<img src='img/text/rear-arc.png' width='20' height='20'>: Place an [aux] Token beside the defending ship.",
+		OnePerShip: true,
+		attack: "4",
+		range: "1 - 2",
+		FrontArc: true,
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "weapon",
+		id: "W244",
+		set: [
+			"75015"
+		],
+		name: "Isokinetic Cannon",
+		cost: 5,
+		text: "The Attack Value of this [weapon_text] is this ship's Primary Weapon +1. <hr> <b>ATTACK:</b> Place 4 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target an opposing ship. \n\n <b>DECLARE TARGET STEP:</b> \n\n Disable 1 [tech_text] Upgrade equipped to the defending ship.",
+		OnePerShip: true,
+		attack: "0",
+		range: "2 - 3",
+		FrontArc: true,
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "weapon",
+		id: "W243",
+		set: [
+			"75015"
+		],
+		name: "Tetryon Particle Weapon",
+		cost: 3,
+		text: "<b>ATTACK:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens and target an opposing ship. \n\n [hit] and [crit] from this attack cannot be modified, re-rolled, or canceled by opposing card effects.",
+		attack: "4",
+		range: "1 - 3",
+		neradaLimit: true,
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "talent",
+		id: "E232",
+		set: [
+			"75015"
+		],
+		name: "Life Of Piracy",
+		cost: 4,
+		text: "<b>SETUP:</b> This ship may start the game either within Range of a Planet Obstacle or within Range of at least 2 Non-Planet Obstacles. <hr> Gain the ability based on the Printed Faction Symbol of the Captain this card is equipped to: \n\n <img src='img/text/faction-ferengi.png' width='20' height='20' title='Ferengi'> - <b>END PHASE:</b> You may discard a [battlestations] Token beside this ship and place 1 Gold-Pressed Latinum Token (GPLT) on the Captain equipped to this ship. \n\n <img src='img/text/faction-klingon.png' width='20' height='20' title='Klingon'> - <b>COMBAT PHASE:</b> You may perform a [sensor-echo] Action as a Free Action even if this ship is not cloaked.",
+		OnePerShip: true,
+		captainIndependent: true,
+		range: "1",
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "crew",
+		id: "C435",
+		set: [
+			"75015"
+		],
+		name: "Donik",
+		cost: 2,
+		text: "This ship cannot be targeted by [weapon_text] Upgrades fired through a <img src='img/text/rear-arc.png' width='20' height='20'>. <hr> <b>WHEN DEFENDING:</b> If the attacking ship has any [question_text] Upgrades equipped to their ship. \n\n Roll +1 defense die.",
+		unique: true,
+		hirogenLimit: true,
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "crew",
+		id: "C434",
+		set: [
+			"75015"
+		],
+		name: "Kovin",
+		cost: 2,
+		text: "Add 1 [weapon_text] to this ship's Upgrade Bar. <hr> <b>WHENEVER YOU WOULD PLACE 3 OR MORE <img src='img/stuff/effect_time_token.png' width='20' height='16'> TOKENS ON A </b> [weapon_text] <b> UPGRADE EQUIPPED TO THIS SHIP:</b> Place 1 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Token on this card. \n\n Place a <img src='img/stuff/effect_disable.png' width='20' height='16'> Token on that [weapon_text] Upgrade instead.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "crew",
+		id: "C433",
+		set: [
+			"75015"
+		],
+		name: "Sulan",
+		cost: 2,
+		text: "<b>ACTION:</b> Discard this card and target an opposing ship within Range. \n\n Disable up to 2 [crew_text] Upgrades equipped to the target ship.",
+		unique: true,
+		range: "1",
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "crew",
+		id: "C432",
+		set: [
+			"75015"
+		],
+		name: "Vidiian Guard",
+		cost: 2,
+		text: "Increase the Captain Skill of the Vidiian Captain equipped to this ship by 2. <hr> <b>WHENEVER AN OPPOSING SHIP WITHIN RANGE WOULD REMOVE A <img src='img/stuff/effect_disable.png' width='20' height='16'> TOKEN FROM 1 OF THEIR [crew_text] UPGRADES:</b> \n Discard this card. \n\n That <img src='img/stuff/effect_disable.png' width='20' height='16'> Token cannot be removed this game round.",
+		OnePerShip: true,
+		range: "1",
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "crew",
+		id: "C431",
+		set: [
+			"75015"
+		],
+		name: "Tau",
+		cost: 3,
+		text: "<b>PLANNING PHASE:</b> Target this ship or another ship within Range. \n\n Place a Token on this card beside the target ship. <hr> <b>COMBAT PHASE:</b> Target an opposing ship within Range. \n\n Steal either 1 [scan], [battlestations], [evade], or [aux] Token beside the target ship and place it on this card.",
+		unique: true,
+		range: "1 - 2",
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "crew",
+		id: "C430",
+		set: [
+			"75015"
+		],
+		name: "Kurros",
+		cost: 3,
+		text: "<b>ACTION:</b> Target an opposing ship within Range and your opponent must choose one of the following: \n\n * Place a Bounty Permanent Effect Token beside the target ship if it does not already have one. \n * Steal either a [battlestations], [evade], or [scan] Token from beside the target ship: place that Token and an [evade] Token beside this ship. \n * Once per game, Steal 1 <img src='img/text/unique.png' width='20' height='20' title='Unique'> [crew_text] Upgrade equipped to the target ship and equip it to this ship ignoring this ship's restrictions. <hr> <b>PERMANENT EFFECT:</b> For the rest of the game, each ship converts either 1 [blank] or [battlestations] into 1 [hit] each time they attack a ship with a Bounty Permanent Effect Token beside it.",
+		unique: true,
+		range: "1",
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "crew",
+		id: "C429",
+		set: [
+			"75015"
+		],
+		name: "Zar",
+		cost: 1,
+		text: "The Captains equipped to opposing ships within Range that have a Permanent Effect Token beside them have -1 Captain Skill. If that Token is a Reputation Permanent Effect Token, that ship has -2 Captain Skill instead.",
+		unique: true,
+		range: "2 - 3",
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "crew",
+		id: "C428",
+		set: [
+			"75015"
+		],
+		name: "Mobar",
+		cost: 3,
+		text: "Opposing ships within Range that have a Permanent Effect Token beside them roll -1 defense dice. In addition if that Token is a Reputation  Permanent Effect Token [battlestations], [scan], and/or [evade] Tokens spent by that ship are placed beside this ship instead of returning to the Action Token supply.",
+		unique: true,
+		range: "1 - 2",
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "crew",
+		id: "C427",
+		set: [
+			"75015"
+		],
+		name: "Turanj",
+		cost: 3,
+		text: "Add 1 [crew_text] to this ship's Upgrade Bar. <hr> <b>(First Officer) WHEN ATTACKING: DEAL DAMAGE STEP:</b> Discard the <img src='img/text/unique.png' width='20' height='20' title='Unique'> Captain equipped to this ship. \n\n Add 1 [crit] Then, flip this card over and equip it as the Captain.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"independent"
+		]
+	},
+	{
+		type: "borg",
+		id: "B024",
+		set: [
+			"75014"
+		],
+		name: "Transwarp Coil",
+		cost: 2,
+		text: "<b>ACTION:</b> If this card is not equipped to a <img src='img/text/faction-borg.png' width='20' height='20' title='Borg'> ship, discard this card. \n\n Perform an Additional Manuever on this ship's dial of the same Speed as it's Revealed Maneuver. Treat this Maneuver as a Red Maneuver.",
+		OnePerShip: true,
+		alliance: false,
+		factions: [
+			"borg"
+		]
+	},
+	{
+		type: "question",
+		id: "Q030",
+		set: [
+			"75014"
+		],
+		name: "Voyager Discount",
+		cost: 0,
+		text: "<b>HOW TO USE:</b> Equip this card to the upgrade slot you wish to give the discount to. It will create a copy of the slot that will give the upgrade the discount once it is equipped. \n\n <b>Take 1 Damgage to your Shields or Hull per card equipped.</b> <hr> <b>UTOPIA USE ONLY</b>",
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "question",
+		id: "Q029",
+		set: [
+			"75014"
+		],
+		name: "Coffee, Black",
+		cost: 1,
+		text: "This upgrade may be equipped to a ship without requiring an Upgrade slot. <hr> <b>(Night Shift) PLANNING PHASE:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Either place a [scan] Token beside this ship or remove an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token from beside this ship. <hr> <b>AT ANY TIME:</b> If you have the Initiative Token, discard this card. \n\n Pass the Initiative Token to the opponent to your left.",
+		OnePerShip: true,
+		captainFederation: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "tech",
+		id: "T301",
+		set: [
+			"75014"
+		],
+		name: "Re-Chargeable Shield Emitters",
+		cost: 3,
+		text: "Increase this ship's Shield Value by 1. <hr> <b>ACTION:</b> Place an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship. \n\n Repair up to 2 Shields on this ship.",
+		OnePerShip: true,
+		novaLimit: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "tech",
+		id: "T300",
+		set: [
+			"75014"
+		],
+		name: "Astrometrics Lab",
+		cost: 1,
+		text: "Add 1 [tech_text] to this ship's Upgrade Bar. <hr> <b>WHENEVER YOU PERFORM A </b> [scan] <b>ACTION:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n You may perform a [sensor-echo] Action using the 1 [straight] as a Free Action even if this ship is not cloaked. <hr> This Upgrade costs +2 SP if not equipped to either a <img src='img/text/fed-intrepid.png' width='20' height='20'>, <img src='img/text/fed-sovereign.png' width='20' height='20'>, or <img src='img/text/fed-luna.png' width='20' height='20'> ship.",
+		OnePerShip: true,
+		shipFederation: true,
+		hullConstraint: "4+",
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "tech",
+		id: "T299",
+		set: [
+			"75014"
+		],
+		name: "Variable Geometry Pylons",
+		cost: 2,
+		text: "<b>REVEAL DIAL STEP:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n You may increase or decrease the speed of your Revealed Maneuver by 1 (Treat this Maneuver as the same color as the revealed Maneuver).",
+		OnePerShip: true,
+		intrepidLimit: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "tech",
+		id: "T298",
+		set: [
+			"75014"
+		],
+		name: "Bio-Neural Circuitry",
+		cost: 2,
+		text: "<b>AFTER THIS SHIP EXECUTES A MANEUVER:</b> Disable this card. \n\n You may perform an Action on this ship's Action Bar or Ship card as a Free Action. <hr> <b>PERFORM ACTION STEP:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n This ship may perform Actions on its Action Bar or Ship card even if there is an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship. <hr> This upgrade costs +3 SP if not equipped to either a <img src='img/text/fed-intrepid.png' width='20' height='20'>, <img src='img/text/fed-sovereign.png' width='20' height='20'>, or <img src='img/text/fed-luna.png' width='20' height='20'> ship.",
+		OnePerShip: true,
+		shipFederation: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "tech",
+		id: "T297",
+		set: [
+			"75014"
+		],
+		name: "Multi-Adaptive Shields",
+		cost: 5,
+		text: "Increase this ship's Shield Value by 1. <hr> <b>WHEN DEFENDING:</b> If this ship has any Active Shields: \n\n Roll +1 defense die and this ship rolls it's full defense dice against Minefield Obstacles and opposing ships with [scan] Tokens beside them.",
+		OnePerShip: true,
+		shipFederation: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "tech",
+		id: "T296",
+		set: [
+			"75014"
+		],
+		name: "Temporal Shielding",
+		cost: 5,
+		text: "Increase this ship's Shield Value by 1. \n\n This ship's Shields cannot be ignored by attacks made with [weapon_text] Upgrades. <hr> <b>END PHASE:</b> If this ship has any Active Shields: \n\n Remove 1 additional <img src='img/stuff/effect_time_token.png' width='20' height='16'> Token from any 1 card equipped to this ship (including the ship card.)",
+		OnePerShip: true,
+		alliance: false,
+		factions: [
+			"federation",
+			"mirror-universe"
+		]
+	},
+	{
+		type: "weapon",
+		id: "W242",
+		set: [
+			"75014"
+		],
+		name: "Photonic Missles",
+		cost: 3,
+		text: "<b>ATTACK:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target an opposing ship. \n\n <b>DECLARE TARGET STEP:</b> Destroy 1 Active Shield on the Defending Ship. \n\n <b>DEAL DAMAGE STEP:</b> If the Defending Ship has no Active Shields, Place 1 <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside it.",
+		OnePerShip: true,
+		attack: "4",
+		range: "1 - 2",
+		FrontArc: true,
+		RearArc: true,
+		deltaflyerLimit: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "weapon",
+		id: "W241",
+		set: [
+			"75014"
+		],
+		name: "Gravimetric Torpedoes",
+		cost: 4,
+		text: "<b>ATTACK:</b> Spend this ship's [target-lock] Token, discard this card, and target an opposing ship. \n\n Place an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside the target and each ship within Range 1 of the target. <hr> <b>ACTION:</b> Target a Non-Planet Obstacle or a Minefield Obstacle within Range and remove this card from the game. \n\n Deal 1 [hit] to each ship within Range 1 of that Obstacle. Then remove that Obstacle from play.",
+		OnePerShip: true,
+		attack: "6",
+		range: "2 - 3",
+		FrontArc: true,
+		RearArc: true,
+		hullConstraint: "4+",
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "weapon",
+		id: "W240",
+		set: [
+			"75014"
+		],
+		name: "Transphasic Torpedoes",
+		cost: 5,
+		text: "The Attack Value of this [weapon_text] is equal to the Defending ship's Printed Hull Value +1. <hr> <b>ATTACK:</b> Discard this card and target an opposing ship. \n\n <b>MODIFY ATTACK DICE STEP:</b> Re-roll up to a number of [blank] equal to this ship's Primary Weapon Value. \n\n <b>DEAL DAMAGE STEP:</b> Uncanceled [crit] from this attack ignore the defending ship's Shields.",
+		OnePerShip: true,
+		attack: "0",
+		range: "2 - 3",
+		FrontArc: true,
+		RearArc: true,
+		alliance: false,
+		factions: [
+			"federation",
+			"mirror-universe"
+		]
+	},
+	{
+		type: "talent",
+		id: "E231",
+		set: [
+			"75014"
+		],
+		name: "Tactical Superiority Commander",
+		cost: 2,
+		text: "<b>WHEN ATTACKING:</b> If there are no Friendly ships within Range that have an equal or higher Primary Weapon Value: \n\n Roll +1 attack die.",
+		unique: true,
+		range: "1 - 1",
+		csConstraint: "8+",
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C426",
+		set: [
+			"75014"
+		],
+		name: "Lower Decks",
+		cost: 0,
+		text: "Equip this card to a crew slot to utilize the Lower Decks keyword functionality. \n\n\n\n <b>NOT A REAL CARD \n\nFOR UTOPIA USE ONLY</b>",
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C425",
+		set: [
+			"75014"
+		],
+		name: "U.S.S. Voyager CMO",
+		cost: 2,
+		text: "<b>FREE ACTION:</b> Discard this card and this ship suffers 1 damage. \n\n Perform any available Action as a Free Action.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C424",
+		set: [
+			"75014"
+		],
+		name: "Veronica Stadi",
+		cost: 3,
+		text: "<b>ACTION:</b> Discard this card and place an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship. \n\n Perform a Maneuver with a Speed of 5 or greater on your Maneuver Dial. If this ship has the 'Federation Prototype' [hook] equipped, you may choose any Maneuver on this ship's Maneuver Dial instead.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C423",
+		set: [
+			"75014"
+		],
+		name: "Aaron Cavit",
+		cost: 3,
+		text: "Add 1 [crew_text] to this ship's Upgrade Bar. <hr> <b>AFTER EXECUTING A MANEUVER WITH A SPEED OF 5 OR GREATER:</b> Discard this card and place an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship. \n\n Place 1 of each [battlestations], [evade], and [scan] Tokens beside this ship.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C422",
+		set: [
+			"75014"
+		],
+		name: "Seven Of Nine",
+		cost: 3,
+		text: "Add either 1 [tech_text] or 1 [borg_text] to this ship's Upgrade bar. <hr> <b>ACTION:</b> \n\n Perform the [scan] Action as a Free Action. In addition if equipped to an <img src='img/text/fed-intrepid.png' width='20' height='20'>, place either a [scan] or [evade] Token beside this ship. In addition if equipped to a <img src='img/text/faction-borg.png' width='20' height='20' title='Borg'> ship, place a [battlestations] Token beside this ship.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation",
+			"borg"
+		]
+	},
+	{
+		type: "crew",
+		id: "C421",
+		set: [
+			"75014"
+		],
+		name: "Kes",
+		cost: 2,
+		text: "<b>ACTIVATION PHASE:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target any ship in play. \n\n Look at the target ship's Maneuver Dial. Trigger the following ability based on the Faction of the target ship: \n <img src='img/text/faction-kazon.png' width='20' height='20' title='Kazon'> - Place a [battlestations] token beside this ship. \n <img src='img/text/faction-8472.png' width='20' height='20' title='Species 8472'> - You may execute a 1 <img src='img/stuff/maneuver_bank_left_white.png' width='20' height='20'>, 1 <img src='img/stuff/maneuver_straight_white.png' width='20' height='20'>, or 1 <img src='img/stuff/maneuver_bank_right_white.png' width='20' height='20'> Maneuver. \n <img src='img/text/faction-mirror.png' width='20' height='20' title='Mirror Universe'> - Place an [evade] Token beside this ship.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation",
+			"independent"
+		]
+	},
+	{
+		type: "crew",
+		id: "C420",
+		set: [
+			"75014"
+		],
+		name: "B'Elanna Torres",
+		cost: 3,
+		text: "<b>END PHASE:</b> Disable this card. \n\n Remove 1 <img src='img/stuff/effect_time_token.png' width='20' height='16'> from each [tech_text] Upgrade equipped to this ship. <hr> <b>AT ANYTIME, ONCE PER GAME:</b> Discard a [tech_text] Upgrade equipped to this ship. \n\n Repair a number of Hull or Shields on this ship equal to half of the printed SP of the discard [tech_text] Upgrade (rounded up).",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation",
+			"klingon"
+		]
+	},
+	{
+		type: "crew",
+		id: "C419",
+		set: [
+			"75014"
+		],
+		name: "Jenkins",
+		cost: 2,
+		text: "<b>REVEAL DIAL STEP:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n This ship may increase the speed of the revealed Maneuver by 1. The color of that Maneuver is the same as the revealed Maneuver. <hr> <b>(Night Shift) CHECK FOR POWER STRAIN STEP:</b> If this ship executed a Non-Red Maneuver. \n\n Remove an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token from beside your ship. \n\n <b>(Lower Decks)</b>",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C418",
+		set: [
+			"75014"
+		],
+		name: "Timothy Lang",
+		cost: 1,
+		text: "Increase the Captain Skill of the Captain equipped to this ship by 1. <hr> <b>(Night Shift) ACTION:</b> Target an opposing ship within Range. \n\n Disable 1 [crew_text] Upgrade equipped to the target ship. \n\n <b>(Lower Decks)</b>",
+		unique: true,
+		alliance: false,
+		range: "1 - 2",
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C417",
+		set: [
+			"75014"
+		],
+		name: "Mortimer Harren",
+		cost: 1,
+		text: "<b>COMBAT PHASE:</b> Spend a [scan] Token from beside this ship and target another ship within Range. \n\n Remove a [battlestations], [scan], [evade], or <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token from beside the target ship. \n\n\n <b>(Lower Decks)</b>",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C416",
+		set: [
+			"75014"
+		],
+		name: "William Telfer",
+		cost: 1,
+		text: "<b>WHENEVER YOU WOULD PLACE 3 OR MORE <img src='img/stuff/effect_time_token.png' width='20' height='16'> TOKENS ON A <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [crew_text] UPGRADE:</b> \n\n You may palce those <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card instead. \n\n <b>(Lower Decks)</b>",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C415",
+		set: [
+			"75014"
+		],
+		name: "Tal Celes",
+		cost: 1,
+		text: "<b>FREE ACTION:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Perform the [scan] Action as a Free Action. \n\n <b>(Lower Decks)</b> ",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation",
+			"bajoran"
+		]
+	},
+	{
+		type: "crew",
+		id: "C414",
+		set: [
+			"75014"
+		],
+		name: "Ahni Jetal",
+		cost: 2,
+		text: "<b>WHENEVER AN OPPOSING EFFECT WITHIN RANGE WOULD DISCARD OR STEAL A FRIENDLY</b> [crew_text] <b>UPGRADE:</b> \n\n This card must be the target instead. <hr> <b>WHENEVER THIS CARD WOULD BE DISCARDED OR STOLEN BY AN OPPOSING SHIP:</b> Target that ship. \n\n Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on either a [crew_text] or a [question_text] Upgrade equipped to the target ship. \n\n\n <b>(Lower Decks)</b>",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C413",
+		set: [
+			"75014"
+		],
+		name: "Erin Hansen",
+		cost: 2,
+		text: "<b>ACTIVATION PHASE:</b> Target an opposing ship within Range that has a Captain Skill of 5 or greater. \n\n If this ship activates after the target ship, you may execute an additional Maneuver on this ship's Maneuver dial. If the target ship is <img src='img/text/faction-borg.png' width='20' height='20' title='Borg'> or has a <img src='img/text/faction-borg.png' width='20' height='20' title='Borg'> Captain equipped to it, place 1 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Token on an Upgrade equipped to that ship.",
+		unique: true,
+		alliance: false,
+		aerieLimit: true,
+		range: "1",
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C412",
+		set: [
+			"75014"
+		],
+		name: "Thompson",
+		cost: 2,
+		text: "<b>WHENEVER A [scan] TOKEN IS PLACED BESIDE THIS SHIP:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Place an [evade] Token beside this ship.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C411",
+		set: [
+			"75014"
+		],
+		name: "Noah Lessing",
+		cost: 3,
+		text: "<b>PLANNING PHASE:</b> Spend 1 of this ship's Shield Tokens. \n\n Choose 1 of the following: \n * Remove an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token from beside this ship. If equipped to a <img src='img/text/fed-nova.png' width='20' height='20'>, also place a [scan] Token beside this ship. \n * Target opposing ship within Range cannot perform the [scan] Action or place [scan] Tokens beside their ship this game round.",
+		unique: true,
+		alliance: false,
+		range: "1 - 2",
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C410",
+		set: [
+			"75014"
+		],
+		name: "Marla Gilmore",
+		cost: 3,
+		text: "Add 1 [tech_text] to this ship's Upgrade Bar. <hr> <b>FREE ACTION:</b> Discard a [tech_text] Upgrade equipped to this ship \n\n You may perform a Green Maneuver and then place an [evade] Token beside this ship.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C409",
+		set: [
+			"75014"
+		],
+		name: "Maxwell Burke",
+		cost: 3,
+		text: "<b>ACTION:</b> Discard this card and target an opposing ship within Range. \n\n Steal either 1 <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [tech_text] or <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [crew_text] Upgrade equipped to the target ship and equip it to this ship, ignoring this ship's restrictions.",
+		unique: true,
+		alliance: false,
+		range: "1",
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "question",
+		id: "Q028",
+		set: [
+			"75014"
+		],
+		name: "The Doctor",
+		cost: 3,
+		text: "This card counts as either a [crew_text] or a [tech_text] Upgrade. <hr> <b>WHEN A <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'></b> [crew_text] <b>UPGRADE EQUIPPED TO THIS SHIP IS DISCARDED BY AN OPPOSING EFFECT:</b> \n\n Place that Upgrade beneath this card. <hr> <b>ACTION:</b> Disable this card. \n\n Equip 1 [crew_text] Upgrade beneath this card to this ship ignoring this ship's restrictions. Then place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on that Upgrade.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C408",
+		set: [
+			"75014"
+		],
+		name: "Tuvok",
+		cost: 4,
+		text: "<b>ACTION:</b> Disable this card. \n\n Perform either a [target-lock] or a [battlestations] Action as a Free Action. Then perform the Action listed on a <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [crew_text] Upgrade equipped to this ship as a Free Action.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation",
+			"vulcan"
+		]
+	},
+	{
+		type: "crew",
+		id: "C407",
+		set: [
+			"75014"
+		],
+		name: "Harry Kim",
+		cost: 3,
+		text: "<b>EACH TIME A</b> [scan] <b>TOKEN IS PLACED BESIDE THIS SHIP:</b> \n\n Remove a <img src='img/stuff/effect_disable.png' width='20' height='16'> Token from either a <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [crew_text] or <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [tech_text] Upgrade equipped to this ship.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C406",
+		set: [
+			"75014"
+		],
+		name: "Tom Paris",
+		cost: 3,
+		text: "<b>COMBAT PHASE:</b> Spend an [evade] Token from beside this ship. \n\n You may either perform a [sensor-echo] Action using the 1 [straight] template even if this ship is not cloaked, or a 1 <img src='img/stuff/maneuver_bank_left_white.png' width='20' height='20'> or 1 <img src='img/stuff/maneuver_bank_right_white.png' width='20' height='20'> Maneuver.",
+		unique: true,
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+	{
+		type: "crew",
+		id: "C405",
+		set: [
+			"75014"
+		],
+		name: "Chakotay",
+		cost: 3,
+		text: "Add 1 [crew_text] to this ship's Upgrade Bar. <hr> <b>ACTION:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target an opposing ship within Range. \n\n Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on the Captain equipped to the target ship. <hr> <b>(First Officer) IF THE CAPTAIN EQUIPPED TO THIS SHIP IS DISCARDED:</b> \n\n Flip this card over and equip this card as the Captain.",
+		unique: true,
+		alliance: false,
+		range: "1 - 2",
+		factions: [
+			"federation",
+			"independent"
+		]
+	},
+	{
 		type: "talent",
 		id: "E230",
 		set: [

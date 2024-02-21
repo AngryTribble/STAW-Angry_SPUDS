@@ -1,149 +1,5 @@
 var module = angular.module("utopia-card-rules", ["utopia-valueof"]);
 
-module.filter( "shipCardNamed", [ "$filter", function($filter) {
-
-	var upgradeSlotsFilter = $filter("upgradeSlots");
-
-	return function( ship, name ) {
-
-		if( ship.name == name )
-			return ship;
-
-		if( ship.captain && ship.captain.name == name )
-			return ship.captain;
-
-		var match = false;
-		$.each( upgradeSlotsFilter(ship), function(i, slot) {
-			if( slot.occupant && slot.occupant.name == name ) {
-				match = slot.occupant;
-				return false;
-			}
-		});
-
-		return match;
-
-	}
-
-}]);
-
-module.filter( "fleetCardNamed", [ "$filter", function($filter) {
-
-	var shipCardNamed = $filter("shipCardNamed");
-
-	return function( fleet, name ) {
-
-		if( !fleet ) {
-			return false;
-		}
-
-		var match = false;
-		$.each( fleet.ships, function(i, ship) {
-			match = shipCardNamed(ship, name);
-			if( match )
-				return false;
-		});
-
-		return match;
-
-	}
-
-}]);
-
-
-module.factory( "$factions", [ "$filter", function($filter) {
-	var valueOf = $filter("valueOf");
-
-	    // "Game elements(implied any) of a sub-faction also count as their corresponding prime faction. This means that a Vulcan ship also counts
-	    //  as a Federation ship, but a Federation ship does not count as a Vulcan ship."
-
-	    // each faction paired with either itself or it's prime faction as a lookup solves this particular check
-			// and continues to check all 'factions' as they should
-			// because if they have a prime faction they are considered as that prime by the game rules
-			// and if they are not they are their own 'prime faction'
-
-			// this also has huge savings on code and complexity by handling the game's rule here as the $factions.hasFaction() func
-			// is called less frequently and leaving the exceptional situations more to the indvidual card rules instead of implementing
-			// a global game rule one card at a time
-	    let primeFactionLookup = {
-	            'federation': 'federation',
-	                'vulcan': "federation",
-	                'bajoran': "federation",
-	                'klingon': 'klingon',
-	                'romulan': 'romulan',
-	                'dominion': 'dominion',
-	                'independent': 'independent',
-	                'ferengi': 'independent',
-	                'kazon': 'independent',
-	                'xindi': 'independent',
-	                'borg' :'borg',
-	                'mirror-universe': 'mirror-universe',
-	                'species-8472': 'species-8472',
-	                'q-continuum': 'q-continuum'
-	            };
-
-	    // get an array of the prime factions for the set of cardFactions as an array of strings
-	    let getPrimeFactions = (cardFactions) => cardFactions.reduce(
-	                (primeFactions, cardFaction) => {
-	                    let primeFaction = primeFactionLookup[cardFaction];
-	                    if (!primeFactions.includes(primeFaction))
-	                        primeFactions.push(primeFaction);
-
-	                    return primeFactions;
-	              }, []);
-
-	    // returns true when Card A's prime factions and Card B's prime factions intersect and therefore have the same 'prime faction' for card rules
-	    let primeFactionMatch = (cardFaction, otherFaction) => {
-	        return getPrimeFactions([cardFaction]).some(cardPrimeFaction => getPrimeFactions([otherFaction]).includes(cardPrimeFaction) );
-	    }
-
-	    var factions = {
-	        hasFaction: function(card, faction, ship, fleet) {
-	            if( !card )
-	                return false;
-	            let factions =  valueOf(card,"factions",ship,fleet) || [];
-	            let primeFactions = getPrimeFactions(factions);
-
-	            // true if it's the faction of the card OR any of the card's faction's 'prime faction'
-	            let isConsideredInFaction = factions.includes(faction) || primeFactions.includes(faction);
-	            return isConsideredInFaction;
-	        },
-	        match: function(card, other, ship, fleet) {
-	            var match = false;
-	            $.each( valueOf(card,"factions",ship,fleet), function(i, cardFaction) {
-	                $.each( valueOf(other,"factions",ship,fleet), function(i, otherFaction) {
-	                    //console.debug(`${card.id}:${card.name}:${cardFaction} -- ${other.id}:${other.name}:${otherFaction} ${card.name} prime factions match(${primeFactionMatch(cardFaction,  otherFaction)}): ${getPrimeFactions([cardFaction])}; ${other.id}:${other.name} prime factions: ${getPrimeFactions([otherFaction])}`);
-	                    if( cardFaction == otherFaction || primeFactionMatch(cardFaction,  otherFaction) ) {
-	                        match = true;
-	                        return false;
-	                    }
-	                });
-	                if( match )
-	                    return false;
-	            });
-	            return match;
-	        },
-	        matchByPrimeFaction: function(card, other, ship, fleet) {
-	            var match = false;
-	            $.each( valueOf(card,"factions",ship,fleet), function(i, cardFaction) {
-	                $.each( valueOf(other,"factions",ship,fleet), function(i, otherFaction) {
-	                    if( primeFactionMatch(cardFaction,  otherFaction) ) {
-	                        match = true;
-	                        return false;
-	                    }
-	                });
-	                if( match )
-	                    return false;
-	            });
-	            return match;
-	        },
-	        list: [ "Federation", "Klingon", "Vulcan", "Romulan", "Bajoran", "Dominion", "Independent", "Borg", "Ferengi", "Species 8472", "Kazon", "Mirror Universe", "Xindi", "Q Continuum" ],
-	    }
-	    factions.listCodified = $.map( factions.list, function(name) {
-	        return name.toLowerCase().replace(/ /g,"-");
-	    } );
-	    return factions;
-}]);
-
 module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factions) {
 
 	var valueOf = $filter("valueOf");
@@ -257,6 +113,30 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 		return returnValue;
 	}
 
+	var getOccupiedSlot = function(upgrade, ship){
+		var id = upgrade.id;
+		for ( var i = 0; i < ship.upgrades.length; i++) {
+			var slotUpgrade = ship.upgrades[i];
+			if (slotUpgrade?.occupant?.id == id) {
+				return slotUpgrade;
+			}
+		}
+		return null;
+	}
+
+	var hasDaharMaster = function(card){
+		var foundDaharMasterTalent = false;
+		card.upgradeSlots.forEach(element => {
+			if (element.occupant) {
+				if (element.occupant.name === "Dahar Master") {
+					foundDaharMasterTalent = true;
+				}
+			}
+		});
+		return foundDaharMasterTalent
+
+	}
+
 	// the following return object represents a massive lookup table to resolve special card rules by a key of "cardType:cardId"
 	return {
 
@@ -304,199 +184,1449 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 			}
 		},
 
-//Alliance Part II
+//These Are The Voyages
+	
+	//Enterprise NX-01
+	"ship:S404":{
+		upgradeSlots: [ {
+			type: ["starship_construction"],
+			rules: "May equip Federation Prototype"
+		}]
+	},	
 
-		//Evasive Maneuvers
-		"talent:E219":{
-			canEquip: function(upgrade,ship,fleet) {
-				return ship.class.indexOf("K'Vort Class") >= 0 && onePerShip("Evasive Maneuvers");
-			}
+	//Jonathan Archer
+	"captain:Cap039":{
+		//Adds 1 crew upgrade slot and 1 slot for Porthos (the best boy)
+		upgradeSlots: [ { 
+			type: ["crew"]
 		},
-
-		//Strafing Run
-		"talent:E222":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("Strafing Run") && (ship.class == "K'Vort Class" || ship.class == "B'Rel Class");
+		{	type: ["crew"],
+			rules: "Porthos Only",
+			canEquip: function(upgrade) {
+				return upgrade.id == "C441";
 			}
-		},
+		} ]
+	},
 
-		//Fight With Honor
-		"talent:E221":{
-			canEquipFaction: function(upgrade,ship,fleet) {
-				return hasFaction(ship,"klingon",ship,fleet);
+	//Erika Hernandez
+	"captain:Cap042":{
+		//Adds 1 crew upgrade slot
+		upgradeSlots: [{
+			type: ["crew"]
+		}],
+		//Can only be equipped to a Federation NX Class
+		canEquipCaptain: function(upgrade,ship,fleet) {
+			return ship.class == "Federation NX Class"
+		}
+	},
+
+	//Edward Jellico
+	"captain:Cap050":{
+		canEquipCaptain: function(captain,ship,fleet) {
+			return ship.hull >= 5;
+		}
+	},
+
+	//James T. Kirk (Admiral)
+	"admiral:A044": {
+		upgradeSlots: [
+			{
+				type: ["crew"]
+			},
+			{
+				type: ["crew"]
 			}
-		},
+		]
+	},
 
-		//Eye For An Eye
-		"talent:E223":{
-			canEquipFaction: function(upgrade,ship,fleet) {
-				return hasFaction(ship,"klingon",ship,fleet);
+	//T'Pol
+	"crew:C436":{
+		upgradeSlots: [
+			{
+				type: ["crew"]
 			}
-		},
+		]
+	},
 
-		//Forward Battery
-		"weapon:W228":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("Forward Battery") && (ship.class == "Vor'cha Class" || ship.class == "Negh'Var Class");
+	//William T. Riker
+	"crew:C440":{
+		upgradeSlots: [
+			{
+				type: ["crew"]
 			}
-		},
+		]
+	},
 
-		//Disruptor Overcharge
-		"weapon:W229":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("Disruptor Overcharge") && (ship.class == "Vor'cha Class");
-			}
-		},
-
-		//Converging Fire
-		"weapon:W232":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("Converging Fire") && (ship.class == "Vor'cha Class" || ship.class == "Negh'var Class");
-			}
-		},
-
-		//Torpedo Fusillade
-		"weapon:W231":{
-			attack: 0,
+	//Malcolm Reed
+	"crew:C444": {
+		upgradeSlots: [ {
+			type: ["weapon"],
+			rules: "May equip Phase Cannons for free",
+			CanEquip: function(upgrade) {
+				return upgrade.name == "Phase Cannons";
+			},
 			intercept: {
-				self: {
-					// Attack is same as ship primary weapon
-					attack: function(upgrade,ship,fleet,attack) {
-						if( ship )
-							return valueOf(ship,"attack",ship,fleet);
-						return attack;
-					},
-					// Cost is primary weapon
-					cost: function(upgrade,ship,fleet,cost) {
-						if( ship )
-							return resolve(upgrade,ship,fleet,cost) + valueOf(ship,"attack",ship,fleet);
+				ship: {
+					cost: function(card,ship,fleet,cost) {
+						if (!$factions.match(card,ship,ship,fleet) )
+						return 1;
+					else if( $factions.match(card,ship,ship,fleet) )
+					return 0;
+				return cost;
+					}
+				}
+			}
+		}]
+
+	},
+
+	//Charles Tucker III
+	"crew:C445" :{
+		//Can only be equipped to ships with a Hull of 3 or less
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return ship.hull <= 3;
+		}
+	},
+	
+	//J. Hayes
+	"crew:C446":{
+		intercept: {
+			ship: {
+				skill: function(upgrade,ship,fleet,skill) {
+					if( upgrade == ship.captain )
+						return resolve(upgrade,ship,fleet,skill) +1;
+					return skill;
+				}
+			}
+		}
+	},
+
+	//Porthos
+	"crew:C447":{
+		//Can only be equipped to a Federation Captain
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return hasFaction(ship.captain, "federation", ship, fleet) || hasFaction(ship.captain, "bajoran", ship, fleet) || hasFaction(ship.captain, "vulcan", ship, fleet);
+		}
+	},
+
+	//Reginald Barclay
+	"crew:C463": {
+		upgradeSlots: [
+			{
+				type: ["tech"],
+				rules: "You may only equip ? upgrades in this slot"
+			}
+		],
+		//Can only be equipped to a Federation Captain
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return hasFaction(ship, "federation", ship, fleet) || hasFaction(ship, "bajoran", ship, fleet) || hasFaction(ship, "vulcan", ship, fleet);
+		},
+	},
+
+	//Katherine Pulaski
+	"crew:C465": {
+		//Can only be equipped to a Federation Captain
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return hasFaction(ship.captain, "federation", ship, fleet) || hasFaction(ship.captain, "bajoran", ship, fleet) || hasFaction(ship.captain, "vulcan", ship, fleet);
+		}
+	},
+
+	//Padraig Daniels
+	"crew:C468":{
+		//Can only be equipped to a Federation Ship
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return hasFaction(ship, "federation", ship, fleet) || hasFaction(ship, "bajoran", ship, fleet) || hasFaction(ship, "vulcan", ship, fleet);
+		}
+	},
+
+	//Sito Jaxa
+	"crew:C472": {
+		//Can only be equipped to a Federation Captain
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return hasFaction(ship.captain, "federation", ship, fleet) || hasFaction(ship.captain, "bajoran", ship, fleet) || hasFaction(ship.captain, "vulcan", ship, fleet);
+		}
+	},
+
+	//Tasha Yar
+	"crew:C476":{
+		upgradeSlots: [
+			{
+				type: ["weapon"]
+			}
+		]
+	},
+
+	//Miles O'Brien
+	"crew:C477": {
+		upgradeSlots: [
+			{
+				type: ["tech"],
+				rules: "May equip Transporter Room Upgrade",
+				canEquip: function(upgrade) {
+					return upgrade.id == "T308";
+				}
+			}
+		]
+	},
+
+	//Leah Brahms
+	"crew:C478": {
+		//Can only be equipped to a Federation Ship
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return hasFaction(ship, "federation", ship, fleet) || hasFaction(ship, "bajoran", ship, fleet) || hasFaction(ship, "vulcan", ship, fleet);
+		}
+	},
+
+	//These Are The Voayages...
+	"talent:E233": {
+		//Can only be equipped to a Federation Captain
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return hasFaction(ship.captain, "federation", ship, fleet) || hasFaction(ship.captain, "bajoran", ship, fleet) || hasFaction(ship.captain, "vulcan", ship, fleet);
+		}
+	},
+
+	//Explore Strange New Worlds...
+	"talent:E234": {
+		//Can only be equipped to a Federation Captain
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return hasFaction(ship.captain, "federation", ship, fleet) || hasFaction(ship.captain, "bajoran", ship, fleet) || hasFaction(ship.captain, "vulcan", ship, fleet);
+		}
+	},
+
+	//To Boldly Go...
+	"talent:E235": {
+		//Can only be equipped to a Federation Captain
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return hasFaction(ship.captain, "federation", ship, fleet) || hasFaction(ship.captain, "bajoran", ship, fleet) || hasFaction(ship.captain, "vulcan", ship, fleet);
+		}
+	},
+
+	//Fly Her Apart Then!
+	"talent:E236": {
+		//Can only be equipped to a Federation Captain and an Excelsior Class ship
+		canEquip: function(upgrade,ship,fleet) {
+			return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet) || $factions.hasFaction(ship.captain,"bajoran", ship, fleet) || $factions.hasFaction(ship.captain,"vulcan", ship, fleet) ) && ship.class == "Excelsior Class";
+		}
+	},
+	
+	//It Won't Be Installed Until Tuesday
+	"talent:E237": {
+		//Can only be equipped to a Federation Captain and an Excelsior Class ship
+		canEquip: function(upgrade,ship,fleet) {
+			return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet) || $factions.hasFaction(ship.captain,"bajoran", ship, fleet) || $factions.hasFaction(ship.captain,"vulcan", ship, fleet) ) && ship.captain.skill <= 5;
+		}		
+	},
+
+	//Tuesday (Crew)
+	"crew:C483": {
+		upgradeSlots: [
+			{
+				type: ["crew"]
+			}
+		],
+		intercept: {
+			ship: {
+				cost: {
+					priority: 100,
+					fn: function(upgrade,ship,fleet,cost) {
+						if( checkUpgrade("crew", upgrade, ship) ) {
+							cost = resolve(upgrade,ship,fleet,cost);
+							cost -=2;
+						}
 						return cost;
 					}
 				}
 			}
-		},
+		}
+	},
 
-		//Photon Torpedoes
-		"weapon:W230":{
-			attack: 0,
-			intercept: {
-				self: {
-					// Attack is same as ship primary + 1
-					attack: function(upgrade,ship,fleet,attack) {
-						if( ship )
-							return valueOf(ship,"attack",ship,fleet) + 1;
-						return attack;
+	//Tuesday (Weapon)
+	"weapon:W251": {
+		upgradeSlots: [
+			{
+				type: ["weapon"]
+			}
+		],
+		intercept: {
+			ship: {
+				cost: {
+					priority: 100,
+					fn: function(upgrade,ship,fleet,cost) {
+						if( checkUpgrade("weapon", upgrade, ship) ) {
+							cost = resolve(upgrade,ship,fleet,cost);
+							cost -=2;
+						}
+						return cost;
 					}
 				}
 			}
-		},
+		}
+	},
 
-		//Enhanced Thrusters
-		"tech:T288":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("Enhanced Thrusters") && (ship.class == "K'Vort Class" || ship.class == "B'Rel Class");
+	//Tuesday (Tech)
+	"tech:T312": {
+		upgradeSlots: [
+			{
+				type: ["tech"]
 			}
-		},
-
-		//Reactor Vent
-		"tech:T283":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("Reactor Vent");
-			}
-		},
-
-		//Secondary Cloaking Coil
-		"tech:T285":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("Secondary Cloaking Coil");
-			}
-		},
-
-		//Extend Shields
-		"tech:T281":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("Extend Shields");
-			}
-		},
-
-		//Passive Sensors
-		"tech:T287":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("Passive Sensors");
-			}
-		},
-
-		//Reinforced Hull
-		"tech:T286":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("Reinforced Hull") && ship.hull >=4;
-			},
-			intercept: {
-				ship: {
-					hull: function(card,ship,fleet,hull) {
-						if( card == ship )
-							return resolve(card,ship,fleet,hull) + 2;
-						return hull;
+		],
+		intercept: {
+			ship: {
+				cost: {
+					priority: 100,
+					fn: function(upgrade,ship,fleet,cost) {
+						if( checkUpgrade("tech", upgrade, ship) ) {
+							cost = resolve(upgrade,ship,fleet,cost);
+							cost -=2;
+						}
+						return cost;
 					}
 				}
+			}
+		}
+	},
+
+	//Phase Cannons
+	"weapon:W247": {
+		//Can only equip one and to a Federation NX Class only
+		canEquip: function(upgrade,ship,fleet) {
+			return ship.class == "Federation NX Class" && onePerShip("Phase Cannons")(upgrade,ship,fleet);
+		}
+	},
+
+	//Type 8 Phaser Array
+	"weapon:W249": {
+		canEquip: function(upgrade,ship,fleet) {
+			if( ship.attack <= 3 )
+				return true;
+			return false;
+		}
+	},
+
+	//Transporter Room
+	"tech:T308": {
+		//Can only equip one
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Transporter Room")(upgrade,ship,fleet);
+		}
+	},
+
+	//Enhanced Tractor Emitters
+	"tech:T309": {
+		//Can only equip one
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Enhanced Tractor Emitters")(upgrade,ship,fleet);
+		}
+	},
+
+	//Navigational Deflector
+	"tech:T311": {
+		//Can only equip one
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Navigational Deflector")(upgrade,ship,fleet);
+		}
+	},
+
+	//Tea, Earl Grey, Hot
+	"question:Q034": {
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Tea, Earl Grey, Hot")(upgrade,ship,fleet);
+		},
+
+		isSlotCompatible: function(slotTypes) {
+			return $.inArray( "tech", slotTypes ) >= 0 || $.inArray( "weapon", slotTypes ) >=0 || $.inArray( "crew", slotTypes ) >= 0;
+		},
+
+		//All non-Federation ships pay +1 SP to equip
+		intercept: {
+			self: {
+				cost: function(upgrade,ship,fleet,cost) {
+					if( ship && !$factions.hasFaction(ship, "federation", ship, fleet) || $factions.hasFaction(ship, "bajoran", ship, fleet) || $factions.hasFaction(ship, "vulcan", ship, fleet))
+					return resolve(upgrade,ship,fleet,cost) +1;
+				return cost;
+				}
+			}
+		},
+		upgradeSlots: [
+			{
+				type: function(upgrade,ship) {
+					return getSlotType(upgrade,ship);
+				}
+			}
+		],
+	},
+
+	//Tactical Data Link
+	"question:Q035": {
+		type: "question",
+		isSlotCompatible: function(slotTypes) {
+			return $.inArray( "tech", slotTypes ) >= 0 || $.inArray( "weapon", slotTypes ) >=0;
+		},
+		//Can only equip one and to a Sovereign Class
+		canEquip: function(upgrade,ship,fleet) {
+			return ship.class == "Sovereign Class" && onePerShip("Tactical Data Link");
+		}
+	},
+	
+
+	//Systems Upgrade
+	"question:Q036": {
+		type: "question",
+		isSlotCompatible: function(slotTypes) {
+			return $.inArray( "tech", slotTypes ) >= 0 || $.inArray( "weapon", slotTypes ) >= 0;
+		},
+		upgradeSlots: [
+			{
+				type: ["tech"]
+			}
+		],
+		intercept: {
+			ship: {
+				shields: function(card,ship,fleet,shields) {
+					if( card == ship )
+						return resolve(card,ship,fleet,shields) + 1;
+					return shields;
+				}
+			}
+		},
+		canEquip: onePerShip("Systems Upgrade"),
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return ($factions.hasFaction(ship,"federation", ship, fleet) || $factions.hasFaction(ship,"bajoran", ship, fleet) || $factions.hasFaction(ship,"vulcan", ship, fleet));
+		}
+	},
+
+	//James T. Kirk Admiral Slot
+	"question:Q037":{
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return hasFaction(ship.captain, "federation", ship, fleet) || hasFaction(ship.captain, "bajoran", ship, fleet) || hasFaction(ship.captain, "vulcan", ship, fleet);
+		},
+		type: "question",
+		isSlotCompatible: function(slotTypes) {
+			return $.inArray("tech", slotTypes) >=0 || $.inArray( "weapon", slotTypes ) >=0 || $.inArray( "crew", slotTypes) >= 0;
+		},
+		upgradeSlots: [
+			{
+				type: ["admiral"],
+				rules: "May equip Federation Admiral with a cost of 4 SP or less."
 			},
-		},
+			{
+				type: function(upgrade,ship) {
+					return getSlotType(upgrade,ship);
+				}
+			}
+		],
+	},
 
-		//Secondary Relays
-		"tech:T282":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("Secondary Relays");
+	//Enhanced Hull Plating
+	"starship_construction:Con003": {
+		//Can only equip one and to a Federation NX Class
+		canEquipConstruction: function(upgrade,ship,fleet) {
+			return ship.class == "Federation NX Class" && onePerShip("Enhanced Hull Plating")(upgrade,ship,fleet);
+		}
+	},
+
+	//Dominion War Retrofit
+	"starship_construction:Con004": {
+		//Creates a new tech, weapon, or crew slot
+		upgradeSlots: [
+			{
+				type: ["tech", "weapon", "crew"]
+			}
+		],
+		intercept: {
+			ship: {
+				//Adds +1 Shield to the stat bar when equipped to a ship
+				shields: function(card, ship, fleet, shields) {
+					if( card == ship) {
+						return resolve(card, ship, fleet, shields) +1;
+					}
+					return shields;
+				},
+				//Adds +1 Hull stat to the Miranda, Excelsior, and Galaxy Classes
+				hull: function(card, ship, fleet, hull) {
+					if (ship.class == "Miranda Class" || ship.class == "Excelsior Class" || ship.class == "Galaxy Class") {
+						return resolve(card,ship,fleet,hull) +1;
+					}
+					return hull;
+				},
+				//Adds +1 Attack to the primary weapon stats of a D'deridex Class
+				attack: function(card, ship, fleet, attack) {
+					if (ship.class == "D'deridex Class") {
+						return resolve(card,ship,fleet,attack) +1;
+					}
+					return attack;
+				}
 			}
 		},
+		//Can only be equipped to a Federation, Klingon, or Romulan ship.
+		canEquipConstruction: function(upgrade,ship,fleet) {
+			return ship && ( $factions.hasFaction(ship,"federation", ship, fleet) || $factions.hasFaction(ship,"bajoran", ship, fleet) || $factions.hasFaction(ship,"vulcan", ship, fleet) || $factions.hasFaction(ship,"klingon", ship, fleet) || $factions.hasFaction(ship,"romulan", ship,fleet) );
+		}
+	},
 
-		//First Officer
-		"crew:C397":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("First Officer");
+//Adversaires of the Delta Quadrant
+
+	//Iden
+	"captain:Cap037":{
+		intercept: {
+			ship: {
+				canEquipAdmiral: function (captain, ship, fleet) {
+					return false;
+				},
+				canEquipAmbassador: function (captain, ship, fleet) {
+					return false;
+				}
+			}
+		}
+	},
+
+	//Dala
+	"captain:Cap031" : {
+		//Creates a new crew slot
+		upgradeSlots: [{},
+				{
+					type: ["crew"]
+				}
+			],
+	},
+
+	//Turanj
+	"crew:C427": {
+		//Creates a new crew slot
+		upgradeSlots: [
+			{
+				type: ["crew"]
+			} 
+		]
+	},
+	
+	// Vidiian Guard
+	"crew:C432": {
+    	canEquip: function(upgrade, ship, fleet) {
+        	return onePerShip("Vidiian Guard");
+    	},
+    	intercept: {
+        	ship: {
+            	skill: function(card, ship, fleet, skill) {
+                	// Check if the captain ID matches
+                	if( ship.captain && ship.captain.id === "Cap033" || ship.captain.name === "Nadirum" || ship.captain.id === "Cap448" || ship.captain.id === "Cap706")
+					return resolve(card,ship,fleet,skill) +2;
+				return skill;
+            	}
+        	}
+    	}
+	},
+
+	//Kovin
+	"crew:C434":{
+		//Creates a new weapon slot
+		upgradeSlots: [
+			{
+				type: ["weapon"]
+			}
+		]
+	},
+
+	//Donik
+	"crew:C435": {
+		canEquip: function(upgrade,ship,fleet) {
+			return ship.class == "Hirogen Warship";
+		}
+	},
+
+	//Life of Piracy
+	"talent:E232": {
+		canEquip: onePerShip("Life Of Piracy"),
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return hasFaction(ship.captain, "independent", ship, fleet) || hasFaction(ship.captain, "ferengi", ship, fleet) || hasFaction(ship.captain, "kazon", ship, fleet) || hasFaction(ship.captain, "xindi", ship, fleet);
+		}
+	},
+
+	//Tetryon Particle Weapon
+	"weapon:W243":{
+		canEquip: function(upgrade,ship,fleet) {
+			return (ship.class == "Nerada-Type")
+		}
+	},
+
+	//Isokinetic Cannon
+	"weapon:W244":{
+		canEquip: onePerShip("Isokinetic Cannon"),
+		attack: 0,
+		intercept: {
+			self: {
+				//Attack is the same as primary weapon +1
+				attack: function(upgrade,ship,fleet,attack) {
+					if ( ship )
+					return valueOf(ship,"attack",ship,fleet) +1;
+				return attack;
+				}
+			}
+		}
+
+	},
+
+	//Targeted Phaser Strike
+	"weapon:W245":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Targeted Phaser Strike");
+		}
+	},
+
+	//Grapplers
+	"weapon:W246":{
+		attack: 0,
+		intercept: {
+			self: {
+				//Attack is the same as primary weapon +1
+				attack: function(upgrade,ship,fleet,attack) {
+					if ( ship )
+						return valueOf(ship,"attack",ship,fleet) +1;
+					return attack;	
+				}
+			}
+		}
+
+	},
+
+	//Regenerative Shielding
+	"tech:T303": {
+		canEquip: onePerShip("Regenerative Shielding"),
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return (ship.class == "Numiri Patrol Ship")
+		},
+		intercept: {
+			ship: {
+				shields: function(card,ship,fleet,shields) {
+					if( card == ship )
+						return resolve(card,ship,fleet,shields) + 1;
+					return shields;
+				}
+			}
+		}
+	},
+
+	//Refractive Shielding
+	"tech:T305": {
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Refractive Shielding")
+		},
+		intercept: {
+			ship: {
+				shields: function(card,ship,fleet,shields) {
+					if( card == ship )
+						return resolve(card,ship,fleet,shields) +1;
+					return shields;	
+				},
+				agility: function(card,ship,fleet,agility) {
+					if( card == ship )
+						return resolve(card,ship,fleet,agility) +1;
+					return agility;
+				}
+			}
+		}
+	},
+
+	//Translocator
+	"tech:T304": {
+		canEquip: onePerShip("Translocator"),
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return hasFaction(ship,"independent",ship,fleet) || hasFaction(ship,"ferengi",ship,fleet) || hasFaction(ship,"kazon",ship,fleet) || hasFaction(ship,"xindi",ship,fleet);
+		}
+	},
+
+	//Stealth Mode
+	"tech:T305": {
+		canEquip: function(upgrade,ship,fleet) {
+			return ship.class == "Hirogen Warship" && onePerShip("Stealth Mode");
+	}
+},
+
+	//Improved Deflector Screens
+	"tech:T306": {
+		canEquip: function(upgrade,ship,fleet) {
+			return ship.hull <=3 && onePerShip("Improved Deflector Screens")(upgrade,ship,fleet);
+		}
+	},
+
+	//Monotanium Armor Plating
+	"tech:T307":{
+		canEquip: onePerShip("Monotanium Armor Plating")
+	},
+
+	//Weiss
+	"question:Q032": {
+		type: "question",
+		isSlotCompatible: function(slotTypes) {
+			return $.inArray( "crew", slotTypes ) >= 0 || $.inArray( "tech", slotTypes ) >=0;
+		},
+		intercept: {
+			ship: {
+				cost: function(captain, ship, fleet, cost) {
+					if (captain.id === "Cap037") {
+						cost -= 1;
+					}
+					return cost;
+				}
+			}
+		}
+	},
+
+	//Kejal
+	"question:Q033": {
+		type: "question",
+		isSlotCompatible: function(slotTypes) {
+			return $.inArray( "crew", slotTypes ) >= 0 || $.inArray( "tech", slotTypes ) >=0;
+		},
+		intercept: {
+			ship: {
+				cost: function(captain, ship, fleet, cost) {
+					if (captain.id === "Cap037") {
+						cost -= 1;
+					}
+					return cost;
+				}
+			}
+		}
+	},
+
+	//Photonic Field Generator
+	"question:Q031": {
+		type: "question",
+		isSlotCompatible: function(slotTypes) {
+			return $.inArray( "weapon", slotTypes ) >= 0 || $.inArray( "tech", slotTypes ) >=0;
+		},
+		intercept: {
+			ship: {
+				cost: function(captain, ship, fleet, cost) {
+					if (captain.id === "Cap037") {
+						cost -= 1;
+					}
+					return cost;
+				}
+			}
+		}
+	},
+
+
+//Lost in the Delta Quadrant
+
+
+	//Rudolph Ransom
+	"captain:Cap022":{
+		//Creates a new crew slot
+		upgradeSlots: [{},
+			{
+				type: ["crew"]
+			}
+		],
+	},
+
+	//Magnus Hansen
+	"captain:Cap023" :{
+		//Can only be equipped to ships with a Hull of 3 or less
+		canEquipCaptain: function(upgrade,ship,fleet) {
+			return ship.hull <= 3;
+		}
+	},
+
+	//Chakotay - Captain
+	"captain:Cap024":{
+		//Creates a new crew slot
+		upgradeSlots: [{},
+			{
+				type: ["crew"]
+			}
+		]
+	},
+
+	//Chakotay - Crew
+	"crew:C405": {
+		//Creates a new crew slot
+		upgradeSlots: [
+			{
+				type: ["crew"]
+			}
+		]
+	},
+	
+	//Tom Paris
+	"captain:Cap025":{
+		//Can only be equipped to ships with a Hull of 3 of less
+		canEquipCaptain: function(upgrade,ship,fleet) {
+			return ship.hull <= 3;
+		}
+	},
+
+	// The Doctor - Captain
+	"captain:Cap028": {
+    	// Creates two new Captain slots
+    	upgradeSlots: [{},{
+            	type: ["captain"],
+            	rules: "Captain to place under The Doctor \n Both cards must combine for a total cost of 6 SP",
+            	intercept: {
+                	ship: {
+                    	cost: function() {
+                        	return 0;
+                    	},
+						canEquip: function(card,ship,fleet,canEquip) {
+							if( !$factions.hasFaction( card, "federation", ship, fleet ) )
+								return false;
+							return canEquip;
+						}
+                	}
+            	}
+        	},
+        	{
+            	type: ["captain"],
+            	rules: "Captain to place under The Doctor \n Both cards must combine for a total cost of 6 SP",
+            	intercept: {
+                	ship: {
+                    	cost: function() {
+                        	return 0;
+                    	},
+						canEquip: function(card,ship,fleet,canEquip) {
+							if( !$factions.hasFaction( card, "federation", ship, fleet ) )
+								return false;
+							return canEquip;
+						}
+                	}
+            	}
+        	}
+    	]
+	},
+
+	//The Doctor - Question
+	"question:Q028":{
+		isSlotCompatible: function(slotTypes) {
+			return $.inArray("tech", slotTypes) >= 0 || $.inArray("crew", slotTypes) >=0;
+		}
+	},
+
+	//Marla Gilmore
+	"crew:C410":{
+		//Creates a new tech slot
+		upgradeSlots: [
+			{
+				type: ["tech"]
+			}
+		]
+	},
+
+	//Erin Hansen
+	"crew:C413":{
+		//Can only be equipped to a Aerie Class
+		canEquip: function(upgrade,ship,fleet) {
+			return ship.class == "Aerie Class"
+		}
+	},
+
+	//Timothy Lang
+	"crew:C418":{
+		intercept: {
+			ship: {
+				//Gives the Captain a +1 Skill boost
+				skill: function(upgrade,ship,fleet,skill) {
+					if( upgrade == ship.captain )
+						return resolve(upgrade,ship,fleet,skill) +1;
+					return skill;
+				}
+			}
+		}
+	},
+
+	//Seven of Nine
+	"crew:C422":{
+		//Creates a new Tech or Borg slot
+		upgradeSlots: [
+			{
+				type: ["tech", "borg"]
+			}
+		]
+	},
+
+	//Aaron Cavit
+	"crew:C423":{
+		//Creates a new Crew slot
+		upgradeSlots: [
+			{
+				type: ["crew"]
+			}
+		]
+	},
+
+	//Lower Decks
+	"crew:C426": {
+		//Adds 2 crew slots for Lower Deck keyworded crew
+		upgradeSlots: [{
+			type: ["crew"],
+			rules: "Lower Decks Crew",
+			//Can only equip crew cards with Lower Deck keyword.
+			canEquip: function(upgrade) {
+				return upgrade.id == "C414" || upgrade.id == "C415" || upgrade.id == "C416" || upgrade.id == "C417" || upgrade.id == "C418" || upgrade.id == "C419";
 			}
 		},
+		{	type: ["crew"],
+			rules: "Lower Decks Crew",
+			//Can only equip crew cards with Lower Deck keyword.
+			canEquip: function(upgrade) {
+				return upgrade.id == "C414" || upgrade.id == "C415" || upgrade.id == "C416" || upgrade.id == "C417" || upgrade.id == "C418" || upgrade.id == "C419";
+		}
+	}
+	]
+	},
+    
+	//Tactical Superiority Commander
+	"talent:E231":{
+		canEquip: function(upgrade,ship,fleet) {
+			return ship.captain.skill >= 8;
+		}
+	},
 
-		//Weapons Officer
-		"crew:C396":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("Weapons Officer");
+	//Transphasic Torpedoes
+	"weapon:W240": {
+		canEquip: onePerShip("Transphasic Torpedoes"),
+		attack: 0,
+		intercept: {
+			self: {
+				//Attack is the same as ships printed Hull Value +1
+				attack: function(upgrade,ship,fleet,attack) {
+					if( ship )
+						return valueOf(ship,"hull",ship,fleet) +1;
+					return attack;
+				}
+			}
+		}
+	},
+
+	//Gravimetric Torpedoes
+	"weapon:W241": {
+		//Only one can be equipped to a ship with a hull of 4 or greater
+		canEquip: function(upgrade,ship,fleet) {
+			return ship.hull >= 4 && onePerShip("Gravimetric Torpedoes")(upgrade,ship,fleet);
+		}
+	},
+	
+	//Photonic Missles
+	"weapon:W242":{
+		//Can only be equipped to a Delta Flyer Class
+		canEquip: function(upgrade,ship,fleet) {
+			return ship.class == "Delta Flyer Class" && onePerShip("Photonic Missles")(upgrade,ship,fleet);
+		}
+	},
+
+	//Temporal Shielding
+	"tech:T296":{
+		canEquip: onePerShip("Temporal Shielding"),
+		intercept: {
+			ship: {
+				shields: function(card,ship,fleet,shields) {
+					if( card == ship )
+					return resolve(card,ship,fleet,shields) +1;
+				return shields;
+				}
+			}
+		}
+	},
+
+	//Multi-Adaptive Shields
+	"tech:T297":{
+		//Only one can be equipped to a Federation ship
+		canEquip: onePerShip("Multi-Adaptive Shields"),
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return hasFaction(ship, "federation", ship, fleet) || hasFaction(ship, "bajoran", ship, fleet) || hasFaction(ship, "vulcan", ship, fleet);
+		},
+		intercept: {
+			ship: {
+				shields: function(card,ship,fleet,shields) {
+					if( card == ship )
+					return resolve(card,ship,fleet,shields) +1;
+				return shields;
+				}
+			}
+		}
+	},
+	
+
+	//Bio-Neural Circitry
+	"tech:T298":{
+		canEquip: onePerShip("Bio-Neural Circuitry"),
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return hasFaction(ship, "federation", ship, fleet) || hasFaction(ship, "bajoran", ship, fleet) || hasFaction(ship, "vulcan", ship, fleet);
+		},
+		intercept: {
+			self: {
+				cost: function(upgrade,ship,fleet,cost) {
+					if( ship.class == "Intrepid Class" || ship.class == "Sovereign Class" || ship.class == "Luna Class") {
+					return resolve(upgrade,ship,fleet,cost) +0;
+				} else {
+					return resolve(upgrade,ship,fleet,cost) +3;
+					}
+				}
+			}
+		}
+		
+	},
+
+	//Variable Geometry Pylons
+	"tech:T299":{
+		//Can only have one equipped to an Intrepid Class
+		canEquip: function(upgrade,ship,fleet) {
+			return ship.class == "Intrepid Class" && onePerShip("Variable Geometry Pylons")(upgrade,ship,fleet);
+		}
+	},
+
+
+	//Astrometrics Lab
+	"tech:T300":{
+		upgradeSlots: [
+			{
+				type: ["tech"]
+			}
+		],
+		canEquip: onePerShip("Astrometrics Lab"),
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return ship && ( $factions.hasFaction(ship,"federation", ship, fleet) || $factions.hasFaction(ship,"bajoran", ship, fleet) || $factions.hasFaction(ship,"vulcan", ship, fleet) ) && ship.hull >= 4;
+		},
+		intercept: {
+			self: {
+				cost: function(upgrade,ship,fleet,cost) {
+					if( ship.class == "Intrepid Class" || ship.class == "Sovereign Class" || ship.class == "Luna Class") {
+					return resolve(upgrade,ship,fleet,cost) +0;
+				} else {
+					return resolve(upgrade,ship,fleet,cost) +2;
+					}
+				}
+			}
+		}
+
+	},
+
+	//Re-Chargeable Shield Emitters
+	"tech:T301":{
+		//Can only have one equipped to a Nova Class
+		canEquip: function(upgrade,ship,fleet) {
+			return ship.class =="Nova Class" && onePerShip("Re-Chargeable Shield Emitters")(upgrade,ship,fleet);
+		},
+		intercept: {
+			ship: {
+				shields: function(card,ship,fleet,shields) {
+					if( card == ship )
+					return resolve(card,ship,fleet,shields) +1;
+				return shields;
+				}
+			}
+		}
+	},
+
+	//Coffee, Black
+	"question:Q029":{
+		//Can only have one equipped to a Federation Captain
+		canEquip: onePerShip("Coffee, Black"),
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return hasFaction(ship.captain, "federation", ship, fleet) || hasFaction(ship.captain, "bajoran", ship, fleet) || hasFaction(ship.captain, "vulcan", ship, fleet);
+		},
+		//Can be equipped to any slot
+		isSlotCompatible: function(slotTypes) {
+			return $.inArray( "tech", slotTypes ) >= 0 || $.inArray( "weapon", slotTypes ) >= 0 || $.inArray( "crew", slotTypes ) >= 0;
+		},
+		//Clone slot it takes
+		upgradeSlots: [
+			{
+				type: function(upgrade,ship) {
+					return getSlotType(upgrade,ship);
+				}
+			}
+		]
+	},
+
+
+	//U.S.S. Voyager (Year of Hell)
+	"question:Q030": {
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return (ship.id == "S385");
+		},
+		//Can be equipped to any slot
+		isSlotCompatible: function(slotTypes) {
+			return $.inArray( "tech", slotTypes ) >= 0 || $.inArray( "weapon", slotTypes ) >= 0 || $.inArray( "crew", slotTypes ) >= 0 || $.inArray( "borg", slotTypes ) >= 0;
+		},		
+		//Clone slot it takes
+		upgradeSlots: [
+			{
+				type: ["tech", "weapon", "crew", "borg"],
+				rules: "Costs -2 SP. Only equip Upgrade cards for slot that was replaced.",
+				intercept: {
+					ship: {
+						cost: function(card,ship,fleet,cost) {
+							return resolve(card,ship,fleet,cost) -2;
+						}
+					}
+				}
+			}
+		]	
+	},
+
+	//Ablative Generator
+	"starship_construction:Con002": {
+		canEquip: onePerShip("Ablative Generator"),
+		canEquipConstruction: function(upgrade,ship,fleet) {
+			return ship.hull >= 4 && ship.shields >= 3;
+		},
+		cost: 0,
+		intercept: {
+			self: {
+				//Cost is the same as ships printed Hull Value +2
+				cost: function(upgrade,ship,fleet,cost) {
+					if( ship )
+						return valueOf(ship,"hull",ship,fleet) +2;
+					return cost;
+				}
+			}
+		}
+},
+
+//Alliance Part III
+
+	//Engineer
+	"crew:C398":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Engineer");
+		}
+	},
+
+	//Cunning
+	"talent:E224":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Cunning");
+		}
+	},
+
+	//Disruptor Sweep
+	"weapon:W233":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Disruptor Sweep");
+		}
+	},
+
+	//Thruster Efficiency
+	"tech:T289":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Thruster Efficiency") && (ship.class == "K'Vort Class" || ship.class == "B'Rel Class");
+		}
+	},
+
+	//Helmsman
+	"crew:C399":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Helmsman");
+		}
+	},
+
+	//Engineer
+	"crew:C401":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Engineer");
+		}
+	},
+
+	//Science Officer
+	"crew:C400":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Science Officer");
+		}
+	},
+
+	//Sub-Commander
+	"crew:C403":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Sub-Commander");
+		}
+	},
+
+	//Tactical Officer
+	"crew:C404":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Tactical Officer");
+		}
+	},
+
+	//Ops Officer
+	"crew:C402":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Ops Officer");
+		}
+	},
+
+	//Suspicious
+	"talent:E229":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Suspicious");
+		}
+	},
+
+	//Opportunistic
+	"talent:E228":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Opportunistic");
+		}
+	},
+
+	//Ambush Tactics
+	"talent:E227":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Ambush Tactics") && hasFaction(ship,"romulan",ship,fleet);
+		}
+	},
+
+	//Heavy Disruptor
+	"weapon:W238":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Heavy Disruptor") && (ship.class == "D'deridex Class");
+		}
+	},
+
+	//Heavy Plasma Torpedo
+	"weapon:W237":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Heavy Plasma Torpedo") && hasFaction(ship,"romulan",ship,fleet);
+		}
+	},
+
+	//Ventral Disruptors
+	"weapon:W235":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Ventral Disruptors");
+		}
+	},
+
+	//Integrated Cloak
+	"weapon:W234":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Integrated Cloak") && hasFaction(ship,"romulan",ship,fleet);
+		}
+	},
+
+	//Ventral Thrusters
+	"tech:T294":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Ventral Thrusters");
+		}
+	},
+
+	//Muon Feedback Beam
+	"tech:T293":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Muon Feedback Beam");
+		}
+	},
+
+	//Plasma Coil Overcharge
+	"tech:T290":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Plasma Coil Overcharge");
+		}
+	},
+
+	//Deep Cloak
+	"tech:T292":{
+		canEquip: function(upgrade,ship,fleet) {
+			return hasFaction(ship,"romulan",ship,fleet);
+		}
+	},
+
+//Alliance Part II
+
+	//Evasive Maneuvers
+	"talent:E219":{
+		canEquip: function(upgrade,ship,fleet) {
+			return ship.class.indexOf("K'Vort Class") >= 0 && onePerShip("Evasive Maneuvers");
+		}
+	},
+
+	//Strafing Run
+	"talent:E222":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Strafing Run") && (ship.class == "K'Vort Class" || ship.class == "B'Rel Class");
+		}
+	},
+
+	//Fight With Honor
+	"talent:E221":{
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return hasFaction(ship,"klingon",ship,fleet);
+		}
+	},
+
+	//Eye For An Eye
+	"talent:E223":{
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return hasFaction(ship,"klingon",ship,fleet);
+		}
+	},
+
+	//Forward Battery
+	"weapon:W228":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Forward Battery") && (ship.class == "Vor'cha Class" || ship.class == "Negh'var Class");
+		}
+	},
+
+	//Disruptor Overcharge
+	"weapon:W229":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Disruptor Overcharge") && (ship.class == "Vor'cha Class");
+		}
+	},
+
+	//Converging Fire
+	"weapon:W232":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Converging Fire") && (ship.class == "Vor'cha Class" || ship.class == "Negh'var Class");
+		}
+	},
+
+	//Torpedo Fusillade
+	"weapon:W231":{
+		attack: 0,
+		intercept: {
+			self: {
+				// Attack is same as ship primary weapon
+				attack: function(upgrade,ship,fleet,attack) {
+					if( ship )
+						return valueOf(ship,"attack",ship,fleet);
+					return attack;
+				},
+				// Cost is primary weapon
+				cost: function(upgrade,ship,fleet,cost) {
+					if( ship )
+						return resolve(upgrade,ship,fleet,cost) + valueOf(ship,"attack",ship,fleet);
+					return cost;
+				}
+			}
+		}
+	},
+
+	//Photon Torpedoes
+	"weapon:W230":{
+		attack: 0,
+		intercept: {
+			self: {
+				// Attack is same as ship primary + 1
+				attack: function(upgrade,ship,fleet,attack) {
+					if( ship )
+						return valueOf(ship,"attack",ship,fleet) + 1;
+					return attack;
+				}
+			}
+		}
+	},
+
+	//Enhanced Thrusters
+	"tech:T288":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Enhanced Thrusters") && (ship.class == "K'Vort Class" || ship.class == "B'Rel Class");
+		}
+	},
+
+	//Reactor Vent
+	"tech:T283":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Reactor Vent");
+		}
+	},
+
+	//Secondary Cloaking Coil
+	"tech:T285":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Secondary Cloaking Coil");
+		}
+	},
+
+	//Extend Shields
+	"tech:T281":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Extend Shields");
+		}
+	},
+
+	//Passive Sensors
+	"tech:T287":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Passive Sensors");
+		}
+	},
+
+	//Reinforced Hull
+	"tech:T286":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Reinforced Hull") && ship.hull >=4;
+		},
+		intercept: {
+			ship: {
+				hull: function(card,ship,fleet,hull) {
+					if( card == ship )
+						return resolve(card,ship,fleet,hull) + 2;
+					return hull;
+				}
 			}
 		},
+	},
 
-		//Operations Officer
-		"crew:C395":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("Operations Officer");
-			}
-		},
+	//Secondary Relays
+	"tech:T282":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Secondary Relays");
+		}
+	},
 
-		//Science Officer
-		"crew:C392":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("Science Officer");
-			}
-		},
+	//First Officer
+	"crew:C397":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("First Officer");
+		}
+	},
 
-		//Engineering Officer
-		"crew:C391":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("Engineering Officer");
-			}
-		},
+	//Weapons Officer
+	"crew:C396":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Weapons Officer");
+		}
+	},
 
-		//Tactical Officer
-		"crew:C394":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("Tactical Officer");
-			}
-		},
+	//Operations Officer
+	"crew:C395":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Operations Officer");
+		}
+	},
 
-		//Helmsman
-		"crew:C393":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("Helmsman");
-			}
-		},
+	//Science Officer
+	"crew:C392":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Science Officer");
+		}
+	},
+
+	//Engineering Officer
+	"crew:C391":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Engineering Officer");
+		}
+	},
+
+	//Tactical Officer
+	"crew:C394":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Tactical Officer");
+		}
+	},
+
+	//Helmsman
+	"crew:C393":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Helmsman");
+		}
+	},
 
 //Ships of the Line
 
@@ -521,7 +1651,7 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 	}
 },
 
-//Type 10 Phasers - Issue #4 on github
+//Type 10 Phasers
 "weapon:W222":{
 	canEquipFaction: function(upgrade,ship,fleet) {
 		return hasFaction(ship,"federation", ship, fleet) || hasFaction(ship,"bajoran", ship, fleet) || hasFaction(ship,"vulcan", ship, fleet) && onePerShip("Type 10 Phasers");
@@ -583,7 +1713,7 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 						return attack;
 				},
 			cost: function(upgrade,ship,fleet,cost) {
-				if( ship.class == "Galaxy Class" || ship.class == "Constitution Class" || ship.class =="Miranda Class" || ship.class =="Nor Class Orbital Space Station" || ship.class == "Vor'cha Class" || ship.class =="D'Deridex Class" || ship.class == "Breen Battle Cruiser" || ship.class == "Cardassian Galor Class" || ship.class == "Negh'Var Class" || ship.class == "D7 Class" || ship.class == "Romulan Science Vessel" || ship.class == "Valdore Class" || ship.class == "D'Kora Class" || ship.class == "Jem'Hadar Attack Ship" || ship.class == "Romulan Bird-Of-Prey" || ship.class == "K't'inga Class" || ship.class == "B'Rel Class" || ship.class == "Cardassian Keldon Class" || ship.class == "Romulan Scout Ship" || ship.class == "K'Vort Class" || ship.class == "Excelsior Class" || ship.class == "Nebula Class" || ship.class == "Raptor Class" || ship.class == "Jem'Hadar Battleship" || ship.class == "Nova Class" || ship.class == "Bajoran Scout Ship" || ship.class == "Borg Sphere" || ship.class == "Kazon Raider" || ship.class == "Species 8472 Bioship" || ship.class == "Intrepid Class" || ship.class == "Tholian Vessel" || ship.class == "Gorn Raider" || ship.class == "D'Kyr Class" || ship.class == "Bajoran Interceptor" || ship.class == "Borg Tactical Cube" || ship.class == "Maquis Raider" || ship.class == "Saber Class" || ship.class == "Suurok Class" || ship.class == "Jem'Hadar Battle Cruiser" || ship.class == "Constitution Refit Class" || ship.class == "Borg Type 03" || ship.class == "Aerie Class" || ship.class == "Constellation Class" || ship.class == "Federation NX Class" || ship.class == "Borg Scout Cube" || ship.class == "Predator Class" || ship.class == "Borg Octahedron" || ship.class == "Reman Warbird" || ship.class == "Klingon Bird-Of-Prey" || ship.class == "Borg Cube" || ship.class == "Vidiian Battle Cruiser" || ship.class == "Hirogen Warship" || ship.class == "Romulan Drone Ship" || ship.class == "Type 7 Shuttlecraft" || ship.class == "Oberth class" || ship.class == "Terran NX Class" || ship.class == "Krenim Weapon Ship" || ship.class == "Prometheus Class" || ship.class == "Olympic Class" || ship.class == "Dauntless Class" || ship.class == "Ferengi Shuttle" || ship.class == "Delta Flyer Class Shuttlecraft" || ship.class == "Scorpion Class Attack Squadron" || ship.class == "Cardassian ATR-4107" || ship.class == "Bajoran Solar Sailor" || ship.class == "Xindi Insectoid Starship" || ship.class == "Xindi Aquatic Cruiser" || ship.class == "Xindi Reptilian Warship" || ship.class == "Andorian Battle Cruiser" || ship.class == "Xindi Weapon")
+				if( ship.class == "Galaxy Class" || ship.class == "Constitution Class" || ship.class =="Miranda Class" || ship.class =="Nor Class Orbital Space Station" || ship.class == "Vor'cha Class" || ship.class =="D'Deridex Class" || ship.class == "Breen Battle Cruiser" || ship.class == "Cardassian Galor Class" || ship.class == "Negh'var Class" || ship.class == "D7 Class" || ship.class == "Romulan Science Vessel" || ship.class == "Valdore Class" || ship.class == "D'Kora Class" || ship.class == "Jem'Hadar Attack Ship" || ship.class == "Romulan Bird-Of-Prey" || ship.class == "K't'inga Class" || ship.class == "B'Rel Class" || ship.class == "Cardassian Keldon Class" || ship.class == "Romulan Scout Ship" || ship.class == "K'Vort Class" || ship.class == "Excelsior Class" || ship.class == "Nebula Class" || ship.class == "Raptor Class" || ship.class == "Jem'Hadar Battleship" || ship.class == "Nova Class" || ship.class == "Bajoran Scout Ship" || ship.class == "Borg Sphere" || ship.class == "Kazon Raider" || ship.class == "Species 8472 Bioship" || ship.class == "Intrepid Class" || ship.class == "Tholian Vessel" || ship.class == "Gorn Raider" || ship.class == "D'Kyr Class" || ship.class == "Bajoran Interceptor" || ship.class == "Borg Tactical Cube" || ship.class == "Maquis Raider" || ship.class == "Saber Class" || ship.class == "Suurok Class" || ship.class == "Jem'Hadar Battle Cruiser" || ship.class == "Constitution Refit Class" || ship.class == "Borg Type 03" || ship.class == "Aerie Class" || ship.class == "Constellation Class" || ship.class == "Federation NX Class" || ship.class == "Borg Scout Cube" || ship.class == "Predator Class" || ship.class == "Borg Octahedron" || ship.class == "Reman Warbird" || ship.class == "Klingon Bird-Of-Prey" || ship.class == "Borg Cube" || ship.class == "Vidiian Battle Cruiser" || ship.class == "Hirogen Warship" || ship.class == "Romulan Drone Ship" || ship.class == "Type 7 Shuttlecraft" || ship.class == "Oberth class" || ship.class == "Terran NX Class" || ship.class == "Krenim Weapon Ship" || ship.class == "Prometheus Class" || ship.class == "Olympic Class" || ship.class == "Dauntless Class" || ship.class == "Ferengi Shuttle" || ship.class == "Delta Flyer Class Shuttlecraft" || ship.class == "Scorpion Class Attack Squadron" || ship.class == "Cardassian ATR-4107" || ship.class == "Bajoran Solar Sailor" || ship.class == "Xindi Insectoid Starship" || ship.class == "Xindi Aquatic Cruiser" || ship.class == "Xindi Reptilian Warship" || ship.class == "Andorian Battle Cruiser" || ship.class == "Xindi Weapon")
 					return resolve(upgrade,ship,fleet,cost) +2;
 				return cost;
 			}
@@ -670,7 +1800,7 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 //Federation Prototype
  "starship_construction:Con001":{
  	canEquipConstruction: function(upgrade,ship,fleet) {
-		return ship.name.startsWith("U.S.S. ") && (ship.name.replace("U.S.S. ", "") == ship.class.replace(/ [Cc]lass/,""))
+		return ship.id == "S413" || ship.name.startsWith("U.S.S. ") && (ship.name.replace("U.S.S. ", "") == ship.class.replace(/ [Cc]lass/,""))
  	},
 
  	upgradeSlots: [
@@ -860,7 +1990,7 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
  	 ],
   },
 
-//Klingon Blood Oath Pack
+//Blood Oath
 
 //Dahar Master
 	"talent:E208": {
@@ -871,7 +2001,7 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 		fleet: {
 			// Add Skill to Kor, Koloth and Kang
 			skill: function(card,ship,fleet,skill) {
-				if( card == ship.captain && ((card.name == "Kor") || (card.name == "Kang") || (card.name == "Koloth")))
+				if( card == ship.captain && ((card.name == "Kor") || (card.name == "Kang") || (card.name == "Koloth")) && hasDaharMaster(card))
 					return resolve(card,ship,fleet,skill) +1;
 				return skill;
 			}
@@ -1011,7 +2141,7 @@ intercept: {
  	 rules: "Torpedo Upgrade with Printed Cost 5 or less.",
 	 faceDown: true,
 	 canEquip: function(upgrade) {
-			 return (upgrade.id == "W204" || upgrade.id == "W192" || upgrade.id == "W191" || upgrade.id == "W183" || upgrade.id == "W177" || upgrade.id == "W161" || upgrade.id == "W160" || upgrade.id == "W158" || upgrade.id == "W157"  || upgrade.id == "W008" || upgrade.id == "W004" || upgrade.id == "W003" || upgrade.id == "W002" || upgrade.id == "W009" || upgrade.id == "W154" || upgrade.id == "W152" || upgrade.id == "W145" || upgrade.id == "W142" || upgrade.id == "W141" || upgrade.id == "W137" || upgrade.id == "W128" || upgrade.id == "W122" || upgrade.id == "W120" || upgrade.id == "W119" || upgrade.id == "W118" || upgrade.id == "W117" || upgrade.id == "W116" || upgrade.id == "W114" || upgrade.id == "W112" || upgrade.id == "W105" || upgrade.id == "W100" || upgrade.id == "W088" || upgrade.id == "W082" || upgrade.id == "W081" || upgrade.id == "W079" || upgrade.id == "W078" || upgrade.id == "W074" || upgrade.id == "W072" || upgrade.id == "W067" || upgrade.id == "W059" || upgrade.id == "W050" || upgrade.id == "W039" || upgrade.id == "W038" || upgrade.id == "W031" || upgrade.id == "W195" || upgrade.id == "W016" || upgrade.id == "W119" || upgrade.id == "W226" || upgrade.id == "W224")
+			 return (upgrade.id == "W204" || upgrade.id == "W192" || upgrade.id == "W191" || upgrade.id == "W183" || upgrade.id == "W177" || upgrade.id == "W161" || upgrade.id == "W160" || upgrade.id == "W158" || upgrade.id == "W157"  || upgrade.id == "W008" || upgrade.id == "W004" || upgrade.id == "W003" || upgrade.id == "W002" || upgrade.id == "W009" || upgrade.id == "W154" || upgrade.id == "W152" || upgrade.id == "W145" || upgrade.id == "W142" || upgrade.id == "W141" || upgrade.id == "W137" || upgrade.id == "W128" || upgrade.id == "W122" || upgrade.id == "W120" || upgrade.id == "W119" || upgrade.id == "W118" || upgrade.id == "W117" || upgrade.id == "W116" || upgrade.id == "W114" || upgrade.id == "W112" || upgrade.id == "W105" || upgrade.id == "W100" || upgrade.id == "W088" || upgrade.id == "W082" || upgrade.id == "W081" || upgrade.id == "W079" || upgrade.id == "W078" || upgrade.id == "W074" || upgrade.id == "W072" || upgrade.id == "W067" || upgrade.id == "W059" || upgrade.id == "W050" || upgrade.id == "W039" || upgrade.id == "W038" || upgrade.id == "W031" || upgrade.id == "W195" || upgrade.id == "W016" || upgrade.id == "W119" || upgrade.id == "W226" || upgrade.id == "W224" || upgrade.id == "W236" || upgrade.id == "W237" || upgrade.id == "W252" || upgrade.id == "W253")
 		 },
 	 intercept: {
 		 ship: {
@@ -2115,7 +3245,7 @@ intercept: {
 				ship: {
 					// All Vulcan/Federation tech is -2 SP
 					cost: function(upgrade, ship, fleet, cost) {
-					if( ( $factions.hasFaction(upgrade,"federation", ship, fleet) || $factions.hasFaction(upgrade,"bajoran", ship, fleet) || $factions.hasFaction(upgrade,"vulcan", ship, fleet) ) && upgrade.type == "tech" )
+					if ( $factions.hasAnyFaction(upgrade,["federation","bajoran", "vulcan"], ship, fleet) && (upgrade.type == "tech" || getOccupiedSlot(upgrade, ship)?.type?.includes("tech") ))
 							return resolve(upgrade, ship, fleet, cost) - 2;
 						return cost;
 					},
@@ -2460,14 +3590,22 @@ intercept: {
 				}
 			} ]
 		},
+
 		// Jonathan Archer
 		"captain:Cap521": {
 			upgradeSlots: [
 				// existing talent slot
 				{},
-				// Add one crew slot
+				//Adds 1 crew upgrade slot and 1 slot for Porthos (the best boy)
 				{
 					type: ["crew"]
+				},
+				{
+					type: ["crew"],
+					rules: "Prothos Only",
+					canEquip: function(upgrade) {
+						return upgrade.id == "C441";
+					}
 				}
 			]
 		},
@@ -4999,6 +6137,18 @@ intercept: {
 	//Robinson :71213
 
 	//Dreadnought(old) :71212
+		"ship:S221": {
+			intercept: {
+				ship: {
+					canEquipCaptain: function (captain, ship, fleet) {
+						return false;
+					},
+					canEquipAdmiral: function (captain, ship, fleet) {
+						return false;
+					}
+				}
+			}
+		},
 		// Counter Measures - one per ship only, +5 SP on any ship except ATR-4107
 		"tech:T112": {
 			canEquip: function(upgrade,ship,fleet) {
@@ -5174,14 +6324,19 @@ intercept: {
 		},
 
 	// Temporal Cold War Cards : 72224gp
-		// Vosk - talents have no faction penalty
-		"captain:temporal_cold_war_vosk": {
-			factionPenalty: function(card,ship,fleet,factionPenalty) {
-				if( card.type == "talent" )
-					return 0;
-				return factionPenalty;
+
+		// Vosk
+		"captain:Cap726": {
+			intercept: {
+				ship: {
+					// No faction penalty for Khan or Talents
+					factionPenalty: function(upgrade, ship, fleet, factionPenalty) {
+						return upgrade.type == "talent" ? 0 : factionPenalty;
+					}
+				}
 			}
 		},
+		
 
 		// Temporal Conduit - +5 SP if fielded on a non-Mirror Universe ship
 		"tech:T126": {
@@ -6355,6 +7510,18 @@ intercept: {
 
 
 	//Dreadnought :72013wp
+		"ship:S265": {
+			intercept: {
+				ship: {
+					canEquipCaptain: function (captain, ship, fleet) {
+						return false;
+					},
+					canEquipAdmiral: function (captain, ship, fleet) {
+						return false;
+					}
+				}
+			}
+		},
 		//Captured
 		"question:Q011": {
 			isSlotCompatible: function(slotTypes) {
@@ -6375,10 +7542,17 @@ intercept: {
 						if( card == ship && factions.indexOf("independent") < 0 )
 							return factions.concat(["independent"]);
 						return factions;
+					},
+					cost: function(captain, ship, fleet, cost) {
+						if (captain.id === "Cap037") {
+							cost -= 1;
+						}
+						return cost;
 					}
 				}
 			}
 		},
+
 		//Plasma Pulse
 		"weapon:W162":{
 			canEquip: onePerShip("Plasma Pulse")
@@ -6547,101 +7721,126 @@ intercept: {
 				return $factions.hasFaction(ship,"klingon", ship, fleet);
 			}},
 
-	//2017 Romulan Faction Set  : 75001
-		//Tomalak
-		"captain:Cap817":{
-			upgradeSlots: [
-				{/* Talent */},
-				{
-					type: ["tech"]
-				}
-			]
-		},
-		//Tal Shiar
-		"talent:E177":{
-			canEquipFaction: function(upgrade,ship,fleet) {
-				return ship.captain && $factions.hasFaction(ship.captain,"romulan", ship, fleet);
-			}
-		},
-		//Interphase Generator
-		"tech:T248":{
-			canEquip: onePerShip("Interphase Generator")
-		},
-		//Reinforced Shields
-		"tech:T165":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("Reinforced Shields") && ship.hull >= 5;
-			}
-		},
-		//Auxiliary Power Core
-		"tech:T166":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("Auxiliary Power Core") && ship.hull >= 4;
-			},
-			intercept: {
-				self: {
-					cost: function(upgrade,ship,fleet,cost) {
-						if( ship && !$factions.hasFaction(ship,"romulan", ship, fleet) )
-							return resolve(upgrade,ship,fleet,cost) + 2;
-						return cost;
-					}
-				}
-			}
-		},
-		//Additional Weapons Array
-		"weapon:W171":{
-			canEquip: function(upgrade,ship,fleet) {
-				return (onePerShip("Additional Weapons Array") && ship.class == "D'deridex Class");
-			}},
+//2017 Romulan Faction Set  : 75001
 
+	//Tomalak
+	"captain:Cap817":{
+		upgradeSlots: [
+			{/* Talent */},
+			{
+				type: ["tech"]
+			}
+		]
+	},
 
-	//2017 Dominion Faction Set  : 75002
-		//All Power to Weapons
-		"talent:E180":{
-			canEquipFaction: function(upgrade,ship,fleet) {
-				return ship.captain && $factions.hasFaction(ship.captain,"dominion", ship, fleet) && ship.hull >= 5;
-			}
+	//Tal Shiar
+	"talent:E177":{
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return ship.captain && $factions.hasFaction(ship.captain,"romulan", ship, fleet);
+		}
+	},
+
+	//Interphase Generator
+	"tech:T248":{
+		canEquip: onePerShip("Interphase Generator")
+	},
+
+	//Reinforced Shields
+	"tech:T165":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Reinforced Shields") && ship.hull >= 5;
+		}
+	},
+
+	//Auxiliary Power Core
+	"tech:T166":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Auxiliary Power Core") && ship.hull >= 4;
 		},
-		//Talak'Talan
-		"crew:C297":{
-			canEquip: function(upgrade,ship,fleet) {
-				return $factions.hasFaction(ship,"dominion", ship, fleet);
-			}
-		},
-		//Duran'Adar
-		"crew:C298":{
-			upgradeSlots: [
-				{
-					type: ["tech"]
+		intercept: {
+			self: {
+				cost: function(upgrade,ship,fleet,cost) {
+					if( ship && !$factions.hasFaction(ship,"romulan", ship, fleet) )
+						return resolve(upgrade,ship,fleet,cost) + 2;
+					return cost;
 				}
-			]
-		},
-		"weapon:W178":{
-			canEquip: function(upgrade,ship,fleet) {
-				return ship.class == "Jem'Hadar Battleship ";
 			}
-		},
-		"weapon:W176":{
-			canEquip: function(upgrade,ship,fleet) {
-				return (onePerShip("Phased Polaron Beams") && ship.class == "Jem'Hadar Attack Ship");
-		}},
-		"weapon:W174":{
-			canEquip: function(upgrade,ship,fleet) {
-				return ship.class == "Jem'Hadar Attack Ship";
-		}},
-		"weapon:W175":{
-			canEquip: onePerShip("Minesweeper")
-		},
-		"tech:T169":{canEquip: function(upgrade,ship,fleet) {
-				return (onePerShip("Suicide Attack") && ship.class == "Jem'Hadar Attack Ship");
-		}},
-		"tech:T168":{
-			canEquip: function(upgrade,ship,fleet) {
-				return $factions.hasFaction(ship,"dominion", ship, fleet);
-			}
-		},
+		}
+	},
 
-	//D'Kora Card Pack : 73001
+	//Additional Weapons Array
+	"weapon:W171":{
+		canEquip: function(upgrade,ship,fleet) {
+			return (onePerShip("Additional Weapons Array") && ship.class == "D'deridex Class");
+		}
+	},
+
+//2017 Dominion Faction Set  : 75002
+
+	//All Power to Weapons
+	"talent:E180":{
+		canEquipFaction: function(upgrade,ship,fleet) {
+			return ship.captain && $factions.hasFaction(ship.captain,"dominion", ship, fleet) && ship.hull >= 5;
+		}
+	},
+
+	//Talak'Talan
+	"crew:C297":{
+		canEquip: function(upgrade,ship,fleet) {
+			return $factions.hasFaction(ship,"dominion", ship, fleet);
+		}
+	},
+
+	//Duran'Adar
+	"crew:C298":{
+		upgradeSlots: [
+			{
+				type: ["tech"]
+			}
+		]
+	},
+
+	//Disruptor Cannon
+	"weapon:W178":{
+		canEquip: function(upgrade,ship,fleet) {
+			return ship.class == "Jem'Hadar Battleship";
+		}
+	},
+
+	//Phased Polaron Beams
+	"weapon:W176":{
+		canEquip: function(upgrade,ship,fleet) {
+			return (onePerShip("Phased Polaron Beams") && ship.class == "Jem'Hadar Attack Ship");
+		}
+	},
+
+	//Energy Dissipator
+	"weapon:W174":{
+		canEquip: function(upgrade,ship,fleet) {
+			return ship.class == "Jem'Hadar Attack Ship";
+		}
+	},
+
+	//Minesweeper
+	"weapon:W175":{
+		canEquip: onePerShip("Minesweeper")
+	},
+
+	//Suicide Attack
+	"tech:T169":{canEquip: function(upgrade,ship,fleet) {
+			return (onePerShip("Suicide Attack") && ship.class == "Jem'Hadar Attack Ship");
+		}
+	},
+
+	//Secondary Matter System
+	"tech:T168":{
+		canEquip: function(upgrade,ship,fleet) {
+			return $factions.hasFaction(ship,"dominion", ship, fleet);
+		}
+	},
+
+//D'Kora Card Pack : 73001
+
 		//Lurin
 		"captain:Cap730":{
 			intercept: {
@@ -6842,7 +8041,18 @@ intercept: {
 			type: "question",
 			isSlotCompatible: function(slotTypes) {
 				return $.inArray( "tech", slotTypes ) >= 0 || $.inArray( "crew", slotTypes ) >= 0;
-		}},
+		},
+		intercept: {
+			ship: {
+				cost: function(captain, ship, fleet, cost) {
+					if (captain.id === "Cap037") {
+						cost -= 1;
+					}
+					return cost;
+				}
+			}
+		}
+	},
 		//Temporal Observatory
 		"question:Q020":{
 			type: "question",
@@ -6854,7 +8064,18 @@ intercept: {
 			type: "question",
 			isSlotCompatible: function(slotTypes) {
 				return $.inArray( "tech", slotTypes ) >= 0 || $.inArray( "weapon", slotTypes ) >= 0;
-			}},
+			},
+			intercept: {
+				ship: {
+					cost: function(captain, ship, fleet, cost) {
+						if (captain.id === "Cap037") {
+							cost -= 1;
+						}
+						return cost;
+					}
+				}
+			}
+		},
 	//Gorn Raider Card Package
 		//Gorn Hegemony
 		"talent:E184":{
@@ -6879,21 +8100,32 @@ intercept: {
 			}
 		},
 	 //Meridor - Gorn Ale
-		"question:Q013":{
-			canEquip: function(upgrade,ship,fleet) {
-				return onePerShip("Meridor - Gorn Ale")(upgrade,ship,fleet) && $factions.hasFaction( ship, "independent", ship, fleet ) || onePerShip("Meridor - Gorn Ale")(upgrade,ship,fleet) && $factions.hasFaction( ship, "ferengi", ship, fleet ) || onePerShip("Meridor - Gorn Ale")(upgrade,ship,fleet) && $factions.hasFaction( ship, "kazon", ship, fleet ) || onePerShip("Meridor - Gorn Ale")(upgrade,ship,fleet) && $factions.hasFaction( ship, "xindi", ship, fleet );
-			},
-			isSlotCompatible: function(slotTypes) {
-				return $.inArray( "tech", slotTypes ) >= 0 || $.inArray( "weapon", slotTypes ) >= 0 || $.inArray( "crew", slotTypes ) >= 0;
-			},
-			upgradeSlots: [
-				{
-					type: function(upgrade,ship) {
-						return getSlotType(upgrade,ship);
-					}
-				}
-			],
+	 "question:Q013":{
+		canEquip: function(upgrade,ship,fleet) {
+			return onePerShip("Meridor - Gorn Ale")(upgrade,ship,fleet) && $factions.hasFaction( ship, "independent", ship, fleet ) || onePerShip("Meridor - Gorn Ale")(upgrade,ship,fleet) && $factions.hasFaction( ship, "ferengi", ship, fleet ) || onePerShip("Meridor - Gorn Ale")(upgrade,ship,fleet) && $factions.hasFaction( ship, "kazon", ship, fleet ) || onePerShip("Meridor - Gorn Ale")(upgrade,ship,fleet) && $factions.hasFaction( ship, "xindi", ship, fleet );
 		},
+		isSlotCompatible: function(slotTypes) {
+			return $.inArray( "tech", slotTypes ) >= 0 || $.inArray( "weapon", slotTypes ) >= 0 || $.inArray( "crew", slotTypes ) >= 0;
+		},
+		upgradeSlots: [
+			{
+				type: function(upgrade,ship) {
+					return getSlotType(upgrade,ship);
+				}
+			}
+			
+		],
+		intercept: {
+			ship: {
+				cost: function(captain, ship, fleet, cost) {
+					if (captain.id === "Cap037") {
+						cost -= 1;
+					}
+					return cost;
+				}
+			}
+		}
+	},
 		//Disruptor Bombardment
 		"weapon:W185":{
 			canEquip: function(upgrade,ship,fleet) {
@@ -7010,12 +8242,27 @@ intercept: {
 				return onePerShip("Stealth Mode") && ship.class == "Hirogen Warship";
 			}
 		},
+
+		//Optronic Data Core
 		"question:Q014":{
+			canEquip: onePerShip("Optronic Data Core"),
 			isSlotCompatible: function(slotTypes) {
 				return $.inArray( "tech", slotTypes ) >= 0 || $.inArray( "weapon", slotTypes ) >= 0;
-			}},
+			},
+			intercept: {
+				ship: {
+					cost: function(captain, ship, fleet, cost) {
+						if (captain.id === "Cap037") {
+							cost -= 1;
+						}
+						return cost;
+					}
+				}
+			}
+		},
 
-	//A Motley Fleet
+//A Motley Fleet
+
 		//Gurngouin
 		"ship:S313":{
 			upgradeSlots: [ {
@@ -7092,7 +8339,7 @@ intercept: {
 		"talent:E190":{
 			canEquipFaction: function(upgrade,ship,fleet) {
 				// TODO Tholians are Independent so can't easily tell their race
-				return ship.captain && ship.captain.name.indexOf("Vidiian") >= 0 ;
+				return ship.captain && ( ship.captain.id == "Cap706" || ship.captain.id == "Cap448" || ship.captain.id == "Cap034" || ship.captain.name.idexOf("Vidiian")) >= 0 ;
 			},
 			canEquip: function(upgrade,ship,fleet) {
 				return ship.class == "Vidiian Battle Cruiser";
@@ -7167,7 +8414,17 @@ intercept: {
 			isSlotCompatible: function(slotTypes) {
 				return $.inArray( "tech", slotTypes ) >= 0 || $.inArray( "weapon", slotTypes ) >= 0 || $.inArray( "crew", slotTypes ) >= 0;
 			},
-			upgradeSlots: [ { type: ["tech", "weapon"] } ]
+			upgradeSlots: [ { type: ["tech", "weapon"] } ],
+			intercept: {
+				ship: {
+					cost: function(captain, ship, fleet, cost) {
+						if (captain.id === "Cap037") {
+							cost -= 1;
+						}
+						return cost;
+					}
+				}
+			}
 		},
 
 
@@ -7739,7 +8996,7 @@ intercept: {
 				}
 		},
 
-	//Dominion Cardassian Faction Pack
+	//The Cardassian Union
 		//Gul Dukat
 		"captain:Cap826":{
 			canEquipCaptain: function(card,ship,fleet) {
@@ -8908,6 +10165,1056 @@ intercept: {
 						}
 					}
 				}
+		},
+
+// Alliance Builder
+//Federation
+
+//Defiant Class
+	"ship:AS0007": {
+		intercept: {
+			ship: {
+				canEquipCaptain: function(captain,ship,fleet) {
+					return captain.id == "AC0003" || captain.id == "AC0004" || captain.id == "AC0005" || captain.id == "AC0006" || captain.id == "AC0007" || captain.id == "AC0008";
+				}
+			}
 		}
+	},
+
+//Saber Class
+		"ship:AS0008": {
+			intercept: {
+				ship: {
+					canEquipCaptain: function(captain,ship,fleet) {
+						return captain.id == "AC0003" || captain.id == "AC0004" || captain.id == "AC0005" || captain.id == "AC0006" || captain.id == "AC0007" || captain.id == "AC0008";
+					}
+				}
+			}
+		},
+
+//Intrepid Class
+		"ship:AS0009": {
+			intercept: {
+				ship: {
+					canEquipCaptain: function(captain,ship,fleet) {
+						return captain.id == "AC0004" || captain.id == "AC0005" || captain.id == "AC0006" || captain.id == "AC0007" || captain.id == "AC0008";
+					}
+				}
+			}
+		},
+
+//Intrepid Class
+		"ship:AS0010": {
+			intercept: {
+				ship: {
+					canEquipCaptain: function(captain,ship,fleet) {
+						return captain.id == "AC0004" || captain.id == "AC0005" || captain.id == "AC0006" || captain.id == "AC0007" || captain.id == "AC0008";
+					}
+				}
+			}
+		},
+
+//Galaxy Class
+		"ship:AS0011": {
+			intercept: {
+				ship: {
+					canEquipCaptain: function(captain,ship,fleet) {
+						return captain.id == "AC0004" || captain.id == "AC0005" || captain.id == "AC0006" || captain.id == "AC0007" || captain.id == "AC0008";
+						}
+				}
+			}
+		},
+
+//Galaxy Class
+			"ship:AS0012": {
+				intercept: {
+						ship: {
+							canEquipCaptain: function(captain,ship,fleet) {
+								return captain.id == "AC0004" || captain.id == "AC0005" || captain.id == "AC0006" || captain.id == "AC0007" || captain.id == "AC0008";
+							}
+						}
+					}
+				},
+
+//Nebula Class
+		"ship:AS0013": {
+			intercept: {
+				ship: {
+					canEquipCaptain: function(captain,ship,fleet) {
+						return captain.id == "AC0004" || captain.id == "AC0005" || captain.id == "AC0006" || captain.id == "AC0007" || captain.id == "AC0008";
+					}
+				}
+			}
+		},
+
+//Nebula Class
+		"ship:AS0014": {
+			intercept: {
+				ship: {
+					canEquipCaptain: function(captain,ship,fleet) {
+						return captain.id == "AC0004" || captain.id == "AC0005" || captain.id == "AC0006" || captain.id == "AC0007" || captain.id == "AC0008";
+					}
+				}
+			}
+		},
+
+//Prometheus Class
+		"ship:AS0015": {
+			intercept: {
+				ship: {
+					canEquipCaptain: function(captain,ship,fleet) {
+						return captain.id == "AC0007" || captain.id == "AC0008";
+					}
+				}
+			}
+		},
+
+//Prometheus Class
+		"ship:AS0016": {
+			intercept: {
+				ship: {
+					canEquipCaptain: function(captain,ship,fleet) {
+						return captain.id == "AC0007" || captain.id == "AC0008";
+					}
+				}
+			}
+		},
+
+//Sovereign Class
+		"ship:AS0017": {
+			intercept: {
+				ship: {
+					canEquipCaptain: function(captain,ship,fleet) {
+							return captain.id == "AC0007" || captain.id == "AC0008";
+						}
+					}
+				}
+			},
+
+
+"captain:AC0001": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"federation",ship,fleet);
+	}
+},
+"captain:AC0002": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"federation",ship,fleet);
+	}
+},
+"captain:AC0003": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"federation",ship,fleet);
+	}
+},
+"captain:AC0004": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"federation",ship,fleet);
+	}
+},
+"captain:AC0005": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"federation",ship,fleet);
+	}
+},
+"captain:AC0006": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"federation",ship,fleet);
+	}
+},
+"captain:AC0007": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"federation",ship,fleet);
+	}
+},
+"captain:AC0008": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"federation",ship,fleet);
+	}
+},
+//Operations Officer
+ "crew:AP1001":{
+	canEquip: onePerShip("Operations Officer") && function(upgrade,ship,fleet){
+		return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet))
+	}},
+	//Tactical Officer
+	"crew:AP1002":{
+	canEquip: onePerShip("Tactical Officer") && function(upgrade,ship,fleet){
+		return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet))
+	}},
+//Helmsman
+ "crew:AP1003":{
+	canEquip: onePerShip("Helmsman") && function(upgrade,ship,fleet){
+		return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet))
+	}},
+//Science Officer
+	"crew:AP1004":{
+	canEquip: onePerShip("Science Officer") && function(upgrade,ship,fleet){
+		return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet))
+	}},
+//Commander
+	"crew:AP1005":{
+	canEquip: onePerShip("Commander") && function(upgrade,ship,fleet){
+		return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet))
+	}},
+//Calculating
+ "talent:AP1006":{
+	canEquip: onePerShip("Calculating") && function(upgrade,ship,fleet){
+		return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet))
+	}},
+//Battle-Hardened
+"talent:AP1009":{
+	canEquip: onePerShip("Battle-Hardened") && function(upgrade,ship,fleet){
+		return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet))
+	}},
+//Detection Grid
+	"tech:AP1013":{
+	canEquip: onePerShip("Detection Grid") && function(upgrade,ship,fleet){
+		return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet))
+	}},
+//Reinforced Shielding
+	"tech:AP1014":{
+	canEquip: onePerShip("Reinforced Shielding") && function(upgrade,ship,fleet){
+		return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet))
+	}},
+//Photon Torpedoes
+"weapon:AP1018":{
+	attack: 0,
+	intercept: {
+		self: {
+			// Attack is same as ship primary + 1
+			attack: function(upgrade,ship,fleet,attack) {
+				if( ship )
+					return valueOf(ship,"attack",ship,fleet) + 1;
+				return attack;
+			}
+		}
+	}
+},
+//Dorsal Phaser Array
+ "weapon:AP1020":{
+	canEquip: onePerShip("Dorsal Phaser Array") && function(upgrade,ship,fleet){
+		return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet))
+	}},
+//Overcharged Phasers
+ "weapon:AP1021":{
+	canEquip: onePerShip("Overcharged Phasers") && function(upgrade,ship,fleet){
+		return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet))
+	}},
+//Full Spread
+"weapon:AP1022":{
+canEquip: onePerShip("Full Spread") && function(upgrade,ship,fleet){
+	return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet))
+}},
+//Enhanced Targeting
+ "weapon:AP1023":{
+	canEquip: onePerShip("Enhanced Targeting") && function(upgrade,ship,fleet){
+		return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet))
+	}},
+//+1 Elite Talent Slot
+	"talent:AE001":{
+		canEquip: onePerShip("Talent Slot") && function(upgrade,ship,fleet){
+			return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet))
+		},
+		upgradeSlots: cloneSlot( 1, { type: ["talent"] } )
+	},
+//+2 Elite Talent Slots
+	"talent:AE004":{
+		canEquip: onePerShip("Talent Slot") && function(upgrade,ship,fleet){
+			return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet))
+		},
+		upgradeSlots: cloneSlot( 2, { type: ["talent"] } )
+	},
+//+3 Elite Talent Slots
+	"talent:AE007":{
+		canEquip: onePerShip("Talent Slot") && function(upgrade,ship,fleet){
+			return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet))
+		},
+		upgradeSlots: cloneSlot( 3, { type: ["talent"] } )
+	},
+//+1 Upgrade Slots
+	"question:AQ001":{
+		canEquip: onePerShip("Upgrade Slots") && function(upgrade,ship,fleet){
+			return ship.captain && ($factions.hasFaction(ship.captain,"federation", ship, fleet))
+		},
+		isSlotCompatible: function(slotTypes) {
+			return $.inArray("tech", slotTypes) >= 0 || $.inArray("crew", slotTypes) >= 0 || $.inArray("weapon", slotTypes) >= 0;
+		},
+		upgradeSlots: [
+			{
+				type: function(upgrade,ship) {
+					return getSlotType(upgrade,ship);
+				}
+			},
+			{
+				type: ["tech","weapon","crew"]
+			}
+		]
+	},
+//+2 Upgrade Slots
+"question:AQ004":{
+	canEquip: onePerShip("Upgrade Slots") && function(upgrade,ship,fleet){
+		return ship.captain && ($factions.hasFaction(ship.captain,"federation", ship, fleet))
+	},
+	isSlotCompatible: function(slotTypes) {
+		return $.inArray("tech", slotTypes) >= 0 || $.inArray("crew", slotTypes) >= 0 || $.inArray("weapon", slotTypes) >= 0;
+	},
+	upgradeSlots: [
+		{
+			type: function(upgrade,ship) {
+				return getSlotType(upgrade,ship);
+			}
+		},
+		{
+			type: ["tech","weapon","crew"],
+		},
+		{
+			type: ["tech","weapon","crew"]
+		}
+	]
+},
+
+	// Alliance Part II: Klingons //
+
+	//K'Vort Class
+"ship:AS0023": {
+	intercept: {
+		ship: {
+			canEquipCaptain: function(captain,ship,fleet) {
+					return captain.id == "AC0011" || captain.id == "AC0012" || captain.id == "AC0013" || captain.id == "AC0014" || captain.id == "AC0015" || captain.id == "AC0016";
+				}
+			}
+		}
+	},
+
+//Vor'cha Class
+"ship:AS0024": {
+	intercept: {
+		ship: {
+			canEquipCaptain: function(captain,ship,fleet) {
+					return captain.id == "AC0011" || captain.id == "AC0012" || captain.id == "AC0013" || captain.id == "AC0014" || captain.id == "AC0015" || captain.id == "AC0016";
+				}
+			}
+		}
+	},
+
+//Negh'Var Class
+"ship:AS0025": {
+	intercept: {
+		ship: {
+			canEquipCaptain: function(captain,ship,fleet) {
+					return captain.id == "AC0015" || captain.id == "AC0016";
+				}
+			}
+		}
+	},
+
+//Negh'Var Class
+"ship:AS0026": {
+	intercept: {
+		ship: {
+			canEquipCaptain: function(captain,ship,fleet) {
+					return captain.id == "AC0015" || captain.id == "AC0016";
+				}
+			}
+		}
+	},
+
+"captain:AC0009": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"klingon",ship,fleet);
+	}
+},
+"captain:AC0010": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"klingon",ship,fleet);
+	}
+},
+"captain:AC0011": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"klingon",ship,fleet);
+	}
+},
+"captain:AC0012": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"klingon",ship,fleet);
+	}
+},
+"captain:AC0013": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"klingon",ship,fleet);
+	}
+},
+"captain:AC0014": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"klingon",ship,fleet);
+	}
+},
+"captain:AC0015": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"klingon",ship,fleet);
+	}
+},
+"captain:AC0016": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"klingon",ship,fleet);
+	}
+},
+//Coordinated Assault
+"talent:AP2001":{
+	canEquip: function(upgrade,ship,fleet){
+		return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet))
+	}},
+//Battle Plan
+"talent:AP2002":{
+	canEquip: function(upgrade,ship,fleet){
+		return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet))
+	}},
+//Engineering Officer
+"crew:AP2003":{
+	canEquip: onePerShip("Engineering Officer") && function(upgrade,ship,fleet){
+		return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet))
+	}},
+//Extend Shields
+"tech:AP2004":{
+	canEquip: onePerShip("Extend Shields") && function(upgrade,ship,fleet){
+		return ship.captain && ( $factions.hasFaction(ship.captain,"federation", ship, fleet))
+	}},
+//Science Officer
+"crew:AP2005":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Science Officer");
+	},
+	canEquipFaction: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon", ship, fleet);
+	}
+},
+//Helmsman
+"crew:AP2006":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Helmsman");
+	},
+	canEquipFaction: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon", ship, fleet);
+	}
+},
+//Tactical Officer
+"crew:AP2007":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Tactical Officer");
+	},
+	canEquipFaction: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon", ship, fleet);
+	}
+},
+//Operations Officer
+"crew:AP2009":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Operations Officer");
+	},
+	canEquipFaction: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon", ship, fleet);
+	}
+},
+//Weapons Officer
+"crew:AP2010":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Weapons Officer");
+	},
+	canEquipFaction: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon", ship, fleet);
+	}
+},
+//First Officer
+"crew:AP2011":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("First Officer");
+	},
+	canEquipFaction: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon", ship, fleet);
+	}
+},
+//Reckless Assault
+"talent:AP2012":{
+	canEquip: onePerShip("Reckless Assault") && function(upgrade,ship,fleet) {
+		return ( $factions.hasFaction(ship.captain,"klingon", ship, fleet));
+	}
+},
+//Evasive Maneuvers
+"talent:AP2013":{
+	canEquip: onePerShip("Evasive Maneuvers") && function(upgrade,ship,fleet) {
+		return ship.class.indexOf("K'Vort Class") >= 0 && ( $factions.hasFaction(ship.captain,"klingon", ship, fleet));
+	}
+},
+//Glory To The Empire!
+"talent:AP2014": {
+	canEquipFaction: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon",ship,fleet);
+	}
+},
+//Fight With Honor
+"talent:AP2016":{
+	canEquip: onePerShip("Fight With Honor"),
+	canEquipFaction: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon",ship,fleet);
+	}
+},
+//Strafing Run
+	"talent:AP2018":{
+		canEquip: onePerShip("Strafing Run") && function(upgrade,ship,fleet) {
+			return (ship.class == "K'Vort Class" || ship.class == "B'Rel Class") && ( $factions.hasFaction(ship.captain,"klingon", ship, fleet));
+		}
+	},
+//Eye For An Eye
+"talent:AP2019":{
+	canEquip: onePerShip('Eye For An Eye'),
+	canEquipFaction: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon",ship,fleet);
+	}
+},
+//Forward Battery
+"weapon:AP2021":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Forward Battery") && (ship.class == "Vor'cha Class" || ship.class == "Negh'var Class")},
+	canEquipFaction: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon",ship,fleet);
+	}
+	},
+//Disruptor Overcharge
+"weapon:AP2022":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Disruptor Overcharge") && (ship.class == "Vor'cha Class");
+	},
+	canEquipFaction: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon",ship,fleet);
+	}
+},
+//Photon Torpedoes
+"weapon:AP2023":{
+	attack: 0,
+	intercept: {
+		self: {
+			// Attack is same as ship primary + 1
+			attack: function(upgrade,ship,fleet,attack) {
+				if( ship )
+					return valueOf(ship,"attack",ship,fleet) + 1;
+				return attack;
+			}
+		}
+	},
+	canEquipFaction: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon",ship,fleet);
+	}
+},
+//Torpedo Fusillade
+"weapon:AP2025":{
+	attack: 0,
+	intercept: {
+		self: {
+			// Attack is same as ship primary weapon
+			attack: function(upgrade,ship,fleet,attack) {
+				if( ship )
+					return valueOf(ship,"attack",ship,fleet);
+				return attack;
+			},
+			// Cost is primary weapon
+			cost: function(upgrade,ship,fleet,cost) {
+				if( ship )
+					return resolve(upgrade,ship,fleet,cost) + valueOf(ship,"attack",ship,fleet);
+				return cost;
+			}
+		}
+	},
+	canEquipFaction: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon",ship,fleet);
+	}
+},
+//Converging Fire
+"weapon:AP2026":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Converging Fire") && (ship.class == "Vor'cha Class" || ship.class == "Negh'var Class");
+	},
+	canEquipFaction: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon",ship,fleet);
+	}
+},
+//Secondary Relays
+"tech:AP2027":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Secondary Relays");
+	},
+	canEquipFaction: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon", ship, fleet);
+	}
+},
+//Reactor Vent
+"tech:AP2028":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Reactor Vent");
+	},
+	canEquip: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon", ship, fleet);
+	}
+},
+//Targeting Array
+"tech:AP2029":{
+	canEquipFaction: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon",ship, fleet);
+	}
+},
+//Secondary Cloaking Coil
+"tech:AP2030":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Secondary Cloaking Coil");
+	},
+	canEquipFaction: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon", ship, fleet);
+	}
+},
+//Reinforced Hull
+"tech:AP2031":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Reinforced Hull") && ship.hull >=4;
+	},
+	canEquipFaction: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon", ship, fleet);
+	},
+	intercept: {
+		ship: {
+			hull: function(card,ship,fleet,hull) {
+				if( card == ship )
+					return resolve(card,ship,fleet,hull) + 2;
+				return hull;
+			}
+		}
+	},
+},
+//Passive Sensors
+"tech:AP2032":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Passive Sensors");
+	},
+	canEquipFaction: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon", ship, fleet);
+	}
+},
+//Enhanced Thrusters
+"tech:AP2033":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Enhanced Thrusters") && (ship.class == "K'Vort Class" || ship.class == "B'Rel Class");
+	},
+	canEquipFaction: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"klingon",ship,fleet);
+	}
+},
+//+1 Elite Talent Slot
+	"talent:AE002":{
+		canEquip: onePerShip("Talent Slot") && function(upgrade,ship,fleet){
+			return ship.captain && ( $factions.hasFaction(ship.captain,"klingon", ship, fleet))
+		},
+		upgradeSlots: cloneSlot( 1, { type: ["talent"] } )
+	},
+//+2 Elite Talent Slots
+	"talent:AE005":{
+		canEquip: onePerShip("Talent Slot") && function(upgrade,ship,fleet){
+			return ship.captain && ( $factions.hasFaction(ship.captain,"klingon", ship, fleet))
+		},
+		upgradeSlots: cloneSlot( 2, { type: ["talent"] } )
+	},
+//+3 Elite Talent Slots
+	"talent:AE008":{
+		canEquip: onePerShip("Talent Slot") && function(upgrade,ship,fleet){
+			return ship.captain && ( $factions.hasFaction(ship.captain,"klingon", ship, fleet))
+		},
+		upgradeSlots: cloneSlot( 3, { type: ["talent"] } )
+	},
+//+1 Upgrade Slots
+	"question:AQ002":{
+		canEquip: onePerShip("Upgrade Slots") && function(upgrade,ship,fleet){
+			return ship.captain && ($factions.hasFaction(ship.captain,"klingon", ship, fleet))
+		},
+		isSlotCompatible: function(slotTypes) {
+			return $.inArray("tech", slotTypes) >= 0 || $.inArray("crew", slotTypes) >= 0 || $.inArray("weapon", slotTypes) >= 0;
+		},
+		upgradeSlots: [
+			{
+				type: function(upgrade,ship) {
+					return getSlotType(upgrade,ship);
+				}
+			},
+			{
+				type: ["tech","weapon","crew"]
+			}
+		]
+	},
+//+2 Upgrade Slots
+"question:AQ005":{
+	canEquip: onePerShip("Upgrade Slots") && function(upgrade,ship,fleet){
+		return ship.captain && ($factions.hasFaction(ship.captain,"klingon", ship, fleet))
+	},
+	isSlotCompatible: function(slotTypes) {
+		return $.inArray("tech", slotTypes) >= 0 || $.inArray("crew", slotTypes) >= 0 || $.inArray("weapon", slotTypes) >= 0;
+	},
+	upgradeSlots: [
+		{
+			type: function(upgrade,ship) {
+				return getSlotType(upgrade,ship);
+			}
+		},
+		{
+			type: ["tech","weapon","crew"],
+		},
+		{
+			type: ["tech","weapon","crew"]
+		}
+	]
+},
+
+//Alliance Part III: Romulan //
+
+//Valdore Class
+"ship:AS0029": {
+intercept: {
+	ship: {
+		canEquipCaptain: function(captain,ship,fleet) {
+				return captain.id == "AC0020" || captain.id == "AC0021" || captain.id == "AC0022" || captain.id == "AC0023" || captain.id == "AC0024";
+			}
+		}
+	}
+},
+
+//Valdore Class
+"ship:AS0030": {
+intercept: {
+	ship: {
+		canEquipCaptain: function(captain,ship,fleet) {
+				return captain.id == "AC0020" || captain.id == "AC0021" || captain.id == "AC0022" || captain.id == "AC0023" || captain.id == "AC0024";
+			}
+		}
+	}
+},
+
+//D'Deridx Class
+"ship:AS0031": {
+intercept: {
+	ship: {
+		canEquipCaptain: function(captain,ship,fleet) {
+				return captain.id == "AC0021" || captain.id == "AC0022" || captain.id == "AC0023" || captain.id == "AC0024";
+			}
+		}
+	}
+},
+
+//D'Deridx Class
+"ship:AS0032": {
+intercept: {
+	ship: {
+		canEquipCaptain: function(captain,ship,fleet) {
+				return captain.id == "AC0021" || captain.id == "AC0022" || captain.id == "AC0023" || captain.id == "AC0024";
+			}
+		}
+	}
+},
+
+//D'Deridx Class
+"ship:AS0033": {
+intercept: {
+	ship: {
+		canEquipCaptain: function(captain,ship,fleet) {
+				return captain.id == "AC0021" || captain.id == "AC0022" || captain.id == "AC0023" || captain.id == "AC0024";
+			}
+		}
+	}
+},
+
+//D'Deridx Class
+"ship:AS0034": {
+intercept: {
+	ship: {
+		canEquipCaptain: function(captain,ship,fleet) {
+				return captain.id == "AC0021" || captain.id == "AC0022" || captain.id == "AC0023" || captain.id == "AC0024";
+			}
+		}
+	}
+},
+
+//Reman Warbird
+"ship:AS0035": {
+intercept: {
+	ship: {
+		canEquipCaptain: function(captain,ship,fleet) {
+				return captain.id == "AC0024";
+			}
+		}
+	}
+},
+
+//Reman Warbird
+"ship:AS0036": {
+intercept: {
+	ship: {
+		canEquipCaptain: function(captain,ship,fleet) {
+				return captain.id == "AC0024";
+			}
+		}
+	}
+},
+
+"captain:AC0017": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"romulan",ship,fleet);
+	}
+},
+"captain:AC0018": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"romulan",ship,fleet);
+	}
+},
+"captain:AC0019": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"romulan",ship,fleet);
+	}
+},
+"captain:AC0020": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"romulan",ship,fleet);
+	}
+},
+"captain:AC0021": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"romulan",ship,fleet);
+	}
+},
+"captain:AC0022": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"romulan",ship,fleet);
+	}
+},
+"captain:AC0023": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"romulan",ship,fleet);
+	}
+},
+"captain:AC0024": {
+	canEquip: function(upgrade,ship,fleet) {
+		return $factions.hasFaction(ship,"romulan",ship,fleet);
+	}
+},
+//+1 Elite Talent Slot
+	"talent:AE003":{
+		canEquip: onePerShip("Talent Slot") && function(upgrade,ship,fleet){
+			return ship.captain && ( $factions.hasFaction(ship.captain,"romulan", ship, fleet))
+		},
+		upgradeSlots: cloneSlot( 1, { type: ["talent"] } )
+	},
+//+2 Elite Talent Slots
+	"talent:AE006":{
+		canEquip: onePerShip("Talent Slot") && function(upgrade,ship,fleet){
+			return ship.captain && ( $factions.hasFaction(ship.captain,"romulan", ship, fleet))
+		},
+		upgradeSlots: cloneSlot( 2, { type: ["talent"] } )
+	},
+//+3 Elite Talent Slots
+	"talent:AE009":{
+		canEquip: onePerShip("Talent Slot") && function(upgrade,ship,fleet){
+			return ship.captain && ( $factions.hasFaction(ship.captain,"romulan", ship, fleet))
+		},
+		upgradeSlots: cloneSlot( 3, { type: ["talent"] } )
+	},
+//+1 Upgrade Slots
+	"question:AQ003":{
+		canEquip: onePerShip("Upgrade Slots") && function(upgrade,ship,fleet){
+			return ship.captain && ($factions.hasFaction(ship.captain,"romulan", ship, fleet))
+		},
+		isSlotCompatible: function(slotTypes) {
+			return $.inArray("tech", slotTypes) >= 0 || $.inArray("crew", slotTypes) >= 0 || $.inArray("weapon", slotTypes) >= 0;
+		},
+		upgradeSlots: [
+			{
+				type: function(upgrade,ship) {
+					return getSlotType(upgrade,ship);
+				}
+			},
+			{
+				type: ["tech","weapon","crew"]
+			}
+		]
+	},
+//+2 Upgrade Slots
+"question:AQ006":{
+	canEquip: onePerShip("Upgrade Slots") && function(upgrade,ship,fleet){
+		return ship.captain && ($factions.hasFaction(ship.captain,"romulan", ship, fleet))
+	},
+	isSlotCompatible: function(slotTypes) {
+		return $.inArray("tech", slotTypes) >= 0 || $.inArray("crew", slotTypes) >= 0 || $.inArray("weapon", slotTypes) >= 0;
+	},
+	upgradeSlots: [
+		{
+			type: function(upgrade,ship) {
+				return getSlotType(upgrade,ship);
+			}
+		},
+		{
+			type: ["tech","weapon","crew"],
+		},
+		{
+			type: ["tech","weapon","crew"]
+		}
+	]
+},
+
+//Engineer
+"crew:AP3001":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Engineer");
+	}
+},
+
+//Cunning
+"talent:AP3002":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Cunning");
+	}
+},
+
+//Disruptor Sweep
+"weapon:AP3003":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Disruptor Sweep");
+	}
+},
+
+//Thruster Efficiency
+"tech:AP3004":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Thruster Efficiency") && (ship.class == "K'Vort Class" || ship.class == "B'Rel Class");
+	}
+},
+
+//Helmsman
+"crew:AP3006":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Helmsman");
+	}
+},
+
+//Engineer
+"crew:AP3007":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Engineer");
+	}
+},
+
+//Science Officer
+"crew:AP3009":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Science Officer");
+	}
+},
+
+//Sub-Commander
+"crew:AP3010":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Sub-Commander");
+	}
+},
+
+//Tactical Officer
+"crew:AP3014":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Tactical Officer");
+	}
+},
+
+//Ops Officer
+"crew:AP3011":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Ops Officer");
+	}
+},
+
+//Suspicious
+"talent:AP3015":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Suspicious");
+	}
+},
+
+//Opportunistic
+"talent:AP3016":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Opportunistic");
+	}
+},
+
+//Ambush Tactics
+"talent:AP3019":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Suspicious") && function(upgrade,ship,fleet){
+			return hasFaction(ship,"romulan",ship,fleet);
+		}
+	}
+},
+
+//Heavy Disruptor
+"weapon:AP3020":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Heavy Disruptor") && (ship.class == "D'deridex Class");
+	}
+},
+
+//Heavy Plasma Torpedo
+"weapon:AP3021":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Heavy Plasma Torpedo") && (ship.class == "D'deridex Class");
+	}
+},
+
+//Ventral Disruptors
+"weapon:AP3022":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Ventral Disruptors");
+	}
+},
+
+//Integrated Cloak
+"weapon:AP3023":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Integrated Cloak") && function(upgrade,ship,fleet) {
+			return hasFaction(ship,"romulan",ship,fleet);
+		}
+	}
+},
+
+//Ventral Thrusters
+"tech:AP3026":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Ventral Thrusters");
+	}
+},
+
+//Muon Feedback Beam
+"tech:AP3027":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Muon Feedback Beam");
+	}
+},
+
+//Plasma Coil Overcharge
+"tech:AP3030":{
+	canEquip: function(upgrade,ship,fleet) {
+		return onePerShip("Plasma Coil Overcharge");
+	}
+},
+
+//Deep Cloak
+"tech:AP3031":{
+	canEquip: function(upgrade,ship,fleet) {
+		return hasFaction(ship,"romulan",ship,fleet);
+	}
+}
+
+
+
 	};
 }]);
