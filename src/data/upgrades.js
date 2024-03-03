@@ -304,6 +304,23 @@ module.exports = [
 	},
 	{
 		type: "crew",
+		id: "C484",
+		set: [
+			"75016"
+		],
+		name: "Hoshi Sato",
+		cost: 3,
+		text: "<b>ACTIVATION PHASE:</b> Disable this card and target a ship within Range. \n\n Decrease the Range of all Upgrades equipped to the target ship by 1 this game round. (Min Range 1)",
+		unique: true,
+		range: "1 - 3",
+		alliance: false,
+		factions: [
+			"federation"
+		]
+	},
+
+	{
+		type: "crew",
 		id: "C483",
 		set: [
 			"75016"
@@ -813,6 +830,7 @@ module.exports = [
 		cost: 4,
 		text: "<b>COMBAT PHASE:</b> Disable this card and target each opposing ship within Range that have any of the following Tokens beside them: [battlestations], [scan], or [evade]. \n\n Discard all of the listed Tokens beside the target ship(s) until only 1 Token remains beside each ship.",
 		unique: true,
+		range: "1",
 		alliance: false,
 		factions: [
 			"federation"
@@ -872,7 +890,7 @@ module.exports = [
 		],
 		name: "Phlox",
 		cost: 2,
-		text: "<b>FREEE ACTION:</b> Disable this card. \n\n Remove all <img src='img/stuff/effect_disable.png' width='20' height='16'> Tokens from each of your other [crew_text] Upgrades equipped to this sihp.",
+		text: "<b>FREE ACTION:</b> Disable this card. \n\n Remove all <img src='img/stuff/effect_disable.png' width='20' height='16'> Tokens from each of your other [crew_text] Upgrades equipped to this sihp.",
 		unique: true,
 		alliance: false,
 		factions: [
@@ -1056,7 +1074,7 @@ module.exports = [
 		],
 		name: "T'Pol",
 		cost: 3,
-		text: "Add 1 [crew_text] to this ship's Upgrade Bar. <hr> <b>ACTION:</b> \n\n Increase the Captain Skill Number of the Captain equipped to this ship by 2 and then palce a [scan] Token beside this ship. <hr> <b>(First Officer) IF THE CAPTAIN EQUIPPED TO THIS SHIP IS DISCARDED:</b> \n\n Flip this card over and equip this card as the Captain.",
+		text: "Add 1 [crew_text] to this ship's Upgrade Bar. <hr> <b>ACTION:</b> \n\n Increase the Captain Skill Number of the Captain equipped to this ship by 2 and then place a [scan] Token beside this ship. <hr> <b>(First Officer) IF THE CAPTAIN EQUIPPED TO THIS SHIP IS DISCARDED:</b> \n\n Flip this card over and equip this card as the Captain.",
 		unique: true,
 		alliance: false,
 		factions: [

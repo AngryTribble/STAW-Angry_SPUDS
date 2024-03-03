@@ -1278,7 +1278,7 @@ module.exports = [
 		},
 		squadron: false
 	},
-	
+
 	{
 		type: "ship",
 		id: "S381",
@@ -4688,7 +4688,7 @@ module.exports = [
 		id: "S273",
 		gameId: 1,
 		set: [
-			"2017core",
+			"2017core"
 		],
 		name: "Federation Starship",
 		class: "Galaxy Class",
@@ -4766,7 +4766,7 @@ module.exports = [
 		set: [
 			"2017core",
 			"OP4Prize",
-			"72011",
+			"72011"
 		],
 		name: "Federation Starship",
 		class: "Nebula Class",
@@ -8567,7 +8567,7 @@ module.exports = [
 		id: "S162",
 		gameId: 1,
 		set: [
-			"71276",
+			"71276"
 		],
 		name: "Federation Starship",
 		class: "Nova Class",
@@ -13262,7 +13262,7 @@ module.exports = [
 		id: "S033",
 		gameId: 1,
 		set: [
-			"72001p",
+			"72001p"
 		],
 		name: "Federation Starship",
 		class: "Intrepid Class",
