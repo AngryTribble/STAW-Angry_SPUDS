@@ -1807,7 +1807,7 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 		CanEquip: true,
 		canEquipFaction: true,
  		canEquipConstruction: function(upgrade,ship,fleet) {
-		return ship.id == "S413" || ship.name.startsWith("U.S.S. ") && (ship.name.replace("U.S.S. ", "") == ship.class.replace(/ [Cc]lass/,""))
+		return ship.id == "S404" || ship.name.startsWith("U.S.S. ") && (ship.name.replace("U.S.S. ", "") == ship.class.replace(/ [Cc]lass/,""))
  	},
 
  	upgradeSlots: [
@@ -2142,32 +2142,36 @@ intercept: {
 
 // Experimental Torpedo Bay
 "weapon:W215": {
-	// Upgrade slot for torpedo only of printed cost 5 or less
-	upgradeSlots: [ {
- 	 type: ["weapon"],
- 	 rules: "Torpedo Upgrade with Printed Cost 5 or less.",
-	 faceDown: true,
-	 canEquip: function(upgrade) {
-			 return (upgrade.id == "W204" || upgrade.id == "W192" || upgrade.id == "W191" || upgrade.id == "W183" || upgrade.id == "W177" || upgrade.id == "W161" || upgrade.id == "W160" || upgrade.id == "W158" || upgrade.id == "W157"  || upgrade.id == "W008" || upgrade.id == "W004" || upgrade.id == "W003" || upgrade.id == "W002" || upgrade.id == "W009" || upgrade.id == "W154" || upgrade.id == "W152" || upgrade.id == "W145" || upgrade.id == "W142" || upgrade.id == "W141" || upgrade.id == "W137" || upgrade.id == "W128" || upgrade.id == "W122" || upgrade.id == "W120" || upgrade.id == "W119" || upgrade.id == "W118" || upgrade.id == "W117" || upgrade.id == "W116" || upgrade.id == "W114" || upgrade.id == "W112" || upgrade.id == "W105" || upgrade.id == "W100" || upgrade.id == "W088" || upgrade.id == "W082" || upgrade.id == "W081" || upgrade.id == "W079" || upgrade.id == "W078" || upgrade.id == "W074" || upgrade.id == "W072" || upgrade.id == "W067" || upgrade.id == "W059" || upgrade.id == "W050" || upgrade.id == "W039" || upgrade.id == "W038" || upgrade.id == "W031" || upgrade.id == "W195" || upgrade.id == "W016" || upgrade.id == "W119" || upgrade.id == "W226" || upgrade.id == "W224" || upgrade.id == "W236" || upgrade.id == "W237" || upgrade.id == "W252" || upgrade.id == "W253")
-		 },
-	 intercept: {
-		 ship: {
-			 canEquip: function(upgrade,ship,fleet) {
-				 var cost = valueOf(upgrade,"cost",ship,fleet);
-				 return cost <= 6;
-
-			return canEquip;
-		},
-		free: function() {
-			return true;
-		},
-		factionPenalty: function(upgrade, ship, fleet) {
-			return ship && $factions.hasFaction(ship, "federation", ship, fleet) ? 0 : 1 && $factions.hasFaction(ship, "klingon", ship, fleet) ? 0 : 1 && $factions.hasFaction(ship, "romulan", ship, fleet) ? 0 : 1 && $factions.hasFaction(ship, "bajoran", ship, fleet) ? 0 : 1 && $factions.hasFaction(ship, "vulcan", ship, fleet) ? 0 : 1 && $factions.hasFaction(ship, "dominion", ship, fleet) ? 0 : 1 && $factions.hasFaction(ship, "borg", ship, fleet) ? 0 : 1 && $factions.hasFaction(ship, "independent", ship, fleet) ? 0 : 1 && $factions.hasFaction(ship, "ferengi", ship, fleet) ? 0 : 1 && $factions.hasFaction(ship, "xindi", ship, fleet) ? 0 : 1 && $factions.hasFaction(ship, "kazon", ship, fleet) ? 0 : 1 && $factions.hasFaction(ship, "mirror-universe", ship, fleet) ? 0 : 1 && $factions.hasFaction(ship, "species-8472", ship, fleet) ? 0 : 1;
-			 }
-		 }
-	 }
- }
-]
+    // Upgrade slot for torpedo only of printed cost 5 or less
+    upgradeSlots: [{
+        type: ["weapon"],
+        rules: "Torpedo Upgrade with Printed Cost 5 or less.",
+        faceDown: true,
+        canEquip: function(upgrade) {
+            const allowedTorpedoIDs = ["W250", "W240", "W241", "W248", "W204", "W192", "W191", "W183", "W177", "W161", "W160", "W158", "W157", "W008", "W004", "W003", "W002", "W009", "W154", "W152", "W145", "W142", "W141", "W137", "W128", "W122", "W120", "W119", "W118", "W117", "W116", "W114", "W112", "W105", "W100", "W088", "W082", "W081", "W079", "W078", "W074", "W072", "W067", "W059", "W050", "W039", "W038", "W031", "W195", "W016", "W119", "W226", "W224", "W236", "W237", "W252", "W253"];
+            return allowedTorpedoIDs.includes(upgrade.id);
+        },
+        intercept: {
+            ship: {
+                canEquip: function(upgrade, ship, fleet) {
+                    var cost = valueOf(upgrade, "cost", ship, fleet);
+                    return cost <= 6;
+                },
+            	free: function() {
+                	return true;
+            	},
+            	factionPenalty: function(upgrade, ship, fleet) {
+                	const factions = ["federation", "klingon", "romulan", "bajoran", "vulcan", "dominion", "borg", "independent", "ferengi", "xindi", "kazon", "mirror-universe", "species-8472"];
+                	for (let faction of factions) {
+                    	if ($factions.hasFaction(ship, faction, ship, fleet)) {
+                        	return 0;
+                    	}
+                	}
+                	return 1;
+            	}
+			}
+        }
+    }]
 },
 
 // Ablative Armor
