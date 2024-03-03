@@ -190,20 +190,25 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 	"ship:S404":{
 		upgradeSlots: [ {
 			type: ["starship_construction"],
-			rules: "May equip Federation Prototype"
+			rules: "May equip Federation Prototype",
+			canEquipConstruction: function(upgrade,ship,fleet) {
+				//return ship.construction.id == "Con001"
+				return true;
+			},
+			canEquip: true
 		}]
 	},	
 
 	//Jonathan Archer
 	"captain:Cap039":{
 		//Adds 1 crew upgrade slot and 1 slot for Porthos (the best boy)
-		upgradeSlots: [ { 
+		upgradeSlots: [ {}, { 
 			type: ["crew"]
 		},
 		{	type: ["crew"],
 			rules: "Porthos Only",
 			canEquip: function(upgrade) {
-				return upgrade.id == "C441";
+				return upgrade.id == "C447";
 			}
 		} ]
 	},
@@ -211,7 +216,7 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 	//Erika Hernandez
 	"captain:Cap042":{
 		//Adds 1 crew upgrade slot
-		upgradeSlots: [{
+		upgradeSlots: [ {}, {
 			type: ["crew"]
 		}],
 		//Can only be equipped to a Federation NX Class
@@ -222,6 +227,7 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 
 	//Edward Jellico
 	"captain:Cap050":{
+		upgradeSlots: [ {} ],
 		canEquipCaptain: function(captain,ship,fleet) {
 			return ship.hull >= 5;
 		}
@@ -229,7 +235,7 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 
 	//James T. Kirk (Admiral)
 	"admiral:A044": {
-		upgradeSlots: [
+		upgradeSlots: [ {},
 			{
 				type: ["crew"]
 			},
