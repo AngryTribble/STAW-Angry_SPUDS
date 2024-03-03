@@ -192,10 +192,8 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 			type: ["starship_construction"],
 			rules: "May equip Federation Prototype",
 			canEquipConstruction: function(upgrade,ship,fleet) {
-				//return ship.construction.id == "Con001"
-				return true;
-			},
-			canEquip: true
+				return ship.construction.id == "Con001"
+			}
 		}]
 	},	
 
@@ -796,7 +794,7 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 	},
 
 	//Regenerative Shielding
-	"tech:T303": {
+	"tech:T302": {
 		canEquip: onePerShip("Regenerative Shielding"),
 		canEquipFaction: function(upgrade,ship,fleet) {
 			return (ship.class == "Numiri Patrol Ship")
@@ -813,9 +811,9 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 	},
 
 	//Refractive Shielding
-	"tech:T305": {
+	"tech:T303": {
 		canEquip: function(upgrade,ship,fleet) {
-			return onePerShip("Refractive Shielding")
+			return onePerShip("Refractive Shielding")(upgrade,ship,fleet)
 		},
 		intercept: {
 			ship: {
@@ -917,6 +915,18 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 
 //Lost in the Delta Quadrant
 
+	//U.S.S. Intrepid NCC-74600
+	"ship:S386": {
+		intercept:{
+			ship: {
+				cost: function(upgrade, ship, fleet, cost) {
+					if( upgrade.name == "Variable Geometry Pylons" || upgrade.name == "Bio-Neural Circuitry")
+						return resolve(upgrade,ship,fleet,cost) -1;
+					return cost;
+				}
+			}
+		}
+	},
 
 	//Rudolph Ransom
 	"captain:Cap022":{
@@ -1063,45 +1073,33 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 
 	//Lower Decks
 	"crew:C426": {
-		//Adds 2 crew slots for Lower Deck keyworded crew
-		upgradeSlots: [{
-			type: ["crew"],
-			rules: "Lower Decks Crew",
-			//Can only equip crew cards with Lower Deck keyword.
-			canEquip: function(upgrade) {
-				return upgrade.id == "C414" || upgrade.id == "C415" || upgrade.id == "C416" || upgrade.id == "C417" || upgrade.id == "C418" || upgrade.id == "C419";
-			}
-		},
-		{	type: ["crew"],
-			rules: "Lower Decks Crew",
-			//Can only equip crew cards with Lower Deck keyword.
-			canEquip: function(upgrade) {
-				return upgrade.id == "C414" || upgrade.id == "C415" || upgrade.id == "C416" || upgrade.id == "C417" || upgrade.id == "C418" || upgrade.id == "C419";
-		}
-	}
-	]
+    	// Adds 2 crew slots for Lower Deck keyworded crew
+    	upgradeSlots: [
+        	{
+            	type: ["crew"],
+            	rules: "Lower Decks Crew",
+            	// Can only equip crew cards with Lower Deck keyword.
+            	canEquip: function(upgrade) {
+                	const lowerDeckCrewIDs = ["C414", "C415", "C416", "C417", "C418", "C419", "C460", "C461", "C470", "C471", "C472", "C473", "C474", "C480", "C481", "C482"];
+                	return lowerDeckCrewIDs.includes(upgrade.id);
+            	}
+        	},
+        	{
+            	type: ["crew"],
+            	rules: "Lower Decks Crew",
+            	// Can only equip crew cards with Lower Deck keyword.
+            	canEquip: function(upgrade) {
+                	const lowerDeckCrewIDs = ["C414", "C415", "C416", "C417", "C418", "C419", "C460", "C461", "C470", "C471", "C472", "C473", "C474", "C480", "C481", "C482"];
+                	return lowerDeckCrewIDs.includes(upgrade.id);
+            	}
+        	}
+    	]
 	},
     
 	//Tactical Superiority Commander
 	"talent:E231":{
 		canEquip: function(upgrade,ship,fleet) {
 			return ship.captain.skill >= 8;
-		}
-	},
-
-	//Transphasic Torpedoes
-	"weapon:W240": {
-		canEquip: onePerShip("Transphasic Torpedoes"),
-		attack: 0,
-		intercept: {
-			self: {
-				//Attack is the same as ships printed Hull Value +1
-				attack: function(upgrade,ship,fleet,attack) {
-					if( ship )
-						return valueOf(ship,"hull",ship,fleet) +1;
-					return attack;
-				}
-			}
 		}
 	},
 
@@ -1805,7 +1803,10 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 
 //Federation Prototype
  "starship_construction:Con001":{
- 	canEquipConstruction: function(upgrade,ship,fleet) {
+		// because of how the logic of the system works, these canEquip and CanEquipFaction fields must be defined and are required - this should probably be fixed in the future.
+		CanEquip: true,
+		canEquipFaction: true,
+ 		canEquipConstruction: function(upgrade,ship,fleet) {
 		return ship.id == "S413" || ship.name.startsWith("U.S.S. ") && (ship.name.replace("U.S.S. ", "") == ship.class.replace(/ [Cc]lass/,""))
  	},
 
