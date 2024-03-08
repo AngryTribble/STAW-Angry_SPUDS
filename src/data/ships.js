@@ -487,7 +487,7 @@ module.exports = [
 		class: "Hirogen Warship",
 		actions: [
 			"evade",
-			"target lock",
+			"target-lock",
 			"scan",
 			"battlestations"
 		],
@@ -525,7 +525,7 @@ module.exports = [
 		class: "Hirogen Warship",
 		actions: [
 			"evade",
-			"target lock",
+			"target-lock",
 			"scan",
 			"battlestations"
 		],
@@ -565,7 +565,7 @@ module.exports = [
 		class: "Hirogen Warship",
 		actions: [
 			"evade",
-			"target lock",
+			"target-lock",
 			"scan",
 			"battlestations"
 		],
@@ -605,7 +605,7 @@ module.exports = [
 		class: "Vidiian Battle Cruiser",
 		actions: [
 			"evade",
-			"target lock",
+			"target-lock",
 			"scan",
 			"battlestations"
 		],
@@ -642,7 +642,7 @@ module.exports = [
 		class: "Vidiian Battle Cruiser",
 		actions: [
 			"evade",
-			"target lock",
+			"target-lock",
 			"scan",
 			"battlestations"
 		],
@@ -681,7 +681,7 @@ module.exports = [
 		class: "Vidiian Battle Cruiser",
 		actions: [
 			"evade",
-			"target lock",
+			"target-lock",
 			"scan",
 			"battlestations"
 		],
@@ -768,7 +768,7 @@ module.exports = [
 		hull: 3,
 		shields: 3,
 		cost: 18,
-		text: "<b>WHEN ATTACKING: MODIGY ATTACK DICE STEP:</b> If the defending ship is in the <img src='img/text/forward-arc.png' width='20' height='20'> of a Friendly ship that is within Range 1 of this ship: \n\n Add 1 [hit].",
+		text: "<b>WHEN ATTACKING: MODIFY ATTACK DICE STEP:</b> If the defending ship is in the <img src='img/text/forward-arc.png' width='20' height='20'> of a Friendly ship that is within Range 1 of this ship: \n\n Add 1 [hit].",
 		unique: true,
 		alliance: false,
 		factions: [
@@ -8588,7 +8588,7 @@ module.exports = [
 		agility: 2,
 		hull: 3,
 		shields: 2,
-		cost: 12,
+		cost: 11,
 		unique: false,
 		factions: [
 			"federation"
