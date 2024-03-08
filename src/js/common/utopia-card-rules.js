@@ -425,69 +425,51 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 	"crew:C483": {
 		upgradeSlots: [
 			{
-				type: ["crew"]
-			}
-		],
-		intercept: {
-			ship: {
-				cost: {
-					priority: 100,
-					fn: function(upgrade,ship,fleet,cost) {
-						if( checkUpgrade("crew", upgrade, ship) ) {
-							cost = resolve(upgrade,ship,fleet,cost);
-							cost -=2;
+				type: ["crew"],
+				rules: "Costs -2 SP",
+				intercept: {
+					ship: {
+						cost: function(card,ship,fleet,cost) {
+							return resolve(card,ship,fleet,cost) -2;
 						}
-						return cost;
 					}
 				}
 			}
-		}
+		],
 	},
 
 	//Tuesday (Weapon)
 	"weapon:W251": {
 		upgradeSlots: [
 			{
-				type: ["weapon"]
-			}
-		],
-		intercept: {
-			ship: {
-				cost: {
-					priority: 100,
-					fn: function(upgrade,ship,fleet,cost) {
-						if( checkUpgrade("weapon", upgrade, ship) ) {
-							cost = resolve(upgrade,ship,fleet,cost);
-							cost -=2;
+				type: ["weapon"],
+				rules: "Costs -2 SP",
+				intercept: {
+					ship: {
+						cost: function(card,ship,fleet,cost) {
+							return resolve(card,ship,fleet,cost) -2;
 						}
-						return cost;
 					}
 				}
 			}
-		}
+		],
 	},
 
 	//Tuesday (Tech)
 	"tech:T312": {
 		upgradeSlots: [
 			{
-				type: ["tech"]
-			}
-		],
-		intercept: {
-			ship: {
-				cost: {
-					priority: 100,
-					fn: function(upgrade,ship,fleet,cost) {
-						if( checkUpgrade("tech", upgrade, ship) ) {
-							cost = resolve(upgrade,ship,fleet,cost);
-							cost -=2;
+				type: ["tech"],
+				rules: "Costs -2 SP",
+				intercept: {
+					ship: {
+						cost: function(card,ship,fleet,cost) {
+							return resolve(card,ship,fleet,cost) -2;
 						}
-						return cost;
 					}
 				}
 			}
-		}
+		],
 	},
 
 	//Phase Cannons
@@ -974,43 +956,64 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 		}
 	},
 
-	// The Doctor - Captain
-	"captain:Cap028": {
-    	// Creates two new Captain slots
-    	upgradeSlots: [{},{
-            	type: ["captain"],
-            	rules: "Captain to place under The Doctor \n Both cards must combine for a total cost of 6 SP",
-            	intercept: {
-                	ship: {
-                    	cost: function() {
-                        	return 0;
-                    	},
-						canEquip: function(card,ship,fleet,canEquip) {
-							if( !$factions.hasFaction( card, "federation", ship, fleet ) )
-								return false;
-							return canEquip;
-						}
-                	}
-            	}
-        	},
-        	{
-            	type: ["captain"],
-            	rules: "Captain to place under The Doctor \n Both cards must combine for a total cost of 6 SP",
-            	intercept: {
-                	ship: {
-                    	cost: function() {
-                        	return 0;
-                    	},
-						canEquip: function(card,ship,fleet,canEquip) {
-							if( !$factions.hasFaction( card, "federation", ship, fleet ) )
-								return false;
-							return canEquip;
-						}
-                	}
-            	}
-        	}
-    	]
-	},
+// The Doctor - Captain
+"captain:Cap028": {
+    // Creates two new Captain slots
+    upgradeSlots: [
+        {},
+        {
+            type: ["captain"],
+            rules: "Captain to place under The Doctor \n Both cards must combine for a total cost of 6 SP",
+            intercept: {
+                ship: {
+                    free: function() {
+                        return true;
+                    },
+                    canEquip: function(card, ship, fleet, canEquip) {
+                        if (!$factions.hasFaction(card, "federation", ship, fleet)) {
+                            return false;
+                        }
+                        // Calculate the cost of the other captain slot
+                        var otherSlotCost = 0;
+                        $.each($filter("upgradeSlots")(ship), function(i, slot) {
+                            if (slot.type && slot.type.includes("captain") && slot.occupant && slot.source === "The Doctor") {
+                                otherSlotCost = valueOf(slot.occupant, "cost", ship, fleet);
+                            }
+                        });
+                        // Check if combined cost exceeds 6 SP
+                        return otherSlotCost + valueOf(card, "cost", ship, fleet) <= 6 && canEquip;
+                    },
+					talents: 0
+                }
+            }
+        },
+        {
+            type: ["captain"],
+            rules: "Captain to place under The Doctor \n Both cards must combine for a total cost of 6 SP",
+            intercept: {
+                ship: {
+                    free: function() {
+                        return true;
+                    },
+                    canEquip: function(card, ship, fleet, canEquip) {
+                        if (!$factions.hasFaction(card, "federation", ship, fleet)) {
+                            return false;
+                        }
+                        // Calculate the cost of the other captain slot
+                        var otherSlotCost = 0;
+                        $.each($filter("upgradeSlots")(ship), function(i, slot) {
+                            if (slot.type && slot.type.includes("captain") && slot.occupant && slot.source === "The Doctor") {
+                                otherSlotCost = valueOf(slot.occupant, "cost", ship, fleet);
+                            }
+                        });
+                        // Check if combined cost exceeds 6 SP
+                        return otherSlotCost + valueOf(card, "cost", ship, fleet) <= 6 && canEquip;
+                    }
+                }
+            }
+        }
+    ]
+},
 
 	//The Doctor - Question
 	"question:Q028":{
@@ -1807,7 +1810,7 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 		CanEquip: true,
 		canEquipFaction: true,
  		canEquipConstruction: function(upgrade,ship,fleet) {
-		return ship.id == "S404" || ship.name.startsWith("U.S.S. ") && (ship.name.replace("U.S.S. ", "") == ship.class.replace(/ [Cc]lass/,""))
+		return ship.id == "S404" || ship.id == "S386" || ship.name.startsWith("U.S.S. ") && (ship.name.replace("U.S.S. ", "") == ship.class.replace(/ [Cc]lass/,""))
  	},
 
  	upgradeSlots: [
