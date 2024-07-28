@@ -15,8 +15,49 @@
         <script type="text/javascript" src="js/lib/angular-sanitize.js"></script>
         <script type="text/javascript" src="js/utopia.min.js"></script>
 
+		<!--<style>
+			#splash {
+				position: fixed;
+				top: 20%;
+				left: 20%;
+				width: 60%;
+				height: 60%;
+				background: #000;
+				color: #fff;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				flex-direction: column;
+				font-size: 2em;
+				z-index: 1000;
+				border-radius: 10px;
+				box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+			}
+
+			#splash button {
+				margin-top: 20px;
+				padding: 10px 20px;
+				font-size: 1em;
+				cursor: pointer;
+				background: #fff;
+				color: #000;
+				border: none;
+				border-radius: 5px;
+			}
+
+			#content {
+				display: none;
+			}
+		</style> -->
     </head>
     <body ng-keypress="keypress($event)">
+
+		<!-- <div id="splash">
+			Welcome to My Site!
+			<button onclick="hideSplash()">Enter Site</button>
+		</div>
+		<div id="content">
+		</div> -->
 
 		<div class="u-container" ng-click="drag.item = false; drag.source = false;">
 
@@ -44,6 +85,17 @@
 		</div>
 
 		<!--<script src="js/analytics.js"></script>-->
+
+		<script>
+			function hideSplash() {
+				document.getElementById('splash').style.display = 'none';
+				document.getElementById('content').style.display = 'block';
+			}
+
+			window.addEventListener('load', () => {
+				setTimeout(hideSplash, 3000);
+			});
+		</script>
 
     </body>
 </html>
