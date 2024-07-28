@@ -42,7 +42,13 @@
 	overflow: hidden;
 }
 
-.card-image img{
+.ship-image {
+	height: 120px;
+	width: 288px;
+	overflow: hidden;
+}
+
+.ship-image img{
 	height: 100%;
 	width: 100%;
 	object-fit: contain;
