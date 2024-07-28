@@ -1808,6 +1808,7 @@ module.exports = [
 			"72011wp"
 		],
 		name: "J.T. Esteban",
+		image: "https://i.imgur.com/YwBDNQ6.png",
 		cost: 2,
 		skill: 3,
 		talents: 0,
