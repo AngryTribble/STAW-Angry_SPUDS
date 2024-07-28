@@ -7907,8 +7907,9 @@ module.exports = [
 			"72011wp"
 		],
 		name: "David Marcus",
+		image: "https://i.imgur.com/tGsxpTD.png",
 		cost: 3,
-		text: "<b>IF A [crew_text] UPGRADE EQUIPPED TO THIS SHIP WOULD BE DISCARDED:</b>\nDiscard this card instead.\n\n<b>WHEN DEFENDING:</b> Discard this card. Add 1 [evade].",
+		text: "<b>IF A </b>[crew_text]<b> UPGRADE EQUIPPED TO THIS SHIP WOULD BE DISCARDED:</b>\nDiscard this card instead. <hr> <b>WHEN DEFENDING:</b> Discard this card. Add 1 [evade].",
 		unique: true,
 		factions: [
 			"federation"
@@ -7922,6 +7923,7 @@ module.exports = [
 			"72011wp"
 		],
 		name: "Saavik",
+		image: "https://i.imgur.com/F02qDxS.png",
 		cost: 1,
 		range: "1 - 2",
 		text: "<b>WHEN DEFENDING:</b> If this ship is within Range of a Planet token.\n\nThis ship may convert one [blank] into 1 [evade].",
@@ -7938,8 +7940,9 @@ module.exports = [
 			"72011wp"
 		],
 		name: "Federation Helmsman",
+		image: "https://i.imgur.com/3vpvhDU.png",
 		cost: 3,
-		text: "<b>ACTION:</b> Place an [aux] Token beside this ship.\n\nPerform a White 1 [straight], 1 [bank-left] or 1 [bank-right] Maneuver.",
+		text: "<b>ACTION:</b> Place an <img src='img/stuff/effect_auxilary.png' width='18' height='16' title='AUX Power Token'> Token beside this ship.\n\nPerform a White 1 [straight], 1 [bank-left] or 1 [bank-right] Maneuver.",
 		unique: false,
 		factions: [
 			"federation"
@@ -7953,9 +7956,10 @@ module.exports = [
 			"72011wp"
 		],
 		name: "Comm Station",
+		image: "https://i.imgur.com/35mEYqV.png",
 		cost: 4,
 		range: "1 - 2",
-		text: "Add 1 [crew_text] to this ship's Upgrade Bar.\n\n<b>ACTIVATION PHASE:</b> Disable this card and target a friendly ship.\n\nThis game round, replace the Captain Skill on this ship's Captain with the Captain Skill of the target ship's Captain.",
+		text: "Add 1 [crew_text] to this ship's Upgrade Bar. <hr><b>ACTIVATION PHASE:</b> Disable this card and target a friendly ship.\n\nThis game round, replace the Captain Skill on this ship's Captain with the Captain Skill of the target ship's Captain.",
 		OnePerShip: true,
 		factions: [
 			"federation"
@@ -7969,6 +7973,7 @@ module.exports = [
 			"72011wp"
 		],
 		name: "Close-Range Scan",
+		image: "https://i.imgur.com/ogFbrP0.png",
 		cost: 3,
 		text: "<b>ACTIVATION PHASE:</b> If this ship performed a [scan] Action, disable 1 Shield.\n\nPlace a [scan] Token beside this ship.",
 		OnePerShip: true,
@@ -7984,9 +7989,10 @@ module.exports = [
 			"72011wp"
 		],
 		name: "Genesis Effect",
+		image: "https://i.imgur.com/Hdt2p8z.png",
 		cost: 2,
 		range: "1 - 3",
-		text: "<b>SETUP:</b> Place 1 [crew_test] Upgrade with a cost of 5 SP or less face down beneath this card.\n\n<b>END PHASE:</b> If this ship is within Range 1-3 of a Planet Token, disable all of its Shields.\n\nFlip the [crew_text] Upgrade beneath this card face up, place 2 [time] Tokens on it and equip it to this ship, even if it exceeds its restrictions. ",
+		text: "<b>SETUP:</b> Place 1 [crew_text] Upgrade with a cost of 5 SP or less face down beneath this card.<hr> <b>END PHASE:</b> If this ship is within Range 1-3 of a Planet Token, disable all of its Shields.\n\nFlip the [crew_text] Upgrade beneath this card face up, place 2 [time] Tokens on it and equip it to this ship, even if it exceeds its restrictions. ",
 		unique: true,
 		factions: [
 			"federation"
@@ -8001,8 +8007,9 @@ module.exports = [
 			"71801"
 		],
 		name: "William T. Riker",
+		image: "https://i.imgur.com/aPbIK8m.png",
 		cost: 4,
-		text: "Modify the Captain Skill of the Captain equipped to this ship by +3.\n<b>IF THE CAPTAIN EQUIPPED TO THIS SHIP IS DISABLED OR DISCARDED:</b>\nThis ship's Captain Skill is 5.\n<b>IF THIS SHIP RECEIVES A FACE UP 'COMMUNICATIONS FAILURE' OR 'INJURED CAPTAIN' DAMAGE CARD:</b>\nFlip that damage card face down.",
+		text: "Modify the Captain Skill of the Captain equipped to this ship by +3. <hr> <b>IF THE CAPTAIN EQUIPPED TO THIS SHIP IS DISABLED OR DISCARDED:</b>\nThis ship's Captain Skill is 5. <hr> <b>IF THIS SHIP RECEIVES A FACE UP 'COMMUNICATIONS FAILURE' OR 'INJURED CAPTAIN' DAMAGE CARD:</b>\nFlip that damage card face down.",
 		unique: true,
 		factions: [
 			"federation"
