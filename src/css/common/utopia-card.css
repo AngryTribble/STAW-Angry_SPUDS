@@ -37,8 +37,9 @@
 }
 
 .card-image {
-	height: 4em;
-	width: 4em;
+	height: 180px;
+	width: 288px;
+	overflow: hidden;
 }
 
 .card-image img{
