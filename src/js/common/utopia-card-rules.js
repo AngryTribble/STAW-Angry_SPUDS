@@ -1800,7 +1800,7 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 //Federation Prototype
  "starship_construction:Con001":{
 		// because of how the logic of the system works, these canEquip and CanEquipFaction fields must be defined and are required - this should probably be fixed in the future.
-		CanEquip: true,
+		canEquip: true,
 		canEquipFaction: true,
  		canEquipConstruction: function(upgrade,ship,fleet) {
 		return ship.id == "S404" || ship.id == "S386" || ship.name.startsWith("U.S.S. ") && (ship.name.replace("U.S.S. ", "") == ship.class.replace(/ [Cc]lass/,""))
