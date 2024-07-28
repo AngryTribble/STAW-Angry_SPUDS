@@ -41,14 +41,13 @@
 	width: 288px;
 	border-radius: 15px;
 	overflow: hidden;
-	position: relative;
 }
 
 .card-image img{
-	height: 873px;
-	width: 1462px;
-	background-size: cover;
-	background-position: top;
+	height: 100%;
+	width: 100%;
+	object-fit: cover;
+	object-position: top;
 	border-radius: 15px;
 }
 
