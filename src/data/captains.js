@@ -1360,7 +1360,7 @@ module.exports = [
 		cost: 2,
 		skill: 2,
 		talents: 1,
-		text: "<b>WHEN ATTACKING:</b> If the defending ship is an Independent ship or has an Independent Captain equipped to it:\n\nThis ship rolls +1 attack die.",
+		text: "<b>WHEN ATTACKING:</b> If the defending ship is an <img src='img/text/faction-indy.png' width='20' height='20' title='Independent Faction'> ship or has an <img src='img/text/faction-indy.png' width='20' height='20' title='Independent Faction'> Captain equipped to it:\n\nThis ship rolls +1 attack die.",
 		unique: true,
 		factions: [
 			"klingon"
@@ -1792,7 +1792,7 @@ module.exports = [
 		skill: 3,
 		talents: 0,
 		range: "1 - 2",
-		text: "This card cannot be affected by anything that affects a Captain, and this card counts as a Romulan Drone Pilot.\n\n<b>ACTION:</b> Target an opposing ship in this ship's Primary Firing Arc.\nThe target ship rolls -2 attack dice against this ship.\n(<i>Romulan Drone Ship Only</i>)",
+		text: "This card cannot be affected by anything that affects a Captain, and this card counts as a Romulan Drone Pilot.<hr> <b>ACTION:</b> Target an opposing ship in this ship's Primary Firing Arc.\n\n The target ship rolls -2 attack dice against this ship.\n(<i>Romulan Drone Ship Only</i>)",
 		unique: true,
 		shipLimit: true,
 		factions: [
@@ -1808,7 +1808,7 @@ module.exports = [
 			"72011wp"
 		],
 		name: "J.T. Esteban",
-		image: "https://i.imgur.com/YwBDNQ6.png",
+		image: "https://i.imgur.com/UjWMjFK.jpg",
 		cost: 2,
 		skill: 3,
 		talents: 0,
@@ -2474,7 +2474,7 @@ module.exports = [
 		cost: 3,
 		skill: 4,
 		talents: 0,
-		text: "At the beginning of the game round, you may flip this card.\n<br> <b>WHEN ATTACKING:</b> If this ship is Cloaked:\n\nThis ship rolls +1 attack die.",
+		text: "At the beginning of the game round, you may flip this card.<hr> <br> <b>WHEN ATTACKING:</b> If this ship is Cloaked:\n\nThis ship rolls +1 attack die.",
 		unique: true,
 		factions: [
 			"klingon"
@@ -5979,7 +5979,7 @@ module.exports = [
 		cost: 6,
 		skill: 8,
 		talents: 2,
-		text: "<b>ACTION:</b> Place 2 [time] Tokens on this card and target all friendly ships.\n\nPlace a [battlestations] Token beside this ship and all target ships.",
+		text: "<b>ACTION:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='18' height='16' title='Time Token'> Tokens on this card and target all friendly ships.\n\nPlace a [battlestations] Token beside this ship and all target ships.",
 		unique: true,
 		range: "1 - 2",
 		factions: [
