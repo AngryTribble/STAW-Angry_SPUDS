@@ -15,6 +15,10 @@
 		<div class="arc-actions"><i ng-repeat="action in ship.actions" class="fs fs-{{action}}"></i></div>
 	</div>
 
+	<div class="ship-image">
+		<img ng-if=""ship.image" ng-src="{{ship.image}}" />
+	</div>
+
 	<!-- <div class="card-image" ng-class="{'card-image-large': Object.keys(shipClass.maneuvers).length > 9}"></div> -->
 	<div ng-class="(shipClass.id == 'borg_cube' || shipClass.id == 'kelvin_constitution_class') ? 'card-image-large' : 'card-image'"></div>
 
