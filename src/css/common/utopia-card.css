@@ -40,25 +40,28 @@
 	height: 180px;
 	width: 288px;
 	border-radius: 15px;
+	overflow: hidden;
 }
 
 .card-image img{
 	height: 100%;
 	width: 100%;
-	object-fit: contain;
+	object-fit: cover;
+	object-position: center;
 	border-radius: 15px;
 }
 
 .ship-image {
 	height: 120px;
 	width: 288px;
-	overflow: hidden;
+	border-radius: 15px;
 }
 
 .ship-image img{
 	height: 100%;
 	width: 100%;
 	object-fit: contain;
+	border-radius: 15px;
 }
 
 .card-image-large {

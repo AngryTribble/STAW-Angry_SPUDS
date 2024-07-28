@@ -4975,7 +4975,7 @@ module.exports = [
 		hull: 3,
 		shields: 3,
 		cost: 19,
-		text: "<b>PLANNING PHASE:</b> Place an [aux] Token beside this ship.\nRemove 1 [time] Token from each [tech_text] Upgrade equipped to this ship.\nThis ship may only be assigned Gareb or a Romulan Drone Pilot as its Captain.",
+		text: "<b>PLANNING PHASE:</b> Place an <img src='img/stuff/effect_auxilary.png' width='18' height='16' title='AUX Power Token'> Token beside this ship.\n\n Remove 1 <img src='img/stuff/effect_time_token.png' width='18' height='16' title='Time Token'> Token from each [tech_text] Upgrade equipped to this ship. <hr> This ship may only be assigned Gareb or a Romulan Drone Pilot as its Captain.",
 		unique: true,
 		factions: [
 			"romulan"
