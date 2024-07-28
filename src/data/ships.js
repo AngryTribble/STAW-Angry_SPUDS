@@ -5202,6 +5202,7 @@ module.exports = [
 			"71801"
 		],
 		name: "Federation Starship",
+		image: "https://i.imgur.com/Xb4s3gM.png",
 		class: "Oberth Class",
 		actions: [
 			"evade",
