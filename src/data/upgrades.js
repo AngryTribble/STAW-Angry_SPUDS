@@ -7891,8 +7891,9 @@ module.exports = [
 			"72011wp"
 		],
 		name: "Captain's Discretion",
+		image: "https://i.imgur.com/GpzGT8H.png",
 		cost: 4,
-		text: "<b>FREE ACTION:</b> Discard this card.\n\nPerform the Action of a [crew_text] Upgrade equipped to this ship.",
+		text: "<b> FREE ACTION:</b> Discard this card.\n\nPerform the Action of a [crew_text] Upgrade equipped to this ship.",
 		unique: false,
 		factions: [
 			"federation"

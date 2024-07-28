@@ -5181,7 +5181,7 @@ module.exports = [
 		hull: 3,
 		shields: 2,
 		cost: 14,
-		text: "<b>WHEN THIS SHIP WOULD BE DESTROYED:</b> \n\nThe attacking ship must discard one [crew_text] Upgrade. If it can't, place an [aux] Token beside it.",
+		text: "<b>WHEN THIS SHIP WOULD BE DESTROYED:</b> \n\nThe attacking ship must discard one [crew_text] Upgrade. If it can't, place an <img src='img/stuff/effect_auxilary.png' width='18' height='16' title='AUX Power Token'> Token beside this ship.",
 		unique: true,
 		factions: [
 			"federation"

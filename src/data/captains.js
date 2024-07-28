@@ -207,7 +207,7 @@ module.exports = [
 		skill: 5,
 		talents: 1,
 		range: "1",
-		nxLimit: true,
+		nxLimit: true
 	},
 	{
 		type: "captain",
@@ -1811,7 +1811,7 @@ module.exports = [
 		cost: 2,
 		skill: 3,
 		talents: 0,
-		text: "The Captain's Discretion [talent_text] Upgrade may be equipped to this Captain. \n\n<b>WHEN THIS SHIP WOULD BE DESTROYED:</b>\nMove up to 2 [crew_text] Upgrades equipped to this ship to another friendly ship even if it exceeds that ship's restrictions. ",
+		text: "The Captain's Discretion [talent_text] Upgrade may be equipped to this Captain. <hr> <b>WHEN THIS SHIP WOULD BE DESTROYED:</b>\nMove up to 2 [crew_text] Upgrades equipped to this ship to another friendly ship even if it exceeds that ship's restrictions. ",
 		unique: true,
 		factions: [
 			"federation"
