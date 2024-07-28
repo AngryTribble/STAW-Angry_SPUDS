@@ -26,6 +26,7 @@
     "build": "grunt",
     "watch": "grunt watch",
     "dev": "npm run start && npm run watch",
+    "serve": "npm run build && http-server -p 8000 staw-utopia",
     "data": "npm run lint-data && npm run generate-data",
     "generate-data": "node ./src/data/index.js",
     "lint-data": "eslint src/data/*.js --fix"
