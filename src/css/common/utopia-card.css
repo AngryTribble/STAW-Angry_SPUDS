@@ -39,12 +39,14 @@
 .card-image {
 	height: 180px;
 	width: 288px;
+	border-radius: 15px;
 }
 
 .card-image img{
 	height: 100%;
 	width: 100%;
 	object-fit: contain;
+	border-radius: 15px;
 }
 
 .ship-image {
