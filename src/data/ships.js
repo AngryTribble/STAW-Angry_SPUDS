@@ -5164,6 +5164,7 @@ module.exports = [
 			"72011wp"
 		],
 		name: "U.S.S. Grissom",
+		image: "https://i.imgur.com/6N4gQTF.png",
 		class: "Oberth Class",
 		actions: [
 			"evade",
