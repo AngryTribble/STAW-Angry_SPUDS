@@ -5190,7 +5190,8 @@ module.exports = [
 			ship: {},
 			fleet: {}
 		},
-		squadron: false
+		squadron: false,
+		image: "https://i.imgur.com/6N4gQTF.png"
 	},
 	{
 		type: "ship",
