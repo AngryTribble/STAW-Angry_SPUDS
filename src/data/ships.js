@@ -862,7 +862,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Delta Flyer II",
-		image: "",
+		image: "https://i.imgur.com/lKFLr8o.png",
 		class: "Delta Flyer Class",
 		actions: [
 			"evade",
@@ -901,7 +901,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Federation Starship",
-		image: "",
+		image: "https://i.imgur.com/bGYpwoL.png",
 		class: "Delta Flyer Class",
 		actions: [
 			"evade",
@@ -938,7 +938,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Delta Flyer",
-		image: "",
+		image: "https://i.imgur.com/DmtJiIL.png",
 		class: "Delta Flyer Class",
 		actions: [
 			"evade",
@@ -976,7 +976,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Federation Starship",
-		image: "",
+		image: "https://i.imgur.com/FOsDRQn.png",
 		class: "Aerie Class",
 		actions: [
 			"evade",
@@ -1011,7 +1011,7 @@ module.exports = [
 			"75014"
 		],
 		name: "U.S.S. Raven",
-		image: "",
+		image: "https://i.imgur.com/BN8vhV0.png",
 		class: "Aerie Class",
 		actions: [
 			"evade",
@@ -1047,7 +1047,7 @@ module.exports = [
 			"75014"
 		],
 		name: "U.S.S. Nova",
-		image: "",
+		image: "https://i.imgur.com/UvzBWDn.png",
 		class: "Nova Class",
 		actions: [
 			"evade",
@@ -1086,7 +1086,7 @@ module.exports = [
 			"75014"
 		],
 		name: "U.S.S. Equinox",
-		image: "",
+		image: "https://i.imgur.com/7ex35W1.png",
 		class: "Nova Class",
 		actions: [
 			"evade",
@@ -1125,7 +1125,7 @@ module.exports = [
 			"75014"
 		],
 		name: "U.S.S. Intrepid NCC-74600",
-		image: "",
+		image: "https://i.imgur.com/G6oMrmA.png",
 		class: "Intrepid Class",
 		actions: [
 			"evade",
@@ -1165,7 +1165,7 @@ module.exports = [
 			"75014"
 		],
 		name: "U.S.S. Voyager",
-		image: "",
+		image: "https://i.imgur.com/6IiM65P.png",
 		class: "Intrepid Class",
 		actions: [
 			"evade",
@@ -1206,7 +1206,7 @@ module.exports = [
 			"75014"
 		],
 		name: "U.S.S. Voyager",
-		image: "",
+		image: "https://i.imgur.com/IvmlLyD.png",
 		class: "Intrepid Class",
 		actions: [
 			"evade",
@@ -1246,7 +1246,7 @@ module.exports = [
 			"75014"
 		],
 		name: "U.S.S. Voyager",
-		image: "",
+		image: "https://i.imgur.com/b0HTnnZ.png",
 		class: "Intrepid Class",
 		actions: [
 			"evade",
