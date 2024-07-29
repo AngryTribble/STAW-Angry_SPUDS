@@ -331,24 +331,6 @@ module.exports = [
 	},
 	{
 		type: "captain",
-		id: "Cap034",
-		gameId: 1,
-		set: [
-			"75015"
-		],
-		name: "Nadirum",
-		unique: true,
-		text: "<b>ACTION:</b> If equipped to a <img src='img/text/ind-vidiian.png' width='20' height='20'>, this is a Free Action instead: Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target an opposing ship within Range. \n\n Discard 1 [crew_text] Upgrade equipped to the target ship.",
-		factions: [
-			"independent"
-		],
-		cost: 3,
-		skill: 5,
-		range: "1",
-		talents: 1
-	},
-	{
-		type: "captain",
 		id: "Cap033",
 		gameId: 1,
 		set: [
@@ -554,7 +536,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Rudolph Ransom",
-		iamge: "https://i.imgur.com/0VU9uHB.png",
+		image: "https://i.imgur.com/0VU9uHB.png",
 		unique: true,
 		text: "Add 1 [crew_text] to this ship's Upgrade Bar. <hr> <b>WHEN DEFENDING:</b> If there is an Obstacle within Range: \n\n Place an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside the attacking ship. If this card is equipped to a <img src='img/text/fed-nova.png' width='20' height='20'>, the attacking ship also rolls -1 attack die.",
 		factions: [
