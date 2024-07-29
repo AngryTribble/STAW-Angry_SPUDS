@@ -1475,7 +1475,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Voyager Discount",
-		image: "https://i.imgur.com/BCSOBIu.png",
+		image: "https://i.imgur.com/QMYruv3.png",
 		cost: 0,
 		text: "<b>HOW TO USE:</b> Equip this card to the upgrade slot you wish to give the discount to. It will create a copy of the slot that will give the upgrade the discount once it is equipped. \n\n <b>Take 1 Damgage to your Shields or Hull per card equipped.</b> <hr> <b>UTOPIA USE ONLY</b>",
 		alliance: false,
@@ -1691,7 +1691,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Lower Decks",
-		image: "https://i.imgur.com/BCSOBIu.png",
+		image: "https://i.imgur.com/QMYruv3.png",
 		cost: 0,
 		text: "Equip this card to a crew slot to utilize the Lower Decks keyword functionality. \n\n\n\n <b>NOT A REAL CARD \n\nFOR UTOPIA USE ONLY</b>",
 		alliance: false,
