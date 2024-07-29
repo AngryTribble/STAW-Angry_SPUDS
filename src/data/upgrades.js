@@ -879,7 +879,7 @@ module.exports = [
 			"75016"
 		],
 		name: "Ilia",
-		iamge: "https://i.imgur.com/DWJkeqs.png",
+		image: "https://i.imgur.com/DWJkeqs.png",
 		cost: 2,
 		text: "This ship does not skip its Perform Action Step when overlapping another ship's base.",
 		unique: true,
