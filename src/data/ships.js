@@ -483,7 +483,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Hirogen Starship",
-		image: "",
+		image: "https://i.imgur.com/fnuw3RG.png",
 		class: "Hirogen Warship",
 		actions: [
 			"evade",
@@ -521,7 +521,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Alpha Hunter",
-		image: "",
+		image: "https://i.imgur.com/MFiNmvr.png",
 		class: "Hirogen Warship",
 		actions: [
 			"evade",
@@ -561,7 +561,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Relic Stalker",
-		image: "",
+		image: "https://i.imgur.com/vmBDSb9.png",
 		class: "Hirogen Warship",
 		actions: [
 			"evade",
@@ -601,7 +601,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Vidiian Starship",
-		image: "",
+		image: "https://i.imgur.com/G5omlHB.png",
 		class: "Vidiian Battle Cruiser",
 		actions: [
 			"evade",
@@ -638,7 +638,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Fina Prime",
-		image: "",
+		image: "https://i.imgur.com/5XRe70R.png",
 		class: "Vidiian Battle Cruiser",
 		actions: [
 			"evade",
@@ -677,7 +677,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Honatta Prime",
-		image: "",
+		image: "https://i.imgur.com/NoiYRgH.png",
 		class: "Vidiian Battle Cruiser",
 		actions: [
 			"evade",
@@ -716,7 +716,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Nasari Starship",
-		image: "",
+		image: "https://i.imgur.com/GDuJYqO.png",
 		class: "Nerada-Type",
 		actions: [
 			"evade",
@@ -751,7 +751,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Nerada",
-		image: "",
+		image: "https://i.imgur.com/VB7wdTN.png",
 		class: "Nerada-Type",
 		actions: [
 			"evade",
@@ -788,7 +788,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Numiri Starship",
-		image: "",
+		image: "https://i.imgur.com/SoOv5Xz.png",
 		class: "Numiri Patrol Ship",
 		actions: [
 			"evade",
@@ -824,7 +824,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Antares Shadow",
-		image: "",
+		image: "https://i.imgur.com/xocJwxx.png",
 		class: "Numiri Patrol Ship",
 		actions: [
 			"evade",
