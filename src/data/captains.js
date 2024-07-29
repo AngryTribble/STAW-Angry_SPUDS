@@ -441,6 +441,7 @@ module.exports = [
 			"75014"
 		],
 		name: "The Doctor",
+		image: "https://i.imgur.com/LCbmDc0.png",
 		unique: true,
 		text: "<b>FLEET CONSTRUCTION:</b> Place 2 <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> Captains with a total cost of 6 SP that are not already in your fleet face-up under this card \n\n This Captain has all text and restrictions from each of the Captains placed under it.",
 		factions: [
@@ -458,6 +459,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Tuvok",
+		image: "https://i.imgur.com/RMgmjXy.png",
 		unique: true,
 		text: "<b>WHEN DEFENDING: COMPARE RESULTS STEP:</b> Spend either a [scan] and 1 of this ship's Shield Tokens or disable 2 of this ship's Active Shields. \n\n Cancel 1 [hit] or [crit].",
 		factions: [
@@ -476,6 +478,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Harry Kim",
+		image: "https://i.imgur.com/hnC1uy0.png",
 		unique: true,
 		text: "<b>(Night Shift)</b> Treat your Captain Skill Number as 5. <hr> <b>AFTER YOU REMOVE AN <img src='img/stuff/effect_auxilary.png' width='18' height='16'> TOKEN FROM BESIDE THIS SHIP:</b> \n\n Place an [evade] Token beside this ship. <b>(Night Shift)</b> In Addition, place a [battlestations] Token beside this ship.",
 		factions: [
@@ -493,6 +496,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Tom Paris",
+		image: "https://i.imgur.com/KllSJxB.png",
 		unique: true,
 		text: "<b>REVEAL DIAL STEP:</b> \n\n You may disregard your revealed Maneuver and either perform a 1 <img src='img/stuff/impulse-roll.png' width='20' height='20'> Maneuver or a 5 <img src='img/stuff/maneuver_straight_red.png' width='20' height='20'> Maneuver. In addition if equipped to a <img src='img/text/fed-delta-flyer.png' width='20' height='20'>, place an [evade] Token beside this ship.",
 		factions: [
@@ -511,6 +515,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Chakotay",
+		image: "https://i.imgur.com/AHRueA5.png",
 		unique: true,
 		text: "Add 1 [crew_text] to this ship's Upgrade Bar. <hr> <b>WHEN ATTACKING:</b> If there is a [scan] Token beside this ship. \n\n 1 [hit] or [crit] cannot be Canceled.",
 		factions: [
@@ -529,6 +534,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Magnus Hansen",
+		image: "https://i.imgur.com/Cebfn6y.png",
 		unique: true,
 		text: "<b>PLANNING PHASE:</b> Target an opposing ship within Range. \n\n This ship activates as though it has a Captain Skill Number equal to the target ship's Captain Skill +1 until the end of Activation Phase. If the target ship is <img src='img/text/faction-borg.png' width='20' height='20' title='Borg'> or has a <img src='img/text/faction-borg.png' width='20' height='20' title='Borg'> Captain equipped to it, place 1 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Token on an Upgrade equipped to that ship.",
 		factions: [
@@ -1808,7 +1814,7 @@ module.exports = [
 			"72011wp"
 		],
 		name: "J.T. Esteban",
-		image: "https://i.imgur.com/UjWMjFK.jpg",
+		image: "https://i.imgur.com/YwBDNQ6.png",
 		cost: 2,
 		skill: 3,
 		talents: 0,
