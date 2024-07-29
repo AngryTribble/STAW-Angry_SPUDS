@@ -1089,6 +1089,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Photonic Field Generator",
+		image: "https://i.imgur.com/dl5QiFR.png",
 		cost: 2,
 		text: "This card counts as a [weapon_text] Upgrade or a [tech_text] Upgrade. <hr> You may perform Actions listed on <b>?</b> Upgrades equipped to this ship even if you have any <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Tokens beside this ship. <hr> Opposing ships within Range cannot Discard or Disable other <img src='img/text/faction-indy.png' width='20' height='20'> <b>?</b> Upgrades equipped to this ship.",
 		range: "1 - 2",
@@ -1105,6 +1106,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Kejal",
+		image: "https://i.imgur.com/5U3JEKC.png",
 		cost: 3,
 		text: "This card counts as a [crew_text] Upgrade or a [tech_text] Upgrade. <hr> <b>ACTION:</b> \n\n You may remove a <img src='img/stuff/effect_disable.png' width='20' height='16'> Token from a <b>?</b> Upgrade equipped to this ship and repair 1 Hull or Shield on this ship.",
 		unique: true,
@@ -1120,6 +1122,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Weiss",
+		image: "https://i.imgur.com/2FMkbNp.png",
 		cost: 2,
 		text: "This card counts as a [crew_text] Upgrade or a [tech_text] Upgrade. <hr> <b>ACTION:</b> Disable this card and target an opposing ship within Range. \n\n Disable 1 [crew_text] Upgrade equipped to the target ship and place an [evade] Token beside this ship.",
 		range: "1 - 2",
@@ -1136,6 +1139,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Monotanium Armor Plating",
+		image: "https://i.imgur.com/WWqjj9I.png",
 		cost: 3,
 		text: "<b>WHENEVER AN OPPONENT SHIP WOULD PLACE A RED</b> [target-lock]<b> TOKEN BESIDE THIS SHIP:</b> Roll 2 Defense dice. \n\n If you roll at least 1 [evade], discard the [target-lock] Token (and the matching Blue [target-lock] Token beside the opposing ship). <hr> <b>ACTION:</b> Disable this card. \n\n Remove each Red [target-lock] Token beside this ship (and the matching Blue [target-lock] Tokens beside the opposing ship(s)).",
 		OnePerShip: true,
@@ -1151,6 +1155,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Improved Deflector Screens",
+		image: "https://i.imgur.com/8ulyf2K.png",
 		cost: 4,
 		text: "Discard this Upgrade when all of this ship's Shields have been destroyed. <hr> <b>WHEN DEFENDING: COMPARE RESULTS STEP:</b> If you have any Active Shields. \n\n Cancel 1 [hit] or [crit].",
 		OnePerShip: true,
@@ -1167,6 +1172,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Stealth Mode",
+		image: "https://i.imgur.com/249IwkV.png",
 		cost: 3,
 		text: "<b>ACTIVATION PHASE:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Perform a [sensor-echo] Action as a Free Action.",
 		OnePerShip: true,
@@ -1183,6 +1189,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Translocator",
+		image: "https://i.imgur.com/5B7TSTJ.png",
 		cost: 3,
 		text: "<b>ACTION:</b> Discard this card and target an opposing ship within Range. \n\n Steal 1 [tech_text] or [weapon_text] Upgrade equipped to the target ship and equip it to this ship ignoring this ship's restrictions.",
 		range: "1",
@@ -1200,6 +1207,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Refractive Shielding",
+		image: "https://i.imgur.com/rIWlwrd.png",
 		cost: 4,
 		text: "Increase this  ship's Shield and Agility Values by 1. <hr> <b>WHEN DEFENDING:</b> If this ship has Active Shields and the attacking ship within Rnage does not have any [scan] Tokens beside it. \n\n Skip the Modify Attack Dice Step.",
 		range: "2 - 3",
@@ -1216,6 +1224,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Regenerative Shielding",
+		image: "https://i.imgur.com/LUMfHYr.png",
 		cost: 3,
 		text: "Increase this ship's Shield Valuue by 1. <hr> <b>END PHASE:</b> \n\n You may repair 1 Shield on this ship.",
 		OnePerShip: true,
@@ -1232,6 +1241,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Grapplers",
+		image: "https://i.imgur.com/23RUo7N.png",
 		cost: 2,
 		text: "The Attack Value of this [weapon_text] is this ship's Primary Weapon +1. <hr> <b>ATTACK:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target an opposing ship. \n\n If the defending ship has no Active Shields, you may re-roll each of your [blank]. If this attack hits, the defending ship cannot perform a Maneuver with a Speed greater than 1 during the next game round.",
 		range: "1",
@@ -1247,6 +1257,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Targeted Phaser Strike",
+		image: "https://i.imgur.com/3et2ftn.png",
 		cost: 2,
 		text: "<b>ATTACK:</b> If this ship has a [target-lock] Token on the defending ship, place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target that opposing ship. \n\n <b>DEAL DAMAGE STEP:</b> Apply the effect based on which of the defending ship's arcs you are in: \n * <img src='img/text/forward-arc.png' width='20' height='20'>: Discard 1 [crew_text] Upgrade equipped to the defending ship. \n * <img src='img/text/rear-arc.png' width='20' height='20'>: Discard 1 [weapon_text] Upgrade equipped to the defending ship. \n * Non-<img src='img/text/forward-arc.png' width='20' height='20'> and Non-<img src='img/text/rear-arc.png' width='20' height='20'>: Place an [aux] Token beside the defending ship.",
 		OnePerShip: true,
@@ -1265,6 +1276,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Isokinetic Cannon",
+		image: "https://i.imgur.com/z6fNLnR.png",
 		cost: 5,
 		text: "The Attack Value of this [weapon_text] is this ship's Primary Weapon +1. <hr> <b>ATTACK:</b> Place 4 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target an opposing ship. \n\n <b>DECLARE TARGET STEP:</b> \n\n Disable 1 [tech_text] Upgrade equipped to the defending ship.",
 		OnePerShip: true,
@@ -1283,6 +1295,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Tetryon Particle Weapon",
+		image: "https://i.imgur.com/YmFMIn3.png",
 		cost: 3,
 		text: "<b>ATTACK:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens and target an opposing ship. \n\n [hit] and [crit] from this attack cannot be modified, re-rolled, or canceled by opposing card effects.",
 		attack: "4",
@@ -1300,6 +1313,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Life Of Piracy",
+		image: "https://i.imgur.com/Kj3lkdO.png",
 		cost: 4,
 		text: "<b>SETUP:</b> This ship may start the game either within Range of a Planet Obstacle or within Range of at least 2 Non-Planet Obstacles. <hr> Gain the ability based on the Printed Faction Symbol of the Captain this card is equipped to: \n\n <img src='img/text/faction-ferengi.png' width='20' height='20' title='Ferengi'> - <b>END PHASE:</b> You may discard a [battlestations] Token beside this ship and place 1 Gold-Pressed Latinum Token (GPLT) on the Captain equipped to this ship. \n\n <img src='img/text/faction-klingon.png' width='20' height='20' title='Klingon'> - <b>COMBAT PHASE:</b> You may perform a [sensor-echo] Action as a Free Action even if this ship is not cloaked.",
 		OnePerShip: true,
@@ -1317,6 +1331,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Donik",
+		image: "https://i.imgur.com/HGlhL7H.png",
 		cost: 2,
 		text: "This ship cannot be targeted by [weapon_text] Upgrades fired through a <img src='img/text/rear-arc.png' width='20' height='20'>. <hr> <b>WHEN DEFENDING:</b> If the attacking ship has any [question_text] Upgrades equipped to their ship. \n\n Roll +1 defense die.",
 		unique: true,
@@ -1333,6 +1348,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Kovin",
+		image: "https://i.imgur.com/FfEHcUg.png",
 		cost: 2,
 		text: "Add 1 [weapon_text] to this ship's Upgrade Bar. <hr> <b>WHENEVER YOU WOULD PLACE 3 OR MORE <img src='img/stuff/effect_time_token.png' width='20' height='16'> TOKENS ON A </b> [weapon_text] <b> UPGRADE EQUIPPED TO THIS SHIP:</b> Place 1 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Token on this card. \n\n Place a <img src='img/stuff/effect_disable.png' width='20' height='16'> Token on that [weapon_text] Upgrade instead.",
 		unique: true,
@@ -1348,6 +1364,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Sulan",
+		image: "https://i.imgur.com/QPOheNJ.png",
 		cost: 2,
 		text: "<b>ACTION:</b> Discard this card and target an opposing ship within Range. \n\n Disable up to 2 [crew_text] Upgrades equipped to the target ship.",
 		unique: true,
@@ -1364,6 +1381,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Vidiian Guard",
+		image: "https://i.imgur.com/bpLhclO.png",
 		cost: 2,
 		text: "Increase the Captain Skill of the Vidiian Captain equipped to this ship by 2. <hr> <b>WHENEVER AN OPPOSING SHIP WITHIN RANGE WOULD REMOVE A <img src='img/stuff/effect_disable.png' width='20' height='16'> TOKEN FROM 1 OF THEIR [crew_text] UPGRADES:</b> \n Discard this card. \n\n That <img src='img/stuff/effect_disable.png' width='20' height='16'> Token cannot be removed this game round.",
 		OnePerShip: true,
@@ -1380,6 +1398,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Tau",
+		image: "https://i.imgur.com/nrF5sKi.png",
 		cost: 3,
 		text: "<b>PLANNING PHASE:</b> Target this ship or another ship within Range. \n\n Place a Token on this card beside the target ship. <hr> <b>COMBAT PHASE:</b> Target an opposing ship within Range. \n\n Steal either 1 [scan], [battlestations], [evade], or [aux] Token beside the target ship and place it on this card.",
 		unique: true,
@@ -1396,6 +1415,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Kurros",
+		image: "https://i.imgur.com/lclDqBB.png",
 		cost: 3,
 		text: "<b>ACTION:</b> Target an opposing ship within Range and your opponent must choose one of the following: \n\n * Place a Bounty Permanent Effect Token beside the target ship if it does not already have one. \n * Steal either a [battlestations], [evade], or [scan] Token from beside the target ship: place that Token and an [evade] Token beside this ship. \n * Once per game, Steal 1 <img src='img/text/unique.png' width='20' height='20' title='Unique'> [crew_text] Upgrade equipped to the target ship and equip it to this ship ignoring this ship's restrictions. <hr> <b>PERMANENT EFFECT:</b> For the rest of the game, each ship converts either 1 [blank] or [battlestations] into 1 [hit] each time they attack a ship with a Bounty Permanent Effect Token beside it.",
 		unique: true,
@@ -1412,6 +1432,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Zar",
+		image: ""
 		cost: 1,
 		text: "The Captains equipped to opposing ships within Range that have a Permanent Effect Token beside them have -1 Captain Skill. If that Token is a Reputation Permanent Effect Token, that ship has -2 Captain Skill instead.",
 		unique: true,
@@ -1428,6 +1449,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Mobar",
+		image: "https://i.imgur.com/B1mWm8Z.png",
 		cost: 3,
 		text: "Opposing ships within Range that have a Permanent Effect Token beside them roll -1 defense dice. In addition if that Token is a Reputation  Permanent Effect Token [battlestations], [scan], and/or [evade] Tokens spent by that ship are placed beside this ship instead of returning to the Action Token supply.",
 		unique: true,
@@ -1444,6 +1466,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Turanj",
+		image: "https://i.imgur.com/eReLXWE.png",
 		cost: 3,
 		text: "Add 1 [crew_text] to this ship's Upgrade Bar. <hr> <b>(First Officer) WHEN ATTACKING: DEAL DAMAGE STEP:</b> Discard the <img src='img/text/unique.png' width='20' height='20' title='Unique'> Captain equipped to this ship. \n\n Add 1 [crit] Then, flip this card over and equip it as the Captain.",
 		unique: true,
