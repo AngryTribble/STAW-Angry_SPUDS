@@ -1432,7 +1432,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Zar",
-		image: ""
+		image: "https://i.imgur.com/6TAoiMb.png",
 		cost: 1,
 		text: "The Captains equipped to opposing ships within Range that have a Permanent Effect Token beside them have -1 Captain Skill. If that Token is a Reputation Permanent Effect Token, that ship has -2 Captain Skill instead.",
 		unique: true,
