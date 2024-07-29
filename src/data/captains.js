@@ -269,7 +269,7 @@ module.exports = [
 			"75015"
 		],
 		name: "Nadirum",
-		imgae: "https://i.imgur.com/SfSgcOf.png",
+		image: "https://i.imgur.com/SfSgcOf.png",
 		unique: true,
 		text: "<b>ACTION:</b> If equipped to a <img src='img/text/ind-vidiian.png' width='20' height='20'>, this is a Free Action instead: Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target an opposing ship within Range. \n\n Discard 1 [crew_text] Upgrade equipped to the target ship.",
 		factions: [
