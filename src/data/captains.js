@@ -554,6 +554,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Rudolph Ransom",
+		iamge: "https://i.imgur.com/0VU9uHB.png",
 		unique: true,
 		text: "Add 1 [crew_text] to this ship's Upgrade Bar. <hr> <b>WHEN DEFENDING:</b> If there is an Obstacle within Range: \n\n Place an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside the attacking ship. If this card is equipped to a <img src='img/text/fed-nova.png' width='20' height='20'>, the attacking ship also rolls -1 attack die.",
 		factions: [
@@ -572,6 +573,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Kathryn Janeway",
+		image: "https://i.imgur.com/tGgbl6i.png",
 		unique: true,
 		text: "<b>EACH TIME AN OPPOSING EFFECT WOULD DISCARD, STEAL OR PLACE ANY <img src='img/stuff/effect_time_token.png' width='20' height='16'> / <img src='img/stuff/effect_disable.png' width='20' height='16'> TOKENS ON A </b> [crew_text] <b>UPGRADE EQUIPPED TO THIS SHIP:</b> Target that ship. \n\n You may perform a Free Attack with this ship's Primary Weapon against the target ship, if able. If this card is equipped to the U.S.S. Voyager, this attack may be in any direction.",
 		factions: [

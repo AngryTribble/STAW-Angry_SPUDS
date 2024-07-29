@@ -1475,6 +1475,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Voyager Discount",
+		image: "https://i.imgur.com/BCSOBIu.png",
 		cost: 0,
 		text: "<b>HOW TO USE:</b> Equip this card to the upgrade slot you wish to give the discount to. It will create a copy of the slot that will give the upgrade the discount once it is equipped. \n\n <b>Take 1 Damgage to your Shields or Hull per card equipped.</b> <hr> <b>UTOPIA USE ONLY</b>",
 		alliance: false,
@@ -1690,6 +1691,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Lower Decks",
+		image: "https://i.imgur.com/BCSOBIu.png",
 		cost: 0,
 		text: "Equip this card to a crew slot to utilize the Lower Decks keyword functionality. \n\n\n\n <b>NOT A REAL CARD \n\nFOR UTOPIA USE ONLY</b>",
 		alliance: false,
@@ -1885,6 +1887,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Ahni Jetal",
+		image: "https://i.imgur.com/0C7VDUX.png",
 		cost: 2,
 		text: "<b>WHENEVER AN OPPOSING EFFECT WITHIN RANGE WOULD DISCARD OR STEAL A FRIENDLY</b> [crew_text] <b>UPGRADE:</b> \n\n This card must be the target instead. <hr> <b>WHENEVER THIS CARD WOULD BE DISCARDED OR STOLEN BY AN OPPOSING SHIP:</b> Target that ship. \n\n Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on either a [crew_text] or a [question_text] Upgrade equipped to the target ship. \n\n\n <b>(Lower Decks)</b>",
 		unique: true,
@@ -1900,6 +1903,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Erin Hansen",
+		image: "https://i.imgur.com/52e5EhL.png",
 		cost: 2,
 		text: "<b>ACTIVATION PHASE:</b> Target an opposing ship within Range that has a Captain Skill of 5 or greater. \n\n If this ship activates after the target ship, you may execute an additional Maneuver on this ship's Maneuver dial. If the target ship is <img src='img/text/faction-borg.png' width='20' height='20' title='Borg'> or has a <img src='img/text/faction-borg.png' width='20' height='20' title='Borg'> Captain equipped to it, place 1 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Token on an Upgrade equipped to that ship.",
 		unique: true,
@@ -1917,6 +1921,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Thompson",
+		image: "https://i.imgur.com/8imbKUm.png",
 		cost: 2,
 		text: "<b>WHENEVER A [scan] TOKEN IS PLACED BESIDE THIS SHIP:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Place an [evade] Token beside this ship.",
 		unique: true,
@@ -1932,6 +1937,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Noah Lessing",
+		image: "https://i.imgur.com/EaaOQHh.png",
 		cost: 3,
 		text: "<b>PLANNING PHASE:</b> Spend 1 of this ship's Shield Tokens. \n\n Choose 1 of the following: \n * Remove an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token from beside this ship. If equipped to a <img src='img/text/fed-nova.png' width='20' height='20'>, also place a [scan] Token beside this ship. \n * Target opposing ship within Range cannot perform the [scan] Action or place [scan] Tokens beside their ship this game round.",
 		unique: true,
@@ -1948,6 +1954,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Marla Gilmore",
+		image: "https://i.imgur.com/jvNB3Mo.png",
 		cost: 3,
 		text: "Add 1 [tech_text] to this ship's Upgrade Bar. <hr> <b>FREE ACTION:</b> Discard a [tech_text] Upgrade equipped to this ship \n\n You may perform a Green Maneuver and then place an [evade] Token beside this ship.",
 		unique: true,
@@ -1963,6 +1970,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Maxwell Burke",
+		image: "https://i.imgur.com/Xe4ftBR.png",
 		cost: 3,
 		text: "<b>ACTION:</b> Discard this card and target an opposing ship within Range. \n\n Steal either 1 <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [tech_text] or <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [crew_text] Upgrade equipped to the target ship and equip it to this ship, ignoring this ship's restrictions.",
 		unique: true,
@@ -1995,6 +2003,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Tuvok",
+		image: "https://i.imgur.com/NyqHk1H.png",
 		cost: 4,
 		text: "<b>ACTION:</b> Disable this card. \n\n Perform either a [target-lock] or a [battlestations] Action as a Free Action. Then perform the Action listed on a <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [crew_text] Upgrade equipped to this ship as a Free Action.",
 		unique: true,
@@ -2011,6 +2020,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Harry Kim",
+		image: "https://i.imgur.com/8iIqQbm.png",
 		cost: 3,
 		text: "<b>EACH TIME A</b> [scan] <b>TOKEN IS PLACED BESIDE THIS SHIP:</b> \n\n Remove a <img src='img/stuff/effect_disable.png' width='20' height='16'> Token from either a <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [crew_text] or <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [tech_text] Upgrade equipped to this ship.",
 		unique: true,
@@ -2026,6 +2036,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Tom Paris",
+		image: "https://i.imgur.com/ItYX9F4.png",
 		cost: 3,
 		text: "<b>COMBAT PHASE:</b> Spend an [evade] Token from beside this ship. \n\n You may either perform a [sensor-echo] Action using the 1 [straight] template even if this ship is not cloaked, or a 1 <img src='img/stuff/maneuver_bank_left_white.png' width='20' height='20'> or 1 <img src='img/stuff/maneuver_bank_right_white.png' width='20' height='20'> Maneuver.",
 		unique: true,
@@ -2041,6 +2052,7 @@ module.exports = [
 			"75014"
 		],
 		name: "Chakotay",
+		image: "https://i.imgur.com/aycWRtK.png",
 		cost: 3,
 		text: "Add 1 [crew_text] to this ship's Upgrade Bar. <hr> <b>ACTION:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target an opposing ship within Range. \n\n Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on the Captain equipped to the target ship. <hr> <b>(First Officer) IF THE CAPTAIN EQUIPPED TO THIS SHIP IS DISCARDED:</b> \n\n Flip this card over and equip this card as the Captain.",
 		unique: true,
