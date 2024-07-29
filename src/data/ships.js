@@ -7,7 +7,7 @@ module.exports = [
 			"75016"
 		],
 		name: "U.S.S. Atlas",
-		image: "",
+		image: "https://i.imgur.com/w2HBtk3.png",
 		class: "Sovereign Class",
 		actions: [
 			"evade",
@@ -47,7 +47,7 @@ module.exports = [
 			"75016"
 		],
 		name: "U.S.S. Enterprise NCC-1701-E",
-		image: "",
+		image: "https://i.imgur.com/nIaiEuA.png",
 		class: "Sovereign Class",
 		actions: [
 			"evade",
@@ -87,7 +87,7 @@ module.exports = [
 			"75016"
 		],
 		name: "U.S.S. Enterprise NCC-1701-E",
-		image: "",
+		image: "https://i.imgur.com/uPXW7Km.png",
 		class: "Sovereign Class",
 		actions: [
 			"evade",
@@ -127,7 +127,7 @@ module.exports = [
 			"75016"
 		],
 		name: "U.S.S. Galaxy",
-		image: "",
+		image: "https://i.imgur.com/7xeztav.png",
 		class: "Galaxy Class",
 		actions: [
 			"evade",
@@ -167,7 +167,7 @@ module.exports = [
 			"75016"
 		],
 		name: "U.S.S. Enterprise-D",
-		image: "",
+		image: "https://i.imgur.com/kfJAuP3.png",
 		class: "Galaxy Class",
 		actions: [
 			"evade",
@@ -207,7 +207,7 @@ module.exports = [
 			"75016"
 		],
 		name: "U.S.S. Enterprise-B",
-		image: "",
+		image: "https://i.imgur.com/xOSU8Lg.png",
 		class: "Excelsior Class",
 		actions: [
 			"evade",
@@ -247,7 +247,7 @@ module.exports = [
 			"75016"
 		],
 		name: "U.S.S. Excelsior",
-		image: "",
+		image: "https://i.imgur.com/fWS3xTj.png",
 		class: "Excelsior Class",
 		actions: [
 			"evade",
@@ -287,7 +287,7 @@ module.exports = [
 			"75016"
 		],
 		name: "U.S.S. Enterprise-A",
-		image: "",
+		image: "https://i.imgur.com/eLou19b.png",
 		class: "Constitution Refit Class",
 		actions: [
 			"evade",
@@ -327,7 +327,7 @@ module.exports = [
 			"75016"
 		],
 		name: "Federation Starship",
-		image: "",
+		image: "https://i.imgur.com/ogcTJCi.png",
 		class: "Constitution Refit Class",
 		actions: [
 			"evade",
@@ -366,7 +366,7 @@ module.exports = [
 			"75016"
 		],
 		name: "U.S.S. Enterprise",
-		image: "",
+		image: "https://i.imgur.com/AEAZk2p.png",
 		class: "Constitution Refit Class",
 		actions: [
 			"evade",
@@ -406,7 +406,7 @@ module.exports = [
 			"75016"
 		],
 		name: "Columbia NX-02",
-		image: "",
+		image: "https://i.imgur.com/6Ni5CUL.png",
 		class: "Federation NX Class",
 		actions: [
 			"evade",
@@ -445,6 +445,7 @@ module.exports = [
 			"75016"
 		],
 		name: "Enterprise NX-01",
+		image: "https://i.imgur.com/Rn2gJnL.png",
 		class: "Federation NX Class",
 		actions: [
 			"evade",

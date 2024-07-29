@@ -7,6 +7,7 @@ module.exports = [
 			"75016"
 		],
 		name: "Geordi La Forge",
+		image: "https://i.imgur.com/cd2AXBc.png",
 		unique: true,
 		text: "<b>WHENEVER THIS SHIP WOULD OVERLAP AN OBSTACLE:</b> \n Disable 1 Shield on this ship. \n\n This ship does not skip the Perform Action Step and does not suffer damage from that Obstacle. <hr> <b>(Night Shift) ACTION:</b> Target a Cloaked ship within Range and place an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship. \n\n Place an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside the target ship and discard their [cloak] Token (The target may raise it's Shields).",
 		factions: [
@@ -24,6 +25,7 @@ module.exports = [
 			"75016"
 		],
 		name: "Data",
+		image: "https://i.imgur.com/njpRhSY.png",
 		unique: true,
 		text: "<b>(Night Shift)</b> Treat your Captain's Skill Number as 5. <hr> <b>AFTER THIS SHIP EXECUTES A</b> [reverse] <b>MANEUVER:(Night Shift) ANY RED MANEUVER INSTEAD:</b> \n\n Place a [battlestations] Token beside this ship.",
 		factions: [
@@ -40,6 +42,7 @@ module.exports = [
 			"75016"
 		],
 		name: "William T. Riker",
+		image: "https://i.imgur.com/gdD01P6.png",
 		unique: true,
 		text: "<b> PLANNING PHASE:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and place a NIGHT SHIFT Token on up to 2 [crew_text] Upgrades equipped to this ship. \n\n <b>Continuous Effect:</b> [crew_text] Upgrades with a NIGHT SHIFT Token on them gain the following ability: \n\n <b>(Night Shift)</b> Spend a NIGHT SHIFT Token on this card to perform its Action as a Free Action.",
 		factions: [
@@ -57,6 +60,7 @@ module.exports = [
 			"75016"
 		],
 		name: "Edward Jellico",
+		image: "https://i.imgur.com/udVgndJ.png",
 		unique: true,
 		text: "<b>ACTION:</b> Place a <img src='img/stuff/effect_time_token.png' width='20' height='16'> Token on a <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [crew_text] Upgrade equipped to this ship and target an opposing ship within Range. \n\n The Captain equipped to the target ship cannot use its printed ability text or any [talet_text] Upgrades equipped to it this game round.",
 		factions: [
@@ -76,6 +80,7 @@ module.exports = [
 			"75016"
 		],
 		name: "Jean-Luc Picard",
+		image: "https://i.imgur.com/Ltmfxfq.png",
 		unique: true,
 		text: "<b>EACH TIME AN OPPOSING EFFECT WOULD DISCARD, STEAL, OR PLACE ANY  <img src='img/stuff/effect_disable.png' width='20' height='16'> / <img src='img/stuff/effect_time_token.png' width='20' height='16'> ON A [crew_text] UPGRADE EQUIPPED TO THIS SHIP:</b> \n\n You may have a [weapon_text] Upgrade equipped to this ship become the target instead. <hr> <b>FREE ACTION:</b> If this card is equipped to a  <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> ship: \n\n Place either a [battlestations] or an [evade] Token beside this ship.",
 		factions: [
@@ -93,6 +98,7 @@ module.exports = [
 			"75016"
 		],
 		name: "John Harriman",
+		image: "https://i.imgur.com/4YV9ZY2.png",
 		unique: true,
 		text: "<b>FREE ACTION:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Perform the Action on a <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [crew_text] Upgrade equipped to this ship as a Free Action.",
 		factions: [
@@ -110,6 +116,7 @@ module.exports = [
 			"75016"
 		],
 		name: "Styles",
+		image: "https://i.imgur.com/zO9uDc5.png",
 		unique: true,
 		text: "<b>ACTIVATION PHASE:</b> Target another ship within Range and choose 1 of the following effect: \n\n * The Captain equipped to the target ship reduces its Captain Skill Number by 3 this game round. \n\n * The Admiral equipped to the target ship cannot use its printed ability text or have its <b>FLEET ACTION</b> be used this game round.",
 		factions: [
@@ -128,6 +135,7 @@ module.exports = [
 			"75016"
 		],
 		name: "Hikaru Sulu",
+		image: "https://i.imgur.com/SOSJGUe.png",
 		unique: true,
 		text: "<b>OBSTRUCT: 1 <hr> EACH TIME A FRIENDLY SHIP WITHIN RANGE SUFFERS DAMAGE: </b> \n\n This ship may either perform a 1 <img src='img/stuff/maneuver_bank_left_white.png' width='20' height='20'> or 1 <img src='img/stuff/maneuver_bank_right_white.png' width='20' height='20'> Maneuver.",
 		factions: [
@@ -146,6 +154,7 @@ module.exports = [
 			"75016"
 		],
 		name: "Pavel Chekov",
+		image: "https://i.imgur.com/XXCAvBn.png",
 		unique: true,
 		text: "<b>CHECK FOR POWER STRAIN STEP:</b> Place an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship and apply the corresponding effect based on the difficulty of this ship's Maneuver: \n\n <b>GREEN:</b> Repair 1 Hull on this ship. \n\n <b>WHITE:</b> Repair 1 Shield on this ship. \n\n <b>RED:</b> Place an [evade] Token beside this ship.",
 		factions: [
@@ -163,6 +172,7 @@ module.exports = [
 			"75016"
 		],
 		name: "Mr. Spock",
+		image: "https://i.imgur.com/9tCepnZ.png",
 		unique: true,
 		text: "<b>PLANNING PHASE:</b> Once per game, you may cancel any Active Negotiations in play. The controlling player(s) may activate their Negotiation Effect targeting a different ship. <hr> <b>FREE ACTION:</b> \n\n Perform either the [target-lock] Action or [scan] Action as a Free Action.",
 		factions: [
@@ -181,6 +191,7 @@ module.exports = [
 			"75016"
 		],
 		name: "James T. Kirk",
+		image: "https://i.imgur.com/DUP2TCU.png",
 		unique: true,
 		text: "<b>REVEAL DIAL STEP:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card \n\n Rotate this ship's Maneuver Dial to a different Maneuver.",
 		factions: [
@@ -198,6 +209,7 @@ module.exports = [
 			"75016"
 		],
 		name: "Erika Hernandez",
+		image: "https://i.imgur.com/PzKrUXt.png",
 		unique: true,
 		text: "Add 1 [crew_text] to this ship's Upgrade Bar. <hr> Friendly <img src='img/text/fed-nx.png' width='18' height='18' title='Federation NX Class'> ships within Range may use the effect of <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [crew_text] Upgrades equipped to this ship as though they are equipped to their ship instead. If they do, place 1 additional <img src='img/stuff/effect_time_token.png' width='20' height='16'> Token on that Upgrade.",
 		factions: [
@@ -217,6 +229,7 @@ module.exports = [
 			"75016"
 		],
 		name: "Maxwell Forrest",
+		image: "https://i.imgur.com/v7t8oMs.png",
 		unique: true,
 		text: "<b>AFTER THIS SHIP EXECUTES A MANEUVER:</b> \n Target a friendly <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> or <img src='img/text/faction-vulcan.png' width='20' height='20' title='Vulcan'> ship within Range that has a Captain equipped with a Captain Skill Number greater than this Captain. \n\n The target ship may either perform a 1 <img src='img/stuff/maneuver_straight_white.png' width='20' height='20'> Maneuver or the Captain equipped to the target ship can perform it's listed Action as a Free Action.",
 		factions: [
@@ -234,6 +247,7 @@ module.exports = [
 			"75016"
 		],
 		name: "T'Pol",
+		image: "https://i.imgur.com/sfXVmoi.png",
 		unique: true,
 		text: "<b>ACTION:</b> \n\n Perform a 1 <img src='img/stuff/impulse-roll.png' width='20' height='20'> Maneuver. In addition, if equipped to a <img src='img/text/faction-vulcan.png' width='20' height='20' title='Vulcan'> ship, place 2 [scan] Tokens beside this ship. In addition, if equipped to an <img src='img/text/fed-nx.png' width='20' height='20'>, you may perform the Action listed on a <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [crew_text] Upgrade equipped to this ship as a Free Action.",
 		factions: [
@@ -252,6 +266,7 @@ module.exports = [
 			"75016"
 		],
 		name: "Jonathan Archer",
+		image: "https://i.imgur.com/RrNG6uH.png",
 		unique: true,
 		text: "Add 1 [crew_text] to this ship's Upgrade Bar. <hr> <b>ACTION:</b> \n\n Perform the Action listed on up to 2 <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [crew_text] Upgrades equipped to this ship as Free Actions. Place a <img src='img/stuff/effect_disable.png' width='20' height='18' title='Federation'> Token on each of those Upgrades. ",
 		factions: [

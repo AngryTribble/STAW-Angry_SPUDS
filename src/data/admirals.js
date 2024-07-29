@@ -7,6 +7,7 @@ module.exports = [
 			"75016"
 		],
 		name: "James T. Kirk",
+		image: "https://i.imgur.com/8UfzzIf.png",
 		unique: true,
 		text: "Add 2 [crew_text] to this ship's Upgrade Bar <hr> <b>WHEN DEFENDING:</b> If this ship is within Range of a Non-Minefield Obstacle. \n\n Roll +1 defense die. In addition if the attacking ship is either a <img src='img/text/faction-klingon.png' width='20' height='20' title='Klingon'> ship or <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> ship, you may re-roll 1 [blank]. <hr> <b>GATHER FORCES STEP:</b> If this card is equipped to a <img src='img/text/fed-constitution-refit.png' width='20' height='20'>. \n\n Your fleet may include 1 additional <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> Admiral with a cost of 4 SP of less. Both Admirals may not be equipped to the same ship.",
 		factions: [
@@ -25,6 +26,7 @@ module.exports = [
 			"75016"
 		],
 		name: "Maxwell Forrest",
+		image: "https://i.imgur.com/xRhRjx9.png",
 		unique: true,
 		text: "<b>FLEET ACTION:</b> \n\n Perform a 1 <img src='img/stuff/maneuver_turn_left_white.png' width='20' height='20'>, 1 <img src='img/stuff/maneuver_bank_left_white.png' width='20' height='20'>, 1 <img src='img/stuff/maneuver_straight_white.png' width='20' height='20'>, 1 <img src='img/stuff/maneuver_bank_right_white.png' width='20' height='20'>, 1 <img src='img/stuff/maneuver_turn_right_white.png' width='20' height='20'> Maneuver.",
 		factions: [
