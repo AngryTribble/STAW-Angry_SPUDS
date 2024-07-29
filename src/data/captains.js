@@ -597,6 +597,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Vorta",
+		image: "https://i.imgur.com/kYRu7KI.png",
 		unique: false,
 		text: "",
 		factions: [
