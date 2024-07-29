@@ -2230,6 +2230,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Independent",
+		image: "https://i.imgur.com/iIw25Vz.png",
 		cost: 5,
 		text: "<b>WHEN ATTACKING OR DEFENDING:</b> If there are no friendly ships within range of this ship. \n\n You may convert 1 [blank] result to a [hit] result or a [evade] result.",
 		unique: true,
@@ -2246,6 +2247,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Suspicious",
+		image:  "https://i.imgur.com/d6pmiPO.png",
 		cost: 3,
 		text: "<b>COMBAT PHASE:</b> Target a Friendly Ship within Range \n\n Move 1 [battlestations], [evade], [scan], or blue [target-lock] Token from beside the target and place that Token beside this ship.",
 		OnePerShip: true,
@@ -2262,6 +2264,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Opportunistic",
+		image: "https://i.imgur.com/NgLPYD2.png",
 		cost: 3,
 		text: "<b>WHEN ATTACKING: MODIFY ATTACK DICE STEP:</b> If the opposing ship has a lower captain skill than ship ship. \n\n You may convert 1 [blank] or [battlestations] result to a [hit] result.",
 		OnePerShip: true,
@@ -2277,6 +2280,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Ambush Tactics",
+		image: "https://i.imgur.com/gF7qDhl.png",
 		cost: 3,
 		text: "<b>WHEN ATTACKING WHILE CLOAKED:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n You may convert up to 3 [battlestations] results into [hit] results.",
 		shipRomulan: true,
@@ -2293,6 +2297,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Evasive",
+		image: "https://i.imgur.com/058MXME.png",
 		cost: 2,
 		text: "<b>EXECUTE MANEUVER STEP:</b> When you would execute a 1 [bank-left] or 1 [bank-right] maneuver, place 2 [time] Tokens on this card. \n\n You may use the 1 [turn-left] or 1 [turn-right] template instead.",
 		alliance: true,
@@ -2307,6 +2312,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Anticipation",
+		image: "https://i.imgur.com/TIm4lB3.png",
 		cost: 2,
 		text: "<b>REVEAL DIAL STEP:</b> Discard this card. \n\n Change this ship's revealed maneuver to any green or white maneuver instead.",
 		alliance: true,
@@ -2321,6 +2327,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Tactical Officer",
+		image: "https://i.imgur.com/iBLpgWE.png",
 		cost: 4,
 		text: "<b>WHEN ATTACKING:</b>  \n If you are outside the target's Primary Firing Arc. \n\n Add 1 [hit] result.",
 		OnePerShip: true,
@@ -2336,6 +2343,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Sub-Commander",
+		image: "https://i.imgur.com/0DKNfoW.png",
 		cost: 5,
 		text: "<b>EXECUTE MANEUVER STEP:</b> If this ship performed a green or white maneuver that did not overlap a ship or obstacle. \n\n Place 1 [evade] Token beside this ship.",
 		OnePerShip: true,
@@ -2351,6 +2359,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Ops Officer",
+		image: "https://i.imgur.com/UcmcQjx.png",
 		cost: 4,
 		text: "<b>ACTION:</b> Place 1 [scan] Token beside this ship. You may also choose 1 opposing ship within range and remove 1 [scan], [battlestations] or [evade] Token from beside that ship.",
 		OnePerShip: true,
@@ -2367,6 +2376,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Engineer",
+		image: "https://i.imgur.com/03G2OBN.png",
 		cost: 3,
 		text: "<b>END PHASE:</b> Disable this card to choose one of the following effects: \n\n *Repair 1 shield \n\n *Remove 1 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Token from one of this ship's Upgrade cards.",
 		OnePerShip: true,
@@ -2382,6 +2392,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Science Officer",
+		image: "https://i.imgur.com/lb16mve.png",
 		cost: 2,
 		text: "You may spend [evade] Tokens as if they were [scan] Tokens.",
 		OnePerShip: true,
@@ -2397,6 +2408,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Helmsman",
+		image: "https://i.imgur.com/wywzr6G.png",
 		cost: 2,
 		text: "<b>ACTIVATION PHASE:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n This ship may make a green maneuver.",
 		OnePerShip: true,
@@ -2412,6 +2424,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Singularity Leak",
+		image: "https://i.imgur.com/U3hZs9K.png",
 		cost: 5,
 		text: "<b>ACTIVATION PHASE:</b> When any ship performs a maneuver and ends within range 1 of you, you must roll 1 Attack die. \n\n On a [hit] or [crit] result, that ship suffers 1 damage.",
 		unique: true,
@@ -2427,6 +2440,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Heavy Disruptor",
+		image: "https://i.imgur.com/xqshZXf.png",
 		cost: 5,
 		text: "<b>ATTACK:</b> Gain 1 <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token and target an opposing ship. \n\n <b>MODIFY ATTACK DICE STEP:</b> If the target has a printed Agility Value of 0 or 1, add 1 [crit] result.",
 		attack: "4",
@@ -2446,6 +2460,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Heavy Plasma Torpedo",
+		image: "https://i.imgur.com/ZYkSOtO.png",
 		cost: 5,
 		text: "<b>ATTACK:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card, 1 <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship, and target an opposing ship. \n\n <b>MODIFY ATTACK DICE STEP:</b> If the target has a printed Agility Value of 0, convert all your [hit] results to [crit] results.",
 		attack: "4",
@@ -2465,6 +2480,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Enhanced Torpedoes",
+		image: "https://i.imgur.com/CdB6kAb.png",
 		cost: 3,
 		text: "<b>ATTACK:</b> Spend this ship's [target-lock] Token, place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target an opposing ship. \n\n Convert up to 2 [blank] results into [hit] results.",
 		attack: "5",
@@ -2483,6 +2499,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Ventral Disruptors",
+		image: "https://i.imgur.com/QkH7Qpw.png",
 		cost: 3,
 		text: "<b>ATTACK:</b> Target an opposing ship. This ship may fire this [weapon] in any direction. \n\n You may convert 1 [battlestations] result to a [hit] result.",
 		attack: "3",
@@ -2500,6 +2517,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Integrated Cloak",
+		image: "https://i.imgur.com/CUgLljw.png",
 		cost: 2,
 		text: "<b>AFTER ATTACKING:</b> If you destroy the target. \n\n You may perform a free [cloak] action. If you already have a [cloak] Token, you may flip it to its green side.",
 		shipRomulan: true,
@@ -2516,6 +2534,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Advanced Cloaking",
+		image: "https://i.imgur.com/58MOLg3.png",
 		cost: 4,
 		text: "<b>WHEN ATTACKING:</b> If this ship is Cloaked and does not have an [aux] Token beside it, place an [aux] Token beside this ship. \n\n This ship's [cloak] Token does not flip to its red side this attack.",
 		alliance: true,
@@ -2530,6 +2549,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Ventral Thrusters",
+		image: "https://i.imgur.com/mTYHffg.png",
 		cost: 4,
 		text: "<b>WHEN THIS SHIP PERFORMS A [sensor-echo] ACTION:</b> You may move sideways using the 1 [bank-left] or 1 [bank-right] template insead. \n<hr> <b>ACTIVATION PHASE:</b> Discard this card. \n\n Perform a free [sensor-echo] action, even if you are not cloaked. You may move sideways using the 1 [bank-left] or 1 [bank-right] template instead.",
 		OnePerShip: true,
@@ -2545,6 +2565,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Muon Feedback Beam",
+		image: "https://i.imgur.com/cXeDihq.png",
 		cost: 3,
 		text: "<b>END PHASE:</b> If you are not cloaked, choose a ship within range. \n\n Remove 1 <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship and place it beside the chosen ship.",
 		range: "1",
@@ -2561,6 +2582,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Deep Cloak",
+		image: "https://i.imgur.com/TtUXHlF.png",
 		cost: 3,
 		text: "<b>COMBAT PHASE:</b> If you are cloaked opposing ships that do not have any [scan] Tokens beside their ship can only target you if they are within range.",
 		range: "1 - 2",
@@ -2577,6 +2599,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Molecular Phase Inverter",
+		image: "https://i.imgur.com/rUIYGv7.png",
 		cost: 2,
 		text: "<b>EXECUTE MANEUVER STEP:</b> When you overlap an obstacle, place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n You do not skip your perform action step.",
 		alliance: true,
@@ -2591,6 +2614,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Plasma Coil Overcharge",
+		image: "https://i.imgur.com/QUngZxo.png",
 		cost: 2,
 		text: "You may treat all of your [straight] maneuvers as green. \n<hr> <b>EXECUTE MANEUVER STEP:</b> If this ship performs a [bank-left] or [bank-right], you may discard this card. \n\n Treat that maneuver as green.",
 		OnePerShip: true,
@@ -2606,6 +2630,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Cunning",
+		image: "https://i.imgur.com/0ym2W8q.png",
 		cost: 5,
 		text: "<b>WHEN ATTACK:</b> If this ship has no active shields. \n\n You may convert 1 [blank] into 1 [hit] result. \n<hr> <b>WHEN DEFENDING:</b> If this ship has no active shields. \n\n You may reroll 1 [blank] result.",
 		OnePerShip: true,
@@ -2621,6 +2646,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Engineer",
+		image: "https://i.imgur.com/44KSemh.png",
 		cost: 4,
 		text: "<b>END PHASE:</b> If you do not have a <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token, you may gain 1 <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token to choose on of the following effects: \n\n *Repair 1 hull damage. \n\n *Flip one face-up damage card face-down.",
 		OnePerShip: true,
@@ -2636,6 +2662,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Disruptor Sweep",
+		image: "https://i.imgur.com/3xgNSVu.png",
 		cost: 4,
 		text: "The Attack Value of this [weapon] is this ship's Primary Weapn Value -1. \n<hr> <b>ATTACK:</b> Disable this card and target all opposing ships. \n\n Make a separate attack roll against each target ship.",
 		attack: "*",
@@ -2654,6 +2681,7 @@ module.exports = [
 			"80003"
 		],
 		name: "Thruster Efficiency",
+		image: "https://i.imgur.com/WUmiT2J.png",
 		cost: 5,
 		text: "<b>EXECUTE MANEUVER STEP:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Treat a red maneuver as white, or a white maneuver as green.",
 		OnePerShip: true,
@@ -2672,6 +2700,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Converging Fire",
+		image: "https://i.imgur.com/icrkXoA.png",
 		cost: 2,
 		text: "<b>COMBAT PHASE:</b> Friendly ships may treat your [target-lock] Tokens as their own.",
 		OnePerShip: true,
@@ -2689,6 +2718,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Torpedo Fusillade",
+		image: "https://i.imgur.com/tr87Qnz.png",
 		cost: 0,
 		text: "The cost and Attack Value of this [weapon] are equal to this ship's Primary Weapon Value. \n<hr> <b>ATTACK:</b> Remove this card from the game and target all opposing ships. \n\n Make a separate attack roll against each target ship.",
 		unique: true,
@@ -2706,6 +2736,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Photon Torpedoes",
+		image: "https://i.imgur.com/0s8Ijvz.png",
 		cost: 3,
 		text: "The Attack Value of this [weapon] is this ship's Primary Weapon Value +1. \n<hr> <b>ATTACK:</b> Spend this ship's [target-lock] Token, disable this card, and target an opposing ship. \n\n This ship may convert 1 [blank] into a [crit] result.",
 		FrontArc: true,
@@ -2723,6 +2754,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Disruptor Overcharge",
+		image: "https://i.imgur.com/FgsXTSk.png",
 		cost: 3,
 		text: "<b>WHEN ATTACKING WITH THIS SHIP'S PRIMARY WEAPON: ROLL ATTACK DICE STEP:</b> If you rolled at least 1 [crit] result. \n\n Add 1 [hit] result to the total.",
 		OnePerShip: true,
@@ -2740,6 +2772,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Forward Battery",
+		image: "https://i.imgur.com/zKje41k.png",
 		cost: 5,
 		text: "<b>WHEN DEFENDING: DECLARE TARGET STEP:</b> If the attacking ship is in your Primary Firing Arc. \n\n Roll 1 Attack die. On a [hit] or [crit] result, deal 1 damage to the attacking ship before it attacks.",
 		OnePerShip: true,
@@ -2757,6 +2790,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Eye For An Eye",
+		image: "https://i.imgur.com/0tjCzIb.png",
 		cost: 2,
 		text: "<b>WHEN DEFENDING: DEAL DAMAGE STEP:</b> If this ship suffers a face-up damage card and the attacking ship is in your Primary Firing Arc. \n\n Discard this card to deal the attacking ship 1 face-up damage card (even if it has active shields).",
 		OnePerShip: true,
@@ -2773,6 +2807,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Strafing Run",
+		image: "https://i.imgur.com/bbiaRXx.png",
 		cost: 3,
 		text: "<b>EXECUTE MANEUVER STEP:</b> If your ship's base or maneuver template overlapped an opposing ship: \n\n Roll 1 attack die. On a [hit] or [crit] result, the opposing ship suffers 1 damage.",
 		OnePerShip: true,
@@ -2790,6 +2825,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Fight With Honor",
+		image: "https://i.imgur.com/MQX3zIJ.png",
 		cost: 3,
 		text: "<b>WHEN ATTACKING A SHIP WITH AN EQUAL OR HIGHER CAPTAIN SKILL NUMBER THAN THIS SHIP:</b> \n\n Convert 1 [battlestations] into 1 [crit].",
 		OnePerShip: true,
@@ -2806,6 +2842,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Glory To The Empire!",
+		image: "https://i.imgur.com/IvKchce.png",
 		cost: 2,
 		text: "<b>WHEN ATTACKING OR DEFENDING:</b> Discard this card. \n\n Reroll all your dice.",
 		alliance: true,
@@ -2820,6 +2857,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Evasive Maneuvers",
+		image: "https://i.imgur.com/ufWVLHe.png",
 		cost: 4,
 		text: "<b>WHEN THIS SHIP SPENDS A [evade] TOKEN:</b> Place 1 <img src='img/stuff/effect_time_token.png' width='20' height='16' title='Time Token'> Token on this card. \n\n Place 1 [evade] Token beside this ship.",
 		OnePerShip: true,
@@ -2836,6 +2874,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Reckless Assault",
+		image: "https://i.imgur.com/32ePpmy.png",
 		cost: 4,
 		text: "<b>WHEN ATTACKING WITH THIS SHIP'S PRIMARY WEAPON:</b> If you are within the target's Primary Firing Arc. \n\n Roll +1 Attack die.",
 		OnePerShip: true,
@@ -2852,6 +2891,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Enhanced Thrusters",
+		image: "https://i.imgur.com/UpczH3d.png",
 		cost: 5,
 		text: "<b>EXECUTE MANEUVER STEP:</b> When this ship performs a [bank-left] or [bank-right] maneuver of speed 2 or 3: \n\n You may treat that maneuver as red to rotate this ship 180°.",
 		OnePerShip: true,
@@ -2869,6 +2909,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Passive Sensors",
+		image: "https://i.imgur.com/e02ZV4l.png",
 		cost: 2,
 		text: "<b>END PHASE:</b> If you did not attack this round, place 1 [scan] Token on this card (max 1). \n\n <b>FREE ACTION:</b> Place 1 [scan] Token from this card beside this ship.",
 		OnePerShip: true,
@@ -2884,6 +2925,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Reinforced Hull",
+		image: "https://i.imgur.com/jUkoVmC.png",
 		cost: 2,
 		text: "Add +2 to this ship's Hull Value.",
 		OnePerShip: true,
@@ -2900,6 +2942,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Secondary Cloaking Coil",
+		image: "https://i.imgur.com/cnF3sYR.png",
 		cost: 3,
 		text: "<b>ACTION:</b> Discard this card. \n\n Repair 1 Shield Token. If you have the [cloak] action on this ship's action bar, you may [cloak] as a free action.",
 		OnePerShip: true,
@@ -2915,6 +2958,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Targeting Array",
+		image: "https://i.imgur.com/0nYEGun.png",
 		cost: 4,
 		text: "You can have two Blue [target-lock] Tokens. \n<hr> <b>WHEN YOU PERFORM A [target-lock] ACTION:</b> \n\n You may perform an additional [target-lock] Action against a different opposing ship within Range.",
 		unique: true,
@@ -2930,6 +2974,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Reactor Vent",
+		image: "https://i.imgur.com/jcoAmP1.png",
 		cost: 4,
 		text: "<b>COMBAT PHASE:</b> If there is an opposing ship within range, you may spend 1 [aux] Token from beside this ship to roll 1 attack die. \n\n On a [hit] or [crit] result, discard 1 Shield Token from the opposing ship.",
 		range: "1",
@@ -2946,6 +2991,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Secondary Relays",
+		image: "https://i.imgur.com/mW1DIWj.png",
 		cost: 2,
 		text: "<b>WHEN THIS SHIP WOULD DISABLE A [weapon] UPGRADE:</b> \n If you do not have any [aux] Tokens beside this ship: \n\n You may place an [aux] Token beside this ship instead.",
 		OnePerShip: true,
@@ -2961,6 +3007,7 @@ module.exports = [
 			"80002"
 		],
 		name: "First Officer",
+		image: "https://i.imgur.com/2a2qxcm.png",
 		cost: 4,
 		text: "<b>WHEN ATTACKING OR DEFENDING:</b> \n Place 1 <img src='img/stuff/effect_time_token.png' width='20' height='16' title='Time Token'> Token on this card. \n\n Convert 1 [battlestations] into 1 [hit] or 1 [evade].",
 		OnePerShip: true,
@@ -2976,6 +3023,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Weapons Officer",
+		image: "https://i.imgur.com/lRJwyG6.png",
 		cost: 4,
 		text: "<b>WHEN ATTACKING:</b> Disable this card. \n\n Convert 1 of your [battlestations] results into a [crit] result and all of your other [battlestations] results into [hit] results.",
 		OnePerShip: true,
@@ -2991,6 +3039,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Operations Officer",
+		image: "https://i.imgur.com/CinJaMw.png",
 		cost: 4,
 		text: "If equipped to a <img src='img/text/kli-kvort.png' width='20' height='20' title='KVort Class'>, add +1 to this ship's Agility Value. \n<hr> <b>WHEN DEFENDING:</b> You may convert 1 [battlestations] result into 1 [evade] result.",
 		OnePerShip: true,
@@ -3006,6 +3055,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Tactical Officer",
+		image: "https://i.imgur.com/AFlGQ09.png",
 		cost: 2,
 		text: "<b>WHEN ATTACKING:</b> If you have a Red [target-lock] on the target ship: \n\n You may spend it as if it were a [battlestations] Token.",
 		OnePerShip: true,
@@ -3021,6 +3071,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Helmsman",
+		image: "https://i.imgur.com/cjVMrwJ.png",
 		cost: 2,
 		text: "<b>EXECUTE MANEUVER STEP:</b> If this ship performed a Non-Red Maneuver that did not overlap any ships or obstacles. Disable this card. \n\n Perform any Maneuver with a Speed of 1 on this ship's Maneuver Dial.",
 		OnePerShip: true,
@@ -3036,6 +3087,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Science Officer",
+		image: "https://i.imgur.com/ZHYL9E4.png",
 		cost: 3,
 		text: "<b>ACTION:</b> Place 1 [scan] Token beside this ship. \n\n You may remove 1 Red  [target-lock] Token from beside this ship (and the corresponding Blue  [target-lock] Token).",
 		OnePerShip: true,
@@ -3051,6 +3103,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Extend Shields",
+		image: "https://i.imgur.com/N2V1mkb.png",
 		cost: 3,
 		text: "<b>END PHASE:</b> If you have 1 or more Active Shields, place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and place 1 <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship to target a friendly ship within Range. \n\n The target ship Repairs 1 Shield.",
 		range: "1",
@@ -3067,6 +3120,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Engineering Officer",
+		image: "https://i.imgur.com/DjXPKCU.png",
 		cost: 3,
 		text: "<b>PERFORM ACTION STEP:</b> Disable this card. \n\n This ship may perform 1 Action while having any <img src='img/stuff/effect_auxilary.png' width='18' height='16' title='AUX Power Token'> Tokens beside it.",
 		OnePerShip: true,
@@ -3082,6 +3136,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Battle Plan",
+		image: "https://i.imgur.com/RtO3StP.png",
 		cost: 4,
 		text: "<b>WHEN ATTACKING:\n </b> If the target is within Range of both this ship and at least 1 other friendly ship. \n\n Add 1 [battlestations] result to this ship's attack roll.",
 		unique: true,
@@ -3098,6 +3153,7 @@ module.exports = [
 			"80002"
 		],
 		name: "Coordinated Assault",
+		image: "https://i.imgur.com/gAKepCa.png",
 		cost: 5,
 		text: "<b>AFTER ATTACKING OR DEFENDING:\n </b> Target a friendly ship within Range and spend a [battlestations], [evade], or [scan] Token from beside this ship. \n\n Place a copy of that Token beside the target ship.",
 		unique: true,
