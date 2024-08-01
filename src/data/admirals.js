@@ -203,6 +203,7 @@ module.exports = [
 			"75003"
 		],
 		name: "Gint",
+		image: "https://i.imgur.com/FRQB9Zi.png",
 		cost: 3,
 		skill: 0,
 		talents: 0,
@@ -305,6 +306,7 @@ module.exports = [
 			"72241"
 		],
 		name: "Gowron",
+		image: "https://i.imgur.com/0ZVG2LP.png",
 		unique: true,
 		text: "<b>FLEET ACTION:</b> If there is not already a [battlestations] Token beside your ship, place 1 [battlestations] Token beside your ship. In addition, if your ship is a Klingon ship with a Klingon Captain assigned to it, you may immediately perform an additional Action from your Action Bar as a free Action.",
 		factions: [
@@ -460,6 +462,7 @@ module.exports = [
 			"71535"
 		],
 		name: "Worf",
+		image: "https://i.imgur.com/sptDzuw.png",
 		unique: true,
 		text: "<b>FLEET ACTION:</b> Target a friendly ship at Range 1-2 with a Hull Value of 3 or less. The target ship immediately makes one free attack with its Primary Weapon against an enemy ship in its forward firing arc. Place an Auxiliary Power Token beside the target ship.",
 		factions: [
@@ -494,6 +497,7 @@ module.exports = [
 			"71798"
 		],
 		name: "Gul Madred",
+		image: "https://i.imgur.com/8OcgVeI.png",
 		unique: true,
 		text: "<b>FLEET ACTION:</b> Target a ship at Range 1-3. If the Captain on the target ship has a Skill number of 6 or less, discard that ship's Captain and Gul Madred. If the Captain on the target ship has a Skill number of 7 or higher, that Captain rolls 2 defense dice. If at least 1 [battlestations] result is rolled, do not discard that ship's Captain or Gul Madred.",
 		factions: [
@@ -668,6 +672,7 @@ module.exports = [
 			"72000b"
 		],
 		name: "Q",
+		image: "https://i.imgur.com/wQTdrjj.png",
 		cost: 1,
 		skill: -1,
 		talents: 1,
