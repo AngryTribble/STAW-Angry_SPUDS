@@ -701,6 +701,7 @@ module.exports = [
 			"75012"
 		],
 		name: "Rekar",
+		image: "https://i.imgur.com/WEgDbVm.png",
 		unique: true,
 		text: "You do not pay faction penalty when equipping this card or any <img src='img/text/faction-romulan.png' width='20' height='20' title='Romulan'> [crew_text] Upgrades to this <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> ship. \n<hr> <b>WHEN ATTACKING WITH A [weapon_text] UPGRADE:</b> \n\n You may re-roll up to 2 [blank] . If that Upgrade is a non-<img src='img/text/faction-romulan.png' width='20' height='20' title='Romulan'> [weapon_text], roll +1 Attack die.",
 		factions: [
@@ -753,6 +754,7 @@ module.exports = [
 			"75012"
 		],
 		name: "Shinzon",
+		image: "https://i.imgur.com/4ju3rI6.png",
 		unique: true,
 		text: "Add the [battlestations] Action to this ship's Action Bar. \n<hr> <b>FREE ACTION:</b> If this ship is cloaked. \n\n Perform an Action on this ship's Action Bar as a Free Action.",
 		factions: [
@@ -858,6 +860,7 @@ module.exports = [
 			"75010"
 		],
 		name: "The Albino",
+		image: "https://i.imgur.com/8jp5F0Y.png",
 		unique: true,
 		text: "<b>WHEN ATTACKING A <img src='img/text/faction-klingon.png' width='20' height='20' title='Klingon'> SHIP OR A SHIP WITH A <img src='img/text/faction-klingon.png' width='20' height='20' title='Klingon'> CAPTAIN EQUIPPED TO IT:</b> \n\n Roll +1 attack die.\n<hr> <b>WHEN ATTACKING:</b> Once per game, if this attack hits:\n\n Discard 1 [crew_text] Upgrade equipped to the defending ship.\n<hr> <b>ACTIVIATION PHASE:</b> Once per game: \n\n This ship may activate last.",
 		factions: [
@@ -912,6 +915,7 @@ module.exports = [
 			"75010"
 		],
 		name: "Kang",
+		image: "https://i.imgur.com/7IeuNAb.png",
 		unique: true,
 		text: "<b>START OF THE GAME:</b> Target a Captain equipped to an opposing ship.\n<hr> <b>WHEN ATTACKING:</b> During the Modify Attack Dice Step, if the target captain is equipped to the defending ship, discard this card.\n\n Add two [crit] results.",
 		factions: [
@@ -1508,6 +1512,7 @@ module.exports = [
 			"71282"
 		],
 		name: "Rettik",
+		imgae: "https://i.imgur.com/AwsBeEb.png",
 		unique: true,
 		text: "Each time you defend, you may re-roll 1 of your blank results one time.",
 		factions: [
@@ -2469,6 +2474,7 @@ module.exports = [
 			"75003"
 		],
 		name: "Daimon Solok",
+		image: "https://i.imgur.com/w14CscT.png",
 		cost: 2,
 		skill: 4,
 		talents: 1,
@@ -2589,6 +2595,7 @@ module.exports = [
 			"72282p"
 		],
 		name: "B'Etor",
+		image: "https://i.imgur.com/TX7ufK3.png",
 		cost: 3,
 		skill: 4,
 		talents: 1,
@@ -2796,6 +2803,7 @@ module.exports = [
 			"71282"
 		],
 		name: "Culluh",
+		image: "https://i.imgur.com/6l8oVam.png",
 		unique: true,
 		text: "After you move, you may discard 1 of your [crew_text] Upgrades to perform one of the Actions listed on your Action Bar as a free Action this round.",
 		factions: [
@@ -3002,6 +3010,7 @@ module.exports = [
 			"71800"
 		],
 		name: "Soval",
+		image: "https://i.imgur.com/GmfLbHu.png",
 		unique: true,
 		text: "You do not pay a faction penalty when deploying any Upgrades to your ship.",
 		factions: [
@@ -3156,6 +3165,7 @@ module.exports = [
 			"71806"
 		],
 		name: "Bractor",
+		image: "https://i.imgur.com/G8XG9ib.png",
 		cost: 3,
 		skill: 4,
 		talents: 1,
@@ -3727,6 +3737,7 @@ module.exports = [
 			"71528"
 		],
 		name: "Calvin Hudson",
+		image: "https://i.imgur.com/lCsH3Xz.png",
 		unique: true,
 		text: "Add 1 [tech_text], [weapon_text] or [crew_text] Upgrade to your Upgrade Bar (your choice). \n\nIf this card is assigned to an Independent ship, all of your Upgrades cost -1 SP.",
 		factions: [
@@ -3813,6 +3824,7 @@ module.exports = [
 			"71793"
 		],
 		name: "Jabin",
+		image: "https://i.imgur.com/6MRMKim.png",
 		unique: true,
 		text: "When defending, your ship rolls +1 defense die.",
 		factions: [
@@ -4008,6 +4020,7 @@ module.exports = [
 			"75005"
 		],
 		name: "Hikaru Sulu",
+		image: "https://i.imgur.com/svqiiTC.png",
 		cost: 3,
 		skill: 5,
 		talents: 0,
@@ -4339,6 +4352,7 @@ module.exports = [
 			"GenCon2013Promo"
 		],
 		name: "Khan Singh",
+		image: "https://i.imgur.com/PFBlyLI.png",
 		unique: true,
 		text: "(Gen-Con Promo) You do not pay a Faction penalty when assigning Khan or any [talent_text] Upgrade to your ship. If any Captain in play has a higher Skill Number than Khan, Khan's Skill Number equals that Captain's Skill Number.",
 		factions: [
@@ -5102,6 +5116,7 @@ module.exports = [
 			"75005"
 		],
 		name: "Mr. Spock",
+		image: "https://i.imgur.com/mpO4g34.png",
 		cost: 4,
 		skill: 6,
 		talents: 1,
@@ -5121,6 +5136,7 @@ module.exports = [
 			"75006"
 		],
 		name: "Koloth",
+		image: "https://i.imgur.com/pZQ7yQ4.png",
 		cost: 4,
 		skill: 7,
 		talents: 1,
@@ -5227,6 +5243,7 @@ module.exports = [
 			"73001"
 		],
 		name: "Lurin",
+		image: "https://i.imgur.com/IJXzm3x.png",
 		cost: 5,
 		skill: 7,
 		talents: 1,
@@ -5312,6 +5329,7 @@ module.exports = [
 			"72235p"
 		],
 		name: "Khan Singh",
+		image: "https://i.imgur.com/DSzZDKb.png",
 		unique: true,
 		text: "You may use any Upgrades without paying a Faction penalty. Up to 3 of the Upgrades you purchase for your ship cost exactly 4 SP each and are placed face down beside your Ship Card. Each Upgrade remains face down until you decide to use it, and then it is turned face up for the rest of the game. The printed cost on those Upgrades cannot be greater than 6.",
 		factions: [
@@ -5382,6 +5400,7 @@ module.exports = [
 			"72262"
 		],
 		name: "Gul Dukat",
+		image: "https://i.imgur.com/p9TBx2w.png",
 		unique: true,
 		text: "Your ship may perform an [evade] or a [battlestations] Action as a free Action each round.",
 		factions: [
@@ -5450,6 +5469,7 @@ module.exports = [
 			"71279"
 		],
 		name: "Weyoun",
+		image: "https://i.imgur.com/eAINFCA.png",
 		unique: true,
 		text: "Add up to 2 additional [crew_text] Upgrade slots to you ship's Upgrade Bar. The cost of these Upgrades is -1 SP each if they are Dominion [crew_text] Upgrades.",
 		factions: [
@@ -5622,6 +5642,7 @@ module.exports = [
 			"71532"
 		],
 		name: "Chang",
+		image: "https://i.imgur.com/GH39BK0.png",
 		unique: true,
 		text: "During the Activation Phase, if your ship is Cloaked, before you move you may perform an additional [sensor-echo] Action (with a 1 [forward] Maneuver Template) as a free Action. If you do so, you may still perform a normal [sensor-echo] Action after you move, during the Perform Actions step.",
 		factions: [
@@ -5904,6 +5925,7 @@ module.exports = [
 			"75006"
 		],
 		name: "Kor",
+		image: "https://i.imgur.com/7jbxlkf.png",
 		cost: 5,
 		skill: 8,
 		talents: 1,
@@ -5921,6 +5943,7 @@ module.exports = [
 			"75006"
 		],
 		name: "James T. Kirk",
+		image: "https://i.imgur.com/2FcTsQk.png",
 		cost: 5,
 		skill: 8,
 		talents: 1,
@@ -5991,6 +6014,7 @@ module.exports = [
 			"2017core"
 		],
 		name: "Jean-Luc Picard",
+		image: "https://i.imgur.com/6iHLH1g.png",
 		cost: 6,
 		skill: 8,
 		talents: 2,
@@ -6009,6 +6033,7 @@ module.exports = [
 			"75001"
 		],
 		name: "Tomalak",
+		image: "https://i.imgur.com/YPyoBpK.png",
 		cost: 5,
 		skill: 8,
 		talents: 1,
@@ -6078,6 +6103,7 @@ module.exports = [
 			"72251"
 		],
 		name: "Martok",
+		image: "https://i.imgur.com/uH6rjGc.png",
 		unique: true,
 		text: "After you move, choose 1 friendly ship within Range 1-2 whose Captain has a lower Skill than Martok's. The chosen ship may immediately perform 1 free Action. ",
 		factions: [
@@ -6234,6 +6260,7 @@ module.exports = [
 			"71804"
 		],
 		name: "Kor",
+		image: "https://i.imgur.com/UmogbIa.png",
 		unique: true,
 		text: "Add 1 [crew_text] Upgrade Slot to your Upgrade Bar. \nEach time you attack, during the Modify Attack Dice step, you may select any number of attack dice (up to the number of non-disabled [crew_text] Upgrades assigned to your ship) and re-roll those dice once.",
 		factions: [

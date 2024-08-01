@@ -1289,6 +1289,7 @@ module.exports = [
 		],
 		name: "Dominion Starship",
 		class: "Jem'Hadar Battle Cruiser",
+		image: "https://i.imgur.com/1CatRst.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -1400,6 +1401,7 @@ module.exports = [
 		],
 		name: "Klingon Starship",
 		class: "K'Vort Class",
+		image: "https://i.imgur.com/HiqU2RV.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -1958,6 +1960,7 @@ module.exports = [
 			"75012"
 		],
 		name: "I.R.W. Belak",
+		image: "https://i.imgur.com/ObpwEor.png",
 		class: "D'deridex Class",
 		actions: [
 			"evade",
@@ -1997,6 +2000,7 @@ module.exports = [
 		],
 		name: "Romulan Starship",
 		class: "D'deridex Class",
+		image: "https://i.imgur.com/uolfK2a.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -2108,6 +2112,7 @@ module.exports = [
 			"75012"
 		],
 		name: "Scimitar",
+		image: "https://i.imgur.com/3yWHzKQ.png",
 		class: "Reman Warbird",
 		actions: [
 			"evade",
@@ -2382,6 +2387,7 @@ module.exports = [
 		],
 		name: "Klingon/Independent Starship",
 		class: "B'Rel Class",
+		image: "https://i.imgur.com/2KrKfao.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -2482,6 +2488,7 @@ module.exports = [
 			"75010"
 		],
 		name: "I.K.S. T'Acog",
+		image: "https://i.imgur.com/alJ4LJQ.png",
 		class: "K'T'Inga Class",
 		actions: [
 			"evade",
@@ -2515,6 +2522,7 @@ module.exports = [
 			"75009"
 		],
 		name: "Dukat's Bird-of-Prey",
+		image: "https://i.imgur.com/YbnuNBv.png",
 		class: "Klingon Bird-of-Prey",
 		actions: [
 			"evade",
@@ -2627,6 +2635,7 @@ module.exports = [
 			"75009"
 		],
 		name: "Preloc",
+		image: "https://i.imgur.com/uDMmCh8.png",
 		class: "Cardassian Keldon Class",
 		actions: [
 			"evade",
@@ -2814,6 +2823,7 @@ module.exports = [
 			"75008"
 		],
 		name: "U.S.S. T'Kumbra",
+		image: "https://i.imgur.com/CDC98WP.png",
 		class: "Nebula Class",
 		actions: [
 			"evade",
@@ -3722,6 +3732,7 @@ module.exports = [
 			"73031"
 		],
 		name: "Gress'sril",
+		image: "https://i.imgur.com/nA3MhxG.png",
 		class: "Gorn Raider",
 		actions: [
 			"evade",
@@ -3760,6 +3771,7 @@ module.exports = [
 		],
 		name: "Gorn Starship",
 		class: "Gorn Raider",
+		image:"https://i.imgur.com/MzNSrze.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -3795,6 +3807,7 @@ module.exports = [
 			"75003"
 		],
 		name: "Lurin's Bird-of-Prey",
+		image: "https://i.imgur.com/Ptghpqi.png",
 		class: "B'Rel Class",
 		actions: [
 			"evade",
@@ -4076,6 +4089,7 @@ module.exports = [
 			"73001"
 		],
 		name: "Goss' Marauder",
+		image: "https://i.imgur.com/drYgxfg.png",
 		class: "D'Kora Class",
 		actions: [
 			"evade",
@@ -4227,6 +4241,7 @@ module.exports = [
 		],
 		name: "Dominion Starship",
 		class: "Jem'Hadar Battle Cruiser",
+		image: "https://i.imgur.com/1CatRst.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -4403,6 +4418,7 @@ module.exports = [
 		],
 		name: "Romulan Starship",
 		class: "D'deridex Class",
+		image: "https://i.imgur.com/uolfK2a.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -4621,6 +4637,7 @@ module.exports = [
 		],
 		name: "Romulan Starship",
 		class: "Romulan Science Vessel",
+		image: "https://i.imgur.com/lNXEbNZ.png",
 		actions: [
 			"evade",
 			"scan",
@@ -4654,6 +4671,7 @@ module.exports = [
 			"2017core"
 		],
 		name: "U.S.S. Enterprise-D",
+		image: "https://i.imgur.com/8jzC0UF.png",
 		class: "Galaxy Class",
 		actions: [
 			"evade",
@@ -4922,6 +4940,7 @@ module.exports = [
 			"2017core"
 		],
 		name: "I.K.S. Vorn",
+		image: "https://i.imgur.com/V7tqAKg.png",
 		class: "K'Vort Class ",
 		actions: [
 			"evade",
@@ -5031,6 +5050,7 @@ module.exports = [
 			"72013wp"
 		],
 		name: "Dreadnought",
+		image: "https://i.imgur.com/4x0L5G5.png",
 		class: "Cardassian ATR-4107",
 		actions: [
 			"evade",
@@ -6330,6 +6350,7 @@ module.exports = [
 		],
 		name: "Xindi Starship",
 		class: "Xindi Weapon",
+		image: "https://i.imgur.com/pVHDJtE.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -6460,6 +6481,7 @@ module.exports = [
 		],
 		name: "ROMULAN STARSHIP",
 		class: "D'deridex Class",
+		image: "https://i.imgur.com/uolfK2a.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -6994,7 +7016,8 @@ module.exports = [
 			"blind_belak"
 		],
 		name: "Romulan Starship",
-		class: "D'deridex Class",
+		class: "D'deridex Class",		
+		image: "https://i.imgur.com/uolfK2a.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -7297,6 +7320,7 @@ module.exports = [
 		],
 		name: "Romulan Starship",
 		class: "Romulan Science Vessel",
+		image: "https://i.imgur.com/lNXEbNZ.png",
 		actions: [
 			"evade",
 			"cloak",
@@ -7370,6 +7394,7 @@ module.exports = [
 		],
 		name: "Klingon Battlecruiser",
 		class: "D7 Class",
+		image: "https://i.imgur.com/EvecWbX.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -8353,6 +8378,7 @@ module.exports = [
 		],
 		name: "Federation Starship",
 		class: "Excelsior Class",
+		image: "https://i.imgur.com/1SuoQ4U.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -9523,6 +9549,7 @@ module.exports = [
 		],
 		name: "Gorn Starship",
 		class: "Gorn Raider",
+		immage: "https://i.imgur.com/MzNSrze.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -9853,6 +9880,7 @@ module.exports = [
 		],
 		name: "Federation Starship",
 		class: "Saber Class",
+		image: "https://i.imgur.com/JGT2EEU.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -10729,6 +10757,7 @@ module.exports = [
 			"71646b"
 		],
 		name: "Prakesh",
+		image: "https://i.imgur.com/IXiXVCe.png",
 		class: "Cardassian Galor Class",
 		actions: [
 			"evade",
@@ -10768,6 +10797,7 @@ module.exports = [
 		],
 		name: "Kazon Starship",
 		class: "Predator Class",
+		image: "https://i.imgur.com/5DRFHlD.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -11376,6 +11406,7 @@ module.exports = [
 			"71532"
 		],
 		name: "Chang's Bird-of-Prey",
+		image: "https://i.imgur.com/PUxf9cv.png",
 		class: "Klingon Bird-of-Prey",
 		actions: [
 			"evade",
@@ -12411,6 +12442,7 @@ module.exports = [
 		],
 		name: "Romulan Starship",
 		class: "D'deridex Class",
+		image: "https://i.imgur.com/uolfK2a.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -13996,6 +14028,7 @@ module.exports = [
 			"72016"
 		],
 		name: "R.I.S. Talvath",
+		image: "https://i.imgur.com/MvpSIls.png",
 		class: "Romulan Science Vessel",
 		actions: [
 			"evade",
