@@ -615,6 +615,7 @@ module.exports = [
 			"75013"
 		],
 		name: "Alynna Nechayev",
+		image: "https://i.imgur.com/G869f8y.png",
 		unique: true,
 		text: "<b>WHEN ATTACKING:</b> \n\n You may re-roll all [blank]. If the defending ship is either a <img src='img/text/faction-dominion.png' width='20' height='20' title='Dominion'> ship or a <img src='img/text/faction-borg.png' width='20' height='20' title='Borg'> ship, roll +1 attack die.",
 		factions: [
@@ -632,6 +633,7 @@ module.exports = [
 			"75013"
 		],
 		name: "Theoderich Patterson",
+		image: "https://i.imgur.com/BDm0g8k.png",
 		unique: true,
 		text: "<b>WHEN DEFENDING:</b> If there is a [scan] Token beside this ship: \n\n Roll +1 defense die and you may re-roll up to 2 [blank] .",
 		factions: [
@@ -649,6 +651,7 @@ module.exports = [
 			"75013"
 		],
 		name: "Strickler",
+		image: "https://i.imgur.com/toBRheV.png",
 		unique: true,
 		text: "<b>WHEN ATTACKING:</b> If the defending ship has a Hull Value of 3 or less. \n\n Add 1 [hit]. If the defending ship is an <img class='centered' src='img/text/faction-indy.png' width='20' height='20' title='Independent'> ship or has an <img class='centered' src='img/text/faction-indy.png' width='20' height='20' title='Independent'> Captain equipped to it, add 1 [crit] instead.",
 		factions: [
@@ -666,6 +669,7 @@ module.exports = [
 			"75013"
 		],
 		name: "George Sanders",
+		image: "https://i.imgur.com/HTnaZdG.png",
 		unique: true,
 		text: "<b>AFTER A FRIENDLY <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> SHIP WITHIN RANGE IS HIT:</b> \n\n\n You may perform a 1 <img src='img/stuff/maneuver_bank_left_white.png' width='20' height='20'>, 1 <img src='img/stuff/maneuver_straight_white.png' width='20' height='20'>, or a 1 <img src='img/stuff/maneuver_bank_right_white.png' width='20' height='20'> Maneuver. If this ship has the 'Federation Prototype' [hook] equipped, you may perform a 1 <img src='img/stuff/maneuver_turn_left_white.png' width='20' height='20'> or 1 <img src='img/stuff/maneuver_turn_right_white.png' width='20' height='20'> Maneuver instead.",
 		factions: [
@@ -684,6 +688,7 @@ module.exports = [
 			"75012"
 		],
 		name: "Lovok",
+		image: "https://i.imgur.com/IAXzku4.png",
 		unique: true,
 		text: "<b>WHEN ATTACKING:</b> Place an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship. \n\n Re-roll each of your [blank] . If equipped to a <img src='img/text/rom-dderidex.png' width='18' height='18' title='DDeridex Class'>, you may also add 1 [hit].",
 		factions: [
@@ -719,6 +724,7 @@ module.exports = [
 			"75012"
 		],
 		name: "Koval",
+		image: "https://i.imgur.com/JNWUsPP.png",
 		unique: true,
 		text: "<b>WHEN ATTACKING: DECLARE TARGET STEP:</b>\n If this ship is Cloaked. \n\n Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on a [crew_text] Upgrade equipped to the defending ship.",
 		factions: [
@@ -736,6 +742,7 @@ module.exports = [
 			"75012"
 		],
 		name: "Donatra",
+		image: "https://i.imgur.com/S2zcq4X.png",
 		unique: true,
 		text: "<b>WHEN A FRIENDLY SHIP WITHIN RANGE IS ATTACKING:</b>\n\n That friendly ship may roll +1 attack die. If that friendly ship is either a <img src='img/text/rom-valdore.png' width='18' height='18' title='Valdore Class'> or a <img src='img/text/fed-sovereign.png' width='18' height='18' title='Sovereign Class'> it may also convert 1 [blank] into 1 [hit].",
 		factions: [
@@ -772,6 +779,7 @@ module.exports = [
 			"75011"
 		],
 		name: "Leyton",
+		image: "https://i.imgur.com/do2dLgw.png",
 		unique: true,
 		text: "ACTION:</b> Target a ship and place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card.\n\n The target ship attacks last this turn.",
 		factions: [
@@ -790,6 +798,7 @@ module.exports = [
 			"75011"
 		],
 		name: "Worf",
+		image: "https://i.imgur.com/aqMCNkU.png",
 		unique: true,
 		text: "<b>WHEN ATTACKING:</b> During the Modify Attack Dice Step, spend a [battlestations] Token beside this ship.\n\n Convert all [blank] to [hit].",
 		factions: [
@@ -808,6 +817,7 @@ module.exports = [
 			"75011"
 		],
 		name: "Jadzia Dax",
+		image: "https://i.imgur.com/yWVqe2c.png",
 		unique: true,
 		text: "You do not pay a faction penalty when equipping <img src='img/text/faction-klingon.png' width='20' height='20' title='Klingon'> [talent_text] Upgrade to this card.\n<hr> <b>ACTIVATION PHASE:</b> \n\nThis ship may perform a 1 <img src='img/stuff/maneuver_bank_left_white.png' width='20' height='20'> or 1 <img src='img/stuff/maneuver_bank_right_white.png' width='20' height='20'>.",
 		factions: [
@@ -825,6 +835,7 @@ module.exports = [
 			"75011"
 		],
 		name: "Keogh",
+		image: "https://i.imgur.com/myTYkZK.png",
 		unique: true,
 		text: "<b>MODIFY ATTACK DICE STEP:</b> When a friendly <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> ship in range is defending and the attacking ship is in this ship's <img src='img/text/forward-arc.png' width='18' height='18' title='Front Arc'> and in range:\n\n Convert 1 [hit] into [blank].",
 		factions: [
@@ -843,6 +854,7 @@ module.exports = [
 			"75011"
 		],
 		name: "Benjamin Sisko",
+		image: "https://i.imgur.com/SzU3pq1.png",
 		unique: true,
 		text: "<b>WHEN ATTACKING:</b> During the Modify Attack Dice Step, if the defending ship is a <img src='img/text/faction-dominion.png' width='20' height='20' title='Dominion'> ship or has a <img src='img/text/faction-dominion.png' width='20' height='20' title='Dominion'> Captain equipped to it:\n\n Add 1 [crit] \n<hr> <b>END PHASE:</b> \n\nRemove one <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship.",
 		factions: [
@@ -879,6 +891,7 @@ module.exports = [
 			"75010"
 		],
 		name: "Kor",
+		image: "https://i.imgur.com/qHY2IlA.png",
 		unique: true,
 		text: "You may equip the Dahar Master [talent_text] Upgrade to this card for 0 SP. \n<hr> <b>FREE ACTION:</b> Place an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship and target all friendly <img src='img/text/faction-klingon.png' width='20' height='20' title='Klingon'> ships.\n\n Remove all Red    [target-lock] Tokens beside the target ships and place them beside this ship.",
 		factions: [
@@ -897,6 +910,7 @@ module.exports = [
 			"75010"
 		],
 		name: "Koloth",
+		image: "https://i.imgur.com/kfyxm4v.png",
 		unique: true,
 		text: "<b>WHEN AN OPPOSING SHIP WITHIN RANGE PERFORMS A MANEUVER:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card.\n\n Perform a maneuver on this ship's dial with a speed of 2.",
 		factions: [
@@ -933,6 +947,7 @@ module.exports = [
 			"75010"
 		],
 		name: "Kang",
+		image: "https://i.imgur.com/rmeRRen.png",
 		unique: true,
 		text: "<b>WHEN DEFENDING:</b> During the Modify Attack Dice Step, spend this ship's [target-lock] Token.\n\n The attacking ship must re-roll all of its attack dice.",
 		factions: [

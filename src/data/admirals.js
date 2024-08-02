@@ -62,6 +62,7 @@ module.exports = [
 			"75013"
 		],
 		name: "Alynna Nechayev",
+		image: "https://i.imgur.com/RJMgXiu.png",
 		unique: true,
 		text: "<font size ='-.5'><b>FLEET ACTION:</b> Target this ship and each other friendly ship within Range that has a Captain equipped with a printed Captain Skill number of 5 or less. \n\n Increase the Captain Skill of each target ship by up to 3 (You may choose a different value for each ship) until the end of the round. </font>",
 		factions: [
@@ -80,6 +81,7 @@ module.exports = [
 			"75013"
 		],
 		name: "Theoderich Patterson",
+		image: "https://i.imgur.com/WOLOXfl.png",
 		unique: true,
 		text: "<font size ='-.5'><b>FLEET ACTION:</b> Target this ship or a friendly ship within Range. \n\n Place a [scan] Token beside the target ship. If the target ship is within Range 1 of a Non-Planet Obstacle, you may also repair 1 Hull on the target ship. If the target ship has a [hook] equipped, you may also remove an [aux] Token from beside that ship.</font>",
 		range: "1 - 2",
@@ -98,6 +100,7 @@ module.exports = [
 			"75013"
 		],
 		name: "Strickler",
+		image: "https://i.imgur.com/sl7VRrQ.png",
 		unique: true,
 		text: "<b>FLEET ACTION:</b> Target this ship or a friendly ship within Range. \n\n Target ship performs either a 1 <img src='img/stuff/maneuver_bank_left_white.png' width='20' height='20'> or 1 <img src='img/stuff/maneuver_bank_right_white.png' width='20' height='20'> Maneuver. If the target ship has the 'Federation Prototype' [hook], you may remove an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token from beside that ship.",
 		range: "1 - 2",
@@ -116,6 +119,7 @@ module.exports = [
 			"75012"
 		],
 		name: "Shinzon",
+		image: "https://i.imgur.com/m2oJx2q.png",
 		unique: true,
 		text: "Add the [battlestations] Action to this ship's Action Bar. \n<hr> <b>FLEET ACTION:</b>\n\n Remove all <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens and/or Disable Tokens from a [weapon_text] Upgrade equipped to this ship, then you may perform an Action on your Action Bar as a Free Action.",
 		factions: [
@@ -133,6 +137,7 @@ module.exports = [
 			"75011"
 		],
 		name: "Leyton",
+		image: "https://i.imgur.com/nreLZZP.png",
 		unique: true,
 		text: "<b>FLEET ACTION:</b> Target a ship and place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card.\n\nThe target ship attacks last this turn.",
 		factions: [
