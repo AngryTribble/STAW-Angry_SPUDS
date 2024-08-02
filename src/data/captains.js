@@ -1512,7 +1512,7 @@ module.exports = [
 			"71282"
 		],
 		name: "Rettik",
-		imgae: "https://i.imgur.com/AwsBeEb.png",
+		image: "https://i.imgur.com/AwsBeEb.png",
 		unique: true,
 		text: "Each time you defend, you may re-roll 1 of your blank results one time.",
 		factions: [

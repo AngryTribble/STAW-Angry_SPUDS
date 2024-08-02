@@ -3323,6 +3323,7 @@ module.exports = [
 			"75013"
 		],
 		name: "Dorsal Phaser Array",
+		image: "https://i.imgur.com/tNyqZV7.png",
 		cost: 0,
 		text: "The Attack Value of this [weapon_text] is equal to this ship's Primary Weapon Value and the cost of this [weapon_text] is equal to this ship's Primary Weapon Value +1. \n<hr> <b>ATTACK:</b> You may fire this weapon in any direction.",
 		shipFederation: true,
@@ -5965,6 +5966,7 @@ module.exports = [
 			"75005"
 		],
 		name: "Klingon Patrol",
+		image: "https://i.imgur.com/3FqdIWr.png",
 		cost: 2,
 		text: "<b>END PHASE:</b> If this ship is not in the Primary Firing Arc of an opposing ship within Range:\n\nFlip this ship's [cloak] Token to its green side.",
 		shipKlingon: true,
@@ -11356,7 +11358,6 @@ module.exports = [
 			"71222"
 		],
 		name: "Self Destruct Sequence",
-		image: "https://i.imgur.com/GALGjjI.png",
 		cost: 3,
 		text: "<b>ACTION:</b> Destroy your ship and target every ship within Range 1 of your ship. Each target ship suffers 1 damage. \n\nNo ship may be equipped with more than 1 \"Self Destruct Sequence\" Upgrade.",
 		unique: false,
@@ -12473,6 +12474,7 @@ module.exports = [
 			"OP1Prize"
 		],
 		name: "Missile Launchers",
+		image: "https://i.imgur.com/RQn36kf.png",
 		unique: false,
 		text: "<b>ATTACK: </b>Disable this card to perform this attack. Make 2 attacks against ship(s) in your forward firing arc. Roll 2 attack dice for each of these attacks. Any [crit] results that would damage an opponent's Shields inflict critical damage to that ship's Hull instead.",
 		factions: [
@@ -15623,6 +15625,7 @@ module.exports = [
 			"71523"
 		],
 		name: "Self-Destruct Sequence",
+		image: "https://i.imgur.com/GALGjjI.png",
 		unique: true,
 		text: "<b>ACTION:</b> You cannot attack this round.  At the end of the next Activation Phase, after all ships have moved, destroy your ship and roll a number of attack dice equal to your Hull value to damage every ship within Range 1 of your ship.  These ships do not roll defense dice against this damage.  You cannot use the Cheat Death [talent_text] Upgrade in conjunction with this Action.  This Upgrade may only be purchased for a Federation ship.",
 		factions: [
@@ -17808,7 +17811,6 @@ module.exports = [
 			"72271"
 		],
 		name: "Dorsal Phaser Array",
-		image: "https://i.imgur.com/tNyqZV7.png",
 		unique: false,
 		text: "<b>ATTACK: </b>You may fire this weapon in any direction. The Attack Value is equal to the ship's Primary Weapon Value. \n\nThis Upgrade may only be purchased for a Federation ship with a Hull Value of 4 or greater and the SP cost is equal to the ship's Primary Weapon Value +1.",
 		factions: [
@@ -18113,7 +18115,6 @@ module.exports = [
 			"71529"
 		],
 		name: "Rom",
-		image: "https://i.imgur.com/TGN2GjH.png",
 		unique: true,
 		text: "<b>ACTION:</b> Discard this card to target a ship at Range 1-3. Disable up to 2 [tech_text] Upgrades of your choice on the target ship. This ability may be used against a ship that is Cloaked.",
 		factions: [
@@ -21950,6 +21951,7 @@ module.exports = [
 			"71806"
 		],
 		name: "Missile Launchers",
+		image: "https://i.imgur.com/RQn36kf.png",
 		cost: 3,
 		text: "<b>ATTACK: </b>Disable this card to perform this attack. Make 2 attacks against ship(s) in your forward firing arc. Roll separate dice for each of these attacks. Any [crit] results that would damage an opponent's Shields inflict critical damage to that ship's Hull instead.",
 		unique: false,
@@ -22540,6 +22542,7 @@ module.exports = [
 			"72013"
 		],
 		name: "Rom",
+		image: "https://i.imgur.com/TGN2GjH.png",
 		cost: 3,
 		text: "<b>ACTION:</b> Repair 1 Shield Token. If this card is assigned to a Ferengi ship, you may repair up to 2 Shield Tokens instead of 1.",
 		unique: true,
