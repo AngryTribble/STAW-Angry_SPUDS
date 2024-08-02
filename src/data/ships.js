@@ -2387,7 +2387,6 @@ module.exports = [
 		],
 		name: "Klingon/Independent Starship",
 		class: "B'Rel Class",
-		image: "https://i.imgur.com/2KrKfao.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -3847,6 +3846,7 @@ module.exports = [
 		],
 		name: "Ferengi/Klingon Starship",
 		class: "B'Rel Class",
+		image: "https://i.imgur.com/2KrKfao.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -10797,7 +10797,7 @@ module.exports = [
 		],
 		name: "Kazon Starship",
 		class: "Predator Class",
-		image: "https://i.imgur.com/5DRFHlD.png",
+		image: "https://i.imgur.com/b1NCcsH.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -11022,6 +11022,7 @@ module.exports = [
 		],
 		name: "Romulan/Borg Starship",
 		class: "D'deridex Class",
+		image: "https://i.imgur.com/uolfK2a.png",
 		actions: [
 			"evade",
 			"target-lock",
