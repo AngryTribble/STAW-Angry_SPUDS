@@ -40,6 +40,7 @@ module.exports = [
 			"75012"
 		],
 		name: "Kimara Cretak",
+		image: "https://i.imgur.com/IYzWjX1.png",
 		cost: 3,
 		text: "<b>NEGOTIATIONS ACCEPTED:</b> \n This ship and the target ship gain the following <b>'FREE ACTION:</b> If this ship is within Range 1 of an Obstacle. Repair either 1 Hull or Shield on this Ship.' \n<hr> <b>NEGOTIATIONS DENIED:</b> All <img src='img/text/faction-romulan.png' width='20' height='20' title='Romulan'> ships (Friendly and opposing) gain the following for the rest of the game <b>'END PHASE:</b> If within Range 1 of an Obstacle: Remove 1 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Token from each [weapon_text] Upgrade equipped to this ship.'",
 		unique: true,
@@ -55,6 +56,7 @@ module.exports = [
 			"75012"
 		],
 		name: "Vreenak",
+		image: "https://i.imgur.com/AsbtzbQ.png",
 		cost: 3,
 		text: "<b>NEGOTIATIONS ACCEPTED:</b> Discard an Upgrade of the opponent's choice equipped to this ship, and an Upgrade of your choice equipped to the target ship. \n<hr> <b>NEGOTIATIONS DENIED:</b> All <img src='img/text/faction-romulan.png' width='20' height='20' title='Romulan'> ships (Friendly and opposing) gain +1 attack die <b>WHEN ATTACKING</b> with <img src='img/text/faction-romulan.png' width='20' height='20' title='Romulan'> [weapon_text] Upgradess and their Primary Weapon for the rest of the game.",
 		unique: true,
@@ -100,6 +102,7 @@ module.exports = [
 			"75011"
 		],
 		name: "Lwaxana Troi",
+		image: "https://i.imgur.com/Txsm0Ey.png",
 		cost: 3,
 		text: "<b>NEGOTIATIONS ACCEPTED</b>: At the start of the game target a Captain or [crew_text] Upgrade equipped to the target ship. Whenever this ship moves within Range 1 of target ship, disable the Captain equipped to this ship and the target Captain or [crew_text] Upgrade.\n<hr> <b>NEGOTIATIONS DENIED</b>: Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens and a Disable Token on the target Captain or [crew_text] Upgrade.",
 		unique: true,
@@ -115,6 +118,7 @@ module.exports = [
 			"75011"
 		],
 		name: "Sarek",
+		image: "https://i.imgur.com/pUDTKNK.png",
 		cost: 3,
 		text: "<b>NEGOTIATIONS ACCEPTED</b>: When this ship and the target ship are within Range 1-3 of each other, neither ship may target the other with an attack unless there are no other targets.\n<hr> <b>NEGOTIATIONS DENIED</b>: Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on all [weapon_text] Upgrades equipped to the target ship.",
 		unique: true,
@@ -131,6 +135,7 @@ module.exports = [
 			"75010"
 		],
 		name: "Korrd",
+		image: "https://i.imgur.com/CHQMthL.png",
 		cost: 3,
 		text: "<b>NEGOTIATIONS ACCEPTED</b>: The target ship must plan its maneuver face up during the Planning Phase.  When the target ship sustains damage to its Shields or Hull, this effect ends.\n<hr> <b>NEGOTIATIONS DENIED</b>: You may plan the target ship's maneuver during the next Planning Phase. The chosen maneuver must be on the target ship's maneuver dial and be a green or white maneuver.  The chosen maneuver may not cause the target ship to go outside of the play area.",
 		unique: true,
@@ -146,6 +151,7 @@ module.exports = [
 			"75010"
 		],
 		name: "Kamarag",
+		image: "https://i.imgur.com/TVwoGyA.png",
 		cost: 3,
 		text: "<b>NEGOTIATIONS ACCEPTED</b>: \n\n During the Combat Phase, this ship and the target ship must attack each other, if able. \n<hr> <b>NEGOTIATIONS DENIED</b>: \n\nThe next time the target ship attacks, it rolls -3 attack dice.",
 		unique: true,
