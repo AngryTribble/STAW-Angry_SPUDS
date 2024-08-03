@@ -156,6 +156,7 @@ module.exports = [
 			"75006"
 		],
 		name: "Robert April",
+		image: "https://i.imgur.com/qJpzLsX.png",
 		cost: 4,
 		skill: 2,
 		talents: 1,
@@ -173,6 +174,7 @@ module.exports = [
 			"75009"
 		],
 		name: "Enabran Tain",
+		image: "https://i.imgur.com/YxZKMHX.png",
 		cost: 5,
 		skill: 2,
 		talents: 1,
@@ -190,6 +192,7 @@ module.exports = [
 			"75005"
 		],
 		name: "Christopher Pike",
+		image: "https://i.imgur.com/9myOfzI.png",
 		cost: 5,
 		skill: 2,
 		talents: 1,

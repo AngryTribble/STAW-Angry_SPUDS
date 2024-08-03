@@ -1328,6 +1328,7 @@ module.exports = [
 		],
 		name: "Dominion Starship",
 		class: "Cardassian Galor Class",
+		image: "https://i.imgur.com/LN9WIVV.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -2585,6 +2586,7 @@ module.exports = [
 			"75009"
 		],
 		name: "Vetar",
+		image: "https://i.imgur.com/MTJm2bX.png",
 		class: "Cardassian Galor Class",
 		actions: [
 			"evade",
@@ -2621,6 +2623,7 @@ module.exports = [
 			"75009"
 		],
 		name: "Orias",
+		image: "https://i.imgur.com/6tfWdU4.png",
 		class: "Cardassian Keldon Class",
 		actions: [
 			"evade",
@@ -2699,6 +2702,7 @@ module.exports = [
 		],
 		name: "Dominion/Klingon Starship",
 		class: "Klingon Bird-of-Prey",
+		image: "https://i.imgur.com/WwcewLV.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -2736,6 +2740,7 @@ module.exports = [
 		],
 		name: "Kir'Shara",
 		class: "D'Kyr Class",
+		image: "https://i.imgur.com/plrTehK.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -2773,6 +2778,7 @@ module.exports = [
 		],
 		name: "V'Shar",
 		class: "D'Kyr Class",
+		image: "https://i.imgur.com/0Zn9OI0.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -2810,6 +2816,7 @@ module.exports = [
 		],
 		name: "U.S.S. Intrepid",
 		class: "Constitution Class",
+		image: "https://i.imgur.com/WFht5uv.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -2888,6 +2895,7 @@ module.exports = [
 		],
 		name: "I.K.S. Klothos",
 		class: "D7 Class",
+		image: "https://i.imgur.com/pjRNaHW.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -2920,6 +2928,7 @@ module.exports = [
 		],
 		name: "I.K.S. Devisor",
 		class: "D7 Class",
+		image: "https://i.imgur.com/YOeK9ch.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -2951,6 +2960,7 @@ module.exports = [
 		],
 		name: "I.R.W. Talon",
 		class: "D7 Class",
+		image: "https://i.imgur.com/NxunlKv.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -2983,6 +2993,7 @@ module.exports = [
 		],
 		name: "Assimilation Target Prime",
 		class: "Galaxy Class",
+		image: "https://i.imgur.com/jpM7JjD.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -3021,6 +3032,7 @@ module.exports = [
 		],
 		name: "Sphere 634",
 		class: "Borg Sphere",
+		image: "https://i.imgur.com/48ZfmOY.png",
 		actions: [
 			"target-lock",
 			"scan",
@@ -3058,6 +3070,7 @@ module.exports = [
 		],
 		name: "Scout 609",
 		class: "Borg Scout Cube",
+		image: "https://i.imgur.com/XU2atpz.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -3095,6 +3108,7 @@ module.exports = [
 		],
 		name: "U.S.S. Voyager",
 		class: "Intrepid Class",
+		image: "https://i.imgur.com/2wANriO.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -3134,6 +3148,7 @@ module.exports = [
 		],
 		name: "Federation/Borg Starship",
 		class: "Intrepid Class",
+		image: "https://i.imgur.com/Bmtwp6t.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -3172,6 +3187,7 @@ module.exports = [
 		],
 		name: "Federation/Borg Starship",
 		class: "Galaxy Class",
+		image: "https://i.imgur.com/dEGGuCR.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -3203,6 +3219,43 @@ module.exports = [
 	},
 	{
 		type: "ship",
+		id: "S199",
+		gameId: 1,
+		set: [
+			"75006"
+		],
+		name: "Federation Starship",
+		class: "Constitution Class",
+		image: "https://i.imgur.com/o6VbAgw.png",
+		actions: [
+			"evade",
+			"target-lock",
+			"scan",
+			"battlestations"
+		],
+		upgrades: [
+			"weapon",
+			"crew",
+			"crew"
+		],
+		attack: 3,
+		agility: 1,
+		hull: 4,
+		shields: 2,
+		cost: 16,
+		text: "\r\n      ",
+		unique: false,
+		factions: [
+			"federation"
+		],
+		intercept: {
+			ship: {},
+			fleet: {}
+		},
+		squadron: false
+	},
+	{
+		type: "ship",
 		id: "S317",
 		gameId: 1,
 		set: [
@@ -3210,6 +3263,7 @@ module.exports = [
 		],
 		name: "U.S.S. Enterprise",
 		class: "Constitution Class",
+		image: "https://i.imgur.com/rz4t7lH.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -3425,6 +3479,7 @@ module.exports = [
 		],
 		name: "U.S.S. Enterprise",
 		class: "Constitution Class (Kelvin)",
+		image: "https://i.imgur.com/44SrrR1.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -3460,6 +3515,7 @@ module.exports = [
 		],
 		name: "U.S.S. Enterprise-A",
 		class: "Constitution Class (Kelvin)",
+		image: "https://i.imgur.com/3MVOIKh.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -3495,6 +3551,7 @@ module.exports = [
 		],
 		name: "Federation Starship",
 		class: "Constitution Class (Kelvin)",
+		image: "https://i.imgur.com/gLLoPB7.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -3529,6 +3586,7 @@ module.exports = [
 		],
 		name: "I.K.S. Amar",
 		class: "Warbird Class",
+		image: "https://i.imgur.com/w9xAMCn.png",
 		actions: [
 			"target-lock",
 			"battlestations",
@@ -3563,6 +3621,7 @@ module.exports = [
 		],
 		name: "I.K.S. Suvwl",
 		class: "Warbird Class",
+		image: "https://i.imgur.com/LyHz09o.png",
 		actions: [
 			"target-lock",
 			"battlestations",
@@ -3597,6 +3656,7 @@ module.exports = [
 		],
 		name: "Klingon Starship",
 		class: "Warbird Class",
+		image: "https://i.imgur.com/uswQYeD.png",
 		actions: [
 			"target-lock",
 			"battlestations",
@@ -4852,6 +4912,7 @@ module.exports = [
 		],
 		name: "Federation Starship",
 		class: "Nebula Class",
+		image: "https://i.imgur.com/VpvDyEC.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -6040,6 +6101,7 @@ module.exports = [
 		],
 		name: "Romulan Battlecruiser",
 		class: "D7 Class",
+		image: "https://i.imgur.com/0Trj0Y2.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -7238,6 +7300,7 @@ module.exports = [
 		],
 		name: "Federation Starship",
 		class: "Constitution Class",
+		image: "https://i.imgur.com/67CjfrE.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -8327,6 +8390,7 @@ module.exports = [
 		],
 		name: "Dominion Starship",
 		class: "Cardassian Keldon Class",
+		image: "https://i.imgur.com/iqkPYjx.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -9022,6 +9086,7 @@ module.exports = [
 		],
 		name: "Borg Starship",
 		class: "Borg Sphere",
+		image: "https://i.imgur.com/actfRrM.png",
 		actions: [
 			"target-lock",
 			"scan",
@@ -9506,6 +9571,7 @@ module.exports = [
 		],
 		name: "Vulcan Starship",
 		class: "D'Kyr Class",
+		image: "https://i.imgur.com/GGTXeo1.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -10421,6 +10487,7 @@ module.exports = [
 		],
 		name: "Borg Starship",
 		class: "Borg Scout Cube",
+		image: "https://i.imgur.com/09N7OKZ.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -10458,6 +10525,7 @@ module.exports = [
 		],
 		name: "Borg Starship",
 		class: "Borg Scout Cube",
+		image: "https://i.imgur.com/09N7OKZ.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -14202,6 +14270,7 @@ module.exports = [
 		],
 		name: "Federation Starship",
 		class: "Akira Class",
+		image: "https://i.imgur.com/MFvf94p.png",
 		actions: [
 			"evade",
 			"target-lock",
