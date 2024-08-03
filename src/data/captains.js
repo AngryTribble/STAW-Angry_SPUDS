@@ -4073,6 +4073,7 @@ module.exports = [
 			"75008"
 		],
 		name: "T'Pol",
+		image: "https://i.imgur.com/EWv0Y1D.png",
 		unique: true,
 		text: "<b>COMBAT PHASE:</b> Choose [evade] or [battlestations] Tokens\n\n You may spend [scan] Tokens as though they were the chosen type of Token this Combat Phase.",
 		cost: 4,
@@ -4090,6 +4091,7 @@ module.exports = [
 			"75007"
 		],
 		name: "Operations Drone",
+		image: "https://i.imgur.com/vnB5QGv.png",
 		unique: false,
 		text: "<b>Setup:</b>\n\nPlace 6 Drone Tokens on this card.\n<hr> <b>PLANNING PHASE:</b> Spend 1 Drone Token on this card and target an opposing ship.\n\nPlace an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside the target ship.",
 		factions: [
@@ -5096,6 +5098,7 @@ module.exports = [
 			"75005"
 		],
 		name: "Kang",
+		image: "https://i.imgur.com/vQRTxJE.png",
 		cost: 4,
 		skill: 6,
 		talents: 1,
@@ -5169,6 +5172,7 @@ module.exports = [
 			"75006"
 		],
 		name: "Larus",
+		image: "https://i.imgur.com/eYJe4zQ.png",
 		cost: 4,
 		skill: 7,
 		talents: 1,
@@ -5186,6 +5190,7 @@ module.exports = [
 			"75005"
 		],
 		name: "Kor",
+		image: "https://i.imgur.com/69b6k9F.png",
 		cost: 4,
 		skill: 7,
 		talents: 1,
@@ -5204,6 +5209,7 @@ module.exports = [
 			"75005"
 		],
 		name: "James T. Kirk",
+		image: "https://i.imgur.com/ZalntgM.png",
 		cost: 4,
 		skill: 7,
 		talents: 1,
@@ -5781,6 +5787,7 @@ module.exports = [
 			"75007"
 		],
 		name: "Kathryn Janeway",
+		image: "https://i.imgur.com/0lmALnC.png",
 		cost: 5,
 		skill: "*",
 		talents: 1,
@@ -5800,6 +5807,7 @@ module.exports = [
 			"75008"
 		],
 		name: "Muroc",
+		image: "https://i.imgur.com/TFbO5Xa.png",
 		cost: 3,
 		skill: 7,
 		talents: 1,
@@ -5817,6 +5825,7 @@ module.exports = [
 			"75008"
 		],
 		name: "T'Pau",
+		image: "https://i.imgur.com/3mj4vRT.png",
 		cost: 4,
 		skill: 5,
 		talents: 1,
@@ -5834,6 +5843,7 @@ module.exports = [
 			"75008"
 		],
 		name: "Solok",
+		image: "https://i.imgur.com/MSQ8y8v.png",
 		cost: 4,
 		skill: 7,
 		talents: 1,
@@ -5853,6 +5863,7 @@ module.exports = [
 			"75009"
 		],
 		name: "Gul Evek",
+		image: "https://i.imgur.com/J2s0e1b.png",
 		cost: 2,
 		skill: 4,
 		text: "<b>COMBAT PHASE:</b> Target all friendly ships.\n\nPlace all <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Tokens beside all target ships beside this ship.",
@@ -5870,6 +5881,7 @@ module.exports = [
 			"75009"
 		],
 		name: "Gul Toran",
+		image: "https://i.imgur.com/xviGp3v.png",
 		cost: 4,
 		skill: 6,
 		talents: 1,
@@ -5888,6 +5900,7 @@ module.exports = [
 			"75009"
 		],
 		name: "Enabran Tain",
+		image: "https://i.imgur.com/tUs5K3G.png",
 		cost: 5,
 		skill: 8,
 		talents: 1,
@@ -5905,6 +5918,7 @@ module.exports = [
 			"75009"
 		],
 		name: "Gul Dukat",
+		image: "https://i.imgur.com/EFNVtG9.png",
 		cost: 5,
 		skill: 8,
 		talents: 2,
@@ -5923,6 +5937,7 @@ module.exports = [
 			"75006"
 		],
 		name: "Robert April",
+		image: "https://i.imgur.com/OxEkgdq.png",
 		cost: 5,
 		skill: 8,
 		talents: 1,
@@ -5993,6 +6008,7 @@ module.exports = [
 			"75005"
 		],
 		name: "Christopher Pike",
+		image: "https://i.imgur.com/rOidozp.png",
 		cost: 5,
 		skill: 8,
 		talents: 1,
@@ -6366,6 +6382,7 @@ module.exports = [
 			"75007"
 		],
 		name: "Borg Queen",
+		image: "https://i.imgur.com/NJ4Kt4W.png",
 		cost: 5,
 		skill: 9,
 		talents: 1,
@@ -6384,6 +6401,7 @@ module.exports = [
 			"75007"
 		],
 		name: "Locutus",
+		image: "https://i.imgur.com/yJGGVgq.png",
 		cost: 4,
 		skill: 9,
 		talents: 1,
