@@ -5880,6 +5880,7 @@ module.exports = [
 			"75005"
 		],
 		name: "Montgomery Scott",
+		image: "https://i.imgur.com/vahGNiy.png",
 		cost: 3,
 		text: "<b>PLANNING PHASE:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card.\n\nRepair 1 Hull on this ship and flip this card.",
 		unique: true,
@@ -5951,7 +5952,7 @@ module.exports = [
 			"75005"
 		],
 		name: "Pavel Chekov",
-		image: "https://i.imgur.com/o6VbAgw.png",
+		image: "https://i.imgur.com/hsXxIsA.png",
 		cost: 2,
 		text: "<b>COMBAT PHASE:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target an opposing ship.\n\nRemove 1 [scan] Token beside the target ship.",
 		unique: true,

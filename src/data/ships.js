@@ -7635,6 +7635,7 @@ module.exports = [
 		],
 		name: "Dominion Starship",
 		class: "Cardassian Galor Class",
+		image: "https://i.imgur.com/LN9WIVV.png",
 		actions: [
 			"evade",
 			"target-lock",
