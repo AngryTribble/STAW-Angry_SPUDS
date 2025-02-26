@@ -9143,7 +9143,7 @@ module.exports = [
 		name: "Hatchery",
 		cost: 2,
 		text: "Add 1 [crew_text] Upgrade slot to your Upgrade Bar. At the start of the game, during the Gather Forces step, place a Xindi [crew_text] Upgrade face down beneath this card. When one of your other [crew_text] Upgrades is discarded discard this card and flip the card beneath this card face up. That card is now deployed to your ship and may be used normally. This Upgrade may only be purchased for a Xindi ship and no ship may have more than one \"Hatchery\" Upgrade.",
-		unique: true,
+		OnePerShip: true,
 		factions: [
 			"xindi"
 		]
