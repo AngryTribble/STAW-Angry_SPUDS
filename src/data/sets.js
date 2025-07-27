@@ -1,6 +1,13 @@
 module.exports = [
 	{
 		type: "set",
+		id: "00001",
+		name: "Enterprise Era (WIP)",
+		releaseDate: "2026",
+		parentSet: "Fremont Event"
+	},
+	{
+		type: "set",
 		id: "75016",
 		gameId: 1,
 		name: "These Are The Voyages",

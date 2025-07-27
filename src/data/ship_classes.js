@@ -1,6 +1,147 @@
 module.exports = [
 	{
 		type: "ship-class",
+		id: "22_Bird_of_Prey",
+		name: "22nd Century Bird-of-Prey",
+		frontArc: "90",
+		rearArc: "",
+		maneuvers: {
+			1: {
+				bank: "green",
+				straight: "green"
+			},
+			2: {
+				turn: "white",
+				bank: "white",
+				straight: "green",
+				about: "green"
+			},
+			3: {
+				turn: "red",
+				bank: "white",
+				straight: "white",
+				about: "red"
+			},
+			4: {
+				straight: "white"
+			},
+			min: 1,
+			max: 4
+		}
+	},
+	{
+		type: "ship-class",
+		id: "D4_Class",
+		name: "D4 Class",
+		frontArc: "90",
+		rearArc: "90",
+		maneuvers: {
+			1: {
+				straight: "green",
+				bank: "green"
+			},
+			2: {
+				straight: "green",
+				bank: "white",
+				turn: "white"
+			},
+			3: {
+				straight: "white",
+				bank: "white",
+				turn: "red"
+			},
+			4: {
+				straight: "white"
+			},
+			min: 1,
+			max: 4
+		}
+	},
+	{
+		type: "ship-class",
+		id: "D5_Class",
+		name: "D5 Class",
+		frontArc: "180",
+		rearArc: "",
+		maneuvers: {
+			1: {
+				straight: "green",
+				bank: "green"
+			},
+			2: {
+				straight: "green",
+				bank: "green",
+				turn: "white"
+			},
+			3: {
+				straight: "white",
+				bank: "white",
+				turn: "white",
+				about: "red"
+			},
+			4: {
+				straight: "white"
+			},
+			min: 1,
+			max: 4
+		}
+	},
+	{
+		type: "ship-class",
+		id: "D5_Tanker",
+		name: "D5 Tanker",
+		frontArc: "90",
+		rearArc: "",
+		maneuvers: {
+			1: {
+				straight: "green",
+				bank: "green"
+			},
+			2: {
+				straight: "green",
+				bank: "green",
+				turn: "white"
+			},
+			3: {
+				straight: "white",
+				bank: "white",
+				turn: "white"
+			},
+			4: {
+				straight: "white"
+			}
+		}
+	},
+	{
+		type: "ship-class",
+		id: "Duj'Hod_Class",
+		name: "Duj'Hod Class",
+		frontArc: "90",
+		rearArc: "",
+		maneuvers: {
+			1: {
+				straight: "green",
+				bank: "green",
+				turn: "green"
+			},
+			2: {
+				straight: "green",
+				bank: "white",
+				turn: "white",
+				about: "white"
+			},
+			3: {
+				straight: "white",
+				bank: "white",
+				turn: "red",
+				about: "red"
+			},
+			min: 1,
+			max: 3
+		}
+	},
+	{
+		type: "ship-class",
 		id: "nerada_type",
 		gameId: 1,
 		name: "Nerada-Type",
