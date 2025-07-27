@@ -19,6 +19,20 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 		};
 	};
 
+	var ShipRestriction = function(allowedClasses) {
+		return function(upgrade, ship, fleet) {
+			return allowedClasses.includes(ship.class);
+		};
+	};
+
+	var nonFederationPenalty = function(ship, fleet) {
+		return !(
+			$factions.hasFaction(ship, "federation", ship, fleet) ||
+			$factions.hasFaction(ship, "bajoran", ship, fleet) ||
+			$factions.hasFaction(ship, "vulcan", ship, fleet)
+		);
+	};
+
 	var upgradeTypes = ["crew","weapon","tech","talent","question","borg"];
 
 	var isUpgrade = function(card) {
@@ -137,6 +151,7 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 
 	}
 
+	
 	// the following return object represents a massive lookup table to resolve special card rules by a key of "cardType:cardId"
 	return {
 
@@ -145,20 +160,41 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 		"captain:Cap101":{
 			factionPenalty: function(upgrade, ship, fleet) {
 				return ship && $factions.hasFaction( ship, "bajoran", ship, fleet ) ? 0 : 1 && $factions.hasFaction( ship, "vulcan", ship, fleet ) ? 0 : 1;
-			}
+			},
 		},
+
 		//Bajoran
 		"captain:Cap112":{
 			factionPenalty: function(upgrade, ship, fleet) {
 				return ship && $factions.hasFaction( ship, "federation", ship, fleet ) ? 0 : 1 && $factions.hasFaction( ship, "vulcan", ship, fleet ) ? 0 : 1;
-			}
+			},
+			upgradeSlots: [
+				{
+					type: ["talent"],
+					rules: "It Won't Be Installed Until Tuesday Only",
+					canEquip: function(upgrade) {
+						return upgrade.name == "It Won't Be Installed Until Tuesday";
+					}
+				}
+			]
 		},
+
 		//Vulcan
 		"captain:Cap115":{
 			factionPenalty: function(upgrade, ship, fleet) {
 				return ship && $factions.hasFaction( ship, "bajoran", ship, fleet ) ? 0 : 1 && $factions.hasFaction( ship, "federation", ship, fleet ) ? 0 : 1;
-			}
+			},
+			upgradeSlots: [
+				{
+					type: ["talent"],
+					rules: "It Won't Be Installed Until Tuesday Only",
+					canEquip: function(upgrade) {
+						return upgrade.name == "It Won't Be Installed Until Tuesday";
+					}
+				}
+			]
 		},
+
 		//independent
 		"captain:Cap111":{
 			factionPenalty: function(upgrade, ship, fleet) {
@@ -436,7 +472,7 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 				}
 			}
 		],
-	},
+	}, 
 
 	//Tuesday (Weapon)
 	"weapon:W251": {
@@ -526,9 +562,10 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
 		//All non-Federation ships pay +1 SP to equip
 		intercept: {
 			self: {
-				cost: function(upgrade,ship,fleet,cost) {
-					if( ship && !$factions.hasFaction(ship, "federation", ship, fleet) || $factions.hasFaction(ship, "bajoran", ship, fleet) || $factions.hasFaction(ship, "vulcan", ship, fleet))
-					return resolve(upgrade,ship,fleet,cost) +1;
+				cost: function(upgrade, ship, fleet, cost) {
+					if (ship && nonFederationPenalty(ship, fleet)) {
+						return resolve(upgrade, ship, fleet, cost) + 1;
+				}
 				return cost;
 				}
 			}
@@ -1797,12 +1834,13 @@ module.factory( "cardRules", [ "$filter", "$factions", function($filter, $factio
   },
 },
 
+
 //Federation Prototype
  "starship_construction:Con001":{
-		// because of how the logic of the system works, these canEquip and CanEquipFaction fields must be defined and are required - this should probably be fixed in the future.
-		canEquip: true,
-		canEquipFaction: true,
- 		canEquipConstruction: function(upgrade,ship,fleet) {
+	// because of how the logic of the system works, these canEquip and canEquipFaction fields must be defined and are required - this should probably be fixed in the future
+	canEquip: true, 
+	canEquipFaction: true, 
+ 	canEquipConstruction: function(upgrade,ship,fleet) {
 		return ship.id == "S404" || ship.id == "S386" || ship.name.startsWith("U.S.S. ") && (ship.name.replace("U.S.S. ", "") == ship.class.replace(/ [Cc]lass/,""))
  	},
 
@@ -2135,6 +2173,7 @@ intercept: {
 		}
 	)
 },
+
 
 // Experimental Torpedo Bay
 "weapon:W215": {
@@ -3611,7 +3650,7 @@ intercept: {
 					type: ["crew"],
 					rules: "Prothos Only",
 					canEquip: function(upgrade) {
-						return upgrade.id == "C441";
+						return upgrade.id == "C447";
 					}
 				}
 			]
@@ -7571,6 +7610,17 @@ intercept: {
 			}
 		},
 
+		//Thoron Shock Emitter
+		"weapon:W164":{
+			canEquip: ShipRestriction(["Cardassian ATR-4107"])
+		},
+
+		//Thoron Shock Emitter
+		"weapon:W131":{
+			canEquip: ShipRestriction(["Cardassian ATR-4107"])
+		},
+
+
 	//Prototype 02 :72014wp
 		"ship:S267": {
 			intercept: {
@@ -8319,10 +8369,33 @@ intercept: {
 		},
 		//Arturis
 		"captain:Cap609":{
-			canEquipCaptain: function(upgrade,ship,fleet) {
-				return ship.class == "Dauntless Class";
-			}
+			//Create captain slot
+			upgradeSlots: [
+				{},
+				{
+					type: ["captain"],
+					rules: "Captain to place under Arturis. \n Captain Card must have a printed cost of 4 SP or less",
+					intercept: {
+						ship: {
+							free: function() {
+								return true;
+							},
+							canEquip: function(card, ship, fleet) {
+								var cost = valueOf(card, "cost", card,ship,fleet);
+								return cost <= 4;
+							},
+							canEquipCaptain: function(upgrade,ship,fleet) {
+								return ship.class == "Dauntless Class";
+							},
+							canEquipAdmiral: function(captain,ship,fleet) {
+								return false;
+							},
+						}
+					}
+				}
+			]
 		},
+
 		//Jhamel
 		"captain:Cap336":{
 			// Equip only on a Romulan Drone Ship
@@ -9296,6 +9369,19 @@ intercept: {
 			}
 		},
 
+		"resource:R039a":{
+			canEquip: function(upgrade,ship,fleet) {
+				return !ship.captain || (ship.captain.skill >= 5);
+			},
+
+			intercept: {
+				ship: {
+					canEquipCaptain: function(captain,ship,fleet) {
+						return typeof captain.skill == "number" && captain.skill >= 5;
+					},
+				},
+			},
+		},
 
 		"resource:R033": {
 			slotType: "ship-resource",
