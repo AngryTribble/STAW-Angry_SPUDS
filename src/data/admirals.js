@@ -1,6 +1,24 @@
 module.exports = [
 	{
 		type: "admiral",
+		id: "FRA001",
+		gameId: 1,
+		set: [
+			"00001"
+		],
+		name: "Krell",
+		image: "https://i.imgur.com/EOZP59R.png",
+		unique: true,
+		text: "<b>COMBAT PHASE:</b> Target 1 friendly ship within range. \n\n Reduce any number of attack or defense dice from that ship's attack or defense roll. \n\n For each die removed, add 1 attack die to the attack roll of Krell's ship.",
+		factions: [
+			"klingon"
+		],
+		cost: 5,
+		skill: 2,
+		range: "1 - 3"
+	},
+	{
+		type: "admiral",
 		id: "A044",
 		gameId: 1,
 		set: [

@@ -1,6 +1,58 @@
 module.exports = [
 	{
 		type: "captain",
+		id: "FRC001",
+		gameId: 1,
+		set: [
+			"00001"
+		],
+		name: "Goroth",
+		image: "https://i.imgur.com/EOZP59R.png",
+		unique: true,
+		text: "<b>ACTION:</b> Discard this card and 1 [crew_text] Upgrade. \n\n Target an opposing ship at range. \n\n Disable the Captain equipped to the target ship.",
+		factions: [
+			"klingon"
+		],
+		cost: 3,
+		skill: 4,
+		range: "1 - 2"
+	},
+	{
+		type: "captain",
+		id: "FRC002",
+		gameId: 1,
+		set: [
+			"00001"
+		],
+		name: "Korok",
+		image: "https://i.imgur.com/EOZP59R.png",
+		unique: true,
+		text: "<b>ATTACK PHASE:</b> When attacking any opposing ship with a [target-lock] Token beside it, you may re-roll any number of your attack dice once.",
+		factions: [
+			"klingon"
+		],
+		cost: 3,
+		skill: 4
+	},
+	{
+		type: "captain",
+		id: "FRC003",
+		gameId: 1,
+		set: [
+			"00001"
+		],
+		name: "Magh",
+		image: "https://i.imgur.com/EOZP59R.png",
+		unique: true,
+		text: "<b>ATTACK PHASE:</b> Palce 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Add 1 attack die to your primary weapon attack. Immediately perform a 1 or 2 <img src='img/stuff/maneuver_straight_white.png' width='20' height='20'>, 1 <img src='img/stuff/maneuver_bank_left_white.png' width='20' height='20'>, or 1 <img src='img/stuff/maneuver_bank_right_white.png' width='20' height='20'> Maneuver.",
+		factions: [
+			"klingon"
+		],
+		cost: 3,
+		skill: 4
+	},
+	{
+		type: "captain",
 		id: "Cap053",
 		gameId: 1,
 		set: [
