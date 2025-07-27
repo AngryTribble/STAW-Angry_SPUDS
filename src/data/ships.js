@@ -3,25 +3,12 @@ module.exports = [
 		type: "ship",
 		id: "S415",
 		gameId: 1,
-		set: [
-			"75016"
-		],
+		set: ["75016"],
 		name: "U.S.S. Atlas",
 		image: "https://i.imgur.com/w2HBtk3.png",
 		class: "Sovereign Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"weapon",
-			"weapon",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "weapon", "weapon", "crew", "crew"],
 		attack: 5,
 		agility: 1,
 		hull: 5,
@@ -30,9 +17,7 @@ module.exports = [
 		text: "<b>WHENEVER THIS SHIP PERFORMS A</b> [battlestations], [scan], or [evade] <b>ACTION:</b> Target a friendly ship within Range 1-2. \n\n Place a copy of that Token beside the target ship.",
 		unique: true,
 		alliance: false,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -43,25 +28,12 @@ module.exports = [
 		type: "ship",
 		id: "S414",
 		gameId: 1,
-		set: [
-			"75016"
-		],
+		set: ["75016"],
 		name: "U.S.S. Enterprise NCC-1701-E",
 		image: "https://i.imgur.com/nIaiEuA.png",
 		class: "Sovereign Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"weapon",
-			"weapon",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "weapon", "weapon", "crew", "crew"],
 		attack: 5,
 		agility: 1,
 		hull: 5,
@@ -70,9 +42,7 @@ module.exports = [
 		text: "<b>WHEN ATTACKING WITH A TORPEDO [weapon] UPGRADE:</b> Place an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship. \n\n You do not need a [target-lock] to perform that attack. <hr> <b>END PHASE:</b> \n\n You may flip this card over to its other side.",
 		unique: true,
 		alliance: false,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -83,25 +53,12 @@ module.exports = [
 		type: "ship",
 		id: "S413",
 		gameId: 1,
-		set: [
-			"75016"
-		],
+		set: ["75016"],
 		name: "U.S.S. Enterprise NCC-1701-E",
 		image: "https://i.imgur.com/uPXW7Km.png",
 		class: "Sovereign Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"weapon",
-			"weapon",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "weapon", "weapon", "crew", "crew"],
 		attack: 5,
 		agility: 1,
 		hull: 5,
@@ -110,9 +67,7 @@ module.exports = [
 		text: "<b>CHECK FOR POWER STRAIN STEP:</b> If you executed a Green Maneuver: \n\n Place an [evade] Token beside this ship and when defending this round, roll +1 defense die <hr> <b>PLANNING PHASE:</b> \n\n You may flip this card over to its other side.",
 		unique: true,
 		alliance: false,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -123,25 +78,12 @@ module.exports = [
 		type: "ship",
 		id: "S412",
 		gameId: 1,
-		set: [
-			"75016"
-		],
+		set: ["75016"],
 		name: "U.S.S. Galaxy",
 		image: "https://i.imgur.com/7xeztav.png",
 		class: "Galaxy Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"weapon",
-			"crew",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "weapon", "crew", "crew", "crew"],
 		attack: 4,
 		agility: 1,
 		hull: 5,
@@ -150,9 +92,7 @@ module.exports = [
 		text: "Treat the Captain Skill Number of the <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> Captain with a printed Captain Skill Number of 4 or greater equipped to this ship as 8. <hr> If equipped with a [hook] <b>WHEN DEFENDING:</b> Roll +1 defense die.",
 		unique: true,
 		alliance: false,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -163,25 +103,12 @@ module.exports = [
 		type: "ship",
 		id: "S411",
 		gameId: 1,
-		set: [
-			"75016"
-		],
+		set: ["75016"],
 		name: "U.S.S. Enterprise-D",
 		image: "https://i.imgur.com/kfJAuP3.png",
 		class: "Galaxy Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"weapon",
-			"crew",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "weapon", "crew", "crew", "crew"],
 		attack: 4,
 		agility: 1,
 		hull: 5,
@@ -190,9 +117,7 @@ module.exports = [
 		text: "<b>DECLARE TARGET STEP:</b> \n\n You may attack a target with this ship's Primary Weapon at -1 attack dice outside of your <img src='img/text/forward-arc.png' width='18' height='18' title='Front Arc'> at Range 1-2.",
 		unique: true,
 		alliance: false,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -288,7 +213,7 @@ module.exports = [
 		],
 		name: "U.S.S. Enterprise-A",
 		image: "https://i.imgur.com/eLou19b.png",
-		class: "Constitution Refit Class",
+		class: "Constitution Class (Refit)",
 		actions: [
 			"evade",
 			"target-lock",
@@ -306,7 +231,7 @@ module.exports = [
 		agility: 1,
 		hull: 4,
 		shields: 4,
-		cost: 22,
+		cost: 24,
 		text: "<b>WHEN ATTACKING:</b> If there is a [scan] Token beside your ship. \n\n Roll +1 Attack die (+2 if the defending ship is Cloaked) <hr> <b>Planning Phase:</b> If the Captain equipped to this ship has a <img src='img/text/unique.png' width='20' height='20' title='Unique'> <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [talent_text] Upgrade equipped to it: You may discard that Upgrade. \n\n Equip 1 other <img src='img/text/unique.png' width='20' height='20' title='Unique'> <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [talent_text] Upgrade with a cost of 4 or less that is not already in your fleet to the Captain and place any Tokens that were on the discarded Upgrade on the new Upgrade.",
 		unique: true,
 		alliance: false,
@@ -328,7 +253,7 @@ module.exports = [
 		],
 		name: "Federation Starship",
 		image: "https://i.imgur.com/ogcTJCi.png",
-		class: "Constitution Refit Class",
+		class: "Constitution Class (Refit)",
 		actions: [
 			"evade",
 			"target-lock",
@@ -367,7 +292,7 @@ module.exports = [
 		],
 		name: "U.S.S. Enterprise",
 		image: "https://i.imgur.com/AEAZk2p.png",
-		class: "Constitution Refit Class",
+		class: "Constitution Class (Refit)",
 		actions: [
 			"evade",
 			"target-lock",
@@ -1008,21 +933,12 @@ module.exports = [
 		type: "ship",
 		id: "S389",
 		gameId: 1,
-		set: [
-			"75014"
-		],
+		set: ["75014"],
 		name: "U.S.S. Raven",
 		image: "https://i.imgur.com/BN8vhV0.png",
 		class: "Aerie Class",
-		actions: [
-			"evade",
-			"scan"
-		],
-		upgrades: [
-			"tech",
-			"tech",
-			"crew"
-		],
+		actions: ["evade", "scan"],
+		upgrades: ["tech", "tech", "crew"],
 		attack: 1,
 		agility: 2,
 		hull: 2,
@@ -1031,9 +947,7 @@ module.exports = [
 		text: "<b> COMBAT PHASE:</b> Target an opposing ship within Range 1. \n\n The target ship cannot attack this ship this game round. If the target ship is the only opposing ship in play, then it rolls -3 attack dice against this ship this game round instead.",
 		unique: true,
 		alliance: false,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -1122,25 +1036,12 @@ module.exports = [
 		type: "ship",
 		id: "S386",
 		gameId: 1,
-		set: [
-			"75014"
-		],
+		set: ["75014"],
 		name: "U.S.S. Intrepid NCC-74600",
 		image: "https://i.imgur.com/G6oMrmA.png",
 		class: "Intrepid Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"tech",
-			"weapon",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "tech", "weapon", "crew", "crew"],
 		attack: 4,
 		agility: 2,
 		hull: 4,
@@ -1149,9 +1050,7 @@ module.exports = [
 		text: "The 'Bio-Neural Circuitry' and 'Variable Geometry Pylons' [tech_text] Upgrades equipped to this ship cost -1 SP. <hr> <b>PLANNING PHASE:</b> Target a cloaked opposing ship within Range 1-2, if that ship is <img src='img/text/faction-romulan.png' width='20' height='20' title='Romulan'> you may choose one additional target. \n\n The Target(s) can only use a 1 [straight] Template when performing a [sensor-echo] Action this game round.",
 		unique: true,
 		alliance: false,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -1162,25 +1061,12 @@ module.exports = [
 		type: "ship",
 		id: "S385",
 		gameId: 1,
-		set: [
-			"75014"
-		],
+		set: ["75014"],
 		name: "U.S.S. Voyager",
 		image: "https://i.imgur.com/6IiM65P.png",
 		class: "Intrepid Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"weapon",
-			"crew",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "weapon", "crew", "crew", "crew"],
 		attack: 4,
 		agility: 2,
 		hull: 4,
@@ -1189,10 +1075,7 @@ module.exports = [
 		text: "<b>FLEET CONSTRUCTION:</b> You may reduce the cost of any number of Upgrades equipped to this ship by -2 SP. For each Upgrade reduced this way, suffer 1 damage at the start of the game (to either Shields or Hull, players choice).",
 		unique: true,
 		alliance: false,
-		factions: [
-			"federation",
-			"mirror-universe"
-		],
+		factions: ["federation", "mirror-universe"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -1203,25 +1086,12 @@ module.exports = [
 		type: "ship",
 		id: "S384",
 		gameId: 1,
-		set: [
-			"75014"
-		],
+		set: ["75014"],
 		name: "U.S.S. Voyager",
 		image: "https://i.imgur.com/IvmlLyD.png",
 		class: "Intrepid Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"weapon",
-			"crew",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "weapon", "crew", "crew", "crew"],
 		attack: 4,
 		agility: 2,
 		hull: 4,
@@ -1230,9 +1100,7 @@ module.exports = [
 		text: "<b>DECLARE TARGET STEP:</b> Place an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship. \n\n You may attack a target with this ship's Primary Weapon outside of your <img src='img/text/forward-arc.png' width='20' height='20'> at Range 1-2.",
 		unique: true,
 		alliance: false,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -1243,25 +1111,12 @@ module.exports = [
 		type: "ship",
 		id: "S383",
 		gameId: 1,
-		set: [
-			"75014"
-		],
+		set: ["75014"],
 		name: "U.S.S. Voyager",
 		image: "https://i.imgur.com/b0HTnnZ.png",
 		class: "Intrepid Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"weapon",
-			"crew",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "weapon", "crew", "crew", "crew"],
 		attack: 4,
 		agility: 2,
 		hull: 4,
@@ -1270,9 +1125,7 @@ module.exports = [
 		text: "<b>ACTION:</b> \n Increase this ship's Agility Value by 1 this game round and repair 1 Hull or Shield on this ship. If there are no friendly ships within Range 1-2, this is a Free Action instead.",
 		unique: true,
 		alliance: false,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -1613,7 +1466,7 @@ module.exports = [
 		hull: 5,
 		shields: 3,
 		cost: 23,
-		text: "<b>WHEN DEFENDING:</b>\n You may re-roll 1 [blank]. If the attacking ship is a Capital Ship, you may also add an [evade]. \n<hr> <b>WHEN ATTACKING A <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> SHIP:</b>\nRoll -2 attack dice.\nPlace 1 <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside the defending ship.",
+		text: "<b>WHEN DEFENDING:</b>\n You may re-roll 1 [blank]. If the attacking ship is a Capital Ship, you may also add an [evade]. \n<hr> <b>WHEN ATTACKING A <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> SHIP:</b>\nYou may roll -2 attack dice.\nPlace 1 <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside the defending ship.",
 		unique: true,
 		factions: [
 			"federation"
@@ -1667,26 +1520,12 @@ module.exports = [
 		type: "ship",
 		id: "S364",
 		gameId: 1,
-		set: [
-			"75013"
-		],
+		set: ["75013"],
 		name: "U.S.S. Cerberus",
 		class: "Prometheus Class",
 		image: "https://i.imgur.com/IkFcUoq.png",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"tech",
-			"weapon",
-			"weapon",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "tech", "weapon", "weapon", "crew", "crew"],
 		attack: 5,
 		agility: 1,
 		hull: 4,
@@ -1694,9 +1533,7 @@ module.exports = [
 		cost: 27,
 		text: "<b>WHEN ATTACKING WITH A <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [weapon_text] UPGRADE:</b> \n\n Convert 1 [battlestations] into 1 [hit]. If the defending ship is a <img src='img/text/faction-dominion.png' width='20' height='20' title='Dominion'> ship, convert 1 [battlestations] into 1 [crit] instead.",
 		unique: true,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -1707,25 +1544,12 @@ module.exports = [
 		type: "ship",
 		id: "S363",
 		gameId: 1,
-		set: [
-			"75013"
-		],
-		name: "Federation Class",
+		set: ["75013"],
+		name: "Federation Starship",
 		class: "Prometheus Class",
 		image: "https://i.imgur.com/LckS2NG.png",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"tech",
-			"weapon",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "tech", "weapon", "crew", "crew"],
 		attack: 5,
 		agility: 1,
 		hull: 4,
@@ -1733,9 +1557,7 @@ module.exports = [
 		cost: 24,
 		text: "",
 		unique: false,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -1746,26 +1568,12 @@ module.exports = [
 		type: "ship",
 		id: "S362",
 		gameId: 1,
-		set: [
-			"75013"
-		],
+		set: ["75013"],
 		name: "U.S.S. Prometheus",
 		class: "Prometheus Class",
 		image: "https://i.imgur.com/G6F8x0q.png",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"tech",
-			"weapon",
-			"weapon",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "tech", "weapon", "weapon", "crew", "crew"],
 		attack: 5,
 		agility: 1,
 		hull: 4,
@@ -1773,9 +1581,7 @@ module.exports = [
 		cost: 28,
 		text: "If this ship is equipped with the 'Federation Prototype' [hook], <img src='img/text/fed-prometheus.png' width='18' height='18' title='Prometheus Class'> Restricted Upgrades equipped to this ship cost -2 SP and cannot be affected by opposing Upgrades.",
 		unique: true,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -1791,7 +1597,6 @@ module.exports = [
 		],
 		name: "I.R.W. Valdore",
 		class: "Valdore Class",
-		image: "https://i.imgur.com/YZCjANG.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -1829,7 +1634,6 @@ module.exports = [
 		],
 		name: "Romulan Starship",
 		class: "Valdore Class",
-		image: "https://i.imgur.com/xpbHAVg.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -1866,7 +1670,6 @@ module.exports = [
 		],
 		name: "I.R.W. Soterus",
 		class: "Valdore Class",
-		image: "https://i.imgur.com/Pxumlx4.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -1904,7 +1707,6 @@ module.exports = [
 		],
 		name: "Romulan Starship",
 		class: "Romulan Scout Vessel",
-		image: "https://i.imgur.com/fp2wciP.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -1939,7 +1741,6 @@ module.exports = [
 		],
 		name: "Tal Shair Scout",
 		class: "Romulan Scout Vessel",
-		image: "https://i.imgur.com/9CTd49F.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -2011,11 +1812,11 @@ module.exports = [
 		id: "S353",
 		gameId: 1,
 		set: [
-			"75012"
+			"75012",
+			"80003"
 		],
 		name: "Romulan Starship",
 		class: "D'deridex Class",
-		image: "https://i.imgur.com/uolfK2a.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -2053,7 +1854,6 @@ module.exports = [
 		],
 		name: "Twilight's Wrath",
 		class: "D'deridex Class",
-		image: "https://i.imgur.com/2b4IXyY.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -2092,7 +1892,6 @@ module.exports = [
 		],
 		name: "Reman Starship",
 		class: "Reman Warbird",
-		image: "https://i.imgur.com/LrW9TgK.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -2811,24 +2610,12 @@ module.exports = [
 		type: "ship",
 		id: "S337",
 		gameId: 1,
-		set: [
-			"75008"
-		],
+		set: ["75008"],
 		name: "U.S.S. Intrepid",
 		class: "Constitution Class",
 		image: "https://i.imgur.com/WFht5uv.png",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"weapon",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "weapon", "crew", "crew"],
 		attack: 3,
 		agility: 1,
 		hull: 4,
@@ -2836,10 +2623,7 @@ module.exports = [
 		cost: 20,
 		text: "<b>FREE ACTION:</b> Place an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship and target a friendly ship within Range 1-2.\n\nPlace a [scan] Token and an [evade] Token beside this ship and target ship.",
 		unique: true,
-		factions: [
-			"federation",
-			"vulcan"
-		],
+		factions: ["federation", "vulcan"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -3103,25 +2887,12 @@ module.exports = [
 		type: "ship",
 		id: "S326",
 		gameId: 1,
-		set: [
-			"75007"
-		],
+		set: ["75007"],
 		name: "U.S.S. Voyager",
 		class: "Intrepid Class",
 		image: "https://i.imgur.com/2wANriO.png",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"borg",
-			"tech",
-			"weapon",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["borg", "tech", "weapon", "crew", "crew"],
 		attack: 5,
 		agility: 2,
 		hull: 4,
@@ -3129,10 +2900,7 @@ module.exports = [
 		cost: 34,
 		text: "<b>FREE ACTION:</b> If this ship performed a Green Maneuver this game round:\n\n Perform a  [target-lock] Action as a Free Action",
 		unique: true,
-		factions: [
-			"federation",
-			"borg"
-		],
+		factions: ["federation", "borg"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -3143,24 +2911,12 @@ module.exports = [
 		type: "ship",
 		id: "S324",
 		gameId: 1,
-		set: [
-			"75007"
-		],
+		set: ["75007"],
 		name: "Federation/Borg Starship",
 		class: "Intrepid Class",
 		image: "https://i.imgur.com/Bmtwp6t.png",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"regenerate"
-		],
-		upgrades: [
-			"borg",
-			"tech",
-			"weapon",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "regenerate"],
+		upgrades: ["borg", "tech", "weapon", "crew"],
 		attack: 5,
 		agility: 2,
 		hull: 4,
@@ -3168,10 +2924,7 @@ module.exports = [
 		cost: 29,
 		text: "",
 		unique: false,
-		factions: [
-			"federation",
-			"borg"
-		],
+		factions: ["federation", "borg"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -3301,6 +3054,7 @@ module.exports = [
 			"75004"
 		],
 		name: "U.S.S. Dauntless",
+		image: "https://i.imgur.com/5G43FEB.png",
 		class: "Dauntless Class",
 		actions: [
 			"evade",
@@ -3338,6 +3092,7 @@ module.exports = [
 			"75004"
 		],
 		name: "Harvester Prime",
+		image: "https://i.imgur.com/n7e94Ty.png",
 		class: "Vidiian Battle Cruiser",
 		actions: [
 			"evade",
@@ -3375,6 +3130,7 @@ module.exports = [
 			"75004"
 		],
 		name: "Telev's Battle Cruiser",
+		image: "https://i.imgur.com/1PWbvIK.png",
 		class: "Andorian Battle Cruiser",
 		actions: [
 			"evade",
@@ -3408,6 +3164,7 @@ module.exports = [
 			"75004"
 		],
 		name: "Guingouin",
+		image: "https://i.imgur.com/1OyzXC1.png",
 		class: "Maquis Raider",
 		actions: [
 			"evade",
@@ -3685,20 +3442,12 @@ module.exports = [
 		type: "ship",
 		id: "S305",
 		gameId: 1,
-		set: [
-			"73041"
-		],
+		set: ["73041"],
 		name: "Fighter Squadron 1",
+		image: "https://i.imgur.com/DpdpQA0.png",
 		class: "Federation Attack Squadron",
-		actions: [
-			"evade",
-			"target-lock"
-		],
-		upgrades: [
-			"squadron",
-			"squadron",
-			"squadron"
-		],
+		actions: ["evade", "target-lock"],
+		upgrades: ["squadron", "squadron", "squadron"],
 		attack: 5,
 		agility: 0,
 		hull: 1,
@@ -3706,29 +3455,19 @@ module.exports = [
 		cost: 24,
 		text: "ATTACK SQUADRON TOKENS: 5\r\n<b>ACTION:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card.\n\nEquip a [squadron_text] Upgrade that was discarded from this Attack Squadron to this Attack Squadron.",
 		unique: true,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		squadron: true
 	},
 	{
 		type: "ship",
 		id: "S304",
 		gameId: 1,
-		set: [
-			"73041"
-		],
+		set: ["73041"],
 		name: "Fighter Squadron 3",
+		image: "https://i.imgur.com/7G8l0DI.png",
 		class: "Federation Attack Squadron",
-		actions: [
-			"evade",
-			"target-lock"
-		],
-		upgrades: [
-			"squadron",
-			"squadron",
-			"squadron"
-		],
+		actions: ["evade", "target-lock"],
+		upgrades: ["squadron", "squadron", "squadron"],
 		attack: 5,
 		agility: 0,
 		hull: 1,
@@ -3736,9 +3475,7 @@ module.exports = [
 		cost: 24,
 		text: "ATTACK SQUADRON TOKENS: 5\r\n<b>ACTION:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card.\nPerform an [sensor-echo] action using a 1 [straight] Maneuver Template as a Free Action, even if this Attack Squadron is not Cloaked.",
 		unique: true,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		squadron: true
 	},
 	{
@@ -3749,6 +3486,7 @@ module.exports = [
 			"73042"
 		],
 		name: "Hirogen Hunting Vessel",
+		image: "https://i.imgur.com/zhH1NsB.png",
 		class: "Hirogen Warship",
 		actions: [
 			"evade",
@@ -3783,6 +3521,7 @@ module.exports = [
 			"73032"
 		],
 		name: "4th Wing Patrol Ship",
+		image: "https://i.imgur.com/NTbHqiN.png",
 		class: "Jem'Hadar Attack Ship",
 		actions: [
 			"evade",
@@ -3855,7 +3594,7 @@ module.exports = [
 		],
 		name: "Gorn Starship",
 		class: "Gorn Raider",
-		image:"https://i.imgur.com/MzNSrze.png",
+		image: "https://i.imgur.com/MzNSrze.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -3910,7 +3649,7 @@ module.exports = [
 		hull: 3,
 		shields: 3,
 		cost: 18,
-		text: "<b>COMBAT PHASE:</b> If there is an opposing ship in the Primary Firing Arc of this ship and the Primary Firing Arc of another <img src='img/text/faction-ferengi.png' width='20' height='20' title='Ferengi'> ship with a <img src='img/text/faction-ferengi.png' width='20' height='20' title='Ferengi'> Captain equipped to it, target that friendly ship.  \n\nThis ship attack first this game round and the target ship attacks second this game round.",
+		text: "<b>COMBAT PHASE:</b> If there is an opposing ship in the Primary Firing Arc of this ship and the Primary Firing Arc of another friendly <img src='img/text/faction-ferengi.png' width='20' height='20' title='Ferengi'> ship with a <img src='img/text/faction-ferengi.png' width='20' height='20' title='Ferengi'> Captain equipped to it, target that friendly ship.  \n\nThis ship attack first this game round and the target ship attacks second this game round.",
 		unique: true,
 		factions: [
 			"ferengi",
@@ -3967,6 +3706,7 @@ module.exports = [
 			"75003"
 		],
 		name: "Prak's Marauder",
+		image: "https://i.imgur.com/4MerFZL.png",
 		class: "D'Kora Class",
 		actions: [
 			"evade",
@@ -4003,6 +3743,7 @@ module.exports = [
 			"75003"
 		],
 		name: "Solok's Marauder",
+		image: "https://i.imgur.com/zE4CHWC.png",
 		class: "D'Kora Class",
 		actions: [
 			"evade",
@@ -4039,6 +3780,7 @@ module.exports = [
 			"75003"
 		],
 		name: "Goss' Shuttle",
+		image: "https://i.imgur.com/HUAjF19.png",
 		class: "Ferengi Shuttle",
 		actions: [
 			"evade",
@@ -4099,6 +3841,7 @@ module.exports = [
 			"73002"
 		],
 		name: "Queen Vessel Prime",
+		image: "https://i.imgur.com/HpB7YCA.png",
 		class: "Borg Octahedron",
 		actions: [
 			"target-lock",
@@ -4174,7 +3917,7 @@ module.exports = [
 			"73001"
 		],
 		name: "Goss' Marauder",
-		image: "https://i.imgur.com/drYgxfg.png",
+		image: "https://i.imgur.com/Z4aWuju.png",
 		class: "D'Kora Class",
 		actions: [
 			"evade",
@@ -4211,6 +3954,7 @@ module.exports = [
 			"75002"
 		],
 		name: "2nd Division Battleship",
+		image: "https://i.imgur.com/4XrDGUg.png",
 		class: "Jem'Hadar Battleship ",
 		actions: [
 			"target-lock",
@@ -4286,6 +4030,7 @@ module.exports = [
 			"75002"
 		],
 		name: "3rd Division Battle Cruiser",
+		image: "https://i.imgur.com/pERNymu.png",
 		class: "Jem'Hadar Battle Cruiser",
 		actions: [
 			"evade",
@@ -4363,6 +4108,7 @@ module.exports = [
 			"75002"
 		],
 		name: "2nd Wing Patrol Ship",
+		image: "https://i.imgur.com/TaLPIbD.png",
 		class: "Jem'Hadar Attack Ship",
 		actions: [
 			"evade",
@@ -4396,6 +4142,7 @@ module.exports = [
 			"75002"
 		],
 		name: "6th Wing Patrol Ship",
+		image: "https://i.imgur.com/aTyvE77.png",
 		class: "Jem'Hadar Attack Ship",
 		actions: [
 			"evade",
@@ -4464,6 +4211,7 @@ module.exports = [
 			"75001"
 		],
 		name: "P.W.B. Tomal",
+		image: "https://i.imgur.com/ylP6tKR.png",
 		class: "D'deridex Class",
 		actions: [
 			"evade",
@@ -4540,6 +4288,7 @@ module.exports = [
 			"75001"
 		],
 		name: "I.R.W. Suran",
+		image: "https://i.imgur.com/NYnshHm.png",
 		class: "Valdore Class",
 		actions: [
 			"evade",
@@ -4615,6 +4364,7 @@ module.exports = [
 			"75001"
 		],
 		name: "Jarok's Scout Vessel",
+		image: "https://i.imgur.com/rGhZi1j.png",
 		class: "Romulan Scout Vessel",
 		actions: [
 			"evade",
@@ -4686,6 +4436,7 @@ module.exports = [
 			"75001"
 		],
 		name: "Mirok's Science Vessel",
+		image: "https://i.imgur.com/miZ7k7Q.png",
 		class: "Romulan Science Vessel",
 		actions: [
 			"evade",
@@ -4829,24 +4580,12 @@ module.exports = [
 		type: "ship",
 		id: "S272",
 		gameId: 1,
-		set: [
-			"2017core"
-		],
+		set: ["2017core"],
 		name: "U.S.S. Sutherland",
+		image: "https://i.imgur.com/d19utFF.png",
 		class: "Nebula Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"weapon",
-			"crew",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "weapon", "crew", "crew", "crew"],
 		attack: 4,
 		agility: 1,
 		hull: 4,
@@ -4854,9 +4593,7 @@ module.exports = [
 		cost: 23,
 		text: "\n<b>WHEN DEFENDING:</b>\n\nCancel 1 [hit]",
 		unique: true,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -5201,6 +4938,7 @@ module.exports = [
 			"72012wp"
 		],
 		name: "I.K.S. Ves Batlh",
+		image: "https://i.imgur.com/id8Z0nS.png",
 		class: "Raptor Class",
 		actions: [
 			"evade",
@@ -5289,7 +5027,7 @@ module.exports = [
 		hull: 3,
 		shields: 2,
 		cost: 14,
-		text: "<b>WHEN THIS SHIP WOULD BE DESTROYED:</b> \n\nThe attacking ship must discard one [crew_text] Upgrade. If it can't, place an <img src='img/stuff/effect_auxilary.png' width='18' height='16' title='AUX Power Token'> Token beside this ship.",
+		text: "<b>WHEN THIS SHIP WOULD BE DESTROYED:</b> \n\nThe attacking ship must discard one [crew_text] Upgrade. If it can't, place an <img src='img/stuff/effect_auxilary.png' width='18' height='16' title='AUX Power Token'> Token beside it.",
 		unique: true,
 		factions: [
 			"federation"
@@ -5346,6 +5084,7 @@ module.exports = [
 			"72300p"
 		],
 		name: "Delta Flyer II",
+		image: "https://i.imgur.com/ADh2mo4.png",
 		class: "Delta Flyer Class Shuttlecraft",
 		actions: [
 			"evade",
@@ -5379,6 +5118,7 @@ module.exports = [
 			"72290p"
 		],
 		name: "U.S.S. Defiant NCC-1764",
+		image: "https://i.imgur.com/66a5T1g.png",
 		class: "Constitution Class",
 		actions: [
 			"evade",
@@ -5413,6 +5153,7 @@ module.exports = [
 			"72293"
 		],
 		name: "Muratas",
+		image: "https://i.imgur.com/Fq5aQzr.png",
 		class: "Xindi Reptilian Warship",
 		actions: [
 			"evade",
@@ -5446,6 +5187,7 @@ module.exports = [
 			"72284p"
 		],
 		name: "U.S.S. Enterprise-D",
+		image: "https://i.imgur.com/DtVgQHB.png",
 		class: "Galaxy Class",
 		actions: [
 			"evade",
@@ -5465,7 +5207,7 @@ module.exports = [
 		hull: 5,
 		shields: 4,
 		cost: 26,
-		text: "During the Roll Attack Dice or Roll Defence Dice step of the Combat Phase, you may switch and [evade], [scan], or  [target-lock] Token that is beside your ship for a [battlestations] Token.",
+		text: "During the Roll Attack Dice or Roll Defence Dice step of the Combat Phase, you may switch an [evade], [scan], or  [target-lock] Token that is beside your ship for a [battlestations] Token.",
 		unique: true,
 		factions: [
 			"federation"
@@ -5484,6 +5226,7 @@ module.exports = [
 			"72281"
 		],
 		name: "Calindra",
+		image: "https://i.imgur.com/9WPo8T3.png",
 		class: "Xindi Aquatic Cruiser",
 		actions: [
 			"evade",
@@ -5518,6 +5261,7 @@ module.exports = [
 			"72282gp"
 		],
 		name: "Sela's Warbird",
+		image: "https://i.imgur.com/uvm3ZeQ.png",
 		class: "D'deridex Class",
 		actions: [
 			"evade",
@@ -5552,6 +5296,7 @@ module.exports = [
 			"72282p"
 		],
 		name: "I.K.S. Toral",
+		image: "https://i.imgur.com/35B6a31.png",
 		class: "B'Rel Class",
 		actions: [
 			"evade",
@@ -5626,6 +5371,7 @@ module.exports = [
 			"72281p"
 		],
 		name: "I.K.S. Hegh'ta",
+		image: "https://i.imgur.com/WvSOP7b.png",
 		class: "K'Vort Class",
 		actions: [
 			"evade",
@@ -5659,6 +5405,7 @@ module.exports = [
 			"72273"
 		],
 		name: "Orassin",
+		image: "https://i.imgur.com/QJqu8Io.png",
 		class: "Xindi Insectoid Starship",
 		actions: [
 			"evade",
@@ -5690,6 +5437,7 @@ module.exports = [
 			"72280p"
 		],
 		name: "I.K.S. Bortas",
+		image: "https://i.imgur.com/KzSbQoh.png",
 		class: "Vor'cha Class",
 		actions: [
 			"evade",
@@ -5708,6 +5456,7 @@ module.exports = [
 		hull: 5,
 		shields: 3,
 		cost: 24,
+
 		text: "When defending, During the Modify Defense dice step, you may re-roll one of your defense dice. If you do so, place an Auxiliary Power Token beside your ship.",
 		unique: true,
 		factions: [
@@ -5723,6 +5472,7 @@ module.exports = [
 			"72263"
 		],
 		name: "U.S.S. Enterprise-B",
+		image: "https://i.imgur.com/VjPAF7K.png",
 		class: "Excelsior Class",
 		actions: [
 			"evade",
@@ -5757,6 +5507,7 @@ module.exports = [
 			"72270p"
 		],
 		name: "Kohlars Battle Cruiser",
+		image: "https://i.imgur.com/Xk8r6ML.png",
 		class: "D7 Class",
 		actions: [
 			"evade",
@@ -5790,6 +5541,7 @@ module.exports = [
 			"72262p"
 		],
 		name: "I.R.W. Rateg",
+		image: "https://i.imgur.com/ESrWoZC.png",
 		class: "Romulan Bird-of-Prey",
 		actions: [
 			"evade",
@@ -5823,24 +5575,12 @@ module.exports = [
 		type: "ship",
 		id: "S245",
 		gameId: 1,
-		set: [
-			"72253"
-		],
+		set: ["72253"],
 		name: "U.S.S. Venture",
+		image: "https://i.imgur.com/wcDY4qL.png",
 		class: "Galaxy Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"weapon",
-			"weapon",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "weapon", "weapon", "crew", "crew"],
 		attack: 4,
 		agility: 1,
 		hull: 5,
@@ -5848,9 +5588,7 @@ module.exports = [
 		cost: 26,
 		text: "If you attack a ship that is in the forward firing arc of another friendly ship, you gain +1 attack die.",
 		unique: true,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		squadron: false
 	},
 	{
@@ -5861,6 +5599,7 @@ module.exports = [
 			"72261p"
 		],
 		name: "U.S.S. Cairo",
+		image: "https://i.imgur.com/XmKcvQH.png",
 		class: "Excelsior Class",
 		actions: [
 			"evade",
@@ -5895,7 +5634,8 @@ module.exports = [
 			"72260gp"
 		],
 		name: "U.S.S. Enterprise-A",
-		class: "Constitution Refit Class",
+		image: "https://i.imgur.com/7OqNVbp.png",
+		class: "Constitution Class (Refit)",
 		actions: [
 			"evade",
 			"target-lock",
@@ -5914,7 +5654,7 @@ module.exports = [
 		hull: 4,
 		shields: 4,
 		cost: 22,
-		text: "When attacking during the Roll Attack Dice step, if there is a [scan] Token beside your ship gain +1 attack die (+2 if the defending ship is Cloaked).",
+		text: "When attacking, during the Roll Attack Dice step, if there is a [scan] Token beside your ship gain +1 attack die (+2 if the defending ship is Cloaked).",
 		unique: true,
 		factions: [
 			"federation"
@@ -5929,6 +5669,7 @@ module.exports = [
 			"72260p"
 		],
 		name: "H.M.S. Bounty",
+		image: "https://i.imgur.com/ljr49KV.png",
 		class: "B'Rel Class",
 		actions: [
 			"evade",
@@ -5963,6 +5704,7 @@ module.exports = [
 			"72255"
 		],
 		name: "Cube 384",
+		image: "https://i.imgur.com/QYzhEE7.png",
 		class: "Borg Cube",
 		actions: [
 			"target-lock",
@@ -5997,6 +5739,7 @@ module.exports = [
 			"72255"
 		],
 		name: "Sphere 936",
+		image: "https://i.imgur.com/4qavYDh.png",
 		class: "Borg Sphere",
 		actions: [
 			"target-lock",
@@ -6030,6 +5773,7 @@ module.exports = [
 			"72236p"
 		],
 		name: "Kruge's Bird-of-Prey",
+		image: "https://i.imgur.com/J8r2gfT.png",
 		class: "B'Rel Class",
 		actions: [
 			"evade",
@@ -6067,6 +5811,7 @@ module.exports = [
 			"72242"
 		],
 		name: "I.R.W. Algeron",
+		image: "https://i.imgur.com/uwboWTm.png",
 		class: "D7 Class",
 		actions: [
 			"evade",
@@ -6128,23 +5873,12 @@ module.exports = [
 		type: "ship",
 		id: "S236",
 		gameId: 1,
-		set: [
-			"72235p"
-		],
+		set: ["72235p"],
 		name: "U.S.S. Reliant",
+		image: "https://i.imgur.com/WwNLPw7.png",
 		class: "Miranda Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"weapon",
-			"weapon",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["weapon", "weapon", "crew", "crew"],
 		attack: 2,
 		agility: 2,
 		hull: 3,
@@ -6152,9 +5886,7 @@ module.exports = [
 		cost: 13,
 		text: "When attacking with your Primary Weapon, during the Modify Attack Dice step, you may disable any number of your Active Shields to re-roll a number of your attack dice equal to the number of Shields you disabled.",
 		unique: true,
-		factions: [
-			"independent"
-		],
+		factions: ["independent"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -6169,6 +5901,7 @@ module.exports = [
 			"72241"
 		],
 		name: "I.K.S. Drovana",
+		image: "https://i.imgur.com/BWGb4EI.png",
 		class: "Vor'cha Class",
 		actions: [
 			"evade",
@@ -6206,6 +5939,7 @@ module.exports = [
 			"72234p"
 		],
 		name: "U.S.S. Constellation",
+		image: "https://i.imgur.com/14aHwRu.png",
 		class: "Constitution Class",
 		actions: [
 			"evade",
@@ -6239,6 +5973,7 @@ module.exports = [
 			"72224p"
 		],
 		name: "Xindus",
+		image: "https://i.imgur.com/7Dey98j.png",
 		class: "Xindi Reptilian Warship",
 		actions: [
 			"evade",
@@ -6305,6 +6040,7 @@ module.exports = [
 			"72233"
 		],
 		name: "I.R.W. Jazkal",
+		image: "https://i.imgur.com/9vjcpE4.png",
 		class: "Romulan Bird-of-Prey",
 		actions: [
 			"evade",
@@ -6336,6 +6072,7 @@ module.exports = [
 			"72232"
 		],
 		name: "I.K.S. Amar",
+		image: "https://i.imgur.com/SvWzcGh.png",
 		class: "K'T'Inga Class",
 		actions: [
 			"evade",
@@ -6365,23 +6102,12 @@ module.exports = [
 		type: "ship",
 		id: "S229",
 		gameId: 1,
-		set: [
-			"72231"
-		],
+		set: ["72231"],
 		name: "U.S.S. Montgolfier",
+		image: "https://i.imgur.com/O5qf7El.png",
 		class: "Saber Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"weapon",
-			"weapon",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "weapon", "weapon", "crew"],
 		attack: 3,
 		agility: 2,
 		hull: 3,
@@ -6389,9 +6115,7 @@ module.exports = [
 		cost: 16,
 		text: "If your ship has an opposing ship target locked, during the Activation Phase, you may switch the target lock to a different ship within Range 1-3 as a free Action.",
 		unique: true,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		squadron: false
 	},
 	{
@@ -6402,6 +6126,7 @@ module.exports = [
 			"71225"
 		],
 		name: "Weapon Zero",
+		image: "https://i.imgur.com/We7gicl.png",
 		class: "Xindi Weapon",
 		actions: [
 			"evade",
@@ -6437,7 +6162,7 @@ module.exports = [
 		],
 		name: "Xindi Starship",
 		class: "Xindi Weapon",
-		image: "https://i.imgur.com/pVHDJtE.png",
+		image: "https://i.imgur.com/pfuG3GV.png",
 		actions: [
 			"evade",
 			"target-lock",
@@ -6469,6 +6194,7 @@ module.exports = [
 			"71203"
 		],
 		name: "Scorpion 4",
+		image: "https://i.imgur.com/iaTY1S2.png",
 		class: "Scorpion Class Attack Squadron",
 		actions: [
 			"evade",
@@ -6500,6 +6226,7 @@ module.exports = [
 			"71203"
 		],
 		name: "ROMULAN ATTACK FIGHTERS",
+		iamge: "https://i.imgur.com/54pAjuO.png",
 		class: "Scorpion Class Attack Squadron",
 		actions: [
 			"evade",
@@ -6530,6 +6257,7 @@ module.exports = [
 			"72221p"
 		],
 		name: "I.R.W. T'Met",
+		image: "https://i.imgur.com/jN2Z0cG.png",
 		class: "D'deridex Class",
 		actions: [
 			"evade",
@@ -6601,6 +6329,7 @@ module.exports = [
 			"71212"
 		],
 		name: "Dreadnought",
+		image: "https://i.imgur.com/CefMKwD.png",
 		class: "Cardassian ATR-4107",
 		actions: [
 			"evade",
@@ -6633,6 +6362,7 @@ module.exports = [
 			"71192"
 		],
 		name: "Halik Raider",
+		image: "https://i.imgur.com/vYHaYPU.png",
 		class: "Kazon Raider",
 		actions: [
 			"evade",
@@ -6697,6 +6427,7 @@ module.exports = [
 			"71211"
 		],
 		name: "DENORIOS",
+		image: "https://i.imgur.com/tO37kht.png",
 		class: "BAJORAN SOLAR SAILOR",
 		actions: [
 			"evade",
@@ -6754,6 +6485,7 @@ module.exports = [
 			"71213"
 		],
 		name: "Robinson",
+		image: "https://i.imgur.com/Lbk4sDe.png",
 		class: "Jem'Hadar Attack Ship",
 		actions: [
 			"evade",
@@ -6783,24 +6515,12 @@ module.exports = [
 		type: "ship",
 		id: "S215",
 		gameId: 1,
-		set: [
-			"71221"
-		],
+		set: ["71221"],
 		name: "U.S.S. Valiant",
+		image: "https://i.imgur.com/Mr6fQRe.png",
 		class: "Defiant Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"weapon",
-			"crew",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "weapon", "crew", "crew", "crew"],
 		attack: 3,
 		agility: 2,
 		hull: 3,
@@ -6808,9 +6528,7 @@ module.exports = [
 		cost: 19,
 		text: "When attacking with Photon Torpedoes during the Roll Attack Dice step, you may discard the Photon Torpedoes Upgrade to gain 1 additional attack die.",
 		unique: true,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		squadron: false
 	},
 	{
@@ -6821,6 +6539,7 @@ module.exports = [
 			"71223"
 		],
 		name: "KUMARI",
+		image: "https://i.imgur.com/REaLSvm.png",
 		class: "Andorian Battle Cruiser",
 		actions: [
 			"evade",
@@ -6887,6 +6606,7 @@ module.exports = [
 			"71201"
 		],
 		name: "U.S.S. Hathaway",
+		image: "https://i.imgur.com/Dz5W8Pv.png",
 		class: "Constellation Class",
 		actions: [
 			"evade",
@@ -6920,6 +6640,7 @@ module.exports = [
 			"71222"
 		],
 		name: "R.I.S. Pi",
+		image: "https://i.imgur.com/gl52BB4.png",
 		class: "Romulan Scout Vessel",
 		actions: [
 			"evade",
@@ -6985,6 +6706,7 @@ module.exports = [
 			"71120"
 		],
 		name: "U.S.S. Enterprise-D",
+		image: "https://i.imgur.com/kTYcU5N.png",
 		class: "Galaxy Class",
 		actions: [
 			"evade",
@@ -7065,6 +6787,7 @@ module.exports = [
 			"71120"
 		],
 		name: "I.R.W. Khazara",
+		image: "https://i.imgur.com/ODvHtaT.png",
 		class: "D'deridex Class",
 		actions: [
 			"evade",
@@ -7104,7 +6827,7 @@ module.exports = [
 			"blind_belak"
 		],
 		name: "Romulan Starship",
-		class: "D'deridex Class",		
+		class: "D'deridex Class",
 		image: "https://i.imgur.com/uolfK2a.png",
 		actions: [
 			"evade",
@@ -7142,6 +6865,7 @@ module.exports = [
 			"71120"
 		],
 		name: "I.K.S. Maht-H'A",
+		image: "https://i.imgur.com/XvnxvhD.png",
 		class: "Vor'cha Class",
 		actions: [
 			"evade",
@@ -7175,22 +6899,12 @@ module.exports = [
 		type: "ship",
 		id: "S202",
 		gameId: 1,
-		set: [
-			"71121"
-		],
+		set: ["71121"],
 		name: "U.S.S. Reliant",
+		image: "https://i.imgur.com/o5sQyi1.png",
 		class: "Miranda Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"weapon",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["weapon", "crew", "crew"],
 		attack: 2,
 		agility: 2,
 		hull: 3,
@@ -7198,9 +6912,7 @@ module.exports = [
 		cost: 14,
 		text: "You gain +1 attack die when firing at Range 1.",
 		unique: true,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -7255,6 +6967,7 @@ module.exports = [
 			"72240"
 		],
 		name: "U.S.S. Enterprise",
+		image: "https://i.imgur.com/J0wF7on.png",
 		class: "Constitution Class",
 		actions: [
 			"evade",
@@ -7274,7 +6987,7 @@ module.exports = [
 		hull: 4,
 		shields: 3,
 		cost: 20,
-		text: "The U.S.S. Enterprise can perform an Action listed on its Action Bar while it has an Auxiliary Power Token.",
+		text: "The <i>U.S.S. Enterprise</i> can perform an Action listed on its Action Bar while it has an Auxiliary Power Token.",
 		unique: true,
 		factions: [
 			"federation"
@@ -7336,6 +7049,7 @@ module.exports = [
 			"71123"
 		],
 		name: "I.R.W. Valdore",
+		image: "https://i.imgur.com/kQy8Gx2.png",
 		class: "Valdore Class",
 		actions: [
 			"evade",
@@ -7373,6 +7087,7 @@ module.exports = [
 			"71124"
 		],
 		name: "R.I.S. Apnex",
+		image: "https://i.imgur.com/TcWbbCz.png",
 		class: "Romulan Science Vessel",
 		actions: [
 			"evade",
@@ -7445,6 +7160,7 @@ module.exports = [
 			"72272"
 		],
 		name: "I.K.S. Gr'oth",
+		image: "https://i.imgur.com/RDtD7eF.png",
 		class: "D7 Class",
 		actions: [
 			"evade",
@@ -7482,7 +7198,7 @@ module.exports = [
 			"72272",
 			"75006"
 		],
-		name: "Klingon Battlecruiser",
+		name: "Klingon Starship",
 		class: "D7 Class",
 		image: "https://i.imgur.com/EvecWbX.png",
 		actions: [
@@ -7519,6 +7235,7 @@ module.exports = [
 			"72251"
 		],
 		name: "I.K.S. Negh'var",
+		image: "https://i.imgur.com/GgIsEE4.png",
 		class: "Negh'var Class",
 		actions: [
 			"evade",
@@ -7594,6 +7311,7 @@ module.exports = [
 			"71127"
 		],
 		name: "Kraxon",
+		image: "https://i.imgur.com/vz0mTlZ.png",
 		class: "Cardassian Galor Class",
 		actions: [
 			"evade",
@@ -7670,6 +7388,7 @@ module.exports = [
 			"71128"
 		],
 		name: "Gor Portas",
+		image: "https://i.imgur.com/9M7EAjx.png",
 		class: "Breen Battle Cruiser",
 		actions: [
 			"evade",
@@ -7743,6 +7462,7 @@ module.exports = [
 			"OP1Prize"
 		],
 		name: "Krayton",
+		image: "https://i.imgur.com/Qm2YiCW.png",
 		class: "D'Kora Class",
 		actions: [
 			"evade",
@@ -7783,7 +7503,7 @@ module.exports = [
 			"75003",
 			"73001"
 		],
-		name: "Ferengi Marauder",
+		name: "Ferengi Starship",
 		class: "D'Kora Class",
 		actions: [
 			"evade",
@@ -7819,6 +7539,7 @@ module.exports = [
 			"OP1Participation"
 		],
 		name: "Deep Space 9",
+		image: "https://i.imgur.com/H4K2p24.png",
 		class: "Nor Class Orbital Space Station",
 		actions: [
 			"target-lock",
@@ -7858,6 +7579,7 @@ module.exports = [
 			"OP1Participation"
 		],
 		name: "Abandoned Space Station",
+		image: "https://i.imgur.com/wRzFPVN.png",
 		class: "Nor Class Orbital Space Station",
 		actions: [
 			"target-lock",
@@ -7894,6 +7616,7 @@ module.exports = [
 			"OP2Prize"
 		],
 		name: "I.K.S. Ch'tang",
+		image: "https://i.imgur.com/aosIQIx.png",
 		class: "B'Rel Class",
 		actions: [
 			"evade",
@@ -7969,6 +7692,7 @@ module.exports = [
 			"OP3Prize"
 		],
 		name: "P.W.B. Aj'Rmr",
+		image: "https://i.imgur.com/TQK3zpp.png",
 		class: "D'deridex Class",
 		actions: [
 			"evade",
@@ -8008,6 +7732,7 @@ module.exports = [
 			"72282"
 		],
 		name: "U.S.S. Defiant",
+		image: "https://i.imgur.com/bQ9h30u.png",
 		class: "Defiant Class",
 		actions: [
 			"evade",
@@ -8088,6 +7813,7 @@ module.exports = [
 			"71269"
 		],
 		name: "I.K.S. Kronos One",
+		image: "https://i.imgur.com/OKN0ReA.png",
 		class: "K'T'Inga Class",
 		actions: [
 			"evade",
@@ -8165,7 +7891,8 @@ module.exports = [
 			"71270"
 		],
 		name: "I.R.W. Praetus",
-		class: "Romulan Bird-of-Prey",
+		image: "https://i.imgur.com/9wZo6ue.png",
+		class: "Romulan Bird-of-Prey Class",
 		actions: [
 			"evade",
 			"target-lock",
@@ -8202,7 +7929,7 @@ module.exports = [
 			"72233"
 		],
 		name: "Romulan Starship",
-		class: "Romulan Bird-of-Prey",
+		class: "Romulan Bird-of-Prey Class",
 		actions: [
 			"evade",
 			"target-lock"
@@ -8235,6 +7962,7 @@ module.exports = [
 			"71271"
 		],
 		name: "5th Wing Patrol Ship",
+		image: "https://i.imgur.com/wVL0CaN.png",
 		class: "Jem'Hadar Attack Ship",
 		actions: [
 			"evade",
@@ -8272,6 +8000,7 @@ module.exports = [
 			"71273"
 		],
 		name: "I.K.S. Koraga",
+		image: "https://i.imgur.com/TJddYWc.png",
 		class: "K'Vort Class",
 		actions: [
 			"evade",
@@ -8350,6 +8079,7 @@ module.exports = [
 			"72262"
 		],
 		name: "Koranak",
+		image: "https://i.imgur.com/RyuUaVJ.png",
 		class: "Cardassian Keldon Class",
 		actions: [
 			"evade",
@@ -8429,6 +8159,7 @@ module.exports = [
 			"72292"
 		],
 		name: "U.S.S. Excelsior",
+		image: "https://i.imgur.com/4Vg1pkj.png",
 		class: "Excelsior Class",
 		actions: [
 			"evade",
@@ -8511,6 +8242,7 @@ module.exports = [
 			"71274"
 		],
 		name: "R.I.S. Vo",
+		image: "https://i.imgur.com/aIPlvel.png",
 		class: "Romulan Scout Vessel",
 		actions: [
 			"evade",
@@ -8542,24 +8274,12 @@ module.exports = [
 		type: "ship",
 		id: "S166",
 		gameId: 1,
-		set: [
-			"OP4Prize"
-		],
+		set: ["OP4Prize"],
 		name: "U.S.S. Sutherland",
+		image: "https://i.imgur.com/oCuOa6Q.png",
 		class: "Nebula Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"weapon",
-			"weapon",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "weapon", "weapon", "crew", "crew"],
 		attack: 4,
 		agility: 1,
 		hull: 4,
@@ -8567,9 +8287,7 @@ module.exports = [
 		cost: 22,
 		text: "When you initiate an attack at range 3, you may choose any number of your attack dice and re-roll them once.",
 		unique: true,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -8584,6 +8302,7 @@ module.exports = [
 			"OP5Prize"
 		],
 		name: "Rav Laerst",
+		image: "https://i.imgur.com/sjsj2rX.png",
 		class: "Breen Battle Cruiser",
 		actions: [
 			"evade",
@@ -8618,7 +8337,8 @@ module.exports = [
 		id: "S164",
 		gameId: 1,
 		set: [
-			"OP5Prize"
+			"OP5Prize",
+			"80003"
 		],
 		name: "Dominion Starship",
 		class: "Breen Battle Cruiser",
@@ -8657,6 +8377,7 @@ module.exports = [
 			"71276"
 		],
 		name: "U.S.S. Equinox",
+		image: "https://i.imgur.com/VKnfNRW.png",
 		class: "Nova Class",
 		actions: [
 			"evade",
@@ -8731,6 +8452,7 @@ module.exports = [
 			"71448"
 		],
 		name: "I.K.S. Somraw",
+		image: "https://i.imgur.com/4LaYP18.png",
 		class: "Raptor Class",
 		actions: [
 			"evade",
@@ -8766,6 +8488,7 @@ module.exports = [
 			"71278"
 		],
 		name: "I.R.W. Gal Gath'thong",
+		image: "https://i.imgur.com/3q73fHB.png",
 		class: "Romulan Bird-of-Prey",
 		actions: [
 			"evade",
@@ -8840,6 +8563,7 @@ module.exports = [
 			"71279"
 		],
 		name: "4th Division Battleship",
+		image: "https://i.imgur.com/vDKLENw.png",
 		class: "Jem'Hadar Battleship",
 		actions: [
 			"target-lock",
@@ -8878,6 +8602,7 @@ module.exports = [
 			"OP6Prize"
 		],
 		name: "Akorem",
+		image: "https://i.imgur.com/GxpKGga.png",
 		class: "Bajoran Scout Ship",
 		actions: [
 			"evade",
@@ -8979,6 +8704,7 @@ module.exports = [
 			"OP5Participation"
 		],
 		name: "Hideki Class Attack Fighter",
+		image: "https://i.imgur.com/bUfLe5V.png",
 		class: "Hideki Class Attack Squadron",
 		actions: [
 			"evade",
@@ -9011,6 +8737,7 @@ module.exports = [
 			"72283"
 		],
 		name: "Borg Sphere 4270",
+		image: "https://i.imgur.com/r7WjOYs.png",
 		class: "Borg Sphere",
 		actions: [
 			"target-lock",
@@ -9119,25 +8846,12 @@ module.exports = [
 		type: "ship",
 		id: "S150",
 		gameId: 1,
-		set: [
-			"71280",
-			"72261"
-		],
+		set: ["71280", "72261"],
 		name: "U.S.S. Voyager",
+		image: "https://i.imgur.com/Bshk9aX.png",
 		class: "Intrepid Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"weapon",
-			"crew",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "weapon", "crew", "crew", "crew"],
 		attack: 4,
 		agility: 2,
 		hull: 4,
@@ -9145,9 +8859,7 @@ module.exports = [
 		cost: 28,
 		text: "Instead of making a normal attack with your Primary Weapon, you may fire in any direction at Range 1-2 with 4 attack dice. If you do so, place an Auxiliary Power Token beside your ship.",
 		unique: true,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -9158,24 +8870,11 @@ module.exports = [
 		type: "ship",
 		id: "S149",
 		gameId: 1,
-		set: [
-			"71280",
-			"72261"
-		],
+		set: ["71280", "72261"],
 		name: "Federation Starship",
 		class: "Intrepid Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"weapon",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "weapon", "crew", "crew"],
 		attack: 4,
 		agility: 2,
 		hull: 4,
@@ -9183,9 +8882,7 @@ module.exports = [
 		cost: 24,
 		text: "",
 		unique: false,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -9200,6 +8897,7 @@ module.exports = [
 			"71282"
 		],
 		name: "Nistrim Raider",
+		image: "https://i.imgur.com/YZcbeuJ.png",
 		class: "Kazon Raider",
 		actions: [
 			"evade",
@@ -9237,6 +8935,7 @@ module.exports = [
 			"72291"
 		],
 		name: "Bioship Alpha",
+		image: "https://i.imgur.com/9PEV3Se.png",
 		class: "Species 8472 Bioship",
 		actions: [
 			"evade",
@@ -9278,6 +8977,7 @@ module.exports = [
 			"blind_bioship"
 		],
 		name: "Species 8472 Starship",
+		image: "https://i.imgur.com/LleHgYi.png",
 		class: "Species 8472 Bioship",
 		actions: [
 			"evade",
@@ -9316,6 +9016,7 @@ module.exports = [
 			"71795"
 		],
 		name: "Tholia One",
+		image: "https://i.imgur.com/ItROyeu.png",
 		class: "Tholian Vessel",
 		actions: [
 			"evade",
@@ -9384,6 +9085,7 @@ module.exports = [
 			"71446"
 		],
 		name: "D'Kyr",
+		image: "https://i.imgur.com/CBYQz1L.png",
 		class: "D'Kyr Class",
 		actions: [
 			"evade",
@@ -9421,6 +9123,7 @@ module.exports = [
 			"71445"
 		],
 		name: "Interceptor 5",
+		image: "https://i.imgur.com/Y1520wl.png",
 		class: "Bajoran Interceptor",
 		actions: [
 			"evade",
@@ -9457,6 +9160,7 @@ module.exports = [
 			"71444"
 		],
 		name: "Tactical Cube 138",
+		image: "https://i.imgur.com/RD08y6v.png",
 		class: "Borg Tactical Cube",
 		actions: [
 			"target-lock",
@@ -9533,7 +9237,7 @@ module.exports = [
 			"71445",
 			"blind_interceptor8"
 		],
-		name: "Bajoran Interceptor",
+		name: "Bajoran Starship",
 		class: "Bajoran Interceptor",
 		actions: [
 			"evade",
@@ -9608,6 +9312,7 @@ module.exports = [
 			"OPArenaPrize"
 		],
 		name: "S'Gorn",
+		image: "https://i.imgur.com/KOJAgts.png",
 		class: "Gorn Raider",
 		actions: [
 			"evade",
@@ -9681,6 +9386,7 @@ module.exports = [
 			"i_k_s_b_moth"
 		],
 		name: "I.K.S. B'Moth",
+		image: "https://i.imgur.com/ckweUDd.png",
 		class: "K'T'Inga Class",
 		actions: [
 			"evade",
@@ -9756,6 +9462,7 @@ module.exports = [
 			"gavroche"
 		],
 		name: "Gavroche",
+		image: "https://i.imgur.com/MZVvP2F.png",
 		class: "Maquis Raider",
 		classId: "maquis_raider",
 		actions: [
@@ -9829,6 +9536,7 @@ module.exports = [
 			"i_r_w_vorta_vor"
 		],
 		name: "I.R.W. Vorta Vor",
+		image: "https://i.imgur.com/lXjcmGz.png",
 		class: "Romulan Bird-of-Prey",
 		actions: [
 			"evade",
@@ -9865,7 +9573,7 @@ module.exports = [
 		set: [
 			"i_r_w_vorta_vor"
 		],
-		name: "Romulan Bird-of-Prey",
+		name: "Romulan Starship",
 		class: "Romulan Bird-of-Prey",
 		actions: [
 			"evade",
@@ -9902,6 +9610,7 @@ module.exports = [
 			"3rd_wing_attack_ship"
 		],
 		name: "3rd Wing Attack Ship",
+		image: "https://i.imgur.com/PqhZ6qz.png",
 		class: "Jem'Hadar Attack Ship",
 		actions: [
 			"evade",
@@ -9935,23 +9644,12 @@ module.exports = [
 		type: "ship",
 		id: "S126",
 		gameId: 1,
-		set: [
-			"u_s_s_yaeger"
-		],
+		set: ["u_s_s_yaeger"],
 		name: "U.S.S. Yeager",
+		image: "https://i.imgur.com/Xwos9QQ.png",
 		class: "Saber Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"weapon",
-			"weapon",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["weapon", "weapon", "crew", "crew"],
 		attack: 3,
 		agility: 2,
 		hull: 3,
@@ -9959,9 +9657,7 @@ module.exports = [
 		cost: 16,
 		text: "When attacking with Photon Torpedoes, you do not need to disable the Photon Torpedoes.",
 		unique: true,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -9972,24 +9668,12 @@ module.exports = [
 		type: "ship",
 		id: "S125",
 		gameId: 1,
-		set: [
-			"u_s_s_yaeger",
-			"72231"
-		],
+		set: ["u_s_s_yaeger", "72231"],
 		name: "Federation Starship",
 		class: "Saber Class",
 		image: "https://i.imgur.com/JGT2EEU.png",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"weapon",
-			"weapon",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["weapon", "weapon", "crew"],
 		text: "",
 		alliance: true,
 		attack: 3,
@@ -9998,9 +9682,7 @@ module.exports = [
 		shields: 2,
 		cost: 12,
 		unique: false,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -10015,7 +9697,8 @@ module.exports = [
 			"71523"
 		],
 		name: "U.S.S. Enterprise",
-		class: "Constitution Refit Class",
+		image: "https://i.imgur.com/4W6YYc6.png",
+		class: "Constitution Class (Refit)",
 		actions: [
 			"evade",
 			"target-lock",
@@ -10054,7 +9737,7 @@ module.exports = [
 			"72260gp"
 		],
 		name: "Federation Starship",
-		class: "Constitution Refit Class",
+		class: "Constitution Class (Refit)",
 		actions: [
 			"evade",
 			"target-lock",
@@ -10091,6 +9774,7 @@ module.exports = [
 			"71522"
 		],
 		name: "Soong",
+		image: "https://i.imgur.com/FVRGBUj.png",
 		class: "Borg Type 03",
 		actions: [
 			"evade",
@@ -10165,6 +9849,7 @@ module.exports = [
 			"71524"
 		],
 		name: "2nd Division Cruiser",
+		image: "https://i.imgur.com/60y7oUk.png",
 		class: "Jem'Hadar Battle Cruiser",
 		actions: [
 			"evade",
@@ -10203,6 +9888,7 @@ module.exports = [
 			"71508"
 		],
 		name: "Ti'Mur",
+		image: "https://i.imgur.com/AMZOoQD.png",
 		class: "Suurok Class",
 		actions: [
 			"evade",
@@ -10271,20 +9957,12 @@ module.exports = [
 		type: "ship",
 		id: "S117",
 		gameId: 1,
-		set: [
-			"71509"
-		],
+		set: ["71509"],
 		name: "U.S.S. Raven",
+		image: "https://i.imgur.com/KjzaxgU.png",
 		class: "Aerie Class",
-		actions: [
-			"evade",
-			"scan"
-		],
-		upgrades: [
-			"tech",
-			"tech",
-			"crew"
-		],
+		actions: ["evade", "scan"],
+		upgrades: ["tech", "tech", "crew"],
 		attack: 1,
 		agility: 2,
 		hull: 2,
@@ -10292,9 +9970,7 @@ module.exports = [
 		cost: 11,
 		text: "Each time you attack or defend, if there is a [scan] token beside your ship, your range combat bonuses are doubled.",
 		unique: true,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -10342,6 +10018,7 @@ module.exports = [
 			"71526"
 		],
 		name: "Enterprise NX-01",
+		image: "https://i.imgur.com/ZuWI1JI.png",
 		class: "Federation NX Class",
 		actions: [
 			"evade",
@@ -10379,6 +10056,7 @@ module.exports = [
 			"71527"
 		],
 		name: "Ni'Var",
+		image: "https://i.imgur.com/srKVPeg.png",
 		class: "Suurok Class",
 		actions: [
 			"evade",
@@ -10415,6 +10093,7 @@ module.exports = [
 			"71525"
 		],
 		name: "Scout 608",
+		image: "https://i.imgur.com/7mj9PwQ.png",
 		class: "Borg Scout Cube",
 		actions: [
 			"evade",
@@ -10558,22 +10237,12 @@ module.exports = [
 		type: "ship",
 		id: "S110",
 		gameId: 1,
-		set: [
-			"71510"
-		],
+		set: ["71510"],
 		name: "U.S.S. Stargazer",
+		image: "https://i.imgur.com/ReXRoH4.png",
 		class: "Constellation Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"weapon",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "weapon", "crew"],
 		attack: 3,
 		agility: 1,
 		hull: 4,
@@ -10581,9 +10250,7 @@ module.exports = [
 		cost: 19,
 		text: "During the Activation Phase, you may disable 1 of your Active Shields to remove 1 Auxiliary Power Token from beside your ship.",
 		unique: true,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -10634,6 +10301,7 @@ module.exports = [
 			"71510b"
 		],
 		name: "U.S.S. Enterprise-D",
+		image: "https://i.imgur.com/KTMxQii.png",
 		class: "Galaxy Class (MU)",
 		actions: [
 			"evade",
@@ -10672,7 +10340,7 @@ module.exports = [
 			"71510b"
 		],
 		name: "Mirror Universe Starship",
-		class: "Galaxy Class (MU)",
+		class: "Galaxy Class",
 		actions: [
 			"evade",
 			"target-lock",
@@ -10709,6 +10377,7 @@ module.exports = [
 			"71510b"
 		],
 		name: "Assimilation Target Prime",
+		image: "https://i.imgur.com/98oxQEy.png",
 		class: "Galaxy Class (MU)",
 		actions: [
 			"evade",
@@ -10765,7 +10434,7 @@ module.exports = [
 		agility: 1,
 		hull: 5,
 		shields: 3,
-		cost: 24,
+		cost: 28,
 		text: "",
 		unique: false,
 		factions: [
@@ -10786,6 +10455,7 @@ module.exports = [
 			"71646a"
 		],
 		name: "Bok's Marauder",
+		image: "https://i.imgur.com/j77bKct.png",
 		class: "D'Kora Class",
 		actions: [
 			"evade",
@@ -10934,6 +10604,7 @@ module.exports = [
 			"71646c"
 		],
 		name: "Relora-Sankur",
+		image: "https://i.imgur.com/4SUKqks.png",
 		class: "Predator Class",
 		actions: [
 			"evade",
@@ -10972,6 +10643,7 @@ module.exports = [
 			"71646d"
 		],
 		name: "Scout 255",
+		image: "https://i.imgur.com/OCsmqXe.png",
 		class: "Borg Scout Cube",
 		actions: [
 			"evade",
@@ -11009,6 +10681,7 @@ module.exports = [
 			"71646e"
 		],
 		name: "Tal'Kir",
+		image: "https://i.imgur.com/H634Ndt.png",
 		class: "D'Kyr Class",
 		actions: [
 			"evade",
@@ -11046,6 +10719,7 @@ module.exports = [
 			"71528"
 		],
 		name: "Val Jean",
+		image: "https://i.imgur.com/yt4ehf0.png",
 		class: "Maquis Raider",
 		classId: "maquis_raider_b",
 		actions: [
@@ -11161,6 +10835,7 @@ module.exports = [
 			"71511"
 		],
 		name: "I.R.W. Avatar of Tomed",
+		image: "https://i.imgur.com/C2U4upz.png",
 		class: "D'deridex Class",
 		actions: [
 			"evade",
@@ -11201,6 +10876,7 @@ module.exports = [
 			"71511"
 		],
 		name: "I.R.W. Avatar of Tomed",
+		image: "https://i.imgur.com/rAOfdki.png",
 		class: "D'deridex Class",
 		actions: [
 			"evade",
@@ -11239,6 +10915,7 @@ module.exports = [
 			"71530"
 		],
 		name: "Queen Vessel Prime",
+		image: "https://i.imgur.com/OB5KlJQ.png",
 		class: "Borg Octahedron",
 		actions: [
 			"target-lock",
@@ -11277,7 +10954,8 @@ module.exports = [
 			"71531",
 			"72271"
 		],
-		name: "U.S.S. Enterprise-E",
+		name: "U.S.S. Enterprise NCC-1701-E",
+		image: "https://i.imgur.com/j0nFb6t.png",
 		class: "Sovereign Class",
 		actions: [
 			"evade",
@@ -11393,6 +11071,7 @@ module.exports = [
 			"71512"
 		],
 		name: "Assimilated Vessel 80279",
+		image: "https://i.imgur.com/mgTFrHw.png",
 		class: "B'Rel Class",
 		actions: [
 			"evade",
@@ -11432,6 +11111,7 @@ module.exports = [
 			"71512"
 		],
 		name: "Korok's Bird-of-Prey",
+		image: "https://i.imgur.com/2MXaU5e.png",
 		class: "B'Rel Class",
 		actions: [
 			"evade",
@@ -11469,6 +11149,7 @@ module.exports = [
 			"71513a"
 		],
 		name: "Tactical Cube 001",
+		image: "https://i.imgur.com/CZJCmJX.png",
 		class: "Borg Tactical Cube",
 		actions: [
 			"target-lock",
@@ -11545,7 +11226,8 @@ module.exports = [
 			"71529"
 		],
 		name: "I.S.S. Defiant",
-		class: "Defiant Class (Mirror)",
+		image: "https://i.imgur.com/QlDwe1k.png",
+		class: "Defiant Class",
 		actions: [
 			"evade",
 			"target-lock",
@@ -11583,6 +11265,7 @@ module.exports = [
 			"72252"
 		],
 		name: "Scimitar",
+		image: "https://i.imgur.com/jCjuqZF.png",
 		class: "Reman Warbird",
 		actions: [
 			"evade",
@@ -11695,7 +11378,7 @@ module.exports = [
 			"71529"
 		],
 		name: "Mirror Universe Starship",
-		class: "Defiant Class (Mirror)",
+		class: "Defiant Class",
 		actions: [
 			"evade",
 			"target-lock",
@@ -11731,6 +11414,7 @@ module.exports = [
 			"71792"
 		],
 		name: "Cube 112",
+		image: "https://i.imgur.com/ESxdpDe.png",
 		class: "Borg Cube",
 		actions: [
 			"target-lock",
@@ -11843,6 +11527,7 @@ module.exports = [
 			"71534"
 		],
 		name: "Fina Prime",
+		image: "https://i.imgur.com/HDdSXAs.png",
 		class: "Vidiian Battle Cruiser",
 		actions: [
 			"evade",
@@ -11917,6 +11602,7 @@ module.exports = [
 			"71810"
 		],
 		name: "Terok Nor",
+		image: "https://i.imgur.com/wCZNKeS.png",
 		class: "Nor Class Orbital Space Station",
 		actions: [
 			"target-lock",
@@ -11935,7 +11621,7 @@ module.exports = [
 		agility: 0,
 		hull: 8,
 		shields: 8,
-		cost: 43,
+		cost: 443,
 		text: "Instead of making a normal attack with your Primary Weapon, you may fire in any direction at Range 1-3 with 4 attack dice.",
 		unique: true,
 		factions: [
@@ -11955,6 +11641,7 @@ module.exports = [
 			"71810"
 		],
 		name: "Deep Space 9",
+		image: "https://i.imgur.com/yNeXj4q.png",
 		class: "Nor Class Orbital Space Station",
 		actions: [
 			"target-lock",
@@ -11994,6 +11681,7 @@ module.exports = [
 			"71754"
 		],
 		name: "1st Wave Attack Fighters",
+		image: "https://i.imgur.com/pKSLNAE.png",
 		class: "Hideki Class Attack Squadron",
 		actions: [
 			"evade",
@@ -12061,6 +11749,7 @@ module.exports = [
 			"71513b"
 		],
 		name: "Trager",
+		image: "https://i.imgur.com/Anpgb2r.png",
 		class: "Cardassian Galor Class",
 		actions: [
 			"evade",
@@ -12097,6 +11786,7 @@ module.exports = [
 			"71513b"
 		],
 		name: "Assimilated Vessel 64758",
+		image: "https://i.imgur.com/tZjmQki.png",
 		class: "Cardassian Galor Class",
 		actions: [
 			"evade",
@@ -12174,7 +11864,8 @@ module.exports = [
 			"71535"
 		],
 		name: "Regent's Flagship",
-		class: "Negh'var Class (Mirror)",
+		image: "https://i.imgur.com/FqRBJQG.png",
+		class: "Negh'var Class",
 		actions: [
 			"evade",
 			"target-lock",
@@ -12212,7 +11903,7 @@ module.exports = [
 			"71535"
 		],
 		name: "Mirror Universe Starship",
-		class: "Negh'var Class (Mirror)",
+		class: "Negh'var Class",
 		actions: [
 			"evade",
 			"target-lock",
@@ -12249,6 +11940,7 @@ module.exports = [
 			"71808"
 		],
 		name: "Alpha Hunter",
+		image: "https://i.imgur.com/V6XXp25.png",
 		class: "Hirogen Warship",
 		actions: [
 			"evade",
@@ -12285,7 +11977,8 @@ module.exports = [
 		gameId: 1,
 		set: [
 			"71808",
-			"73042"
+			"73042",
+			"75015"
 		],
 		name: "Hirogen Starship",
 		class: "Hirogen Warship",
@@ -12325,6 +12018,7 @@ module.exports = [
 			"71753"
 		],
 		name: "Fighter Squadron 6",
+		image: "https://i.imgur.com/xmoQdyL.png",
 		class: "Federation Attack Squadron",
 		actions: [
 			"evade",
@@ -12393,6 +12087,7 @@ module.exports = [
 			"71536"
 		],
 		name: "Prototype 01",
+		image: "https://i.imgur.com/Mjwn6rh.png",
 		class: "Romulan Drone Ship",
 		actions: [
 			"evade",
@@ -12429,6 +12124,7 @@ module.exports = [
 			"71996"
 		],
 		name: "I.K.S. Pagh",
+		image: "https://i.imgur.com/gBdHQBd.png",
 		class: "K'Vort Class",
 		actions: [
 			"evade",
@@ -12466,6 +12162,7 @@ module.exports = [
 			"71793"
 		],
 		name: "Ogla-Razik",
+		image: "https://i.imgur.com/TmJebAc.png",
 		class: "Predator Class",
 		actions: [
 			"evade",
@@ -12504,6 +12201,7 @@ module.exports = [
 			"71794"
 		],
 		name: "I.R.W. Haakona",
+		image: "https://i.imgur.com/upapShx.png",
 		class: "D'deridex Class",
 		actions: [
 			"evade",
@@ -12580,6 +12278,7 @@ module.exports = [
 			"71797"
 		],
 		name: "Gornarus",
+		image: "https://i.imgur.com/5Humsm8.png",
 		class: "Gorn Raider",
 		actions: [
 			"evade",
@@ -12616,6 +12315,7 @@ module.exports = [
 			"71798"
 		],
 		name: "Reklar",
+		image: "https://i.imgur.com/zaCpTBr.png",
 		class: "Cardassian Galor Class",
 		actions: [
 			"evade",
@@ -12688,6 +12388,7 @@ module.exports = [
 			"71796"
 		],
 		name: "I.S.S. Enterprise",
+		image: "https://i.imgur.com/tdldT6I.png",
 		class: "Constitution Class",
 		actions: [
 			"evade",
@@ -12758,6 +12459,7 @@ module.exports = [
 			"71997p"
 		],
 		name: "Sakharov",
+		image: "https://i.imgur.com/7yxX4Il.png",
 		class: "Type 7 Shuttlecraft",
 		actions: [
 			"evade",
@@ -12791,6 +12493,7 @@ module.exports = [
 			"71800"
 		],
 		name: "I.S.S. Avenger",
+		image: "https://i.imgur.com/XABZyYC.png",
 		class: "Terran NX Class",
 		actions: [
 			"evade",
@@ -12828,6 +12531,7 @@ module.exports = [
 			"71799"
 		],
 		name: "Kyana Prime",
+		image: "https://i.imgur.com/9AAqWJ9.png",
 		class: "Krenim Weapon Ship",
 		actions: [
 			"target-lock",
@@ -12865,6 +12569,7 @@ module.exports = [
 			"71998p"
 		],
 		name: "U.S.S. Hood",
+		image: "https://i.imgur.com/NCqMSD3.png",
 		class: "Excelsior Class",
 		actions: [
 			"evade",
@@ -12899,22 +12604,12 @@ module.exports = [
 		type: "ship",
 		id: "S047",
 		gameId: 1,
-		set: [
-			"71801"
-		],
+		set: ["71801"],
 		name: "U.S.S. Pegasus",
+		image: "https://i.imgur.com/WkylUnN.png",
 		class: "Oberth Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan"
-		],
-		upgrades: [
-			"tech",
-			"tech",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan"],
+		upgrades: ["tech", "tech", "crew", "crew"],
 		attack: 2,
 		agility: 3,
 		hull: 3,
@@ -12922,9 +12617,7 @@ module.exports = [
 		cost: 14,
 		text: "All of your [tech_text] Upgrades cost -1 SP.",
 		unique: true,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -13010,6 +12703,7 @@ module.exports = [
 			"71803"
 		],
 		name: "Ratosha",
+		image: "https://i.imgur.com/0qbTBAZ.png",
 		class: "Bajoran Scout Ship",
 		actions: [
 			"evade",
@@ -13045,6 +12739,7 @@ module.exports = [
 			"71999p"
 		],
 		name: "I.K.S. Korinar",
+		image: "https://i.imgur.com/RosghTn.png",
 		class: "B'Rel Class",
 		actions: [
 			"evade",
@@ -13115,24 +12810,11 @@ module.exports = [
 		type: "ship",
 		id: "S041",
 		gameId: 1,
-		set: [
-			"71802"
-		],
+		set: ["71802"],
 		name: "Federation Starship",
 		class: "Prometheus Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"tech",
-			"weapon",
-			"weapon",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "tech", "weapon", "weapon", "crew"],
 		text: "",
 		alliance: true,
 		attack: 5,
@@ -13141,9 +12823,7 @@ module.exports = [
 		shields: 4,
 		cost: 24,
 		unique: false,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -13158,6 +12838,7 @@ module.exports = [
 			"71804"
 		],
 		name: "I.K.S. Ning'tao",
+		image: "https://i.imgur.com/sb000DA.png",
 		class: "B'Rel Class",
 		actions: [
 			"evade",
@@ -13191,25 +12872,12 @@ module.exports = [
 		type: "ship",
 		id: "S039",
 		gameId: 1,
-		set: [
-			"71802"
-		],
+		set: ["71802"],
 		name: "U.S.S. Prometheus",
+		image: "https://i.imgur.com/5cqSwVI.png",
 		class: "Prometheus Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"tech",
-			"weapon",
-			"weapon",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "tech", "weapon", "weapon", "crew", "crew"],
 		attack: 5,
 		agility: 1,
 		hull: 4,
@@ -13217,9 +12885,7 @@ module.exports = [
 		cost: 28,
 		text: "<b>ACTION:</b> If you performed a [forward] Maneuver this round, immediately perform an additional 1 [forward] or 2 [forward] Maneuver.",
 		unique: true,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		intercept: {
 			ship: {},
 			fleet: {}
@@ -13234,6 +12900,7 @@ module.exports = [
 			"blind_aldara"
 		],
 		name: "Aldara",
+		image: "https://i.imgur.com/r8WbU5T.png",
 		class: "Cardassian Galor Class",
 		actions: [
 			"evade",
@@ -13266,6 +12933,7 @@ module.exports = [
 			"72004p"
 		],
 		name: "Azati Prime",
+		image: "https://i.imgur.com/tF36qVJ.png",
 		class: "Xindi Aquatic Cruiser",
 		actions: [
 			"evade",
@@ -13333,6 +13001,7 @@ module.exports = [
 			"blind_belak"
 		],
 		name: "I.R.W. Belak",
+		image: "https://i.imgur.com/UOHp2i4.png",
 		class: "D'deridex Class",
 		actions: [
 			"evade",
@@ -13363,24 +13032,12 @@ module.exports = [
 		type: "ship",
 		id: "S034",
 		gameId: 1,
-		set: [
-			"72001p"
-		],
+		set: ["72001p"],
 		name: "U.S.S. Bellerophon",
+		image: "https://i.imgur.com/4dG42fK.png",
 		class: "Intrepid Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"weapon",
-			"weapon",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "weapon", "weapon", "crew", "crew"],
 		attack: 4,
 		agility: 2,
 		hull: 4,
@@ -13388,9 +13045,7 @@ module.exports = [
 		cost: 27,
 		text: "When defending, during the Compare Results step, you may disable 2 of your Active Shields to cancel 1 of the attacking ship's [hit] results.",
 		unique: true,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		squadron: false
 	},
 	{
@@ -13435,6 +13090,7 @@ module.exports = [
 			"72012"
 		],
 		name: "Bioship Beta",
+		image: "https://i.imgur.com/qJIgV3P.png",
 		class: "Species 8472 Bioship",
 		actions: [
 			"evade",
@@ -13469,6 +13125,7 @@ module.exports = [
 			"blind_bioship"
 		],
 		name: "Bioship Omega",
+		image: "https://i.imgur.com/TaWNWrS.png",
 		class: "Species 8472 Bioship",
 		actions: [
 			"evade",
@@ -13503,6 +13160,7 @@ module.exports = [
 			"blind_buruk"
 		],
 		name: "I.K.S. Buruk",
+		image: "https://i.imgur.com/J22BWjC.png",
 		class: "K'Vort Class",
 		actions: [
 			"evade",
@@ -13536,6 +13194,7 @@ module.exports = [
 			"71805"
 		],
 		name: "U.S.S. Dauntless",
+		image: "https://i.imgur.com/oGntTvN.png",
 		class: "Dauntless Class",
 		actions: [
 			"evade",
@@ -13573,7 +13232,7 @@ module.exports = [
 			"71805",
 			"75004"
 		],
-		name: "Independent Starship",
+		name: "Species 116 Starship",
 		class: "Dauntless Class",
 		actions: [
 			"evade",
@@ -13606,6 +13265,7 @@ module.exports = [
 			"72014"
 		],
 		name: "Delta Flyer",
+		image: "https://i.imgur.com/j1EPmex.png",
 		class: "Delta Flyer Class Shuttlecraft",
 		actions: [
 			"evade",
@@ -13654,7 +13314,7 @@ module.exports = [
 		agility: 2,
 		hull: 2,
 		shields: 2,
-		cost: 12,
+		cost: 18,
 		text: "You may deploy [weapon_text] Upgrades with a cost of 4 SP or less to this ship.",
 		unique: false,
 		factions: [
@@ -13670,6 +13330,7 @@ module.exports = [
 			"72003p"
 		],
 		name: "Diaspora",
+		image: "https://i.imgur.com/7h23QXi.png",
 		class: "Xindi Insectoid Starship",
 		actions: [
 			"evade",
@@ -13732,6 +13393,7 @@ module.exports = [
 			"blind_interceptor8"
 		],
 		name: "Interceptor 8",
+		image: "https://i.imgur.com/iX4TXeI.png",
 		class: "Bajoran Interceptor",
 		actions: [
 			"evade",
@@ -13764,6 +13426,7 @@ module.exports = [
 			"72002p"
 		],
 		name: "U.S.S. Intrepid",
+		image: "https://i.imgur.com/bSiySvP.png",
 		class: "Constitution Class",
 		actions: [
 			"evade",
@@ -13797,6 +13460,7 @@ module.exports = [
 			"71806"
 		],
 		name: "Kreechta",
+		image: "https://i.imgur.com/OAUTUfV.png",
 		class: "D'Kora Class",
 		actions: [
 			"evade",
@@ -13813,7 +13477,7 @@ module.exports = [
 		agility: 1,
 		hull: 4,
 		shields: 3,
-		cost: 20,
+		cost: 22,
 		text: "When attacking a ship that has damaged Shields, during the Modify Attack Dice step, you may re-roll a number of your Attack dice up to the number of the defending ship's damaged Shields.",
 		unique: true,
 		factions: [
@@ -13829,24 +13493,12 @@ module.exports = [
 		type: "ship",
 		id: "S020",
 		gameId: 1,
-		set: [
-			"blind_lakota"
-		],
+		set: ["blind_lakota"],
 		name: "U.S.S. Lakota",
+		image: "https://i.imgur.com/ypDxa44.png",
 		class: "Excelsior Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"weapon",
-			"weapon",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "weapon", "weapon", "crew", "crew"],
 		attack: 3,
 		agility: 1,
 		hull: 5,
@@ -13854,9 +13506,7 @@ module.exports = [
 		cost: 22,
 		text: "When attacking, during the Modify Attack Dice step, you may convert 1 of your [hit] results into 1 [crit] result. If you do so, place an Auxiliary Power Token beside your ship.",
 		unique: true,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		squadron: false
 	},
 	{
@@ -13867,6 +13517,7 @@ module.exports = [
 			"blind_nistrim_culluh"
 		],
 		name: "Nistrim-Culluh",
+		image: "https://i.imgur.com/JEXqyRD.png",
 		class: "Predator Class",
 		actions: [
 			"evade",
@@ -13900,6 +13551,7 @@ module.exports = [
 			"blind_nunks_marauder"
 		],
 		name: "Nunk's Marauder",
+		image: "https://i.imgur.com/zZSA7R8.png",
 		class: "D'Kora Class",
 		actions: [
 			"evade",
@@ -13932,6 +13584,7 @@ module.exports = [
 			"71807"
 		],
 		name: "U.S.S. Pasteur",
+		image: "https://i.imgur.com/f8E43T8.png",
 		class: "Olympic Class",
 		actions: [
 			"evade",
@@ -13995,24 +13648,12 @@ module.exports = [
 		type: "ship",
 		id: "S014",
 		gameId: 1,
-		set: [
-			"72011"
-		],
+		set: ["72011"],
 		name: "U.S.S. Phoenix",
+		image: "https://i.imgur.com/MQJWBX6.png",
 		class: "Nebula Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"tech",
-			"weapon",
-			"weapon",
-			"crew",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["tech", "weapon", "weapon", "crew", "crew"],
 		attack: 4,
 		agility: 1,
 		hull: 4,
@@ -14020,9 +13661,7 @@ module.exports = [
 		cost: 22,
 		text: "Before you move, you may change your maneuver to another maneuver on your Maneuver Dial with the same speed. If you do so, place an Auxiliary Power Token beside your ship.",
 		unique: true,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		squadron: false
 	},
 	{
@@ -14033,6 +13672,7 @@ module.exports = [
 			"72013"
 		],
 		name: "Quark's Treasure",
+		image: "https://i.imgur.com/Cf1ccML.png",
 		class: "Ferengi Shuttle",
 		actions: [
 			"evade",
@@ -14063,6 +13703,7 @@ module.exports = [
 			"72015"
 		],
 		name: "I.K.S. Rotarran",
+		image: "https://i.imgur.com/fHzXOdB.png",
 		class: "B'Rel Class",
 		actions: [
 			"evade",
@@ -14096,6 +13737,7 @@ module.exports = [
 			"blind_seleya"
 		],
 		name: "Seleya",
+		image: "https://i.imgur.com/jPSZsQP.png",
 		class: "D'Kyr Class",
 		actions: [
 			"evade",
@@ -14161,6 +13803,7 @@ module.exports = [
 			"72000p"
 		],
 		name: "I.R.W. Terix",
+		image: "https://i.imgur.com/5m1AtMl.png",
 		class: "D'deridex Class",
 		actions: [
 			"evade",
@@ -14232,23 +13875,12 @@ module.exports = [
 		type: "ship",
 		id: "S006",
 		gameId: 1,
-		set: [
-			"72008"
-		],
+		set: ["72008"],
 		name: "U.S.S. Thunderchild",
+		image: "https://i.imgur.com/sW7knML.png",
 		class: "Akira Class",
-		actions: [
-			"evade",
-			"target-lock",
-			"scan",
-			"battlestations"
-		],
-		upgrades: [
-			"weapon",
-			"weapon",
-			"weapon",
-			"crew"
-		],
+		actions: ["evade", "target-lock", "scan", "battlestations"],
+		upgrades: ["weapon", "weapon", "weapon", "crew"],
 		attack: 4,
 		agility: 2,
 		hull: 5,
@@ -14256,9 +13888,7 @@ module.exports = [
 		cost: 23,
 		text: "Each time you defend, if you take no damage from an attack, you may immediately roll 1 attack die. A [hit] or [crit] result damages the attacking ship.",
 		unique: true,
-		factions: [
-			"federation"
-		],
+		factions: ["federation"],
 		squadron: false
 	},
 	{
@@ -14304,6 +13934,7 @@ module.exports = [
 			"blind_tohkaht"
 		],
 		name: "I.K.S. Toh'Kaht",
+		image: "https://i.imgur.com/Fb2VS0f.png",
 		class: "Vor'cha Class",
 		actions: [
 			"evade",
@@ -14369,6 +14000,7 @@ module.exports = [
 			"72009"
 		],
 		name: "I.K.S. T'Ong",
+		image: "https://i.imgur.com/HFC4fSa.png",
 		class: "K'T'Inga Class",
 		actions: [
 			"evade",
@@ -14406,6 +14038,7 @@ module.exports = [
 			"72010"
 		],
 		name: "I.R.W. Vrax",
+		image: "https://i.imgur.com/2dCKhoo.png",
 		class: "Valdore Class",
 		actions: [
 			"evade",
