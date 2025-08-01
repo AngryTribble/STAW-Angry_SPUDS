@@ -217,7 +217,7 @@ module.exports = [
 			"federation"
 		],
 		text: "After you move, you may target 1 friendly Federation ship within Range 1-3 (or your own ship). The target ship immediately removes 1 Disabled Upgrade Token from 1 of its disabled Upgrades as a free Action.",
-		cost: 5,
+		cost: 4,
 		skill: 2,
 		upgradeSlots: [],
 		isSkillModifier: true,
@@ -246,7 +246,7 @@ module.exports = [
 			"dominion"
 		],
 		text: "After you move, you may target 1 friendly Dominion ship within Range 1-2 (or your own ship). The target ship immediately performs an Action on one of its non-disabled [tech_text] Upgrades as a free Action.",
-		cost: 5,
+		cost: 4,
 		skill: 2,
 		upgradeSlots: [],
 		isSkillModifier: true,
@@ -275,7 +275,7 @@ module.exports = [
 			"romulan"
 		],
 		text: "After you move, you may target 1 friendly Cloaked Romulan ship within Range 1-2 (or your own ship). The target ship immediately performs a [sensor-echo] Action as a free Action.",
-		cost: 5,
+		cost: 4,
 		skill: 2,
 		upgradeSlots: [],
 		isSkillModifier: true,
@@ -304,7 +304,7 @@ module.exports = [
 			"klingon"
 		],
 		text: "After you move, you may target 1 friendly Klingon ship within Range 1-2 (or your own ship). The target ship immediately performs an action on one of its non-disabled [crew_text] Upgrades as a free Action.",
-		cost: 5,
+		cost: 4,
 		skill: 2,
 		upgradeSlots: [],
 		isSkillModifier: true,
@@ -333,7 +333,7 @@ module.exports = [
 			"independent"
 		],
 		text: "All of your [crew_text] Upgrades cost -1 SP for all ships in your fleet (including your own ship).",
-		cost: 5,
+		cost: 9,
 		skill: 1,
 		upgradeSlots: [],
 		isSkillModifier: true,
@@ -362,7 +362,7 @@ module.exports = [
 			"independent"
 		],
 		text: "After you move, you may target 1 friendly ship within Range 1-2 (or your own ship). The target ship immediately performs an additional white \"1\" Maneuver (forward, bank or turn).",
-		cost: 5,
+		cost: 9,
 		skill: 1,
 		upgradeSlots: [],
 		isSkillModifier: true,
@@ -391,7 +391,7 @@ module.exports = [
 			"independent"
 		],
 		text: "All your [weapon_text] Upgrades cost -1 SP for all ships in your fleet (including your own ship).",
-		cost: 5,
+		cost: 9,
 		skill: 1,
 		upgradeSlots: [],
 		isSkillModifier: true,
@@ -420,7 +420,7 @@ module.exports = [
 			"independent"
 		],
 		text: "All of your [tech_text] Upgrades cost -1 SP for all ships in your fleet (including your own ship).",
-		cost: 5,
+		cost: 9,
 		skill: 1,
 		upgradeSlots: [],
 		isSkillModifier: true,
@@ -574,7 +574,7 @@ module.exports = [
 			"romulan"
 		],
 		text: "When attacking, all other friendly, Romulan ships within Range 1-2 of your Flagship may choose any number of their attack dice and re-roll them once.",
-		cost: 10,
+		cost: 11,
 		actions: [
 			"sensor-echo"
 		],
@@ -634,7 +634,7 @@ module.exports = [
 			"independent"
 		],
 		text: "When defending, all other friendly ships within Range 1 of your Flagship gain +1 defense die.",
-		cost: 10,
+		cost: 11,
 		actions: [
 			"battlestations"
 		],
@@ -694,7 +694,7 @@ module.exports = [
 			"klingon"
 		],
 		text: "When attacking, all other friendly Klingon ships within Range 1-2 of your Flagship may convert 1 blank result into 1 [hit] result.",
-		cost: 10,
+		cost: 11,
 		actions: [
 			"cloak"
 		],
@@ -754,7 +754,7 @@ module.exports = [
 			"independent"
 		],
 		text: "All other friendly ships within Range 1 of your Flagship gain +1 attack die when attacking at Range 2-3.",
-		cost: 10,
+		cost: 11,
 		actions: [
 			"scan"
 		],
@@ -814,7 +814,7 @@ module.exports = [
 			"dominion"
 		],
 		text: "When defending, all other friendly Dominion ships within Range 1-2 of your Flagship may convert 1 blank result into 1 [evade] result.",
-		cost: 10,
+		cost: 11,
 		actions: [
 			"scan"
 		],
@@ -874,7 +874,7 @@ module.exports = [
 			"independent"
 		],
 		text: "After your Flagship moves, you may target 1 other Friendly ship within Range 1 of your Flagship. Target ship immediately performs an extra white or green Maneuver.",
-		cost: 10,
+		cost: 11,
 		actions: [
 			"target-lock"
 		],
@@ -934,7 +934,7 @@ module.exports = [
 			"federation"
 		],
 		text: "When defending, all other friendly Federation ships within Range 1-2 of your Flagship may choose any number of their defense dice and re-roll them once.",
-		cost: 10,
+		cost: 11,
 		actions: [
 			"battlestations"
 		],
@@ -994,7 +994,7 @@ module.exports = [
 			"independent"
 		],
 		text: "After your Flagship moves, you may target 1 other Friendly ship within Range 1 of your Flagship. Target ship immediately performs a 2nd Action listed on its Action Bar as a free Action this round.",
-		cost: 10,
+		cost: 11,
 		actions: [
 			"evade"
 		],
@@ -1377,7 +1377,7 @@ module.exports = [
 			"independent"
 		],
 		text: "Captain's Skill is increased +1.\n\nAdd +1 to this Ships Hull value.",
-		cost: 5,
+		cost: 4,
 		showType: true,
 		canEquip: true,
 		canEquipFaction: true,
@@ -1405,7 +1405,7 @@ module.exports = [
 			"independent"
 		],
 		text: "Captain's Skill is increased +1.\n\nAdd +1 to this Ships Shield value.",
-		cost: 5,
+		cost: 4,
 		showType: true,
 		canEquip: true,
 		canEquipFaction: true,
@@ -1433,7 +1433,7 @@ module.exports = [
 			"independent"
 		],
 		text: "Ship with Captain skill 5+\n\nAfter performing an Green or White Maneuver, remove a Disable Token from a Upgrade equipped to this ship.",
-		cost: 3,
+		cost: 2,
 		showType: true,
 		canEquip: true,
 		canEquipFaction: true,
