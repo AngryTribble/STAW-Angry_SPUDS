@@ -51,7 +51,8 @@ module.exports = [
 			"federation"
 		],
 		cost: 3,
-		skill: 1
+		skill: 1,
+		eraENT: true
 	},
 	{
 		type: "admiral",
