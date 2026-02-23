@@ -161,6 +161,22 @@
 	height: 1.6em;
 	width: 1em;
 	border-top-right-radius: 1em;
+	position: relative;
+	overflow: visible;
+}
+
+.card-era-icon {
+	display: block;
+	width: 1.7em;
+	height: 1.7em;
+	position: absolute;
+	right: -0.35em;
+	top: -0.6em;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: contain;
+	z-index: 10;
+	cursor: help;
 }
 
 .card-unique-icon {

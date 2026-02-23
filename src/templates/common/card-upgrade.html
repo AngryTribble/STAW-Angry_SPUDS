@@ -20,6 +20,11 @@
 			}">{{upgrade.name | uppercase}}</span>
 	</div>
 
+	<div class="card-corner-top-right">
+		<i ng-if="upgrade.eraENT" class="card-eraENT-icon fs fs-eraENT" title="Enterprise Era"></i>
+		<div class="card-corner-inner"></div>
+	</div>
+
 	<div class="card-border-left pull-left">
 		<i ng-if="upgrade.captainFederation" class="card-captainFederation-icon fs fs-captainFederation" title="Federation Captain Required"></i>
 		<i ng-if="upgrade.captainBajoren" class="card-captainBajoren-icon fs fs-captainBajoren" title="Bajoran Captain Required"></i>
