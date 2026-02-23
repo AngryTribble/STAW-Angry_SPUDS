@@ -310,6 +310,19 @@
 	text-align: center;
 }
 
+.card-eraENT-icon {
+	background: url("../img/restrictions/era_ENT.png")no-repeat;
+	font-size: 0.5em;
+	background-size: 2em;
+	color: white;
+	width: 1.2em;
+	position: relative;	
+	left: 0em;
+	top: -0.1em;
+	z-index: 1;
+	text-align: center;
+}
+
 .card-shipLimit-icon {
 	background: url("../img/restrictions/upgrade-ship-limit.png")no-repeat;
 	background-size: 1em;
