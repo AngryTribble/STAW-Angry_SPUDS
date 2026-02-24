@@ -312,80 +312,28 @@
 	text-align: center;
 }
 
-.card-eraENT-icon {
-	background: url("../img/restrictions/era_ENT.png")no-repeat;
-	background-size: 1em;
-	color: gray;
+.card-ear-icon {
+	display: block;
 	width: 1.2em;
-	position: relative;	
+	height: 1.2em;
+	margin: 0.12em 0;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 1em 1em;
+	position:relative;
 	left: 0em;
 	top: -0.1em;
-	z-index: 1;
-	text-align: center;
+	z-index: 2;
+	cursor: help;
 }
 
-.card-eraTOS-icon {
-	background: url("../img/restrictions/era_TOS.png")no-repeat;
-	background-size: 1em;
-	color: gray;
-	width: 1.2em;
-	position: relative;	
-	left: 0em;
-	top: -0.1em;
-	z-index: 1;
-	text-align: center;
-}
+.card-eraENT-icon { background-image: url("../img/restrictions/era_ENT.png"); }
+.card-eraTOS-icon { background-image: url("../img/restrictions/era_TOS.png"); }
+.card-eraTMP-icon { background-image: url("../img/restrictions/era_TMP.png"); }
+.card-eraTNG-icon { background-image: url("../img/restrictions/era_TNG.png"); }
+.card-eraDSV-icon { background-image: url("../img/restrictions/era_DSV.png"); }
+.card-eraKVN-icon { background-image: url("../img/restrictions/era_KVN.png"); }
 
-.card-eraTMP-icon {
-	background: url("../img/restrictions/era_TMP.png")no-repeat;
-	background-size: 1em;
-	color: gray;
-	width: 1.2em;
-	position: relative;	
-	left: 0em;
-	top: -0.1em;
-	z-index: 1;
-	text-align: center;
-	filter: drop-shadow(0 0 4px rgba(0,0,0,0.7));
-}
-
-.card-eraTNG-icon {
-	background: url("../img/restrictions/era_TNG.png")no-repeat;
-	background-size: 1em;
-	color: gray;
-	width: 1.2em;
-	position: relative;	
-	left: 0em;
-	top: -0.1em;
-	z-index: 1;
-	text-align: center;
-	border-radius: 50%;
-	box-shadow: 0 0 0 0.5em #a8b6bf;
-}
-
-.card-eraDSV-icon {
-	background: url("../img/restrictions/era_DSV.png")no-repeat;
-	background-size: 1em;
-	color: gray;
-	width: 1.2em;
-	position: relative;	
-	left: 0em;
-	top: -0.1em;
-	z-index: 1;
-	text-align: center;
-}
-
-.card-eraKVN-icon {
-	background: url("../img/restrictions/era_KVN.png")no-repeat;
-	background-size: 1em;
-	color: gray;
-	width: 1.2em;
-	position: relative;	
-	left: 0em;
-	top: -0.1em;
-	z-index: 1;
-	text-align: center;
-}
 
 .card-shipLimit-icon {
 	background: url("../img/restrictions/upgrade-ship-limit.png")no-repeat;
