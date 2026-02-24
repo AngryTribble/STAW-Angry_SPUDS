@@ -333,6 +333,30 @@
   content: ".";
 }
 
+.fs-eraENT:before {
+  content: ".";
+}
+
+.fs-eraTOS:before {
+  content: ".";
+}
+
+.fs-eraTMP:before {
+  content: ".";
+}
+
+.fs-eraTNG:before {
+  content: ".";
+}
+
+.fs-eraDSV:before {
+  content: ".";
+}
+
+.fs-eraKVN:before {
+  content: ".";
+}
+
 .fs-attackConstraint:before {
   content: ".";
 }
