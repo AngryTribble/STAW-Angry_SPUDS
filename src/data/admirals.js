@@ -1,5 +1,3 @@
-const enumeratePropertyNames = require("eslint-plugin-n/lib/util/enumerate-property-names");
-
 module.exports = [
 	{
 		type: "admiral",
@@ -230,7 +228,7 @@ module.exports = [
 		talents: 1,
 		text: "Add 1 [crew_text] to this ship's Upgrade Bar.\n<hr> <b>FLEET ACTION:</b>\n\nFlip up to 2 Specialization Cards equipped to this ship.",
 		unique: true,
-		eraKVN: true,	
+		eraKVN: true,
 		factions: [
 			"mirror-universe",
 			"federation"
@@ -250,6 +248,7 @@ module.exports = [
 		talents: 0,
 		text: "You may only equip the \"Grand Nagus\" and \"Rules of Acquisition\" [talent_text] Upgrades to this Captain.\n<hr> <b>SETUP:</b> \n\n Place 2 GPLT on this card.\n<hr> <b>WHEN YOU WOULD SPEND ONE OR MORE GPLT:</b> \n\n You may roll a number of defence dice equal to the number of GPLT that would be spent. For each [evade], spend 1 fewer GPLT.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"ferengi"
 		]
@@ -268,6 +267,7 @@ module.exports = [
 		talents: 1,
 		text: "<b>FLEET ACTION:</b> Decrease the Captain Skill of the Captain equipped to this ship by 1 this game round.\n\nPerform an Action on this ship's Action Bar and an Action on a <img src='img/text/faction-dominion.png' width='20' height='20' title='Dominion'> [crew_text] equipped to this ship as Free Actions.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"dominion"
 		]
@@ -286,6 +286,7 @@ module.exports = [
 		talents: 1,
 		text: "<b>FLEET ACTION:</b> Spend one Shield Token from this ship.\n\nPlace 3 [evade] Tokens beside this ship.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"klingon"
 		]
@@ -304,6 +305,7 @@ module.exports = [
 		talents: 1,
 		text: "<b>FLEET ACTION:</b> When defending this round, the attacking ship cannot benefit from or spend a [scan] Token that is beside it nor can they spend a [battlestations] Token that is beside it against your ship.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"romulan"
 		]
@@ -321,6 +323,7 @@ module.exports = [
 		talents: 1,
 		text: "<b>FLEET ACTION:</b> When defending this round roll +1 defense die. In addition, if this card is assigned to a Xindi ship, when attacking this round, gain +1 attack die.",
 		unique: true,
+		eraENT: true,
 		factions: [
 			"xindi"
 		]
@@ -341,7 +344,8 @@ module.exports = [
 		],
 		cost: 3,
 		skill: 1,
-		talents: 1
+		talents: 1,
+		eraTOS: true
 	},
 	{
 		type: "admiral",
@@ -359,7 +363,9 @@ module.exports = [
 		],
 		cost: 3,
 		skill: 0,
-		talents: 1
+		talents: 1,
+		eraTNG: true,
+		eraDSV: true
 	},
 	{
 		type: "admiral",
@@ -377,7 +383,8 @@ module.exports = [
 		],
 		cost: 5,
 		skill: 2,
-		talents: 1
+		talents: 1,
+		eraTMP: true
 	},
 	{
 		type: "admiral",
@@ -395,7 +402,8 @@ module.exports = [
 		],
 		cost: 5,
 		skill: 1,
-		talents: 1
+		talents: 1,
+		eraDSV: true
 	},
 	{
 		type: "admiral",
@@ -413,7 +421,8 @@ module.exports = [
 		],
 		cost: 3,
 		skill: 1,
-		talents: 0
+		talents: 0,
+		eraENT: true
 	},
 	{
 		type: "admiral",
@@ -431,7 +440,8 @@ module.exports = [
 		],
 		cost: 3,
 		skill: 1,
-		talents: 1
+		talents: 1,
+		eraENT: true
 	},
 	{
 		type: "admiral",
@@ -449,7 +459,9 @@ module.exports = [
 		],
 		cost: 5,
 		skill: 2,
-		talents: 1
+		talents: 1,
+		eraTNG: true,
+		eraDSV: true
 	},
 	{
 		type: "admiral",
@@ -468,7 +480,9 @@ module.exports = [
 		],
 		cost: 3,
 		skill: 1,
-		talents: 0
+		talents: 0,
+		eraTNG: true,
+		eraDSV: true
 	},
 	{
 		type: "admiral",
@@ -486,7 +500,8 @@ module.exports = [
 		],
 		cost: 3,
 		skill: 1,
-		talents: 0
+		talents: 0,
+		eraTMP: true
 	},
 	{
 		type: "admiral",
@@ -505,7 +520,9 @@ module.exports = [
 		],
 		cost: 1,
 		skill: 1,
-		talents: 0
+		talents: 0,
+		eraTNG: true,
+		eraDSV: true
 	},
 	{
 		type: "admiral",
@@ -523,7 +540,8 @@ module.exports = [
 		],
 		cost: 2,
 		skill: 0,
-		talents: 1
+		talents: 1,
+		eraDSV: true
 	},
 	{
 		type: "admiral",
