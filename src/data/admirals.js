@@ -34,7 +34,8 @@ module.exports = [
 		cost: 5,
 		skill: 0,
 		talents: 1,
-		range: "1 - 2"
+		range: "1 - 2",
+		eraTMP: true
 	},
 	{
 		type: "admiral",
@@ -71,7 +72,8 @@ module.exports = [
 		cost: 6,
 		skill: 2,
 		talents: 2,
-		range: "1"
+		range: "1",
+		eraDSV: true
 	},
 
 	{
@@ -91,7 +93,9 @@ module.exports = [
 		cost: 4,
 		skill: 1,
 		talents: 1,
-		range: "1 - 2"
+		range: "1 - 2",
+		eraTNG: true,
+		eraDSV: true
 	},
 	{
 		type: "admiral",
@@ -110,7 +114,8 @@ module.exports = [
 		],
 		cost: 3,
 		skill: 1,
-		talents: 1
+		talents: 1,
+		eraDSV: true
 	},
 	{
 		type: "admiral",
