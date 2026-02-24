@@ -20,11 +20,6 @@
 			}">{{upgrade.name | uppercase}}</span>
 	</div>
 
-	<div class="card-corner-top-right">
-		<i ng-if="upgrade.eraENT" class="card-eraENT-icon fs fs-eraENT" title="Enterprise Era"></i>
-		<div class="card-corner-inner"></div>
-	</div>
-
 	<div class="card-border-left pull-left">
 		<i ng-if="upgrade.captainFederation" class="card-captainFederation-icon fs fs-captainFederation" title="Federation Captain Required"></i>
 		<i ng-if="upgrade.captainBajoren" class="card-captainBajoren-icon fs fs-captainBajoren" title="Bajoran Captain Required"></i>
@@ -69,6 +64,13 @@
 		<i ng-if="upgrade.cost8472" class="card-cost8472-icon">{{upgrade|valueOf:'cost8472':ship:fleet}}</i>
 		<i ng-if="upgrade.costMU" class="card-costMU-icon">{{upgrade|valueOf:'costMU':ship:fleet}}</i>
 
+		<i ng-if="upgrade.eraENT" class="card-eraENT-icon fs fs-eraENT" title="Enterprise Era"></i>
+		<i ng-if="upgrade.eraTOS" class="card-eraTOS-icon fs fs-eraTOS" title="Original Series Era"></i>
+		<i ng-if="upgrade.eraTMP" class="card-eraTMP-icon fs fs-eraTMP" title="The Motion Picture Era"></i>
+		<i ng-if="upgrade.eraTNG" class="card-eraTNG-icon fs fs-eraTNG" title="The Next Generation Era"></i>
+		<i ng-if="upgrade.eraDSV" class="card-eraDSV-icon fs fs-eraDSV" title="Deep Space Nine & Voyager Era"></i>
+		<i ng-if="upgrade.eraKVN" class="card-eraKVN-icon fs fs-eraKVN" title="Kelvin Timeline Era"></i>
+
 		<i ng-if="upgrade.attackConstraint" class="card-attackConstraint-icon" title="Must have an Attack Value of {{upgrade|valueOf:'attackConstraint':ship:fleet}}">{{upgrade|valueOf:'attackConstraint':ship:fleet}}</i>
 		<i ng-if="upgrade.hullConstraint" class="card-hullConstraint-icon" title="Must Have a Hull Value of {{upgrade|valueOf:'hullConstraint':ship:fleet}}">{{upgrade|valueOf:'hullConstraint':ship:fleet}}</i>
 		<i ng-if="upgrade.shieldConstraint" class="card-shieldConstraint-icon" title="Must Have Shield Value of {{upgrade|valueOf:'shieldConstraint':ship:fleet}}">{{upgrade|valueOf:'shieldConstraint':ship:fleet}}</i>
@@ -77,7 +79,6 @@
 		<i ng-if="upgrade.FrontArc" class="card-FrontArc-icon fs fs-FrontArc" title="Forward Firing Arc"></i>
 		<i ng-if="upgrade.RearArc" class="card-RearArc-icon fs fs-RearArc" title="Secondary Firing Arc"></i>
 		<i ng-if="upgrade.arc360" class="card-360Arc-icon fs fs-360Arc" title="360-Degree Firing Arc"></i>
-		<i ng-if="upgrade.eraENT" class="card-eraENT-icon fs fs-eraENT" title="Enterprise Era"></i>
 		<i ng-if="upgrade.shipLimit" class="card-shipLimit-icon fs fs-shipLimit"></i>
 		<i ng-if="upgrade.constitutionLimit" class="card-constitutionLimit-icon fs fs-constitutionLimit" title="Constitution Class"></i>
 		<i ng-if="upgrade.akiraLimit" class="card-akiraLimit-icon fs fs-akiraLimit" title="Akira Class"></i>

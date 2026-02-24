@@ -165,20 +165,6 @@
 	overflow: visible;
 }
 
-.card-era-icon {
-	display: block;
-	width: 1.7em;
-	height: 1.7em;
-	position: absolute;
-	right: -0.35em;
-	top: -0.6em;
-	background-repeat: no-repeat;
-	background-position: center;
-	background-size: contain;
-	z-index: 10;
-	cursor: help;
-}
-
 .card-unique-icon {
 	font-size: 1.3em;
 	border: 0.05em solid #a8b6bf;
@@ -328,6 +314,66 @@
 
 .card-eraENT-icon {
 	background: url("../img/restrictions/era_ENT.png")no-repeat;
+	background-size: 1em;
+	color: gray;
+	width: 1.2em;
+	position: relative;	
+	left: 0em;
+	top: -0.1em;
+	z-index: 1;
+	text-align: center;
+}
+
+.card-eraTOS-icon {
+	background: url("../img/restrictions/era_TOS.png")no-repeat;
+	background-size: 1em;
+	color: gray;
+	width: 1.2em;
+	position: relative;	
+	left: 0em;
+	top: -0.1em;
+	z-index: 1;
+	text-align: center;
+}
+
+.card-eraTMP-icon {
+	background: url("../img/restrictions/era_TMP.png")no-repeat;
+	background-size: 1em;
+	color: gray;
+	width: 1.2em;
+	position: relative;	
+	left: 0em;
+	top: -0.1em;
+	z-index: 1;
+	text-align: center;
+}
+
+.card-eraTNG-icon {
+	background: url("../img/restrictions/era_TNG.png")no-repeat;
+	background-size: 1em;
+	color: gray;
+	width: 1.2em;
+	position: relative;	
+	left: 0em;
+	top: -0.1em;
+	z-index: 1;
+	text-align: center;
+}
+
+.card-eraDSV-icon {
+	background: url("../img/restrictions/era_DSV.png")no-repeat;
+	background-size: 1em;
+	color: gray;
+	width: 1.2em;
+	position: relative;	
+	left: 0em;
+	top: -0.1em;
+	z-index: 1;
+	text-align: center;
+}
+
+.card-eraKVN-icon {
+	background: url("../img/restrictions/era_KVN.png")no-repeat;
 	background-size: 1em;
 	color: gray;
 	width: 1.2em;

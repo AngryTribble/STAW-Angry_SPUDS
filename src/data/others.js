@@ -574,7 +574,7 @@ module.exports = [
 			"romulan"
 		],
 		text: "When attacking, all other friendly, Romulan ships within Range 1-2 of your Flagship may choose any number of their attack dice and re-roll them once.",
-		cost: 10,
+		cost: 11,
 		actions: [
 			"sensor-echo"
 		],
@@ -634,7 +634,7 @@ module.exports = [
 			"independent"
 		],
 		text: "When defending, all other friendly ships within Range 1 of your Flagship gain +1 defense die.",
-		cost: 10,
+		cost: 11,
 		actions: [
 			"battlestations"
 		],
@@ -694,7 +694,7 @@ module.exports = [
 			"klingon"
 		],
 		text: "When attacking, all other friendly Klingon ships within Range 1-2 of your Flagship may convert 1 blank result into 1 [hit] result.",
-		cost: 10,
+		cost: 11,
 		actions: [
 			"cloak"
 		],
@@ -754,7 +754,7 @@ module.exports = [
 			"independent"
 		],
 		text: "All other friendly ships within Range 1 of your Flagship gain +1 attack die when attacking at Range 2-3.",
-		cost: 10,
+		cost: 11,
 		actions: [
 			"scan"
 		],
@@ -814,7 +814,7 @@ module.exports = [
 			"dominion"
 		],
 		text: "When defending, all other friendly Dominion ships within Range 1-2 of your Flagship may convert 1 blank result into 1 [evade] result.",
-		cost: 10,
+		cost: 11,
 		actions: [
 			"scan"
 		],
@@ -874,7 +874,7 @@ module.exports = [
 			"independent"
 		],
 		text: "After your Flagship moves, you may target 1 other Friendly ship within Range 1 of your Flagship. Target ship immediately performs an extra white or green Maneuver.",
-		cost: 10,
+		cost: 11,
 		actions: [
 			"target-lock"
 		],
@@ -934,7 +934,7 @@ module.exports = [
 			"federation"
 		],
 		text: "When defending, all other friendly Federation ships within Range 1-2 of your Flagship may choose any number of their defense dice and re-roll them once.",
-		cost: 10,
+		cost: 11,
 		actions: [
 			"battlestations"
 		],
@@ -994,7 +994,7 @@ module.exports = [
 			"independent"
 		],
 		text: "After your Flagship moves, you may target 1 other Friendly ship within Range 1 of your Flagship. Target ship immediately performs a 2nd Action listed on its Action Bar as a free Action this round.",
-		cost: 10,
+		cost: 11,
 		actions: [
 			"evade"
 		],
