@@ -1,3 +1,5 @@
+const enumeratePropertyNames = require("eslint-plugin-n/lib/util/enumerate-property-names");
+
 module.exports = [
 	{
 		type: "admiral",
@@ -134,7 +136,8 @@ module.exports = [
 		],
 		cost: 2,
 		skill: 1,
-		talents: 1
+		talents: 1,
+		eraDSV: true
 	},
 	{
 		type: "admiral",
@@ -152,7 +155,8 @@ module.exports = [
 		],
 		cost: 6,
 		skill: 2,
-		talents: 1
+		talents: 1,
+		eraTNG: true
 	},
 	{
 		type: "admiral",
@@ -171,7 +175,8 @@ module.exports = [
 		cost: 4,
 		skill: 2,
 		talents: 1,
-		range: "1 - 2"
+		range: "1 - 2",
+		eraDSV: true
 	},
 	{
 		type: "admiral",
@@ -189,7 +194,8 @@ module.exports = [
 		unique: true,
 		factions: [
 			"federation"
-		]
+		],
+		eraTOS: true
 	},
 	{
 		type: "admiral",
@@ -205,6 +211,7 @@ module.exports = [
 		talents: 1,
 		text: "You do not pay a faction penalty when equipping this card to a <img src='img/text/faction-romulan.png' width='20' height='20' title='Romulan'> ship.\n<hr> <b>FREE FLEET ACTION:</b> Discard 1 <img src='img/text/faction-dominion.png' width='20' height='20' title='Dominion'> [crew_text] Upgrade equipped to this ship and place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card.\n\n Perform an attack with this ship's Primary Weapon with -1 attack die.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"dominion"
 		]
@@ -223,6 +230,7 @@ module.exports = [
 		talents: 1,
 		text: "Add 1 [crew_text] to this ship's Upgrade Bar.\n<hr> <b>FLEET ACTION:</b>\n\nFlip up to 2 Specialization Cards equipped to this ship.",
 		unique: true,
+		eraKVN: true,	
 		factions: [
 			"mirror-universe",
 			"federation"

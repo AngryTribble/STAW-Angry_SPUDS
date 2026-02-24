@@ -322,6 +322,7 @@
 	top: -0.1em;
 	z-index: 1;
 	text-align: center;
+	filter: drop-shadow(0 0 4px rgba(0,0,0,0.7));
 }
 
 .card-eraTOS-icon {
@@ -334,6 +335,7 @@
 	top: -0.1em;
 	z-index: 1;
 	text-align: center;
+	filter: drop-shadow(0 0 4px rgba(0,0,0,0.7));
 }
 
 .card-eraTMP-icon {
@@ -360,7 +362,7 @@
 	z-index: 1;
 	text-align: center;
 	border-radius: 50%;
-	box-shadow: 0 0 0 0.5em #a8b6bf;
+	filter: drop-shadow(0 0 4px rgba(0,0,0,0.7));
 }
 
 .card-eraDSV-icon {
@@ -373,6 +375,7 @@
 	top: -0.1em;
 	z-index: 1;
 	text-align: center;
+	filter: drop-shadow(0 0 4px rgba(0,0,0,0.7));
 }
 
 .card-eraKVN-icon {
@@ -385,6 +388,7 @@
 	top: -0.1em;
 	z-index: 1;
 	text-align: center;
+	filter: drop-shadow(0 0 4px rgba(0,0,0,0.7));
 }
 
 .card-shipLimit-icon {
