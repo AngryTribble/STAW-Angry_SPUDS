@@ -8,6 +8,23 @@ module.filter( "removeDashes", [ "$filter", function($filter) {
 
 }]);
 
+module.filter( "eraLabel", function() {
+
+	var eraLabels = {
+		'eraENT': 'Enterprise',
+		'eraTOS': 'The Original Series',
+		'eraTMP': 'The Motion Picture',
+		'eraTNG': 'The Next Generation',
+		'eraDSV': 'Deep Space Nine & Voyager',
+		'eraKVN': 'Kelvin Timeline'
+	};
+
+	return function( era ) {
+		return eraLabels[era] || era;
+	}
+
+});
+
 module.factory( "globalInterceptors", function() {
 	return {
 		// Prevent all cards from ever having a negative cost
@@ -164,7 +181,7 @@ module.filter( "valueOf", [ "$filter", function($filter) {
 
 	return function( card, field, ship, fleet, upgradeSlot, options ) {
 
-		// for future reference use let instead of var 
+		// for future reference use let instead of var
 		// var is function scoped meaning it is available anywhere inside the function and 'hoisted' to the top of the function
 		// let is block scoped meaning it is only available within the block it is defined in( think '{' and '}' pairs) and is not hoisted to the top of the function
 		// let is also not reassignable, meaning you can't redefine it in the same block

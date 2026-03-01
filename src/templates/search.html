@@ -35,6 +35,18 @@
 			</span>
 		</search-filter-group>
 
+		<search-filter-group title="Era">
+			<span>
+				<label class="u-label"><input type="checkbox" ng-model="search.eras.enterprise.search" > <i class="fs fs-eraENT card-eraENT-icon"></i> Enterprise (ENT)</label>
+			</span>
+			<span>
+				<label class="u-label"><input type="checkbox" ng-model="search.eras.tosTmp.search" > <i class="fs fs-eraTOS card-eraTOS-icon"></i><i class="fs fs-eraTMP card-eraTMP-icon"></i><i class="fs fs-eraKVN card-eraKVN-icon"></i> The Original Series/TOS Movies/The Kelvin-verse (TOS/TMP)</label>
+			</span>
+			<span>
+				<label class="u-label"><input type="checkbox" ng-model="search.eras.tngDsv.search" > <i class="fs fs-eraTNG card-eraTNG-icon"></i><i class="fs fs-eraDSV card-eraDSV-icon"></i> The Next Generation/Deep Space 9/Voyager (TNG/DS9/VOY)</label>
+			</span>
+		</search-filter-group>
+
 		<search-filter-group title="Order By" open>
 			<div class="u-search-filter-comment">
 				Order results by <select ng-model="search.sortBy" ng-options="sortable.value as sortable.name for sortable in sortables"></select>

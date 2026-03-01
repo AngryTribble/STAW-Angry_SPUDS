@@ -2,7 +2,15 @@
 
 	<div class="ship-image">
 		<img ng-if="ship.image" ng-src="{{ship.image}}" />
+		<div class="ship-era-icons">
+			<i ng-if="ship.eraENT" class="card-eraENT-icon fs fs-eraENT" title="Enterprise Era"></i>
+			<i ng-if="ship.eraTOS" class="card-eraTOS-icon fs fs-eraTOS" title="The Original Series Era"></i>
+			<i ng-if="ship.eraTMP" class="card-eraTMP-icon fs fs-eraTMP" title="The Motion Picture Era"></i>
+			<i ng-if="ship.eraTNG" class="card-eraTNG-icon fs fs-eraTNG" title="The Next Generation Era"></i>
+			<i ng-if="ship.eraDSV" class="card-eraDSV-icon fs fs-eraDSV" title="Deep Space Nine & Voyager Era"></i>
+			<i ng-if="ship.eraKVN" class="card-eraKVN-icon fs fs-eraKVN" title="Kelvin Timeline Era"></i>
 		</div>
+	</div>
 
 	<div class="card-corner-top-left pull-left"><i ng-if="ship.unique" class="card-unique-icon fs fs-unique pull-left"></i>
 		<div class="card-corner-inner pull-right"></div>

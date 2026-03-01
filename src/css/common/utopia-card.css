@@ -55,6 +55,8 @@
 	height: 120px;
 	width: 288px;
 	border-radius: 15px;
+	position: relative;
+	overflow: hidden;
 }
 
 .ship-image img{
@@ -62,6 +64,22 @@
 	width: 100%;
 	object-fit: contain;
 	border-radius: 15px;
+}
+
+.ship-era-icons {
+	position: absolute;
+	bottom: 0.25em;
+	right: 0.25em;
+	z-index: 2;
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: flex-end;
+	align-items: center;
+	gap: 0.05em;
+}
+
+.ship-era-icons i {
+	display: block;
 }
 
 .card-image-large {
@@ -317,7 +335,7 @@
 	background-size: 1em;
 	color: gray;
 	width: 1.2em;
-	position: relative;	
+	position: relative;
 	left: 0em;
 	top: -0.1em;
 	z-index: 1;
@@ -330,7 +348,7 @@
 	background-size: 1em;
 	color: gray;
 	width: 1.2em;
-	position: relative;	
+	position: relative;
 	left: 0em;
 	top: -0.1em;
 	z-index: 1;
@@ -343,7 +361,7 @@
 	background-size: 1em;
 	color: gray;
 	width: 1.2em;
-	position: relative;	
+	position: relative;
 	left: 0em;
 	top: -0.1em;
 	z-index: 1;
@@ -356,7 +374,7 @@
 	background-size: 1em;
 	color: gray;
 	width: 1.2em;
-	position: relative;	
+	position: relative;
 	left: 0em;
 	top: -0.1em;
 	z-index: 1;
@@ -369,7 +387,7 @@
 	background-size: 1em;
 	color: gray;
 	width: 1.2em;
-	position: relative;	
+	position: relative;
 	left: 0em;
 	top: -0.1em;
 	z-index: 1;
@@ -382,7 +400,7 @@
 	background-size: 1em;
 	color: gray;
 	width: 1.2em;
-	position: relative;	
+	position: relative;
 	left: 0em;
 	top: -0.1em;
 	z-index: 1;
@@ -2040,7 +2058,7 @@
 	background-size: 1em;
 	color: gray;
 	width: 1.2em;
-	position: relative;	
+	position: relative;
 	left: 0em;
 	top: -0.1em;
 	z-index: 1;
