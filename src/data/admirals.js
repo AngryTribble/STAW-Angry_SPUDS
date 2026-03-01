@@ -559,7 +559,8 @@ module.exports = [
 		],
 		cost: 4,
 		skill: 2,
-		talents: 1
+		talents: 1,
+		earTNG: true
 	},
 	{
 		type: "admiral",
@@ -577,7 +578,8 @@ module.exports = [
 		],
 		cost: 5,
 		skill: 2,
-		talents: 1
+		talents: 1,
+		eraTNG: true
 	},
 	{
 		type: "admiral",
@@ -595,7 +597,8 @@ module.exports = [
 		],
 		cost: 3,
 		skill: 1,
-		talents: 1
+		talents: 1,
+		eraENT: true
 	},
 	{
 		type: "admiral",
@@ -613,7 +616,8 @@ module.exports = [
 		],
 		cost: 2,
 		skill: 0,
-		talents: 0
+		talents: 0,
+		eraENT: true
 	},
 	{
 		type: "admiral",
@@ -631,7 +635,8 @@ module.exports = [
 		],
 		cost: 2,
 		skill: -1,
-		talents: 0
+		talents: 0,
+		eraTNG: true
 	},
 	{
 		type: "admiral",
@@ -649,7 +654,8 @@ module.exports = [
 		],
 		cost: 1,
 		skill: 1,
-		talents: 1
+		talents: 1,
+		eraDSV: true
 	},
 	{
 		type: "admiral",
@@ -667,7 +673,8 @@ module.exports = [
 		],
 		cost: 4,
 		skill: 1,
-		talents: 1
+		talents: 1,
+		eraDSV: true
 	},
 	{
 		type: "admiral",
@@ -683,6 +690,7 @@ module.exports = [
 		talents: 1,
 		text: "<b>FLEET ACTION:</b> Target a ship within Range 1-2 that is in your forward firing arc. If the target ship attacks this round, that ship rolls 1 less attack die this round.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -701,6 +709,7 @@ module.exports = [
 		talents: 1,
 		text: "<b>FLEET ACTION:</b> Target a ship within Range 1 of your ship (including your ship). Target ship gains +1 attack die this round and suffers 1 damage to its Hull.",
 		unique: true,
+		eraTOS: true,
 		factions: [
 			"federation"
 		]
@@ -719,6 +728,7 @@ module.exports = [
 		talents: 1,
 		text: "<b>FLEET ACTION:</b> Place a [scan] Token beside your ship. You may then perform 1 Action from your Action bar as a free Action. You cannot perform the [scan] Action as a free Action this round.\n\n<b>( ERRATA )</b>",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"mirror-universe"
 		],
@@ -741,6 +751,7 @@ module.exports = [
 		talents: 0,
 		text: "<b>FLEET ACTION:</b> Target a ship at Range 1-2 that does not have your ship in its forward firing arc. If you attack that ship this round, gain +1 attack die and roll 1 less defense die.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -759,6 +770,8 @@ module.exports = [
 		talents: 1,
 		text: "<b>FLEET ACTION:</b> Rotate your ship 180-degrees. Place a number of Auxiliary Power tokens beside your ship equal to the speed of the maneuver you revealed this round.",
 		unique: true,
+		eraTNG: true,
+		eraDSV: true,
 		factions: [
 			"q-continuum"
 		],
@@ -782,6 +795,7 @@ module.exports = [
 		talents: 1,
 		text: "<b>FLEET ACTION:</b> Target a ship at Range 1. Disable 1 of your Upgrades and 1 Upgrade (your choice) on the target ship.\n\nThis card may only be purchased for a Ferengi ship.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"ferengi"
 		]
@@ -800,6 +814,7 @@ module.exports = [
 		talents: 1,
 		text: "<b>FLEET ACTION:</b> Target a ship within Range 1 and remove 1 Token ([evade], [scan], [battlestations], or  [target-lock]) from beside that ship. If you remove a  [target-lock] Token with this ability, also remove the corresponding  [target-lock] Token.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"romulan"
 		]
@@ -818,6 +833,7 @@ module.exports = [
 		talents: 1,
 		text: "<b>FLEET ACTION:</b> All friendly ships within Range 1 of your ship gain +1 attack die this round (+2 attack dice against Borg ships).",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -836,6 +852,7 @@ module.exports = [
 		talents: 1,
 		text: "<b>FLEET ACTION:</b> Target a ship at Range 1-2. When attacking that ship this round, you may re-roll all of your blank results once. In addition, if the target ship is Cloaked, immediately flip that ship's [cloak] Token over to its red side.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -854,6 +871,7 @@ module.exports = [
 		talents: 1,
 		text: "<b>FLEET ACTION:</b> Each time you defend this round, during the Roll Defense Dice step, you may choose to roll 2 less defense dice. If you do so, add 1 [evade] result to your roll.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"romulan"
 		]
