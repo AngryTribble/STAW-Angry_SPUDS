@@ -4,6 +4,12 @@ module.filter( "cardFilter", [ "$factions", "$filter", function($factions, $filt
 
 	return function( cards, options ) {
 
+		var eraGroups = {
+			enterprise: ["eraENT"],
+			tosTmp: ["eraTOS", "eraTMP", "eraKVN"],
+			tngDsv: ["eraTNG", "eraDSV"]
+		};
+
 		var valueOf = $filter("valueOf");
 
 		return $.map( cards, function(card) {
@@ -124,6 +130,25 @@ module.filter( "cardFilter", [ "$factions", "$filter", function($factions, $filt
 			if( !(noneSelected || hasAFaction) )
 				return null;
 
+			// Era selection
+			if( options.eras ) {
+				var noneEraSelected = true;
+				var hasAnEra = false;
+				$.each( options.eras, function(name, data) {
+					if( data.search ) {
+						noneEraSelected = false;
+						$.each( eraGroups[name] || [], function(i, eraFlag) {
+							if( card[eraFlag] === true ) {
+								hasAnEra = true;
+								return false;
+							}
+						});
+					}
+				});
+				if( !(noneEraSelected || hasAnEra) )
+					return null;
+			}
+
 			return card;
 		});
 
@@ -160,6 +185,38 @@ module.directive( "search", function() {
 
 		controller: [ "$scope", "$factions", function($scope, $factions) {
 
+			function normalizeEraGroups() {
+				var eras = $scope.search.eras || {};
+				$scope.search.eras = {
+					enterprise: {
+						search: !!((eras.enterprise && eras.enterprise.search) || (eras.eraENT && eras.eraENT.search))
+					},
+					tosTmp: {
+						search: !!((eras.tosTmp && eras.tosTmp.search) ||
+							(eras.eraTOS && eras.eraTOS.search) ||
+							(eras.eraTMP && eras.eraTMP.search) ||
+							(eras.eraKVN && eras.eraKVN.search))
+					},
+					tngDsv: {
+						search: !!((eras.tngDsv && eras.tngDsv.search) ||
+							(eras.eraTNG && eras.eraTNG.search) ||
+							(eras.eraDSV && eras.eraDSV.search))
+					}
+				};
+			}
+
+			function ensureSearchShape() {
+				if( !$scope.search || typeof $scope.search != "object" )
+					$scope.search = {};
+				if( !$scope.search.factions || typeof $scope.search.factions != "object" )
+					$scope.search.factions = {};
+				if( !$scope.search.types || typeof $scope.search.types != "object" )
+					$scope.search.types = {};
+				if( !$scope.search.eras || typeof $scope.search.eras != "object" )
+					$scope.search.eras = {};
+				normalizeEraGroups();
+			}
+
 			// Set initial search parameters
 			$scope.search = {
 				query: "",
@@ -167,6 +224,7 @@ module.directive( "search", function() {
 				generic: false,
 				factions: {},
 				types: { "ship": {}, "captain": {}, "admiral": {} },
+				eras: {},
 				columns: 1,
 				sortBy: "cost",
 				ascending: "false",
@@ -177,13 +235,19 @@ module.directive( "search", function() {
 				filterValue: "",
 			};
 
-			$scope.defaults = localStorage.defaults ? angular.fromJson( localStorage.defaults ) : {};
+			try {
+				$scope.defaults = localStorage.defaults ? angular.fromJson( localStorage.defaults ) : {};
+			} catch(e) {
+				$scope.defaults = {};
+			}
 
 			// Load search defaults
 			if( $scope.defaults.search )
 				angular.copy( $scope.defaults.search, $scope.search );
 			else
 				$scope.defaults.search = angular.copy($scope.search);
+
+			ensureSearchShape();
 
 			// Clears search parameters
 			$scope.resetSearch = function() {
@@ -195,6 +259,9 @@ module.directive( "search", function() {
 				} );
 				$.each( $scope.search.types, function(i,types) {
 					types.search = false;
+				} );
+				$.each( $scope.search.eras, function(i,era) {
+					era.search = false;
 				} );
 				$scope.search.sortBy = $scope.defaults.search.sortBy || "name";
 				$scope.search.ascending = $scope.defaults.search.ascending || "true";
@@ -237,7 +304,15 @@ module.directive( "search", function() {
 
 			// Construct faction list from hard-coded list
 			$.each( $factions.list, function(i, faction) {
-				$scope.search.factions[faction.toLowerCase().replace(/ /g,"-")] = {};
+				var factionKey = faction.toLowerCase().replace(/ /g,"-");
+				if( !$scope.search.factions[factionKey] )
+					$scope.search.factions[factionKey] = {};
+			});
+
+			// Construct era list from hard-coded list
+			$.each( ['enterprise', 'tosTmp', 'tngDsv'], function(i, eraGroup) {
+				if( !$scope.search.eras[eraGroup] )
+					$scope.search.eras[eraGroup] = {};
 			});
 
 			$scope.sortables = [
@@ -345,6 +420,11 @@ module.directive( "search", function() {
 					$scope.search.sets = {};
 					$scope.defaults = {};
 				}
+
+				if( !$scope.defaults.search )
+					$scope.defaults.search = angular.copy($scope.search);
+
+				ensureSearchShape();
 
 				// Add new sets to filter
 				$.each( $scope.sets, function(i, set) {
