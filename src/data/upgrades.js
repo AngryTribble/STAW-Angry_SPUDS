@@ -451,6 +451,7 @@ module.exports = [
 		text: "<b>ACTION:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Perform either a 1 <img src='img/stuff/maneuver_turn_left_red.png' width='20' height='20'> or 1 <img src='img/stuff/maneuver_turn_right_red.png' width='20' height='20'> Maneuver. <b>(Night Shift)</b> Treat that Maneuver as a White Maneuver instead. \n\n <b>(Lower Decks)</b>",
 		unique: true,
 		alliance: false,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -467,6 +468,7 @@ module.exports = [
 		text: "<b>WHENEVER AN OPPOSING SHIP ACQUIRES A</b> [target-lock] <b>ON THIS SHIP:</b> \n If there is a [scan] Token beside this ship: \n\n Place an [evade] Token beside this ship. <hr> <b>(Night Shift) WHEN DEFENDING: MODIFY ATTACK DICE STEP:</b> Spend a [scan] Token beside this ship. \n\n The attacking ship cannot spend its [target-lock] Token. \n\n <b>(Lower Decks)</b>",
 		unique: true,
 		alliance: false,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -483,6 +485,7 @@ module.exports = [
 		text: "<b>ACTION:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Repair 1 Hull or Shield on this ship. \n <b>(Nightshift)</b> In addition, place 1 [scan] Token beside this ship. \n\n <b>(Lower Decks)</b>",
 		unique: true,
 		alliance: false,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -499,6 +502,7 @@ module.exports = [
 		text: "<b>DEAL DAMAGE STEP:</b> If this ship would suffer any Critical Damage: \n Discard this card. \n\n Discard all 'Jostled Navigator' and 'Injured Captain' damage cards that would be assigned to this ship and do not resolve their effects. <hr> <b>(Night Shift) PLANNING PHASE:</b> Place an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship. \n\n Place a [scan] Token beside this ship and remove 1 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Token from the Captain and a [crew_text] Upgrade equipped to this ship.",
 		unique: true,
 		alliance: false,
+		eraTNG: true,
 		factions: [
 			"federation",
 			"vulcan"
@@ -517,6 +521,7 @@ module.exports = [
 		unique: true,
 		shipFederation: true,
 		alliance: false,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -533,6 +538,8 @@ module.exports = [
 		text: "You may equip the 'Transporter Room' [tect_text] Upgrade to this ship without requiring an Upgrade Slot. <hr> <b>FREE ACTION:</b> Disable this card. <b>(Night Shift)</b> place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens instead. \n\n Perform the TRANSPORT Action as a Free Action.",
 		unique: true,
 		alliance: false,
+		eraTNG: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -549,6 +556,7 @@ module.exports = [
 		text: "Add 1 [weapon_text] Upgrade to this ship's Upgrade Bar. <hr> <b>WHEN ATTACKING: MODIFY ATTACK DICE STEP:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Re-roll up to 3 of your attack dice.",
 		unique: true,
 		alliance: false,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -566,6 +574,7 @@ module.exports = [
 		unique: true,
 		alliance: false,
 		range: "1 - 3",
+		eraTNG: true,
 		factions: [
 			"federation",
 			"bajoran"
@@ -584,6 +593,7 @@ module.exports = [
 		unique: true,
 		range: "1 - 2",
 		alliance: false,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -600,6 +610,7 @@ module.exports = [
 		text: "<b>END PHASE:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Remove a <img src='img/stuff/effect_disable.png' width='20' height='16'> Token from a [crew_text] Upgrade with <b>(Lower Decks)</b> Keyword and then, place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on that Upgrade. \n\n\n <b>(Lower Decks)</b>",
 		unique: true,
 		alliance: false,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -617,6 +628,7 @@ module.exports = [
 		unique: true,
 		alliance: false,
 		captainFederation: true,
+		eraTNG: true,
 		factions: [
 			"federation",
 			"bajoran"
@@ -634,6 +646,7 @@ module.exports = [
 		text: "<b>END PHASE:</b> Disable this card and spend a [scan] Token beside this ship. \n\n Repair 1 Shield on this ship. If there is any <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Tokens beside this ship, you may Repair 1 Hull on this ship instead. \n\n\n <b>(Lower Decks)</b>",
 		unique: true,
 		alliance: false,
+		eraTNG: true,
 		factions: [
 			"federation",
 			"vulcan"
@@ -651,6 +664,7 @@ module.exports = [
 		text: "<b>ACTION:</b> Disable this card. \n\n Perform a Red Maneuver on this ship's Maneuver Dial. \n\n\n <b>(Lower Decks)</b>",
 		unique: true,
 		alliance: false,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -667,6 +681,7 @@ module.exports = [
 		text: "<b>WHENEVER YOU REMOVE A <img src='img/stuff/effect_disable.png' width='20' height='16'> TOKEN FROM 1 OF YOUR <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> UPGRADES:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Place an [evade] Token beside this ship.",
 		unique: true,
 		alliance: false,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -684,6 +699,7 @@ module.exports = [
 		unique: true,
 		alliance: false,
 		shipFederation: true,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -700,6 +716,7 @@ module.exports = [
 		text: "<b>AFTER AN OPPOSING SHIP WITHIN RANGE EXECUTES A MANEUVER:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n You may rotate your Maneuver Dial to a Maneuver of the same Speed as the opposing ship.",
 		unique: true,
 		alliance: false,
+		eraTNG: true,
 		range: "1 - 3",
 		factions: [
 			"federation"
@@ -717,6 +734,8 @@ module.exports = [
 		text: "<b>CHECK FOR POWER STRAIN STEP:</b> If this ship performed a [straight] Maneuver. \n\n Remove an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token from beside this ship. <hr> <b>WHEN ATTACKING OR DEFENDING:</b> Place an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship. \n\n Re-roll up to 2 [blank].",
 		unique: true,
 		alliance: false,
+		eraTNG: true,
+		eraDSV: true,
 		factions: [
 			"federation",
 			"klingon"
@@ -735,6 +754,7 @@ module.exports = [
 		unique: true,
 		alliance: false,
 		captainFederation: true,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -751,6 +771,7 @@ module.exports = [
 		text: "<b>WHENEVER A</b> [crew_text]<b> UPGRADE EQUIPPED TO THIS SHIP WOULD BE DISABLED:</b> \n\n You may disable this card instead. <hr> <b>WHENEVER A</b> [crew_text] <b>UPGRADE EQUIPPED TO THIS SHIP WOULD BE DISCARDED:</b> \n\n You may discard this card instead.",
 		unique: true,
 		alliance: false,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -769,6 +790,7 @@ module.exports = [
 		shipFederation: true,
 		range: "1 - 2",
 		alliance: false,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -786,6 +808,7 @@ module.exports = [
 		unique: true,
 		range: "1 - 2",
 		alliance: false,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -802,6 +825,8 @@ module.exports = [
 		text: "<b>PLANNING PHASE:</b> Disable this card. \n\n Place a [scan] Token beside this ship. \n\n\n <b>(Lower Decks)</b>",
 		unique: true,
 		alliance: false,
+		eraTMP: true,
+		eraDSV: true,
 		factions: [
 			"federation",
 			"vulcan"
@@ -819,6 +844,7 @@ module.exports = [
 		text: "<b>WHEN ATTACKING:</b> If there is a [scan] Token beside this ship. \n\n You may re-roll up to 2 of your attack dice. \n\n\n <b>(Lower Decks)</b>",
 		unique: true,
 		alliance: false,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -835,6 +861,7 @@ module.exports = [
 		text: "<b>WHENEVER YOU PERFORM THE ACTION LISTED ON A <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [talent_text] Upgrade:</b> Disable this card. \n\n Place a [battlestations] Token beside this ship. ",
 		unique: true,
 		alliance: false,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -851,6 +878,7 @@ module.exports = [
 		text: "<b>WHEN ATTACKING WITH A [weapon_text] UPGRADE: </b> \n\n You may disable this card instead of that Upgrade.",
 		unique: true,
 		alliance: false,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -867,6 +895,7 @@ module.exports = [
 		text: "<b>ACTION:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Perform either a 1 <img src='img/stuff/maneuver_bank_left_white.png' width='20' height='20'> or 1 <img src='img/stuff/maneuver_bank_right_white.png' width='20' height='20'> Maneuver.",
 		unique: true,
 		alliance: false,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -883,6 +912,7 @@ module.exports = [
 		text: "<b>WHENEVER THIS SHIP WOULD REPAIR ANY OF ITS HULL OR SHIELDS:</b> Disable this card. \n\n Place 2 [scan] Tokens beside this ship instead.",
 		unique: true,
 		alliance: false,
+		eraTMP: true,
 		factions: [
 			"federation",
 			"vulcan"
@@ -900,6 +930,7 @@ module.exports = [
 		text: "This ship does not skip its Perform Action Step when overlapping another ship's base.",
 		unique: true,
 		alliance: false,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -917,6 +948,7 @@ module.exports = [
 		unique: true,
 		range: "1 - 2",
 		alliance: false,
+		eraTMP: true,
 		factions: [
 			"federation",
 			"vulcan"
@@ -934,6 +966,7 @@ module.exports = [
 		text: "<b>CHECK FOR POWER STRAIN STEP:</b> If this ship performed a Geen Maneuver. \n\n Place an [evade] Token beside this ship.",
 		unique: true,
 		alliance: false,
+		eraTMP: true,
 		factions: [
 			"federation",
 			"vulcan"
@@ -952,6 +985,7 @@ module.exports = [
 		unique: true,
 		range: "1 - 2",
 		alliance: false,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -969,6 +1003,7 @@ module.exports = [
 		unique: true,
 		range: "1",
 		alliance: false,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -985,6 +1020,7 @@ module.exports = [
 		text: "<b>END PHASE:</b> Spend a [scan] Token beside this ship. \n\n Remove a <img src='img/stuff/effect_disable.png' width='20' height='16'> Token from a [crew] Upgrade equipped to this ship.",
 		unique: true,
 		alliance: false,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -1001,6 +1037,7 @@ module.exports = [
 		text: "<b>AFTER SUFFERING ANY DAMAGE TO YOUR HULL:</b> Discard this card and place 1 <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship. \n\n Repair 1 Hull on this ship.",
 		unique: true,
 		alliance: false,
+		eraENT: true,
 		factions: [
 			"federation"
 		]
@@ -1018,6 +1055,7 @@ module.exports = [
 		unique: true,
 		range: "1 - 3",
 		alliance: false,
+		eraENT: true,
 		factions: [
 			"federation"
 		]
@@ -1034,6 +1072,7 @@ module.exports = [
 		text: "<b>FREE ACTION:</b> Disable this card. \n\n Remove all <img src='img/stuff/effect_disable.png' width='20' height='16'> Tokens from each of your other [crew_text] Upgrades equipped to this sihp.",
 		unique: true,
 		alliance: false,
+		eraENT: true,
 		factions: [
 			"federation"
 		]
@@ -1051,6 +1090,7 @@ module.exports = [
 		unique: true,
 		alliance: false,
 		captainFederation: true,
+		eraENT: true,
 		factions: [
 			"federation"
 		]
@@ -1068,6 +1108,7 @@ module.exports = [
 		unique: true,
 		alliance: false,
 		range: "1 - 2",
+		eraENT: true,
 		factions: [
 			"federation"
 		]
@@ -1085,6 +1126,7 @@ module.exports = [
 		unique: true,
 		alliance: false,
 		hullConstraint: "3-",
+		eraENT: true,
 		factions: [
 			"federation"
 		]
@@ -1101,6 +1143,7 @@ module.exports = [
 		text: "You may equip the 'Phase Cannons' [weapon_text] Upgrade to this ship for free without requiring an Upgrade Slot. <hr> <b>ACTION:</b> \n\n You may convert 1 [blank] to 1 [hit] and 1 [battlestations] to 1 [hit] When Attacking this game round.",
 		unique: true,
 		alliance: false,
+		eraENT: true,
 		factions: [
 			"federation"
 		]
@@ -1117,6 +1160,7 @@ module.exports = [
 		text: "<b>ACTION:</b \n\n Perform a 1 <img src='img/stuff/maneuver_impulse_roll_red.png' width='20' height='20'> Maneuver and then, place an [evade] Token beside this ship.",
 		unique: true,
 		alliance: false,
+		eraENT: true,
 		factions: [
 			"federation"
 		]
@@ -1133,6 +1177,7 @@ module.exports = [
 		text: "<b>ACTION:</b> \n\n Perform a Green Maneuver on this ship's Maneuver Dial.",
 		unique: true,
 		alliance: false,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -1149,6 +1194,7 @@ module.exports = [
 		text: "<b> COMBAT PHASE:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and spend a [scan] Token beside this ship. \n\n Repair 1 Shield on this ship. If this card is equipped to a <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> Ship, Repair 2 Shields instead.",
 		unique: true,
 		alliance: false,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -1165,6 +1211,7 @@ module.exports = [
 		text: "Add 1 [crew_text] to this ship's Upgrade Bar. <hr> <b>FREE ACTION:</b> Disable this card. \n\n Perform the Action listed on the Captain, [talent_text], or [crew_text] Upgrade equipped to this ship as a Free Action. <hr> <b>(First Officer) IF THE CAPTAIN EQUIPPED TO THIS SHIP IS DISCARDED:</b> \n\n Flip this card over and equip it as the Captain.",
 		unique: true,
 		alliance: false,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -1181,6 +1228,7 @@ module.exports = [
 		text: "<b>ACTION:</b> \n\n Roll +2 defense dice and convert 1 [battlestations] to [evade] when defending this game round.",
 		unique: true,
 		alliance: false,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -1197,6 +1245,7 @@ module.exports = [
 		text: "<b>CHECK FOR POWER STRAIN STEP:</b> If this ship performed a White Maneuver. \n\n Remove an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token from beside this ship. If equipped to a <img src='img/text/fed-miranda.png' width='20' height='20' title='Miranda Class'>, place a [scan] Token beside this ship. <hr> <b>(First Officer) IF THE CAPTAIN EQUIPPED TO THIS SHIP IS DISCARDED: \n\n Flip this card over and equip this card as the Captain.",
 		unique: true,
 		alliance: false,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -1213,6 +1262,7 @@ module.exports = [
 		text: "<b>WHEN ATTACKING:</b> If there is a [scan] Token beside this ship. \n\n Convert each [battlestations] into [hit]. If equipped to a <img src='img/text/fed-constitution-refit.png' width='18' height='18' title='Constitution Refit Class'>, this attack cannot be cancelled. <hr> <b>(First Officer) IF THE CAPTAIN EQUIPPED TO THIS SHIP IS DISCARDED: </b> \n\n Flip this card over and equip this card as the Captain.",
 		unique: true,
 		alliance: false,
+		eraTMP: true,
 		factions: [
 			"federation",
 			"vulcan"
@@ -1230,6 +1280,7 @@ module.exports = [
 		text: "Add 1 [crew_text] to this ship's Upgrade Bar. <hr> <b>ACTION:</b> \n\n Increase the Captain Skill Number of the Captain equipped to this ship by 2 and then place a [scan] Token beside this ship. <hr> <b>(First Officer) IF THE CAPTAIN EQUIPPED TO THIS SHIP IS DISCARDED:</b> \n\n Flip this card over and equip this card as the Captain.",
 		unique: true,
 		alliance: false,
+		eraENT: true,
 		factions: [
 			"federation",
 			"vulcan"
@@ -1490,6 +1541,7 @@ module.exports = [
 		unique: true,
 		hirogenLimit: true,
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"independent"
 		]
@@ -1506,6 +1558,7 @@ module.exports = [
 		text: "Add 1 [weapon_text] to this ship's Upgrade Bar. <hr> <b>WHENEVER YOU WOULD PLACE 3 OR MORE <img src='img/stuff/effect_time_token.png' width='20' height='16'> TOKENS ON A </b> [weapon_text] <b> UPGRADE EQUIPPED TO THIS SHIP:</b> Place 1 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Token on this card. \n\n Place a <img src='img/stuff/effect_disable.png' width='20' height='16'> Token on that [weapon_text] Upgrade instead.",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"independent"
 		]
@@ -1523,6 +1576,7 @@ module.exports = [
 		unique: true,
 		range: "1",
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"independent"
 		]
@@ -1540,6 +1594,7 @@ module.exports = [
 		OnePerShip: true,
 		range: "1",
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"independent"
 		]
@@ -1557,6 +1612,7 @@ module.exports = [
 		unique: true,
 		range: "1 - 2",
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"independent"
 		]
@@ -1574,6 +1630,7 @@ module.exports = [
 		unique: true,
 		range: "1",
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"independent"
 		]
@@ -1591,6 +1648,7 @@ module.exports = [
 		unique: true,
 		range: "2 - 3",
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"independent"
 		]
@@ -1608,6 +1666,7 @@ module.exports = [
 		unique: true,
 		range: "1 - 2",
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"independent"
 		]
@@ -1624,6 +1683,7 @@ module.exports = [
 		text: "Add 1 [crew_text] to this ship's Upgrade Bar. <hr> <b>(First Officer) WHEN ATTACKING: DEAL DAMAGE STEP:</b> Discard the <img src='img/text/unique.png' width='20' height='20' title='Unique'> Captain equipped to this ship. \n\n Add 1 [crit] Then, flip this card over and equip it as the Captain.",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"independent"
 		]
@@ -1887,6 +1947,7 @@ module.exports = [
 		text: "<b>FREE ACTION:</b> Discard this card and this ship suffers 1 damage. \n\n Perform any available Action as a Free Action.",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -1903,6 +1964,7 @@ module.exports = [
 		text: "<b>ACTION:</b> Discard this card and place an <img src='img/stuff/effect_auxilary.png' width='18' height='16' title='AUX Power Token'> Token beside this ship. \n\n Perform a Maneuver with a Speed of 5 or greater on your Maneuver Dial. If this ship has the 'Federation Prototype' [hook] equipped, you may choose any Maneuver on this ship's Maneuver Dial instead.",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -1919,6 +1981,7 @@ module.exports = [
 		text: "Add 1 [crew_text] to this ship's Upgrade Bar. <hr> <b>AFTER EXECUTING A MANEUVER WITH A SPEED OF 5 OR GREATER:</b> Discard this card and place an <img src='img/stuff/effect_auxilary.png' width='18' height='16' title='AUX Power Token'> Token beside this ship. \n\n Place 1 of each [battlestations], [evade], and [scan] Tokens beside this ship.",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -1935,6 +1998,7 @@ module.exports = [
 		text: "Add either 1 [tech_text] or 1 [borg_text] to this ship's Upgrade bar. <hr> <b>ACTION:</b> \n\n Perform the [scan] Action as a Free Action. In addition if equipped to an <img src='img/text/fed-intrepid.png' width='20' height='20' title='Intrepid Class'>, place either a [scan] or [evade] Token beside this ship. In addition if equipped to a <img src='img/text/faction-borg.png' width='20' height='20' title='Borg Faction'> ship, place a [battlestations] Token beside this ship.",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"federation",
 			"borg"
@@ -1952,6 +2016,7 @@ module.exports = [
 		text: "<b>ACTIVATION PHASE:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target any ship in play. \n\n Look at the target ship's Maneuver Dial. Trigger the following ability based on the Faction of the target ship: \n <img src='img/text/faction-kazon.png' width='20' height='20' title='Kazon'> - Place a [battlestations] token beside this ship. \n <img src='img/text/faction-8472.png' width='20' height='20' title='Species 8472'> - You may execute a 1 <img src='img/stuff/maneuver_bank_left_white.png' width='20' height='20'>, 1 <img src='img/stuff/maneuver_straight_white.png' width='20' height='20'>, or 1 <img src='img/stuff/maneuver_bank_right_white.png' width='20' height='20'> Maneuver. \n <img src='img/text/faction-mirror.png' width='20' height='20' title='Mirror Universe'> - Place an [evade] Token beside this ship.",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"federation",
 			"independent"
@@ -1969,6 +2034,7 @@ module.exports = [
 		text: "<b>END PHASE:</b> Disable this card. \n\n Remove 1 <img src='img/stuff/effect_time_token.png' width='20' height='16' title='Time Token'> from each [tech_text] Upgrade equipped to this ship. <hr> <b>AT ANYTIME, ONCE PER GAME:</b> Discard a [tech_text] Upgrade equipped to this ship. \n\n Repair a number of Hull or Shields on this ship equal to half of the printed SP of the discard [tech_text] Upgrade (rounded up).",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"federation",
 			"klingon"
@@ -1986,6 +2052,7 @@ module.exports = [
 		text: "<b>REVEAL DIAL STEP:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n This ship may increase the speed of the revealed Maneuver by 1. The color of that Maneuver is the same as the revealed Maneuver. <hr> <b>(Night Shift) CHECK FOR POWER STRAIN STEP:</b> If this ship executed a Non-Red Maneuver. \n\n Remove an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token from beside your ship. \n\n <b>(Lower Decks)</b>",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -2002,6 +2069,7 @@ module.exports = [
 		text: "Increase the Captain Skill of the Captain equipped to this ship by 1. <hr> <b>(Night Shift) ACTION:</b> Target an opposing ship within Range. \n\n Disable 1 [crew_text] Upgrade equipped to the target ship. \n\n <b>(Lower Decks)</b>",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		range: "1 - 2",
 		factions: [
 			"federation"
@@ -2020,6 +2088,7 @@ module.exports = [
 		unique: true,
 		range: "1 - 2",
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -2036,6 +2105,7 @@ module.exports = [
 		text: "<b>WHENEVER YOU WOULD PLACE 3 OR MORE <img src='img/stuff/effect_time_token.png' width='20' height='16'> TOKENS ON A <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [crew_text] UPGRADE:</b> \n\n You may place those <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card instead. \n\n <b>(Lower Decks)</b>",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -2052,6 +2122,7 @@ module.exports = [
 		text: "<b>FREE ACTION:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Perform the [scan] Action as a Free Action. \n\n <b>(Lower Decks)</b> ",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"federation",
 			"bajoran"
@@ -2069,6 +2140,7 @@ module.exports = [
 		text: "<b>WHENEVER AN OPPOSING EFFECT WITHIN RANGE WOULD DISCARD OR STEAL A FRIENDLY</b> [crew_text] <b>UPGRADE:</b> \n\n This card must be the target instead. <hr> <b>WHENEVER THIS CARD WOULD BE DISCARDED OR STOLEN BY AN OPPOSING SHIP:</b> Target that ship. \n\n Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on either a [crew_text] or a [question_text] Upgrade equipped to the target ship. \n\n\n <b>(Lower Decks)</b>",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -2086,6 +2158,7 @@ module.exports = [
 		unique: true,
 		alliance: false,
 		aerieLimit: true,
+		eraDSV: true,
 		range: "1",
 		factions: [
 			"federation"
@@ -2103,6 +2176,7 @@ module.exports = [
 		text: "<b>WHENEVER A [scan] TOKEN IS PLACED BESIDE THIS SHIP:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n Place an [evade] Token beside this ship.",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -2119,6 +2193,7 @@ module.exports = [
 		text: "<b>PLANNING PHASE:</b> Spend 1 of this ship's Shield Tokens. \n\n Choose 1 of the following: \n * Remove an <img src='img/stuff/effect_auxilary.png' width='18' height='16' title='AUX Power Token'> Token from beside this ship. If equipped to a <img src='img/text/fed-nova.png' width='20' height='20' title='Nova Class'>, also place a [scan] Token beside this ship. \n * Target opposing ship within Range cannot perform the [scan] Action or place [scan] Tokens beside their ship this game round.",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		range: "1 - 2",
 		factions: [
 			"federation"
@@ -2136,6 +2211,7 @@ module.exports = [
 		text: "Add 1 [tech_text] to this ship's Upgrade Bar. <hr> <b>FREE ACTION:</b> Discard a [tech_text] Upgrade equipped to this ship \n\n You may perform a Green Maneuver and then place an [evade] Token beside this ship.",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -2152,6 +2228,7 @@ module.exports = [
 		text: "<b>ACTION:</b> Discard this card and target an opposing ship within Range. \n\n Steal either 1 <img src='img/text/faction-federation.png' width='20' height='20' title='Federation Faction'> [tech_text] or <img src='img/text/faction-federation.png' width='20' height='20' title='Federation Faction'> [crew_text] Upgrade equipped to the target ship and equip it to this ship, ignoring this ship's restrictions.",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		range: "1",
 		factions: [
 			"federation"
@@ -2169,6 +2246,7 @@ module.exports = [
 		text: "This card counts as either a [crew_text] or a [tech_text] Upgrade. <hr> <b>WHEN A <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'></b> [crew_text] <b>UPGRADE EQUIPPED TO THIS SHIP IS DISCARDED BY AN OPPOSING EFFECT:</b> \n\n Place that Upgrade beneath this card. <hr> <b>ACTION:</b> Disable this card. \n\n Equip 1 [crew_text] Upgrade beneath this card to this ship ignoring this ship's restrictions. Then place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on that Upgrade.",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -2185,6 +2263,7 @@ module.exports = [
 		text: "<b>ACTION:</b> Disable this card. \n\n Perform either a [target-lock] or a [battlestations] Action as a Free Action. Then perform the Action listed on a <img src='img/text/faction-federation.png' width='20' height='20' title='Federation Faction'> [crew_text] Upgrade equipped to this ship as a Free Action.",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"federation",
 			"vulcan"
@@ -2202,6 +2281,7 @@ module.exports = [
 		text: "<b>EACH TIME A</b> [scan] <b>TOKEN IS PLACED BESIDE THIS SHIP:</b> \n\n Remove a <img src='img/stuff/effect_disable.png' width='20' height='16' title='Disabled Token'> Token from either a <img src='img/text/faction-federation.png' width='20' height='20' title='Federation Faction'> [crew_text] or <img src='img/text/faction-federation.png' width='20' height='20' title='Federation Faction'> [tech_text] Upgrade equipped to this ship.",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -2218,6 +2298,7 @@ module.exports = [
 		text: "<b>COMBAT PHASE:</b> Spend an [evade] Token from beside this ship. \n\n You may either perform a [sensor-echo] Action using the 1 [straight] template even if this ship is not cloaked, or a 1 <img src='img/stuff/maneuver_bank_left_white.png' width='20' height='20'> or 1 <img src='img/stuff/maneuver_bank_right_white.png' width='20' height='20'> Maneuver.",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -2234,6 +2315,7 @@ module.exports = [
 		text: "Add 1 [crew_text] to this ship's Upgrade Bar. <hr> <b>ACTION:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target an opposing ship within Range. \n\n Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on the Captain equipped to the target ship. <hr> <b>(First Officer) IF THE CAPTAIN EQUIPPED TO THIS SHIP IS DISCARDED:</b> \n\n Flip this card over and equip this card as the Captain.",
 		unique: true,
 		alliance: false,
+		eraDSV: true,
 		range: "1 - 2",
 		factions: [
 			"federation",
@@ -2350,6 +2432,7 @@ module.exports = [
 		text: "<b>WHEN ATTACKING:</b>  \n If you are outside the target's Primary Firing Arc. \n\n Add 1 [hit] result.",
 		OnePerShip: true,
 		alliance: true,
+		eraDSV: true,
 		factions: [
 			"romulan"
 		]
@@ -2366,6 +2449,7 @@ module.exports = [
 		text: "<b>EXECUTE MANEUVER STEP:</b> If this ship performed a green or white maneuver that did not overlap a ship or obstacle. \n\n Place 1 [evade] Token beside this ship.",
 		OnePerShip: true,
 		alliance: true,
+		eraDSV: true,
 		factions: [
 			"romulan"
 		]
@@ -2383,6 +2467,7 @@ module.exports = [
 		OnePerShip: true,
 		range: "1 - 2",
 		alliance: true,
+		eraDSV: true,
 		factions: [
 			"romulan"
 		]
@@ -2399,6 +2484,7 @@ module.exports = [
 		text: "<b>END PHASE:</b> Disable this card to choose one of the following effects: \n\n *Repair 1 shield \n\n *Remove 1 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Token from one of this ship's Upgrade cards.",
 		OnePerShip: true,
 		alliance: true,
+		eraDSV: true,
 		factions: [
 			"romulan"
 		]
@@ -2415,6 +2501,7 @@ module.exports = [
 		text: "You may spend [evade] Tokens as if they were [scan] Tokens.",
 		OnePerShip: true,
 		alliance: true,
+		eraDSV: true,
 		factions: [
 			"romulan"
 		]
@@ -2431,6 +2518,7 @@ module.exports = [
 		text: "<b>ACTIVATION PHASE:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card. \n\n This ship may make a green maneuver.",
 		OnePerShip: true,
 		alliance: true,
+		eraDSV: true,
 		factions: [
 			"romulan"
 		]
@@ -2669,6 +2757,7 @@ module.exports = [
 		text: "<b>END PHASE:</b> If you do not have a <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token, you may gain 1 <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token to choose on of the following effects: \n\n *Repair 1 hull damage. \n\n *Flip one face-up damage card face-down.",
 		OnePerShip: true,
 		alliance: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -3029,6 +3118,7 @@ module.exports = [
 		text: "<b>WHEN ATTACKING OR DEFENDING:</b> \n Place 1 [time] Token on this card. \n\n Convert 1 [battlestations] into 1 [hit] or 1 [evade].",
 		OnePerShip: true,
 		alliance: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -3045,6 +3135,7 @@ module.exports = [
 		text: "<b>WHEN ATTACKING:</b> Disable this card. \n\n Convert 1 of your [battlestations] results into a [crit] result and all of your other [battlestations] results into [hit] results.",
 		OnePerShip: true,
 		alliance: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -3061,6 +3152,7 @@ module.exports = [
 		text: "If equipped to a <img src='img/text/kli-kvort.png' width='20' height='20' title='K'Vort Class'>, add +1 to this ship's Agility Value. \n<hr> <b>WHEN DEFENDING:</b> You may convert 1 [battlestations] result into 1 [evade] result.",
 		OnePerShip: true,
 		alliance: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -3077,6 +3169,7 @@ module.exports = [
 		text: "<b>WHEN ATTACKING:</b> If you have a Red [target-lock] on the target ship: \n\n You may spend it as if it were a [battlestations] Token.",
 		OnePerShip: true,
 		alliance: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -3093,6 +3186,7 @@ module.exports = [
 		text: "<b>EXECUTE MANEUVER STEP:</b> If this ship performed a Non-Red Maneuver that did not overlap any ships or obstacles. Disable this card. \n\n Perform any Maneuver with a Speed of 1 on this ship's Maneuver Dial.",
 		OnePerShip: true,
 		alliance: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -3109,6 +3203,7 @@ module.exports = [
 		text: "<b>ACTION:</b> Place 1 [scan] Token beside this ship. \n\n You may remove 1 Red  [target-lock] Token from beside this ship (and the corresponding Blue  [target-lock] Token).",
 		OnePerShip: true,
 		alliance: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -3142,6 +3237,7 @@ module.exports = [
 		text: "<b>PERFORM ACTION STEP:</b> Disable this card. \n\n This ship may perform 1 Action while having any [aux] Tokens beside it.",
 		OnePerShip: true,
 		alliance: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -3192,6 +3288,7 @@ module.exports = [
 		cost: 3,
 		text: "This card counts as a [crew_text] Upgrade or a [tech_text] Upgrade. \n<hr> <b>ACTION:</b> Disable this card. \n\n Remove all <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens from each [crew_text] Upgrade equipped to this ship.",
 		OnePerShip: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -3461,6 +3558,7 @@ module.exports = [
 		cost: 2,
 		text: "<b>REVEAL DIAL STEP:</b> When this ship reveals a [straight] Maneuver: Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and choose 1 of the listed effects. \n\n *Treat the revealed Maneuver as a Green Maneuver. \n\n *Increase the speed of the revealed Maneuver by 1. The color of the Maneuver remains the same as the revealed Maneuver. \n\n If this ship has the 'Federation Prototype' [hook] equipped, you may choose both effects.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -3478,6 +3576,7 @@ module.exports = [
 		text: "<b>ACTIVATION PHASE:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target this ship or a friendly <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> ship within range. \n\n Flip 1 face-up damage card on the target ship facedown. If the target ship has the 'Federation Prototype' [hook] equipped, repair 1 Hull on the target ship.",
 		unique: true,
 		shipFederation: true,
+		eraDSV: true,
 		range: "1",
 		factions: [
 			"federation"
@@ -3496,6 +3595,7 @@ module.exports = [
 		text: "<b>WHENEVER YOU WOULD PLACE AN <img src='img/stuff/effect_auxilary.png' width='18' height='16'> TOKEN BESIDE THIS SHIP:</b> \n\n Place that Token on this card (max 2). \n<hr> <b>ACTION:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target a ship with a [hook] equipped within range. \n\n If that ship is this ship or a friendly ship, it performs a 2 [straight] . If that ship is an opposing ship, Place any [aux] Tokens from on this card beside the target ship.",
 		unique: true,
 		range: "1 - 2",
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -3512,6 +3612,7 @@ module.exports = [
 		cost: 2,
 		text: "<b>END PHASE:</b> Spend a [scan] Token beside this ship. \n\n Remove an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship. If this ship has a the 'Federation Prototype' [hook] equipped, repair 1 Hull on this ship.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -3528,6 +3629,7 @@ module.exports = [
 		cost: 3,
 		text: "<b>COMBAT PHASE:</b> Place an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship. \n\n Remove either 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens or a Disabled Token from a <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [weapon_text] Upgrade equipped to this ship. If this ship has the 'Federation Prototype' [hook] equipped place a [battlestations] Token beside this ship.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -3737,6 +3839,7 @@ module.exports = [
 		cost: 3,
 		text: "Increase the Captain Skill of the Captain equipped to this ship by 1 (By 3 for a <img src='img/text/faction-romulan.png' width='20' height='20' title='Romulan'> Captain instead). \n<hr> <b>WHEN DEFENDING:</b> Spend an [evade] Token beside this ship. \n\n Place a [battlestations] Token beside this ship.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"romulan"
 		]
@@ -3753,6 +3856,7 @@ module.exports = [
 		cost: 2,
 		text: "You may equip the 'Romulan Cloaking Device' Upgrade to this ship for 0 SP even if it exceeds its restrictions. \n<hr> <b>WHENEVER YOU WOULD PERFORM THE [cloak] ACTION:</b> \n\n Place an [evade] Token beside this ship. If equipped to a <img src='img/text/fed-defiant.png' width='18' height='18' title='Defiant Class'>, you may place a [battlestations] Token instead.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"romulan"
 		]
@@ -3770,6 +3874,7 @@ module.exports = [
 		text: "<b>REVEAL DIAL STEP:</b> Disable this card. \n\n Disregard your revealed Maneuver and perform a 1 red [reverse] Maneuver instead. If equipped to a <img src='img/text/rom-dderidex.png' width='18' height='18' title='DDeridx Class'> ship, treat this as a white Maneuver instead.",
 		OnePerShip: true,
 		costRomulan: "+2",
+		eraDSV: true,
 		factions: [
 			"romulan"
 		]
@@ -3787,6 +3892,7 @@ module.exports = [
 		text: "<b>PLANNING PHASE:</b> If your ship is Cloaked: Target an opposing ship within Range. \n\n Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on a [crew_text] Upgrade equipped to the target ship. If equipped to a <img src='img/text/rom-reman.png' width='18' height='18' title='Reman Warbird'>, you may perform a [sensor-echo] Action as a Free Action.",
 		range: "1 - 2",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"romulan"
 		]
@@ -3804,6 +3910,7 @@ module.exports = [
 		text: "<b>ACTION:</b> Disable this card and target an opposing ship within Range. \n\n The target ship either executes a 1 <img src='img/stuff/maneuver_bank_left_white.png' width='20' height='20'>, 1 <img src='img/stuff/maneuver_bank_right_white.png' width='20' height='20'>, or 1 <img src='img/stuff/maneuver_straight_white.png' width='20' height='20'> Maneuver of the opponent's choice. If the target ship is also a <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> ship, it rolls -1 attack die this game round. If the target ship also has 'Enterprise' in its name, place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on the Captain equipped to that ship.",
 		range: "2 - 3",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"romulan",
 			"independent"
@@ -3822,6 +3929,7 @@ module.exports = [
 		text: "Add 1 [crew_text] upgrade to this Ship's Upgrade Bar. \n<hr> <b>ACTION:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target this ship or a friendly ship within Range. \n\n <b>CONTINUOUS EFFECT:</b> \n\n The Captain and other [crew_text] Upgrades equipped to the target ship cannot be affected by opposing cards. ",
 		range: "1 - 2",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"romulan"
 		]
@@ -3895,6 +4003,7 @@ module.exports = [
 		cost: 2,
 		text: "<b>WHEN ATTACKING:</b> During the Modify Attack Dice Step, discard this card.\n\n Add 1 [hit].",
 		OnePerShip: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -3911,6 +4020,7 @@ module.exports = [
 		cost: 2,
 		text: "Add the [scan] Action to this ship's Action Bar.\n<hr> <b>WHEN THE CAPTAIN OF THIS SHIP WOULD BE DISABLED OR DISCARDED:</b>\n\n Discard this card instead.",
 		unique: true,
+		eraTOS: true,
 		factions: [
 			"klingon"
 		]
@@ -3927,6 +4037,7 @@ module.exports = [
 		cost: 2,
 		text: "<b>WHEN ONE OR MORE <img src='img/stuff/effect_time_token.png' width='20' height='16'> TOKENS WOULD BE PLACED ON A [weapon_text] UPGRADE EQUIPPED TO THIS SHIP:</b> \n\n Place 1 fewer <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens. If this ship is Cloaked and it is a <img src='img/text/faction-klingon.png' width='20' height='20' title='Klingon'> [weapon_text] Upgrade, place 2 fewer <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens instead.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -3943,6 +4054,7 @@ module.exports = [
 		cost: 3,
 		text: "<b>END PHASE:</b> Remove an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship.\n\n Flip this ship's [cloak] Token to its Green side.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -3960,6 +4072,7 @@ module.exports = [
 		text: "<b>ACTION:</b> Discard this card and target an opposing ship that has no Active Shields.\n\n Disable 1 [crew_text] Upgrade on the target ship and/or steal 1 [crew_text] Upgrade from the target ship, ignoring this ship's restrictions.",
 		unique: true,
 		range: "1 - 2",
+		eraDSV: true,
 		factions: [
 			"klingon",
 			"independent"
@@ -4102,7 +4215,8 @@ module.exports = [
 			"federation"
 		],
 		cost: 2,
-		range: "1 - 2"
+		range: "1 - 2",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -4118,7 +4232,8 @@ module.exports = [
 		factions: [
 			"federation"
 		],
-		cost: 2
+		cost: 2,
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -4134,7 +4249,8 @@ module.exports = [
 		factions: [
 			"federation"
 		],
-		cost: 2
+		cost: 2,
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -4151,7 +4267,8 @@ module.exports = [
 			"federation"
 		],
 		cost: 2,
-		range: "1"
+		range: "1",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -4168,7 +4285,8 @@ module.exports = [
 			"federation"
 		],
 		cost: 3,
-		range: "1"
+		range: "1",
+		eraDSV: true
 	},
 	{
 		type: "tech",
@@ -4306,7 +4424,8 @@ module.exports = [
 			"federation"
 		],
 		cost: 5,
-		alliance: true
+		alliance: true,
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -4323,7 +4442,8 @@ module.exports = [
 			"federation"
 		],
 		cost: 3,
-		alliance: true
+		alliance: true,
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -4340,7 +4460,8 @@ module.exports = [
 			"federation"
 		],
 		cost: 4,
-		alliance: true
+		alliance: true,
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -4357,7 +4478,8 @@ module.exports = [
 			"federation"
 		],
 		cost: 2,
-		alliance: true
+		alliance: true,
+		eraDSV: true
 	},
 	{
 		type: "talent",
@@ -4484,7 +4606,8 @@ module.exports = [
 			"federation"
 		],
 		cost: 3,
-		alliance: true
+		alliance: true,
+		eraDSV: true
 	},
 	{
 		type: "tech",
@@ -4603,6 +4726,7 @@ module.exports = [
 		shipDominion: true,
 		unique: true,
 		range: "1 - 2",
+		eraDSV: true,
 		factions: [
 			"dominion"
 		]
@@ -4620,6 +4744,7 @@ module.exports = [
 		cost: 5,
 		unique: true,
 		range: "1",
+		eraDSV: true,
 		factions: [
 			"dominion",
 			"bajoran"
@@ -4638,6 +4763,7 @@ module.exports = [
 		cost: 3,
 		unique: true,
 		range: "2 - 3",
+		eraDSV: true,
 		factions: [
 			"dominion"
 		]
@@ -4762,6 +4888,7 @@ module.exports = [
 		cost: 2,
 		unique: true,
 		range: "1 - 2",
+		eraDSV: true,
 		factions: [
 			"dominion"
 		]
@@ -4847,6 +4974,7 @@ module.exports = [
 		cost: 2,
 		unique: true,
 		range: "1 - 2",
+		eraTNG: true,
 		factions: [
 			"vulcan"
 		]
@@ -4863,6 +4991,7 @@ module.exports = [
 		text: "<b>WHEN DEFENDING:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card.\n\nRemove a    [target-lock] Token or a [battlestations] Token beside the attacking ship.  Place a [scan] Token beside this ship.",
 		cost: 2,
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"federation",
 			"vulcan"
@@ -4880,6 +5009,7 @@ module.exports = [
 		text: "<b>FREE ACTION:</b> \n\n Place three [scan] Tokens beside this ship.\n<hr> <b>END PHASE:</b> If you used Chu'Lak's Free Action: \n\n You must discard 1 [crew_text] Upgrade equipped to this ship.",
 		cost: 2,
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"federation",
 			"vulcan"
@@ -5275,6 +5405,7 @@ module.exports = [
 		cost: 3,
 		unique: true,
 		text: "Add 1 [borg_text] to this ship's Upgrade Bar. The [borg_text] Upgrade equipped to this ship using that [borg_text] Upgrade Slot cost -1SP for each unused Upgrade Slot on that ship's printed Upgrade Bar.",
+		eraDSV: true,
 		factions: [
 			"federation",
 			"borg"
@@ -5293,6 +5424,7 @@ module.exports = [
 		unique: true,
 		shipBorg: true,
 		text: "<b>WHEN THIS SHIP PERFORMES A </b>[regenerate]<b> ACTION:</b>\n\nRepair up to 1 Shield and 1 Hull instead. this ship does not lose its attack from performing the [regenerate] Action.",
+		eraDSV: true,
 		factions: [
 			"borg"
 		]
@@ -5309,6 +5441,7 @@ module.exports = [
 		cost: 5,
 		unique: true,
 		text: "<b>WHEN DEFENDING:</b> During the Modify Attack Dice Step, spend 1 Drone Token on the Captain equiped to this ship.\n\nThe attacking ship cannot re-roll any attack dice this attack. In addition, if the attacking ship has any <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [weapon_text] Upgrades equipped to it, convert 1 [hit] or [crit] into 1 [blank] .",
+		eraDSV: true,
 		factions: [
 			"federation",
 			"borg"
@@ -5326,6 +5459,7 @@ module.exports = [
 		cost: 3,
 		unique: true,
 		text: "Increase the Captain Skill of the Captain equiped to this ship by 1. If the Captain is a <img src='img/text/faction-borg.png' width='20' height='20' title='Borg'> Captain increase its Captain Skill by 3 instead.\n<hr> <b>ONCE PER GAME, WHEN THE CAPTAIN OF THIS SHIP IS DISCARDED:</b>\n\nThis Card becomes this ship's Captain. Place 5 Drone Tokens on this card.",
+		eraTNG: true,
 		factions: [
 			"borg"
 		]
@@ -5342,6 +5476,7 @@ module.exports = [
 		cost: 2,
 		unique: true,
 		text: "Add 1 [borg_text] to this ship's Upgrade Bar.\n<hr> All [borg_text] Upgrades equipped to this ship cost -1 SP.",
+		eraDSV: true,
 		factions: [
 			"borg"
 		]
@@ -5452,6 +5587,7 @@ module.exports = [
 		cost: 3,
 		unique: true,
 		text: "<b>PLANNING PHASE:</b> Disable this card or place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card, and target a [crew_text] Upgrade equipped to this ship.\n\nRemove 1 Disabled Token or all <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens from the target [crew_text] Upgrade.",
+		eraTOS: true,
 		factions: [
 			"federation"
 		]
@@ -5468,6 +5604,7 @@ module.exports = [
 		cost: 4,
 		unique: true,
 		text: "<b>COMBAT PHASE:</b> Discard this card and spend a [scan] Token beside this ship.\n\nThis ship's attacks cannot be cancelled this game round and this ship cannot be prevented from attacking this game round.",
+		eraTOS: true,
 		factions: [
 			"federation"
 		]
@@ -5484,6 +5621,7 @@ module.exports = [
 		cost: 3,
 		unique: true,
 		text: "<b>WHEN A [battlestations] TOKEN IS PLACED BESIDE THIS SHIP:</b>\n\nRemove a Disable Token from a [crew_text] Upgrade equipped to this ship.",
+		eraTOS: true,
 		factions: [
 			"federation"
 		]
@@ -5500,6 +5638,7 @@ module.exports = [
 		cost: 3,
 		unique: true,
 		text: "<b>ACTION: </b>Disable this card.\n\nRepair up to 1 Shield and 1 Hull on this ship.",
+		eraTOS: true,
 		factions: [
 			"federation"
 		]
@@ -5516,6 +5655,7 @@ module.exports = [
 		cost: 2,
 		unique: true,
 		text: "<b>WHEN THIS SHIP REVEALS ITS MANEUVER DIAL: </b>Disable this card.\n\nRotate this ship's maneuver dial to a White or Green maneuver of the same speed as the maneuver revealed and perform that maneuver instead.",
+		eraTOS: true,
 		factions: [
 			"federation"
 		]
@@ -5534,6 +5674,7 @@ module.exports = [
 		unique: true,
 		shipKlingon: true,
 		text: "<b>ACTION:</b> Discard this card and target an opposing ship. \n\nLook at all face down damage cards beside the target ship's Ship Card. Flip 1 of those Damage Cards face up and resolve its effect if applicable.",
+		eraTOS: true,
 		factions: [
 			"klingon"
 		]
@@ -5552,6 +5693,7 @@ module.exports = [
 		unique: true,
 		shipKlingon: true,
 		text: "<b>WHEN A <img src='img/text/faction-klingon.png' width='20' height='20' title='Klingon'> </b>[crew_text]<b> UPGRADE EQUIPPED TO THIS SHIP OR ANOTHER FRIENDLY SHIP WITHIN RANGE WOULD BE DISCARDED BY AN OPPOSING EFFECT:</b> \n\n You may discard this card instead.",
+		eraTOS: true,
 		factions: [
 			"klingon"
 		]
@@ -5569,6 +5711,7 @@ module.exports = [
 		range: "1-2",
 		unique: true,
 		text: "<b>ACTIVATION PHASE:</b> Target a [crew_text] Upgrade equipped to a friendly ship.\n\nThis card becomes a copy of the target [crew_text] Upgrade this game round.",
+		eraTOS: true,
 		factions: [
 			"romulan"
 		]
@@ -5586,6 +5729,7 @@ module.exports = [
 		unique: true,
 		range: " 1 ",
 		text: "You do not pay a faction penalty for this card. \n<hr> <b>PLANNING PHASE:</b> Disable this card and target an opposing ship.\n\nPlace a Love Crystal Token on two [crew_text] Upgrades equipped to the opposing ship.",
+		eraTOS: true,
 		factions: [
 			"independent"
 		]
@@ -5775,6 +5919,7 @@ module.exports = [
 		unique: true,
 		range: "1",
 		andorianLimit: true,
+		eraENT: true,
 		factions: [
 			"independent"
 		]
@@ -5792,6 +5937,7 @@ module.exports = [
 		text: "<b>PLANNING PHASE:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target an opposing ship.\n\nThe target ship cannot perform a maneuver with a speed greater than 2 this game round.",
 		unique: true,
 		range: "1 - 2",
+		eraDSV: true,
 		factions: [
 			"independent"
 		]
@@ -5809,6 +5955,7 @@ module.exports = [
 		text: "<b>PLANNING PHASE:</b> Target a [crew_text] Upgrade equipped to an opposing ship.\n\nPlace 1 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Token on the target [crew_text] Upgrade.\n<hr> <b>END PHASE</b> Target a [crew_text] Upgrade with a <img src='img/stuff/effect_time_token.png' width='20' height='16'> Token on it equipped to an opposing ship.\n\nAdd 1 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Token to the target [crew_text] Upgrade instead of removing 1 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Token.",
 		unique: true,
 		range: "1 - 2",
+		eraDSV: true,
 		factions: [
 			"independent"
 		]
@@ -5826,6 +5973,7 @@ module.exports = [
 		text: "<b>ACTION:</b> Discard this card and target an opposing ship.\n\nDiscard 1 [crew_text] Upgrade equipped to the target ship. This ship may perform a maneuver on its dial with a speed of 3 or less. If it does it cannot attack this game round.",
 		unique: true,
 		range: "1 - 2",
+		eraDSV: true,
 		factions: [
 			"independent"
 		]
@@ -5844,6 +5992,7 @@ module.exports = [
 		unique: true,
 		talents: 1,
 		specialization: true,
+		eraKVN: true,
 		factions: [
 			"mirror-universe",
 			"federation"
@@ -5863,6 +6012,7 @@ module.exports = [
 		unique: true,
 		talents: 1,
 		specialization: true,
+		eraKVN: true,
 		factions: [
 			"mirror-universe",
 			"federation"
@@ -5881,6 +6031,7 @@ module.exports = [
 		text: "<b>WHEN THIS SHIP WOULD SUFFER DAMAGE FROM AN OBSTACLE OR MINEFIELD TOKEN:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and roll 3 defence dice.\n\nFor each [evade] cancel 1 [hit] or [crit].",
 		unique: true,
 		specialization: true,
+		eraKVN: true,
 		factions: [
 			"mirror-universe",
 			"federation"
@@ -5899,6 +6050,7 @@ module.exports = [
 		text: "<b>PLANNING PHASE:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card.\n\nRepair 1 Shield on this ship and flip this card.",
 		unique: true,
 		specialization: true,
+		eraKVN: true,
 		factions: [
 			"mirror-universe",
 			"federation"
@@ -5917,6 +6069,7 @@ module.exports = [
 		text: "<b>PLANNING PHASE:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card.\n\nRepair 1 Hull on this ship and flip this card.",
 		unique: true,
 		specialization: true,
+		eraKVN: true,
 		factions: [
 			"mirror-universe",
 			"federation"
@@ -5935,6 +6088,7 @@ module.exports = [
 		text: "<b>WHEN A CAPTAIN EQUIPPED TO THIS SHIP WOULD BE DISABLED:</b>\n\n Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card instead.\n<hr> <b>WHEN A CAPTAIN EQUIPPED TO THIS SHIP WOULD BE DISCARDED:</b>\n\nPlace 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and the Captain that would be discarded instead.",
 		unique: true,
 		specialization: true,
+		eraKVN: true,
 		factions: [
 			"mirror-universe",
 			"federation"
@@ -5953,6 +6107,7 @@ module.exports = [
 		text: "<b>SETUP:</b>\n\n Place 1 [crew_text] Upgrade with a printed cost of 4 SP or less face down beneath this card.\n<hr> <b>ACTIVATION PHASE:</b>\n\nFlip the [crew_text] Upgrade beneath this card face up and equip it to this ship even if it exceeds this ship's restrictions. Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on that [crew_text] Upgrade.",
 		unique: true,
 		specialization: true,
+		eraKVN: true,
 		factions: [
 			"mirror-universe",
 			"federation"
@@ -5971,6 +6126,7 @@ module.exports = [
 		text: "<b>ACTIVATION PHASE:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card.\n\n Remove 1 <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship.",
 		unique: true,
 		specialization: true,
+		eraKVN: true,
 		factions: [
 			"mirror-universe",
 			"federation"
@@ -5990,6 +6146,7 @@ module.exports = [
 		unique: true,
 		specialization: true,
 		range: "1 - 2",
+		eraKVN: true,
 		factions: [
 			"mirror-universe",
 			"federation"
@@ -6008,6 +6165,7 @@ module.exports = [
 		text: "<b>WHEN THIS CARD IS FLIPPED FACE UP OR AFTER THIS SHIP SUFFERS CRITICAL DAMAGE:</b>\n\nDiscard all face up \"Communications Failure\" damage cards beside this ship's Ship Card.",
 		unique: true,
 		specialization: true,
+		eraKVN: true,
 		factions: [
 			"mirror-universe",
 			"federation"
@@ -6027,6 +6185,7 @@ module.exports = [
 		unique: true,
 		specialization: true,
 		range: "1 - 2",
+		eraKVN: true,
 		factions: [
 			"mirror-universe",
 			"federation"
@@ -6113,6 +6272,7 @@ module.exports = [
 		cost: 2,
 		text: "<b>COMBAT PHASE:</b> Discard this card.\n\nPlace 1 [evade] Token beside this ship.",
 		shipKlingon: true,
+		eraKVN: true,
 		factions: [
 			"mirror-universe",
 			"klingon"
@@ -6131,6 +6291,7 @@ module.exports = [
 		text: "<b>END PHASE:</b> If this ship is not in the Primary Firing Arc of an opposing ship within Range:\n\nFlip this ship's [cloak] Token to its green side.",
 		shipKlingon: true,
 		range: "1 - 2",
+		eraKVN: true,
 		factions: [
 			"mirror-universe",
 			"klingon"
@@ -6149,6 +6310,7 @@ module.exports = [
 		text: "<b>END PHASE:</b> Once per game, discard the Captain equipped to this ship.\n\nPerfrom an attack with this ship's Primary Weapon. This card becomes this ship's Captain with a Captain Skill of 4.",
 		shipKlingon: true,
 		OnePerShip: true,
+		eraKVN: true,
 		factions: [
 			"mirror-universe",
 			"klingon"
@@ -6167,6 +6329,7 @@ module.exports = [
 		text: "<b>SETUP:</b> Place 1 Disabled Token on 1 [crew_text] upgrade equipped to each opposing ship.",
 		unique: true,
 		shipKlingon: true,
+		eraKVN: true,
 		factions: [
 			"mirror-universe",
 			"klingon"
@@ -6494,6 +6657,7 @@ module.exports = [
 		text: "This ship cannot be targeted by [weapon_text] Upgrades fried though a Secondary Firing Arc.",
 		unique: true,
 		hirogenLimit: true,
+		eraDSV: true,
 		factions: [
 			"independent"
 		]
@@ -6510,6 +6674,7 @@ module.exports = [
 		cost: 3,
 		text: "Increase the Captain Skill of the Captain equipped to this ship by 1.\n<hr> <b>WHEN THIS SHIP PERFROMS A </b>[scan]<b> ACTION:</b>\n\nPlace an additional [scan] Token beside this ship.",
 		OnePerShip: true,
+		eraDSV: true,
 		factions: [
 			"independent"
 		]
@@ -6595,6 +6760,7 @@ module.exports = [
 		text: "<b>ACTIVATION PHASE:</b> Target a [crew_text] Upgrade equipped to an opposing ship.\n\nThis card becomes a copy of the target [crew_text] Upgrade this game round.",
 		unique: true,
 		range: "1 - 2",
+		eraDSV: true,
 		factions: [
 			"dominion"
 		]
@@ -6611,6 +6777,7 @@ module.exports = [
 		cost: 1,
 		text: "<b>WHEN ATTACKING:</b> If the defending ship shares a faction with this ship or this card:\n\n1[hit] or 1[crit] cannot be cancelled.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"dominion"
 		]
@@ -6627,6 +6794,7 @@ module.exports = [
 		cost: 4,
 		text: "<b>COMBAT PHASE:</b> If all this ships Shields have been destroyed, disable this card.\n\nThis ship rolls +2 attack dice this game round.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"dominion"
 		]
@@ -6695,6 +6863,7 @@ module.exports = [
 		unique: true,
 		opBanned: false,
 		range: "1",
+		eraENT: true,
 		factions: [
 			"independent"
 		]
@@ -6711,6 +6880,7 @@ module.exports = [
 		cost: 3,
 		text: "<b>ACTION:</b> If this ship performed a [straight] Maneuver this game round disable this card.\n\nPerform a 1 white [straight] Maneuver",
 		unique: true,
+		eraTOS: true,
 		factions: [
 			"independent"
 		]
@@ -6727,6 +6897,7 @@ module.exports = [
 		cost: 2,
 		text: "For each Gorn Trooper Equipped to this ship, Increase the Captain Skill of the Captain equipped to this ship by 1.\n<hr> <b>WHEN ATTACKING:</b> Disable this card.\n\nRe-Roll 1 attack die.",
 		unique: false,
+		eraTOS: true,
 		factions: [
 			"independent"
 		]
@@ -6915,6 +7086,7 @@ module.exports = [
 		text: "<b>ACTION:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card and target a [tech_text] or [question_text] Upgrade equipped to another ship.\n\nPlace 3 [time] Tokens on the target Upgrade.",
 		unique: true,
 		range: "1 - 2",
+		eraDSV: true,
 		factions: [
 			"ferengi"
 		]
@@ -6931,6 +7103,7 @@ module.exports = [
 		cost: 3,
 		text: "<b>WHEN THIS SHIP WOULD BE DESTROYED BY AN ATTACK:</b> \n\n Equip this card to the attacking ship, even if it exceeds that ships restrictions with a number of GPLT on this card equal the the number of GPLT on the captain on this ship.\n<hr> <b>ACTIVATION PHASE:</b> The opposing player may spend 1 GPLT on this card. \n\n Place 1 Disabled Token on an Upgrade equipped to this ship.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"ferengi"
 		]
@@ -6947,6 +7120,7 @@ module.exports = [
 		cost: 2,
 		text: "<b>ACTION:</b> Discard this card an place 1 <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship.\n\nThis ship rolls +2 attack dice this game round.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"ferengi"
 		]
@@ -6964,6 +7138,7 @@ module.exports = [
 		text: "<b>END PHASE:</b> Discard this card or another [crew_text] Upgrade equipped to this ship.\n\n Place 2 GPLT on the Captain equipped to this ship.",
 		unique: true,
 		captainFerengi: true,
+		eraDSV: true,
 		factions: [
 			"ferengi"
 		]
@@ -6981,6 +7156,7 @@ module.exports = [
 		text: "<b>WHEN A FERENGI </b>[crew_text]<b> UPGRADE WOULD BE DISCARDED FROM THIS SHIP:</b>\n\nPlace 1 GPLT on the Captain equipped to this ship.",
 		unique: true,
 		captainFerengi: true,
+		eraDSV: true,
 		factions: [
 			"ferengi"
 		]
@@ -6997,6 +7173,7 @@ module.exports = [
 		cost: 1,
 		text: "You do not pay a Faction Penalty when equipping this card to a <img src='img/text/faction-ferengi.png' width='20' height='20' title='Ferengi'> Ship.\n<hr>Opposing effects that cost one or more GPLT cost +1 GPLT.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -7100,6 +7277,7 @@ module.exports = [
 		cost: 4,
 		text: "<b>ACTION:</b> Discard this card.\n\nFor each damage this ship suffers this game round, disable 1 of its Active Shields instead of destroying it. If this ship has no Active Shields, damage is applied normally.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"borg"
 		]
@@ -7116,6 +7294,7 @@ module.exports = [
 		cost: 4,
 		text: "<b>ACTIVATION PHASE:</b> Once per game, discard the Captain equipped to this ship.\n\nPerform an Action as a Free Action. Then, place 4 Drone Tokens on this card. This card becomes this ships Captain.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"borg"
 		]
@@ -7132,6 +7311,7 @@ module.exports = [
 		cost: 2,
 		text: "Add 1 [crew_text] to this ships Upgrade Bar.\n<hr> If this card is equipped to a <img src='img/text/faction-borg.png' width='20' height='20' title='Borg'> ship, you may have <img src='img/text/faction-borg.png' width='20' height='20' title='Borg'> [crew_text] Upgrades fill this ships [tech_text] or [borg_text] Upgrade Slots.",
 		OnePerShip: true,
+		eraDSV: true,
 		factions: [
 			"borg"
 		]
@@ -7148,6 +7328,7 @@ module.exports = [
 		cost: 2,
 		text: "<b>WHENEVER THE EFFECT OF A </b>[crew_text]<b> UPGRADE WOULD TARGET THIS SHIP:</b> Discard this card and target that [crew_text] Upgrade.\n\nDisable the target [crew_text] Upgrade and cancel its effect.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"borg"
 		]
@@ -7182,6 +7363,7 @@ module.exports = [
 		cost: 3,
 		text: "<b>ACTION:</b> Disable this card and disable the Captain equipped t this ship, and target a [crew_text] Upgrade equipped to another ship.\n\nPlace a number of <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens equal the the Captain Skill of the Captain equipped to this ship -2 on the target [crew_text] Upgrade.",
 		unique: true,
+		eraTNG: true,
 		range: "1",
 		factions: [
 			"ferengi"
@@ -7199,6 +7381,7 @@ module.exports = [
 		cost: 3,
 		text: "<b>ACTION:</b> Discard this card.\n\nRemove a Disabled Token from a [tech_text] Upgrade equipped to this ship and repair 1 damage to this ships Shields.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"ferengi"
 		]
@@ -7217,6 +7400,8 @@ module.exports = [
 		unique: true,
 		range: "1 - 2",
 		captainFerengi: true,
+		eraTNG: true,
+		eraDSV: true,
 		factions: [
 			"ferengi"
 		]
@@ -7451,6 +7636,7 @@ module.exports = [
 		image: "https://i.imgur.com/TRhLe4L.png",
 		cost: 3,
 		text: "<b>MODIFY ATTACK DICE STEP OR MODIFY DEFENSE DICE STEP:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card.\n\nConvert 1 [battlestations] into 1 [blank], 1 [evade], or 1 [hit].\n\n<b>( ERRATA )</b>",
+		eraDSV: true,
 		factions: [
 			"dominion"
 		]
@@ -7466,6 +7652,7 @@ module.exports = [
 		image: "https://i.imgur.com/2FvGons.png",
 		cost: 3,
 		text: "<b>END PHASE:</b> Place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card.\n\n[battlestations] Token do not get removed from this ship this game round.",
+		eraDSV: true,
 		factions: [
 			"dominion"
 		]
@@ -7482,6 +7669,7 @@ module.exports = [
 		cost: 3,
 		text: "Add 1 [tech_text] to this ships Upgrade Bar.\n<hr> <b>ACTIVATION PHASE:</b> After this ship reveals a Red Maneuver, place 3 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card.\n\nThis ship does not receive <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Tokens this game round.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"dominion"
 		]
@@ -7500,6 +7688,7 @@ module.exports = [
 		text: "<b>ACTION:</b> Discard this card and target all friendly ships.\n\nPlace a [battlestations] Token beside this ship and all target ships.",
 		unique: true,
 		shipDominion: true,
+		eraDSV: true,
 		factions: [
 			"dominion"
 		]
@@ -7516,6 +7705,7 @@ module.exports = [
 		cost: 2,
 		text: "<b>WHEN ATTACKING:</b> If this ship spent its [target-lock] Token to re-roll its attack dice:\n\nThis ship may convert 1 [blank] into 1 [hit].",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"dominion"
 		]
@@ -7667,6 +7857,7 @@ module.exports = [
 		cost: 3,
 		text: "<b>ACTION:</b> Discard this card and target a friendly ship.\n\nRemove 1 Disabled Token from all [crew_text] Upgrades equipped to the target ship.",
 		range: "1 - 2",
+		eraTNG: true,
 		factions: [
 			"romulan"
 		]
@@ -7683,6 +7874,7 @@ module.exports = [
 		cost: 2,
 		text: "<b>START OF THE GAME:</b> Target all friendly <img src='img/text/faction-romulan.png' width='20' height='20' title='Romulan'> ships.\n\nPlace a [cloak] Token on the base of all the target ships.",
 		range: "1",
+		eraTNG: true,
 		factions: [
 			"romulan"
 		]
@@ -7699,6 +7891,7 @@ module.exports = [
 		cost: 2,
 		text: "<b>WHEN ATTACKING:</b> If this ship has an [evade] Token beside it:\n\nThis ship may convert 1 of the defending ship's [evade] into a [blank] .",
 		unique: false,
+		eraTNG: true,
 		factions: [
 			"romulan"
 		]
@@ -7715,6 +7908,7 @@ module.exports = [
 		cost: 1,
 		text: "<b>PLANNING PHASE:</b> Discard this card and target a friendly ship.\n\n[tech_text] Upgrades equipped to the target ship cannot be affected by opposing effects this game round.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"romulan"
 		]
@@ -7731,6 +7925,7 @@ module.exports = [
 		cost: 1,
 		text: "<b>ACTIVATION PHASE:</b> Discard this card.\n\nThis ship activates last this game round.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"romulan"
 		]
@@ -7863,6 +8058,8 @@ module.exports = [
 		text: "<b>WHEN ATTACKING:</b> If this ship is Cloaked:\n\nConvert all [blank] to [hit].",
 		unique: true,
 		shipKlingon: true,
+		eraTNG: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -7879,6 +8076,8 @@ module.exports = [
 		cost: 4,
 		text: "<b>ACTION:</b> Discard this card.\n\nEquip a [weapon_text] Upgrade with a cost of 5 SP or less that was discarded from this ship to this ship.",
 		unique: true,
+		eraTNG: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -7894,6 +8093,8 @@ module.exports = [
 		image: "https://i.imgur.com/N5Q1tYR.png",
 		cost: 3,
 		text: "<b>ACTIVATION PHASE:</b> Place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card.\n\nPerform a [scan] Action as a Free Action.",
+		eraTNG: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -7910,6 +8111,7 @@ module.exports = [
 		cost: 2,
 		unique: true,
 		text: "<b>WHEN DEFENDING:</b>\n\nThis ship may convert 1 [battlestations] into 1 [evade].",
+		eraTNG: true,
 		factions: [
 			"klingon"
 		]
@@ -7925,6 +8127,8 @@ module.exports = [
 		image: "https://i.imgur.com/o7D4yn6.png",
 		cost: 1,
 		text: "<b>WHEN ATTACKING:</b> Discard this card.\n\nConvert 1 [hit] into 1 [crit].",
+		eraTNG: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -7941,6 +8145,7 @@ module.exports = [
 		cost: 3,
 		unique: true,
 		text: "<b>ACTIVATION PHASE:</b> After this ship reveals its Maneuver, place 2 <img src='img/stuff/effect_time_token.png' width='20' height='16'> Tokens on this card.\n\nThis ship may increase or decrease the speed of the revealed Maneuver by 2. The color of the Maneuver (Red, White, Green) is the same as the revealed Maneuver. This ship cannot perform an Action the game round this effect is activated.",
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -7957,6 +8162,7 @@ module.exports = [
 		cost: 2,
 		unique: true,
 		text: "<b>PLANNING PHASE:</b> Disable this card.\n\nRemove a <img src='img/stuff/effect_disable.png' width='20' height='16'> Token from a [tech_text] or [weapon_text] Upgrade equipped to this ship.",
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -7974,6 +8180,7 @@ module.exports = [
 		unique: true,
 		range: "1 - 3",
 		text: "<b>PLANNING PHASE:</b> After all ships have chosen their Maneuver, discard this card and target two opposing ships.\n\nLook at the Maneuver dials of the target ships. Then, this ship may change its chosen Maneuver. The  target ships' Maneuvers may not be changed for the rest of the game round.",
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -7990,6 +8197,7 @@ module.exports = [
 		cost: 3,
 		unique: true,
 		text: "<b>ACTIVATION PHASE:</b> Disable this card.\nRemove a <img src='img/stuff/effect_disable.png' width='20' height='16'> Token from a [crew_text] Upgrade equipped to this ship.\n<hr> <b>ACTION:</b> Discard this card.\nEquip a [crew_text] Upgrade with a cost of 4 SP or less that was discarded from this ship to this ship.",
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -8006,6 +8214,7 @@ module.exports = [
 		cost: 2,
 		unique: true,
 		text: "<b>WHEN ATTACKING:</b> If the defending ship is Cloaked:\n\nThe defending ship rolls -2 defense dice.",
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -8074,6 +8283,7 @@ module.exports = [
 		range: "1 - 2",
 		text: "<b>WHEN THIS CARD WOULD BE DISCARDED:</b>\n\n Discard an [evade] Token beside an opposing ship.",
 		unique: false,
+		eraENT: true,
 		factions: [
 			"independent"
 		]
@@ -8335,6 +8545,7 @@ module.exports = [
 		cost: 1,
 		text: "<b>WHEN ATTACKING:</b>\n\nThis ship may re-roll 1 [blank] . If the defending ship is a <img src='https://i.imgur.com/l7seIMt.png' width='20' height='20'> Ship, this ship may also convert 1 [blank] into 1 [hit].",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"independent"
 		]
@@ -8368,6 +8579,7 @@ module.exports = [
 		range: "1 - 2",
 		text: "Add 1 [crew_text] to this ships Upgrade Bar.\n\n<b>ACTION:</b> Discard this card and discard 1 [crew_text] Upgrade, and target an opposing ship.\n\nDisable the Captain equipped to the target ship. ",
 		unique: true,
+		eraENT: true,
 		factions: [
 			"klingon"
 		]
@@ -8384,6 +8596,7 @@ module.exports = [
 		cost: 3,
 		text: "<b>IF THE CAPTAIN EQUIPPED TO THIS SHIP WOULD BE DISABLED OR DISCARDED:</b>\n\nDiscard this card instead. ",
 		unique: true,
+		eraENT: true,
 		factions: [
 			"klingon"
 		]
@@ -8488,6 +8701,7 @@ module.exports = [
 		cost: 3,
 		text: "<b>IF A </b>[crew_text]<b> UPGRADE EQUIPPED TO THIS SHIP WOULD BE DISCARDED:</b>\nDiscard this card instead.\n\n<b>WHEN DEFENDING:</b> Discard this card. Add 1 [evade].",
 		unique: true,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -8505,6 +8719,7 @@ module.exports = [
 		range: "1 - 2",
 		text: "<b>WHEN DEFENDING:</b> If this ship is within Range of a Planet token.\n\nThis ship may convert one [blank] into 1 [evade].",
 		unique: true,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -8521,6 +8736,7 @@ module.exports = [
 		cost: 3,
 		text: "<b>ACTION:</b> Place an <img src='img/stuff/effect_auxilary.png' width='18' height='16'> Token beside this ship.\n\nPerform a White 1 [straight], 1 [bank-left] or 1 [bank-right] Maneuver.",
 		unique: false,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -8588,6 +8804,7 @@ module.exports = [
 		cost: 4,
 		text: "Modify the Captain Skill of the Captain equipped to this ship by +3.\n<b>IF THE CAPTAIN EQUIPPED TO THIS SHIP IS DISABLED OR DISCARDED:</b>\nThis ship's Captain Skill is 5.\n<b>IF THIS SHIP RECEIVES A FACE UP 'COMMUNICATIONS FAILURE' OR 'INJURED CAPTAIN' DAMAGE CARD:</b>\nFlip that damage card face down.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -8605,6 +8822,7 @@ module.exports = [
 		range: "1 - 2",
 		text: "<b>ACTION:</b> Discard this card and target an opposing ship.\n\nRoll one attack die and consult the below chart:\n[crit]:Discard a card of your choice on the target ship.\n[battlestations]: Discard the Captain of the target ship.\n[hit]:Discard a [crew_text] on the target ship,\n[blank] : Nothing happens.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -8671,6 +8889,7 @@ module.exports = [
 		cost: 3,
 		text: "If your ship ends its move overlapping another ship's base, you may discard this card to perform an Action from your ship's Action Bar.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -8705,6 +8924,7 @@ module.exports = [
 		cost: 5,
 		text: "<b>ACTION:</b> If your ship is not Cloaked, disable all of your remaining Shields and target a ship at Range 1-2 that is not Cloaked and has no Active Shields. Discard this card to place 2 Time Tokens on all Upgrades on the target ship that do not already have Time Tokens on them.",
 		unique: true,
+		eraENT: true,
 		factions: [
 			"mirror-universe"
 		]
@@ -8721,6 +8941,7 @@ module.exports = [
 		cost: 4,
 		text: "<b>ACTION:</b> Disable this card to remove up to 2 Disabled Upgrade Tokens or up to 4 Time Tokens from any of your [tech_text] or [weapon_text] Upgrades.",
 		unique: true,
+		eraENT: true,
 		factions: [
 			"mirror-universe"
 		]
@@ -8737,6 +8958,7 @@ module.exports = [
 		cost: 4,
 		text: "<b>ACTION:</b> Discard this card to target a ship within Range 1-3. Disable 1 [crew_text] Upgrade and/or 1 [tech_text] or [weapon_text] Upgrade on the target ship.",
 		unique: true,
+		eraENT: true,
 		factions: [
 			"mirror-universe"
 		]
@@ -8805,6 +9027,7 @@ module.exports = [
 		cost: 5,
 		text: "Add 1 [tech_text] Upgrade to your Upgrade Bar.\nWhen you are supposed to disable a [tech_text] Upgrade, you may disable this card instead and place 3 Time Tokens on the [tech_text] Upgrade. (2 Time Tokens if it is a Xindi [tech_text] Upgrade).\n\nThis Upgrade may only be purchased for a Xindi ship and no ship may be equipped with more than one 'Reptilian Analysis Team' Upgrade.",
 		unique: false,
+		eraENT: true,
 		factions: [
 			"xindi"
 		]
@@ -8903,6 +9126,7 @@ module.exports = [
 		cost: 4,
 		text: "Add 2 [weapon_text] Upgrade slots to your Upgrade Bar.\n\nWhen attacking, during the Modify Attack Dice step you may place 2 Time Tokens on this card to re-roll up to three of your attack dice.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -8984,6 +9208,7 @@ module.exports = [
 		cost: 4,
 		text: "<b>ACTION:</b> Discard this card to target a ship at Range 1-3. Chose 1 Upgrade on the target ship and place 2 Time Tokens on that Upgrade.",
 		unique: true,
+		eraENT: true,
 		factions: [
 			"xindi"
 		]
@@ -9048,6 +9273,7 @@ module.exports = [
 		cost: 2,
 		text: "<b>ACTION:</b> Discard this card to remove 2 Disabled Upgrade Tokens from your other Upgrades.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"romulan"
 		]
@@ -9112,6 +9338,7 @@ module.exports = [
 		cost: 5,
 		text: "<b>ACTION:</b> Discard this card to disable your Captain Card and place a [battlestations] Token beside your ship.\n\nWhile your Captain Card is disabled your Captain Skill is \"0\" and your ship may perform the [battlestations] Action as if it were on your Action Bar.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"klingon"
 		]
@@ -9145,6 +9372,8 @@ module.exports = [
 		talents: 1,
 		text: "You may perform a [cloak] or a [sensor-echo] Action as a free action, if your ship has the appropriate Action on its Action Bar\n\nIf B'Etor is the Captain of your ship, you may fill one of your [crew_text] Upgrade slots with this card and gain +4 to your Captain Skill.\n(Not a physical card, used internally on Utopia, can only be equipped as crew if B'Etor is your captain.)",
 		unique: true,
+		eraTNG: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -9162,6 +9391,8 @@ module.exports = [
 		talents: 1,
 		text: "A friendly ship within Range 1-2 of your ship may use the Action or Ability of your [talent_text] Upgrade as if it were assigned to that ship.\nIf Lursa is the Captain of your ship, you may fill one of your [crew_text] Upgrade slots with this card and gain +4 to your Captain Skill. \n(Not a physical card, used internally on Utopia, can only be equipped as crew if Lursa is your captain.)",
 		unique: true,
+		eraTNG: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -9194,6 +9425,7 @@ module.exports = [
 		cost: 4,
 		text: "During the Modify Defense Dice step, you may discard this card to re-roll up to 2 of your defense dice.\n\nIf this card is deployed to a Klingon Ship, you may disable it instead of discarding it.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"klingon"
 		]
@@ -9274,6 +9506,7 @@ module.exports = [
 		cost: 3,
 		text: "<b>ACTION:</b> If your ship is not Cloaked, disable all of your remaining Shields and target a ship at range 1-2 that is not Cloaked and has no Active Shields. Discard this card to discard any Upgrade with a cost of 5 SP or less on the target ship. This Upgrade costs +5 SP if purchased for any ship other than a Xindi ship and no ship may be equipped with more than one 'Insectoid Raiding Party' Upgrade.",
 		unique: true,
+		eraENT: true,
 		factions: [
 			"xindi"
 		]
@@ -9374,6 +9607,8 @@ module.exports = [
 		cost: 3,
 		text: "When attacking a ship with no Active Shields, you may disable this card to gain +1 attack die. Your ship cannot roll any defense dice during the round in which you use this ability.",
 		unique: true,
+		eraTNG: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -9406,6 +9641,7 @@ module.exports = [
 		cost: 4,
 		text: "If your ship is hit, after the Deal Damage phase, you may discard this card to immediately execute a maneuver from your Maneuver Dial with a speed of 3 or less.",
 		unique: true,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -9521,6 +9757,7 @@ module.exports = [
 		cost: 5,
 		text: "<b>ACTION:</b> If your ship is not Cloaked, disable this card to repair 1 of your Shield Tokens\nOR\n<b>ACTION:</b> Discard this card to flip up to 3 of your Disabled Shields over to their Active sides. If you do this while you ship is Cloaked, flip your [cloak] Token to its red side.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -9537,6 +9774,7 @@ module.exports = [
 		cost: 4,
 		text: "<b>ACTION:</b> Place a [battlestations] Token beside your ship. Then place and Auxiliary Power Token beside your ship. You cannot perform a [battlestations] Action this round.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -9553,6 +9791,7 @@ module.exports = [
 		cost: 2,
 		text: "<b>ACTION:</b> If your ship is not Cloaked, disable all of your remaining Shields and target a ship at Range 1-2 that is not Cloaked and has no Active Shields. Disable this card and any 2 [crew_text] Upgrades of your choice on the target ship.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -9621,6 +9860,7 @@ module.exports = [
 		range: "1-3",
 		text: "<b>ACTION:</b> Discard this card to target an opposing ship.\n\n This game round, the target ship rolls +1 attack die this round but cannot roll defense dice.",
 		unique: true,
+		eraTMP: true,
 		factions: [
 			"romulan"
 		]
@@ -9782,6 +10022,7 @@ module.exports = [
 		cost: 3,
 		text: "If you execute a red maneuver, you may disable this card instead of placing an Auxiliary Power Token beside your ship.",
 		unique: true,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -9798,6 +10039,7 @@ module.exports = [
 		cost: 4,
 		text: "During the Activation Phase, after you move, you may discard this card to perform the Action listed on your ship's Captain Card as a free Action.",
 		unique: true,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -9814,6 +10056,7 @@ module.exports = [
 		cost: 3,
 		text: "After your ship executes a green maneuver, you may perform an [evade] Action as a free Action.",
 		unique: true,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -9861,6 +10104,7 @@ module.exports = [
 		cost: 4,
 		text: "At the end of the Activation Phase, you may disable this card and place an Auxiliary Power Token beside your ship to flip up to 2 of your disabled Shield Tokens (red) back to their Active sides (blue).",
 		unique: true,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -9876,6 +10120,7 @@ module.exports = [
 		cost: 4,
 		text: "Add 1 Upgrade slot to your Upgrade bar ([tech_text] or [weapon_text]).\n\nAt any time, you may disable this card to remove an Auxiliary Power Token from beside your ship.",
 		unique: true,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -9891,6 +10136,7 @@ module.exports = [
 		cost: 5,
 		text: "At the start of the Combat Phase, you may discard this card to target all opposing ships within Range 1 of your ship. Each target ship must either discard a Token ([evade], [scan], or [battlestations]) that is beside it or place an Auxiliary Power Token beside it.",
 		unique: true,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -9986,6 +10232,7 @@ module.exports = [
 		cost: 5,
 		text: "<b>ACTION:</b> Target a ship at Range 1-3. Discard this card and disable 1 Upgrade on the target ship ([crew_text], [tech_text], or [weapon_text]). You may immediately use the Action listed on the Upgrade you disabled with this Action as if it were assigned to your ship.",
 		unique: true,
+		eraTMP: true,
 		factions: [
 			"klingon"
 		]
@@ -10002,6 +10249,7 @@ module.exports = [
 		cost: 6,
 		text: "<b>ACTION:</b> If your ship is not Cloaked, disable all of your remaining Shields and target a ship at Range 1-2 that is not Cloaked and has no Active Shields. Discard this card and disable all Upgrades on the target ship. The target ship rolls -1 attack die and -1 defense die while any of its Upgrades remain disabled. Once there are no disabled Upgrades on the target ship, remove Torg's Continuous Effect Token from beside the target ship.",
 		unique: true,
+		eraTMP: true,
 		factions: [
 			"klingon"
 		]
@@ -10018,6 +10266,7 @@ module.exports = [
 		cost: 5,
 		text: "<b>ACTION:</b> If your ship is not Cloaked, discard this card to target a friendly ship within Range 1-2 of your ship. Take up to 3 [crew_text] Upgrades from that ship and deploy them to your ship, even if it exceeds your ship's restrictions, OR take up to 3 [crew_text] Upgrades from your ship and deploy them to the target ship, even if it exceeds that ship's restrictions.",
 		unique: true,
+		eraTMP: true,
 		factions: [
 			"klingon"
 		]
@@ -10066,6 +10315,7 @@ module.exports = [
 		cost: 2,
 		text: "<b>ACTION:</b> Disable this card to place a [scan] Token beside your ship. You cannot perform the [scan] Action as a free Action this round. \n\nThis Upgrade may only be purchased for a Romulan ship and no ship may be equipped with more than 1 \"Romulan Technical Officer\" Upgrade.",
 		unique: false,
+		eraTOS: true,
 		factions: [
 			"romulan"
 		]
@@ -10132,6 +10382,7 @@ module.exports = [
 		cost: 5,
 		text: "Whenever an opposing ship is required to place Time Tokens on one of its Upgrades, you may discard this card to force that ship to place 1 additional Time Token on that Upgrade.\nOR\nDuring the Combat Phase, you may discard this card to chose any number of dice and re-roll them.",
 		unique: true,
+		eraENT: true,
 		factions: [
 			"mirror-universe"
 		]
@@ -10212,6 +10463,7 @@ module.exports = [
 		cost: 5,
 		text: "<b>ACTION:</b> Discard this card to add +3 to your Captain Skill Number until the End Phase of this round. If you attack first in the Combat Phase as a result of this, during the Compare Results step, you may convert 1 of your [hit] results into a [crit] result.",
 		unique: true,
+		eraTMP: true,
 		factions: [
 			"independent"
 		]
@@ -10300,6 +10552,7 @@ module.exports = [
 		cost: 5,
 		text: "When attacking, during he Modify Defense Dice step, you may disable this card to force the defending ship to re-roll 1 of its defense dice of your choice.\n\nWhen defending, you may roll your full defense dice in spite of the presence of an opposing ship's [scan] Token.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -10350,6 +10603,7 @@ module.exports = [
 		cost: 5,
 		text: "<b>ACTION:</b> Discard this card to repair 1 damage to your ship's Hull or Shields.\n\nOR\n\nACTION:Disable this card to flip one Critical Damage Card that is assigned to your ship face down.",
 		unique: false,
+		eraTOS: true,
 		factions: [
 			"federation"
 		]
@@ -10414,6 +10668,7 @@ module.exports = [
 		cost: 4,
 		text: "When attacking with your Primary Weapon, if your attack hits the target ship, you may spend your [target-lock] Token to discard 1 [crew_text] Upgrade on target ship.",
 		unique: true,
+		eraENT: true,
 		factions: [
 			"xindi"
 		]
@@ -10479,6 +10734,7 @@ module.exports = [
 		cost: 5,
 		text: "<b>ACTION:</b> Discard this card to target a ship at Range 1. When attacking that ship with your Primary Weapon this round, gain +1 attack die and force the defending ship to roll -1 defense die.\r\n\r\nNo ship may be equipped with more than 1 \"Reman Bodyguards\" Upgrade.",
 		unique: false,
+		eraENT: true,
 		factions: [
 			"romulan"
 		]
@@ -10495,6 +10751,7 @@ module.exports = [
 		cost: 5,
 		text: "Add 1 [tech_text] Upgrade to your Upgrade Bar. That Upgrade costs -1 SP (min 1) and must be a Romulan [tech_text] Upgrade.\r\n\r\nACTION: When defending this round, during the Roll Defense Dice step, disable this card and one of your [tech_text] Upgrades to roll +1 defense die.",
 		unique: true,
+		eraENT: true,
 		factions: [
 			"romulan"
 		]
@@ -10545,6 +10802,7 @@ module.exports = [
 		cost: 3,
 		text: "<b>ACTION:</b> Discard this card to immediately perform an additional 1[come-about] or 2[come-about] Maneuver. Treat this as a red maneuver. \n\nThis card costs +5 SP for any non-Klingon ship and cannot be deployed to a ship the does not have a [come-about] Maneuver on its Maneuver Dial.",
 		unique: false,
+		eraTMP: true,
 		factions: [
 			"klingon"
 		]
@@ -10561,6 +10819,7 @@ module.exports = [
 		cost: 2,
 		text: "During the Activation Phase, before you move, you may discard this card to disregard your chosen maneuver and perform any maneuver on your Maneuver Dial with a speed of 3 or less. Treat this maneuver as a red maneuver. \n\nNo ship may be equipped with more than on \"Klingon Navigator\" Upgrade.",
 		unique: false,
+		eraTMP: true,
 		factions: [
 			"klingon"
 		]
@@ -10577,6 +10836,7 @@ module.exports = [
 		cost: 3,
 		text: "When attacking with your Primary Weapon, during the Modify Attack Dice step, you may disable this card to spend your [evade] Token to convert 1 of your [battlestations] results into a [hit] result.",
 		unique: false,
+		eraTMP: true,
 		factions: [
 			"klingon"
 		]
@@ -10609,6 +10869,7 @@ module.exports = [
 		cost: 5,
 		text: "During the Activation Phase, after you move, if there is an Auxiliary Power Token beside your ship, you may disable this card to perform an Action from your Action Bar.  <b>OR</b>  During the Activation Phase after you move you may disable this card to perform an Action listed on one of your [tech_text] Upgrades as a free Action.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -10713,6 +10974,7 @@ module.exports = [
 		cost: 4,
 		text: "All of your Xindi [weapon_text] Upgrades cost -1 SP. \n\nWhen attacking, during the Declare Target step, if your ship does not already have another ship target locked, you may discard this card to acquire a target lock on a ship within Range 1-3 of your ship.",
 		unique: true,
+		eraENT: true,
 		factions: [
 			"xindi"
 		]
@@ -10814,6 +11076,7 @@ module.exports = [
 		cost: 1,
 		text: "During the Activation Phase, after you move, if you have the [cloak] Action on your Action Bar, you may discard this card to perform a [cloak] Action as a free Action.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"romulan"
 		]
@@ -11128,6 +11391,7 @@ module.exports = [
 		cost: 4,
 		text: "When attacking with your Primary Weapon, during the Roll Attack Dice step, instead of rolling your normal number of attack dice, you may discard this card to roll a number of attack dice equal to the SP cost of one upgrade on the target ship (max 4 dice).",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"kazon"
 		]
@@ -11144,6 +11408,7 @@ module.exports = [
 		cost: 4,
 		text: "During the Activation Phase, you may discard this card to place an [evade] Token beside your ship, even if there is already one there. If you do so place an Auxiliary Power Token beside your ship.\n\n No ship may be equipped with more than one 'Kazon Guard' Upgrade.",
 		unique: false,
+		eraDSV: true,
 		factions: [
 			"kazon"
 		]
@@ -11340,6 +11605,8 @@ module.exports = [
 		cost: 5,
 		text: "<b>ACTION:</b> If your ship is not Cloaked, disable all of your remaining Shields and target a ship at Range 1-2 that is not Cloaked and has no Active Shields. Discard this card to inflict 1 damage to the target ship's Hull.",
 		unique: true,
+		eraTNG: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -11356,6 +11623,7 @@ module.exports = [
 		cost: 4,
 		text: "You may disable this card after performing a red maneuver to place an [evade] Token beside your ship.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -11372,6 +11640,7 @@ module.exports = [
 		cost: 4,
 		text: "At any time, your may discard this card to re-roll any 1 die.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -11388,6 +11657,7 @@ module.exports = [
 		cost: 4,
 		text: "During the Combat Phase you may disable this card to spend a [scan] Token that is beside your ship as though it were a [evade] or a [battlestations] Token.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -11404,6 +11674,7 @@ module.exports = [
 		cost: 3,
 		text: "At the beginning of the Combat Phase, you may disable this card to add +2 to your Captain Skill Number until the End Phase.  OR   During the Combat Phase, you may discard this card to select up to 3 of your attack or defence dice and re-roll them.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -11436,6 +11707,7 @@ module.exports = [
 		cost: 5,
 		text: "<b>ACTION:</b> Disable this card to perform an additional green maneuver with a speed of 1. Your ship cannot be Target Locked this round. If there is already a Target Lock on your ship, remove it.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -11452,6 +11724,7 @@ module.exports = [
 		cost: 4,
 		text: "When targeting an opposing ship with a Photon or Quantum Torpedoes secondary weapon you may disable this card instead of spending a Target Lock.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -11468,6 +11741,7 @@ module.exports = [
 		cost: 2,
 		text: "If your ship suffers damage to its Hull you may immediately disable this card to repair 1 Shield.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -11484,6 +11758,7 @@ module.exports = [
 		cost: 5,
 		text: "<b>ACTION:</b> Disable this card to repair 1 damage to your Hull or Shields. <b>OR</b> If you execute a Red Maneuver, you may disable this card after skipping your Perform Action Step to remove 1 Auxiliary Power Token form beside your ship.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -11516,6 +11791,7 @@ module.exports = [
 		cost: 3,
 		text: "When a friendly  ship within Range 1 of your ship is declared the target of an attack, you may discard this card to target that ship. If you do so, the target ship may spend your [evade] or [battlestations] Tokens as if it were beside their ship during this attack.",
 		unique: true,
+		eraENT: true,
 		factions: [
 			"independent"
 		]
@@ -11616,6 +11892,7 @@ module.exports = [
 		cost: 5,
 		text: "At the start of the game, place up to 3 Federation [tech_text] Upgrades, each 4 SP or less, face down under this card. During the Actavation Phase, you may discard this card to flip one of these Upgrades face up and deploy it to your ship, even if it exceeds your ship's restrictions. If you do so, remove the other 2 face down Upgrades from the game and place an Auxiliary Power Token beside your ship.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -11632,6 +11909,8 @@ module.exports = [
 		cost: 5,
 		text: "When defending, you may disable this card. If you do so, the attacking ship rolls 1 fewer attack die and cannot spend [battlestations] or [target-lock] Tokens to modify its attack roll and your ship may roll its full defence dice in spite of the presence of any [scan] Token(s) beside the attacking ship.",
 		unique: true,
+		eraTNG: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -11648,6 +11927,7 @@ module.exports = [
 		cost: 5,
 		text: "All of your [tech_text] Upgrades cost -1 SP. \n\nWhen defending, during the Roll Defence Dice step, you may disable this card to roll 1 additional defence die for each [tech_text] Upgrade deployed to your ship (+2 max)",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -11713,6 +11993,7 @@ module.exports = [
 		cost: 5,
 		text: "<b>ACTION:</b> Discard this card to target a ship at Range 3. Your ship cannot attack the target ship and that ship cannot attack your ship this round.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"romulan"
 		]
@@ -11729,6 +12010,7 @@ module.exports = [
 		cost: 1,
 		text: "When attacking with your Primary Weapon during the Roll Attack Dice step, you may discard this card to gain +1 attack die for that attack.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"romulan"
 		]
@@ -11803,7 +12085,9 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true,
+		eraDSV: true
 	},
 	{
 		type: "tech",
@@ -11839,7 +12123,9 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true,
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -11859,7 +12145,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "crew",
@@ -11879,7 +12166,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "weapon",
@@ -11939,7 +12227,8 @@ module.exports = [
 		factions: [
 			"klingon"
 		],
-		cost: 4
+		cost: 4,
+		eraTNG: true
 	},
 	{
 		type: "crew",
@@ -11955,7 +12244,8 @@ module.exports = [
 		factions: [
 			"klingon"
 		],
-		cost: 1
+		cost: 1,
+		eraTNG: true
 	},
 	{
 		type: "weapon",
@@ -12055,7 +12345,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "crew",
@@ -12075,7 +12366,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "weapon",
@@ -12178,7 +12470,9 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTOS: true,
+		eraTMP: true
 	},
 	{
 		type: "crew",
@@ -12198,7 +12492,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTMP: true
 	},
 	{
 		type: "crew",
@@ -12218,7 +12513,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTMP: true
 	},
 	{
 		type: "crew",
@@ -12238,7 +12534,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTMP: true
 	},
 	{
 		type: "weapon",
@@ -12345,7 +12642,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTOS: true
 	},
 	{
 		type: "crew",
@@ -12366,7 +12664,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTOS: true
 	},
 	{
 		type: "crew",
@@ -12387,7 +12686,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTOS: true
 	},
 	{
 		type: "crew",
@@ -12408,7 +12708,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTOS: true
 	},
 	{
 		type: "crew",
@@ -12429,7 +12730,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTOS: true
 	},
 	{
 		type: "talent",
@@ -12469,7 +12771,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "weapon",
@@ -12509,7 +12812,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "crew",
@@ -12529,7 +12833,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "tech",
@@ -12606,7 +12911,8 @@ module.exports = [
 		factions: [
 			"klingon"
 		],
-		cost: 3
+		cost: 3,
+		eraTOS: true
 	},
 	{
 		type: "crew",
@@ -12625,7 +12931,8 @@ module.exports = [
 		],
 		cost: 3,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTOS: true
 	},
 	{
 		type: "weapon",
@@ -12700,7 +13007,8 @@ module.exports = [
 		factions: [
 			"klingon"
 		],
-		cost: 5
+		cost: 5,
+		eraDSV: true
 	},
 	{
 		type: "talent",
@@ -12734,7 +13042,8 @@ module.exports = [
 		factions: [
 			"klingon"
 		],
-		cost: 4
+		cost: 4,
+		eraDSV: true
 	},
 	{
 		type: "weapon",
@@ -12773,7 +13082,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "weapon",
@@ -12853,7 +13163,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "weapon",
@@ -12935,7 +13246,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "weapon",
@@ -13030,7 +13342,8 @@ module.exports = [
 		factions: [
 			"klingon"
 		],
-		cost: 5
+		cost: 5,
+		eraDSV: true
 	},
 	{
 		type: "talent",
@@ -13070,7 +13383,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "weapon",
@@ -13174,7 +13488,9 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true,
+		eraDSV: true
 	},
 	{
 		type: "talent",
@@ -13237,7 +13553,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -13258,7 +13575,9 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true,
+		eraDSV: true
 	},
 	{
 		type: "talent",
@@ -13340,7 +13659,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTMP: true
 	},
 	{
 		type: "crew",
@@ -13356,7 +13676,8 @@ module.exports = [
 		factions: [
 			"klingon"
 		],
-		cost: 2
+		cost: 2,
+		eraTMP: true
 	},
 	{
 		type: "tech",
@@ -13496,7 +13817,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -13516,7 +13838,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -13536,7 +13859,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -13556,7 +13880,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTOS: true
 	},
 	{
 		type: "crew",
@@ -13572,7 +13897,8 @@ module.exports = [
 		factions: [
 			"klingon"
 		],
-		cost: 4
+		cost: 4,
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -13592,7 +13918,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "tech",
@@ -13633,7 +13960,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "weapon",
@@ -13780,7 +14108,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTMP: true
 	},
 	{
 		type: "crew",
@@ -13801,7 +14130,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTMP: true
 	},
 	{
 		type: "crew",
@@ -13822,7 +14152,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTMP: true
 	},
 	{
 		type: "tech",
@@ -13904,7 +14235,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "tech",
@@ -13964,7 +14296,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "weapon",
@@ -14044,7 +14377,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "tech",
@@ -14084,7 +14418,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -14104,7 +14439,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "question",
@@ -14125,7 +14461,8 @@ module.exports = [
 		talents: 0,
 		attack: 0,
 		range: "",
-		countsAsUpgrade: true
+		countsAsUpgrade: true,
+		eraDSV: true
 	},
 	{
 		type: "tech",
@@ -14181,7 +14518,8 @@ module.exports = [
 		factions: [
 			"klingon"
 		],
-		cost: 4
+		cost: 4,
+		eraENT: true
 	},
 	{
 		type: "tech",
@@ -14241,7 +14579,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTOS: true
 	},
 	{
 		type: "crew",
@@ -14261,7 +14600,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTOS: true
 	},
 	{
 		type: "talent",
@@ -14341,7 +14681,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -14361,7 +14702,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -14381,7 +14723,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "weapon",
@@ -14522,7 +14865,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -14542,7 +14886,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "tech",
@@ -14584,7 +14929,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "tech",
@@ -14756,7 +15102,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -14776,7 +15123,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "tech",
@@ -14859,7 +15207,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -14880,7 +15229,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -14901,7 +15251,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 
 	{
@@ -14924,7 +15275,8 @@ module.exports = [
 		talents: 0,
 		attack: 0,
 		range: "",
-		countsAsUpgrade: true
+		countsAsUpgrade: true,
+		eraDSV: true
 	},
 	{
 		type: "talent",
@@ -14965,7 +15317,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -14986,7 +15339,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -15007,7 +15361,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "weapon",
@@ -15236,7 +15591,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraENT: true
 	},
 	{
 		type: "crew",
@@ -15256,7 +15612,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraENT: true
 	},
 	{
 		type: "tech",
@@ -15336,7 +15693,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -15356,7 +15714,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "tech",
@@ -15436,7 +15795,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "borg",
@@ -15640,7 +16000,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTOS: true
 	},
 	{
 		type: "tech",
@@ -15736,7 +16097,8 @@ module.exports = [
 		factions: [
 			"klingon"
 		],
-		cost: 2
+		cost: 2,
+		eraTNG: true
 	},
 	{
 		type: "talent",
@@ -15796,7 +16158,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTOS: true
 	},
 	{
 		type: "tech",
@@ -15836,7 +16199,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "talent",
@@ -15877,7 +16241,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "talent",
@@ -15917,7 +16282,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "talent",
@@ -15994,7 +16360,8 @@ module.exports = [
 		factions: [
 			"federation"
 		],
-		cost: 2
+		cost: 2,
+		eraTNG: true
 	},
 	{
 		type: "crew",
@@ -16014,7 +16381,9 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true,
+		eraDSV: true
 	},
 	{
 		type: "weapon",
@@ -16152,7 +16521,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTMP: true
 	},
 	{
 		type: "crew",
@@ -16172,7 +16542,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTMP: true
 	},
 	{
 		type: "crew",
@@ -16192,7 +16563,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTMP: true
 	},
 	{
 		type: "crew",
@@ -16212,7 +16584,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTMP: true
 	},
 	{
 		type: "talent",
@@ -16251,7 +16624,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTMP: true
 	},
 	{
 		type: "crew",
@@ -16271,7 +16645,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTMP: true
 	},
 	{
 		type: "crew",
@@ -16291,7 +16666,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTMP: true
 	},
 	{
 		type: "crew",
@@ -16312,7 +16688,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "crew",
@@ -16333,7 +16710,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "crew",
@@ -16354,7 +16732,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "crew",
@@ -16375,7 +16754,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "talent",
@@ -16496,7 +16876,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -16516,7 +16897,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -16536,7 +16918,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "tech",
@@ -16716,7 +17099,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraENT: true
 	},
 	{
 		type: "tech",
@@ -16795,7 +17179,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -16816,7 +17201,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -16837,7 +17223,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "question",
@@ -16859,7 +17246,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -16876,7 +17264,8 @@ module.exports = [
 		factions: [
 			"klingon"
 		],
-		cost: 5
+		cost: 5,
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -16897,7 +17286,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -16918,7 +17308,8 @@ module.exports = [
 		skill: 0,
 		talents: 1,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -16939,7 +17330,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "tech",
@@ -16979,7 +17371,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraENT: true
 	},
 	{
 		type: "crew",
@@ -16999,7 +17392,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraENT: true
 	},
 	{
 		type: "crew",
@@ -17019,7 +17413,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraENT: true
 	},
 	{
 		type: "crew",
@@ -17039,7 +17434,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraENT: true
 	},
 	{
 		type: "crew",
@@ -17059,7 +17455,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraENT: true
 	},
 	{
 		type: "crew",
@@ -17079,7 +17476,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraENT: true
 	},
 	{
 		type: "talent",
@@ -17119,7 +17517,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraENT: true
 	},
 	{
 		type: "tech",
@@ -17199,7 +17598,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "crew",
@@ -17219,7 +17619,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "crew",
@@ -17239,7 +17640,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "tech",
@@ -17400,7 +17802,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "talent",
@@ -17481,7 +17884,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "weapon",
@@ -17623,7 +18027,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "crew",
@@ -17643,7 +18048,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "tech",
@@ -17683,7 +18089,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "tech",
@@ -17744,7 +18151,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "borg",
@@ -17804,7 +18212,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraENT: true
 	},
 	{
 		type: "tech",
@@ -18007,7 +18416,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "talent",
@@ -18111,7 +18521,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "crew",
@@ -18132,7 +18543,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "crew",
@@ -18153,7 +18565,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "crew",
@@ -18173,7 +18586,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -18193,7 +18607,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -18213,7 +18628,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "talent",
@@ -18334,7 +18750,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "crew",
@@ -18355,7 +18772,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "crew",
@@ -18375,7 +18793,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -18395,7 +18814,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "talent",
@@ -18676,7 +19096,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "tech",
@@ -18712,7 +19133,8 @@ module.exports = [
 		factions: [
 			"klingon"
 		],
-		cost: 5
+		cost: 5,
+		eraTMP: true
 	},
 	{
 		type: "tech",
@@ -18792,7 +19214,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -18812,7 +19235,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -18832,7 +19256,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "talent",
@@ -18892,7 +19317,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -18912,7 +19338,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -18933,7 +19360,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "talent",
@@ -19140,7 +19568,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -19160,7 +19589,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -19180,7 +19610,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -19200,7 +19631,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "weapon",
@@ -19460,7 +19892,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "talent",
@@ -19560,7 +19993,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -19580,7 +20014,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -19600,7 +20035,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -19620,7 +20056,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "tech",
@@ -20138,7 +20575,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "tech",
@@ -20194,7 +20632,7 @@ module.exports = [
 		cost: 3,
 		skill: null,
 		talents: null,
-		attack: null
+		eraDSV: true
 	},
 	{
 		type: "talent",
@@ -20234,7 +20672,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -20254,7 +20693,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "question",
@@ -20313,7 +20753,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "crew",
@@ -20333,7 +20774,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "talent",
@@ -20373,7 +20815,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "weapon",
@@ -20473,7 +20916,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTOS: true
 	},
 	{
 		type: "tech",
@@ -20533,7 +20977,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -20553,7 +20998,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "tech",
@@ -20653,7 +21099,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTOS: true
 	},
 	{
 		type: "crew",
@@ -20673,7 +21120,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTOS: true
 	},
 	{
 		type: "crew",
@@ -20693,7 +21141,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTOS: true
 	},
 	{
 		type: "talent",
@@ -20793,7 +21242,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "talent",
@@ -20893,7 +21343,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraENT: true
 	},
 	{
 		type: "crew",
@@ -20913,7 +21364,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraENT: true
 	},
 	{
 		type: "tech",
@@ -21117,7 +21569,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "tech",
@@ -21217,7 +21670,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "crew",
@@ -21237,7 +21691,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "crew",
@@ -21257,7 +21712,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "crew",
@@ -21277,7 +21733,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraTNG: true
 	},
 	{
 		type: "talent",
@@ -21337,7 +21794,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "talent",
@@ -21435,7 +21893,8 @@ module.exports = [
 		factions: [
 			"klingon"
 		],
-		cost: 5
+		cost: 5,
+		eraDSV: true
 	},
 	{
 		type: "tech",
@@ -21517,7 +21976,8 @@ module.exports = [
 		talents: 0,
 		attack: 0,
 		range: "",
-		countsAsUpgrade: true
+		countsAsUpgrade: true,
+		eraDSV: true
 	},
 	{
 		type: "tech",
@@ -21557,7 +22017,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "crew",
@@ -21577,7 +22038,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		eraDSV: true
 	},
 	{
 		type: "tech",
@@ -21744,6 +22206,7 @@ module.exports = [
 		cost: 3,
 		text: "When defending, during the Roll Defense Dice step, you may discard this card to roll +2 Defense Dice.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"dominion"
 		]
@@ -21810,6 +22273,7 @@ module.exports = [
 		cost: 5,
 		text: "When defending, during the Roll Defense Dice step, you may disable this card to roll 1 additional defense die.\nOR\nWhen defending, during the Roll Defense Dice step, you may discard this card to roll 2 additional defense dice.",
 		unique: false,
+		eraENT: true,
 		factions: [
 			"xindi"
 		]
@@ -21939,6 +22403,7 @@ module.exports = [
 		cost: 3,
 		text: "<b>ACTION:</b> Target a ship at Range 1-2 and roll 1 attack die. If you roll a [hit] or [crit] result, discard this card and 1 [crew_text] Upgrade on the target ship.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"romulan"
 		]
@@ -22005,6 +22470,7 @@ module.exports = [
 		cost: 3,
 		text: "You do not pay a faction penalty when assigning this card to a Federation ship.\n\nDuring the Planning Phase, after all ships have been assigned a Maneuver Dial, you may discard this card to look at up to 3 ships' Maneuver Dials. You may then change your chosen Maneuver.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"independent"
 		]
@@ -22252,6 +22718,7 @@ module.exports = [
 		cost: 3,
 		text: "When defending, during the Deal Damage step, you may discard this card to disable up to 2 of your Shield Tokens instead of losing them.\n\nThis card costs +5 SP if purchased for a non-Klingon ship.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"klingon"
 		]
@@ -22461,6 +22928,7 @@ module.exports = [
 		cost: 4,
 		text: "When defending, during the Compare Results step, you may disable this card and 1 of your Active Shields to cancel 1 [hit] or [crit] result.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -22477,6 +22945,7 @@ module.exports = [
 		cost: 3,
 		text: "<b>ACTION:</b> Disable this card to place 2 [evade] Tokens beside your ship. You cannot roll any defense dice this round. You cannot perform an [evade] Action this round, even as a free Action.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -22493,6 +22962,7 @@ module.exports = [
 		cost: 4,
 		text: "During the Activation Phase, you may disable this card to perform a [battlestations] Action as a free Action.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -22608,6 +23078,7 @@ module.exports = [
 		cost: 5,
 		text: "<b>ACTION:</b> If your ship is not Cloaked, disable all of your remaining Shields and target a ship at Range 1-2 that is not Cloaked and has no Active Shields. Discard this card to disable all [crew_text] Upgrades on the target ship and then place an Auxiliary Power Token beside that ship.",
 		unique: false,
+		eraENT: true,
 		factions: [
 			"xindi"
 		]
@@ -22673,6 +23144,7 @@ module.exports = [
 		cost: 5,
 		text: "When attacking, during the Roll Attack Dice step, you may discard this card to roll +2 attack dice for that attack. In addition, if this Upgrade is deployed to a Bajoran ship, during the Modify Attack Dice step, you may re-roll all of your [battlestations] results for that attack.\n\nThis Upgrade may only be purchased for a Bajoran or Federation ship.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"bajoran"
 		]
@@ -22739,6 +23211,7 @@ module.exports = [
 		cost: 3,
 		text: "<b>ACTION:</b> If there are no enemy ships within Range 1-3 of your ship, repair 1 of your Shield Tokens.\n\nYou do not pay a faction penalty when assigning this card to a Vulcan ship.",
 		unique: false,
+		eraTMP: true,
 		factions: [
 			"federation"
 		]
@@ -22871,6 +23344,7 @@ module.exports = [
 		cost: 4,
 		text: "At the end of the Activation Phase, if you are in the forward firing arc of an enemy ship, you may discard this card to immediately perform a 3 [forward] or 4 [forward] Maneuver. You cannot attack on the round you use this ability.\n\nNo ship may be equipped with more than 1 Tactical Officer Upgrade.",
 		unique: false,
+		eraTNG: true,
 		factions: [
 			"ferengi"
 		],
@@ -22968,6 +23442,8 @@ module.exports = [
 		cost: 3,
 		text: "At any time, you may discard this card to perform a [scan] Action as a free Action.",
 		unique: true,
+		eraTMP: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -23080,6 +23556,7 @@ module.exports = [
 		cost: 5,
 		text: "Between any of the Phases, you may discard this card to remove a Disabled Upgrade Token from 1 of your [weapon_text] Upgrades.\nOR\nWhen attacking, during the Declare Target step, you may discard this card to target a ship at Range 1-3. Choose 1 non-Borg [weapon_text] Upgrade on the target ship with a printed cost of 4 or less and disable it to perform its attack as if it were deployed to your ship.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"ferengi"
 		]
@@ -23129,6 +23606,7 @@ module.exports = [
 		cost: 3,
 		text: "When defending, during the Deal Damage step, after your ship suffers at least 1 damage to its Hull, you may discard this card to immediately perform an additional Green Maneuver.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"mirror-universe"
 		],
@@ -23149,6 +23627,7 @@ module.exports = [
 		cost: 2,
 		text: "<b>ACTION:</b> Remove 1 Disabled Upgrade Token from 1 of your [tech_text] or [crew_text] Upgrades and then perform a [scan] or [evade] Action as a free Action.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"mirror-universe"
 		],
@@ -23265,6 +23744,7 @@ module.exports = [
 		cost: 1,
 		text: "At any time, you may discard this card to remove 1 Disabled Upgrade Token from one of your [crew_text] or [tech_text] Upgrades and then place 2 Time Tokens on that Upgrade.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -23281,6 +23761,7 @@ module.exports = [
 		cost: 4,
 		text: "<b>ACTION:</b> Disable this card and 2 of your Active Shields to repair 1 damage to your ship's Hull.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"federation"
 		]
@@ -23345,6 +23826,7 @@ module.exports = [
 		cost: 2,
 		text: "When your ship is defending, during the Compare Results step, you may discard this card to cancel 1 [hit] or [crit] result.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"q-continuum"
 		],
@@ -23387,6 +23869,7 @@ module.exports = [
 		cost: 5,
 		text: "This Upgrade counts as either a [crew_text], an [talent_text], a [tech_text], or a [weapon_text] Upgrade (your choice).\n\nWhenever a friendly ship within Range 1 of your ship receives damage, you may discard this card to transfer all of that damage to your ship.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"q-continuum"
 		],
@@ -23437,6 +23920,7 @@ module.exports = [
 		cost: 5,
 		text: "During the Planning Phase, you may target a ship within Range 1-3 and choose 1 [crew_text] Upgrade on the target ship. If you do so, treat this card as an exact copy of the chosen Upgrade until the end of the End Phase in which you use this ability. If the chosen Upgrade's Action or ability requires it to be disabled or discarded, you must disable or discard this card to use it.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"independent"
 		]
@@ -23453,6 +23937,7 @@ module.exports = [
 		cost: 3,
 		text: "When defending, during the Roll Attack Dice step, you may discard this card to force the attacking ship to roll -2 attack dice for that attack.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"ferengi"
 		]
@@ -23469,6 +23954,7 @@ module.exports = [
 		cost: 3,
 		text: "<b>ACTION:</b> Repair 1 Shield Token. If this card is assigned to a Ferengi ship, you may repair up to 2 Shield Tokens instead of 1.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"ferengi"
 		]
@@ -23565,6 +24051,8 @@ module.exports = [
 		cost: 2,
 		text: "Increase your Captain's Skill by +1 (+3 for a Klingon Captain). This ability cannot be used on this card.\n\nIf your Captain is disabled, discarded, or affected by a critical damage card, treat this card as your Captain Card with a Skill of 5. If your Captain becomes non-disabled or unaffected by the critical damage card, that Captain Card is restored.",
 		unique: true,
+		eraTNG: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -23581,6 +24069,7 @@ module.exports = [
 		cost: 5,
 		text: "You do not pay a faction penalty when assigning this card to a Klingon ship.\n\nYou may disable this card and spend your [scan] Token to convert 1 of your [battlestations] results into a [hit] or an [evade] result.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"federation"
 		]
@@ -23597,6 +24086,7 @@ module.exports = [
 		cost: 3,
 		text: "After you reveal a red maneuver, before you move, you may discard this card to treat the maneuver as a green maneuver. If your ship is cloaked when you do this, you may immediately perform a [sensor-echo] Action as a free Action.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -23613,6 +24103,7 @@ module.exports = [
 		cost: 5,
 		text: "<b>ACTION:</b> Disable this card to repair 1 Shield Token. In addition, if your ship is cloaked, you may repair 1 damage to your Hull. You roll -2 attack dice on all of your attacks this round.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -23629,6 +24120,7 @@ module.exports = [
 		cost: 5,
 		text: "<b>ACTION:</b> Discard this card to acquire a target lock on a ship within Range 1-3 of your ship and then perform an Action from your Action Bar (not [target-lock]) as a free Action.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"klingon"
 		]
@@ -23661,6 +24153,7 @@ module.exports = [
 		cost: 4,
 		text: "<b>ACTION:</b> Discard this card to repair up to 2 Shield Tokens.\n\nThis Upgrade costs +4 SP if purchased for any non-Vulcan ship.",
 		unique: true,
+		eraENT: true,
 		factions: [
 			"vulcan"
 		]
@@ -23842,6 +24335,7 @@ module.exports = [
 		cost: 4,
 		text: "<b>ACTION:</b> If your ship is not Cloaked, disable all of your remaining Shields and target a ship at Range 1-2 that is not Cloaked and has no Active Shields. Discard this card to steal 1 [crew_text] Upgrade on the target ship, even if it exceeds your ship's restrictions.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"mirror-universe"
 		],
@@ -24001,6 +24495,7 @@ module.exports = [
 		cost: 5,
 		text: "When attacking with your Primary Weapon, during the Roll Attack Dice step, you may discard this card to gain +2 attack dice for that attack.\nIf you targeted an Attack Squadron with that attack, after resolving the attack, you may immediately make a second attack against the same Attack Squadron using only 2 attack dice; the number of dice for the second attack cannot be increased in any way.\nYou cannot roll any defense dice during the round you use this ability.",
 		unique: true,
+		eraDSV: true,
 		factions: [
 			"mirror-universe"
 		]
@@ -24071,6 +24566,7 @@ module.exports = [
 		cost: 2,
 		text: "If your ship is not Cloaked, during the Modify Attack Dice step, you may disable this card to re-roll all of your blank results once.\n\nThis Upgrade costs +3 SP for any non-Klingon ship and no ship may be equipped with more than 1 Tactical Officer Upgrade.",
 		unique: false,
+		eraTNG: true,
 		factions: [
 			"klingon"
 		],
@@ -24091,6 +24587,7 @@ module.exports = [
 		cost: 5,
 		text: "<b>ACTION:</b> Discard this card to target a ship at Range 1. Your ship cannot attack the target ship and the target ship cannot attack your ship this round.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"klingon"
 		],
@@ -24192,6 +24689,7 @@ module.exports = [
 		cost: 3,
 		text: "When you are instructed to place Time Tokens on one of your [weapon_text] Upgrades, place 1 less Time Token than required.\n\nThis Upgrade costs +2 SP for any non-Romulan ship and no ship may be equipped with more than 1 Bridge Officer Upgrade.",
 		unique: false,
+		eraTNG: true,
 		factions: [
 			"romulan"
 		]
@@ -24208,6 +24706,7 @@ module.exports = [
 		cost: 5,
 		text: "<b>ACTION:</b> Discard this card to target a ship at Range 3. Discard 1 [crew_text] Upgrade of your choice on the target ship.",
 		unique: true,
+		eraTNG: true,
 		factions: [
 			"romulan"
 		]

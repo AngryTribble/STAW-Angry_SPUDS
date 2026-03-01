@@ -333,7 +333,7 @@ module.exports = [
 			"independent"
 		],
 		text: "All of your [crew_text] Upgrades cost -1 SP for all ships in your fleet (including your own ship).",
-		cost: 5,
+		cost: 4,
 		skill: 1,
 		upgradeSlots: [],
 		isSkillModifier: true,
@@ -362,7 +362,7 @@ module.exports = [
 			"independent"
 		],
 		text: "After you move, you may target 1 friendly ship within Range 1-2 (or your own ship). The target ship immediately performs an additional white \"1\" Maneuver (forward, bank or turn).",
-		cost: 5,
+		cost: 4,
 		skill: 1,
 		upgradeSlots: [],
 		isSkillModifier: true,
@@ -391,7 +391,7 @@ module.exports = [
 			"independent"
 		],
 		text: "All your [weapon_text] Upgrades cost -1 SP for all ships in your fleet (including your own ship).",
-		cost: 5,
+		cost: 4,
 		skill: 1,
 		upgradeSlots: [],
 		isSkillModifier: true,
@@ -420,7 +420,7 @@ module.exports = [
 			"independent"
 		],
 		text: "All of your [tech_text] Upgrades cost -1 SP for all ships in your fleet (including your own ship).",
-		cost: 5,
+		cost: 4,
 		skill: 1,
 		upgradeSlots: [],
 		isSkillModifier: true,
@@ -449,7 +449,7 @@ module.exports = [
 			"independent"
 		],
 		text: "Whenever you perform a [battlestations], [scan], or [evade] Action, you may place 2 Tokens of the appropriate type beside your ship instead of 1.  If you do so, place an Auxiliary Power Token beside your ship. \n\nIf your Captain's Skill is ever reduced below 4, you may use the Skill Number on this card instead of your Captain's Skill Number.",
-		cost: 3,
+		cost: 2,
 		upgradeSlots: [
 			{
 				type: [
@@ -480,7 +480,7 @@ module.exports = [
 			"independent"
 		],
 		text: "Add 1 [weapon_text] Upgrade slot to your Upgrade Bar. \nDuring the Roll Attack Dice step of the Combat Phase, you may spend a [battlestations] Token to roll +1 attack die. \nDuring the Roll Defense Dice step of the Combat Phase, you may spend a [battlestations] Token to roll +1 defense die.",
-		cost: 3,
+		cost: 2,
 		upgradeSlots: [
 			{
 				type: [
@@ -511,7 +511,7 @@ module.exports = [
 			"independent"
 		],
 		text: "Add 1 [crew_text] Upgrade slot to your Upgrade Bar. \nDuring the Modify Attack Dice step of the Combat Phase, you may choose one of your attack dice and re-roll that die twice. \nDuring the Modify Defense Dice step of the Combat Phase, you may choose one of your defense dice and re-roll that die twice.",
-		cost: 3,
+		cost: 2,
 		upgradeSlots: [
 			{
 				type: [
@@ -542,7 +542,7 @@ module.exports = [
 			"independent"
 		],
 		text: "Add 1 [tech_text] Upgrade slot to your Upgrade Bar. \nEach time you attack, if there is a [scan] Token beside your ship, the defender rolls -2 defense dice instead of -1. \nDuring the Modify Defense Dice step of the Combat Phase, you may spend a [scan] Token to add 1 [evade] result to your roll.",
-		cost: 3,
+		cost: 2,
 		upgradeSlots: [
 			{
 				type: [
@@ -1377,7 +1377,7 @@ module.exports = [
 			"independent"
 		],
 		text: "Captain's Skill is increased +1.\n\nAdd +1 to this Ships Hull value.",
-		cost: 5,
+		cost: 4,
 		showType: true,
 		canEquip: true,
 		canEquipFaction: true,
@@ -1433,7 +1433,7 @@ module.exports = [
 			"independent"
 		],
 		text: "Ship with Captain skill 5+\n\nAfter performing an Green or White Maneuver, remove a Disable Token from a Upgrade equipped to this ship.",
-		cost: 3,
+		cost: 2,
 		showType: true,
 		canEquip: true,
 		canEquipFaction: true,
@@ -1461,7 +1461,7 @@ module.exports = [
 			"independent"
 		],
 		text: "Ship must have a hull of Hull 3 or less\n\nAdds 1 [weapon_text] slot and +1 to Shield and Captain Skill values",
-		cost: 5,
+		cost: 4,
 		upgrades: [
 			{
 				type: [
@@ -1505,7 +1505,7 @@ module.exports = [
 			"independent"
 		],
 		text: "Ship must have a hull of Hull 4 or more\n\nWhenever this ships Captain, Admiral, or [crew_text] would be disabled, you may place 2 [time] Tokens on that card instead.\n-OR-\nWhenever this ships Captain, Admiral, or [crew_text] would be discarded, you may discard this card instead.",
-		cost: 6,
+		cost: 5,
 		showType: true,
 		canEquip: true,
 		canEquipFaction: true,
