@@ -217,7 +217,7 @@ module.exports = [
 			"federation"
 		],
 		text: "After you move, you may target 1 friendly Federation ship within Range 1-3 (or your own ship). The target ship immediately removes 1 Disabled Upgrade Token from 1 of its disabled Upgrades as a free Action.",
-		cost: 5,
+		cost: 4,
 		skill: 2,
 		upgradeSlots: [],
 		isSkillModifier: true,
@@ -246,7 +246,7 @@ module.exports = [
 			"dominion"
 		],
 		text: "After you move, you may target 1 friendly Dominion ship within Range 1-2 (or your own ship). The target ship immediately performs an Action on one of its non-disabled [tech_text] Upgrades as a free Action.",
-		cost: 5,
+		cost: 4,
 		skill: 2,
 		upgradeSlots: [],
 		isSkillModifier: true,
@@ -275,7 +275,7 @@ module.exports = [
 			"romulan"
 		],
 		text: "After you move, you may target 1 friendly Cloaked Romulan ship within Range 1-2 (or your own ship). The target ship immediately performs a [sensor-echo] Action as a free Action.",
-		cost: 5,
+		cost: 4,
 		skill: 2,
 		upgradeSlots: [],
 		isSkillModifier: true,
@@ -304,7 +304,7 @@ module.exports = [
 			"klingon"
 		],
 		text: "After you move, you may target 1 friendly Klingon ship within Range 1-2 (or your own ship). The target ship immediately performs an action on one of its non-disabled [crew_text] Upgrades as a free Action.",
-		cost: 5,
+		cost: 4,
 		skill: 2,
 		upgradeSlots: [],
 		isSkillModifier: true,
@@ -333,7 +333,7 @@ module.exports = [
 			"independent"
 		],
 		text: "All of your [crew_text] Upgrades cost -1 SP for all ships in your fleet (including your own ship).",
-		cost: 4,
+		cost: 9,
 		skill: 1,
 		upgradeSlots: [],
 		isSkillModifier: true,
@@ -362,7 +362,7 @@ module.exports = [
 			"independent"
 		],
 		text: "After you move, you may target 1 friendly ship within Range 1-2 (or your own ship). The target ship immediately performs an additional white \"1\" Maneuver (forward, bank or turn).",
-		cost: 4,
+		cost: 9,
 		skill: 1,
 		upgradeSlots: [],
 		isSkillModifier: true,
@@ -391,7 +391,7 @@ module.exports = [
 			"independent"
 		],
 		text: "All your [weapon_text] Upgrades cost -1 SP for all ships in your fleet (including your own ship).",
-		cost: 4,
+		cost: 9,
 		skill: 1,
 		upgradeSlots: [],
 		isSkillModifier: true,
@@ -420,7 +420,7 @@ module.exports = [
 			"independent"
 		],
 		text: "All of your [tech_text] Upgrades cost -1 SP for all ships in your fleet (including your own ship).",
-		cost: 4,
+		cost: 9,
 		skill: 1,
 		upgradeSlots: [],
 		isSkillModifier: true,

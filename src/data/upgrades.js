@@ -8785,7 +8785,7 @@ module.exports = [
 		image: "https://i.imgur.com/Hdt2p8z.png",
 		cost: 2,
 		range: "1 - 3",
-		text: "<b>SETUP:</b> Place 1 [crew_test] Upgrade with a cost of 5 SP or less face down beneath this card.\n\n<b>END PHASE:</b> If this ship is within Range 1-3 of a Planet Token, disable all of its Shields.\n\nFlip the [crew_text] Upgrade beneath this card face up, place 2 [time] Tokens on it and equip it to this ship, even if it exceeds its restrictions. ",
+		text: "<b>SETUP:</b> Place 1 [crew_text] Upgrade with a cost of 5 SP or less face down beneath this card.\n\n<b>END PHASE:</b> If this ship is within Range 1-3 of a Planet Token, disable all of its Shields.\n\nFlip the [crew_text] Upgrade beneath this card face up, place 2 [time] Tokens on it and equip it to this ship, even if it exceeds its restrictions. ",
 		unique: true,
 		factions: [
 			"federation"
