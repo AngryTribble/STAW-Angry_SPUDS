@@ -6495,7 +6495,8 @@ module.exports = [
 			"federation"
 		],
 		"squadron": false,
-		"eraTMP": true
+		"eraTMP": true,
+	opBanned: true
 	},
 	{
 		"type": "ship",
@@ -7649,7 +7650,8 @@ module.exports = [
 			"fleet": {}
 		},
 		"squadron": false,
-		"eraTNG": true
+		"eraTNG": true,
+	opBanned: true
 	},
 	{
 		"type": "ship",
@@ -8017,7 +8019,8 @@ module.exports = [
 			"fleet": {}
 		},
 		"squadron": false,
-		"eraTNG": true
+		"eraTNG": true,
+	opBanned: true
 	},
 	{
 		"type": "ship",
@@ -9441,7 +9444,8 @@ module.exports = [
 			"fleet": {}
 		},
 		"squadron": false,
-		"eraDSV": true
+		"eraDSV": true,
+	opBanned: true
 	},
 	{
 		"type": "ship",
@@ -9893,7 +9897,8 @@ module.exports = [
 			"fleet": {}
 		},
 		"squadron": false,
-		"eraDSV": true
+		"eraDSV": true,
+	opBanned: true
 	},
 	{
 		"type": "ship",
@@ -12150,7 +12155,8 @@ module.exports = [
 			"fleet": {}
 		},
 		"squadron": false,
-		"eraTNG": true
+		"eraTNG": true,
+	opBanned: true
 	},
 	{
 		"type": "ship",
@@ -12470,7 +12476,8 @@ module.exports = [
 			"fleet": {}
 		},
 		"squadron": false,
-		"eraTNG": true
+		"eraTNG": true,
+	opBanned: true
 	},
 	{
 		"type": "ship",
@@ -12741,7 +12748,8 @@ module.exports = [
 			"fleet": {}
 		},
 		"squadron": false,
-		"eraDSV": true
+		"eraDSV": true,
+	opBanned: true
 	},
 	{
 		"type": "ship",
@@ -13168,7 +13176,8 @@ module.exports = [
 			"fleet": {}
 		},
 		"squadron": false,
-		"eraDSV": true
+		"eraDSV": true,
+	opBanned: true
 	},
 	{
 		"type": "ship",
@@ -14302,7 +14311,8 @@ module.exports = [
 			"romulan"
 		],
 		"squadron": false,
-		"eraDSV": true
+		"eraDSV": true,
+	opBanned: true
 	},
 	{
 		"type": "ship",
@@ -14587,7 +14597,8 @@ module.exports = [
 			"federation"
 		],
 		"squadron": false,
-		"eraDSV": true
+		"eraDSV": true,
+	opBanned: true
 	},
 	{
 		"type": "ship",
@@ -14620,7 +14631,8 @@ module.exports = [
 			"federation"
 		],
 		"squadron": false,
-		"eraDSV": true
+		"eraDSV": true,
+	opBanned: true
 	},
 	{
 		"type": "ship",

@@ -6590,7 +6590,8 @@ module.exports = [
 		text: "This card may only be equipped to a Hirogen Captain or Admiral \n<hr> <b>END PHASE:</b> If this ship hit an opposing ship with an attack this game round: \n\n Place 1 Mission Token on this card (max 3).\n<hr> <b>ACTIVATION PHASE:</b> Spend 1 Mission Token on this card.\n\nPerform an Action on this ship's Action Bar as a Free Action.",
 		factions: [
 			"independent"
-		]
+		],
+		opBanned: true
 	},
 	{
 		type: "tech",
@@ -6660,7 +6661,8 @@ module.exports = [
 		eraDSV: true,
 		factions: [
 			"independent"
-		]
+		],
+		opBanned: true
 	},
 	{
 		type: "crew",
@@ -8722,7 +8724,8 @@ module.exports = [
 		eraTMP: true,
 		factions: [
 			"federation"
-		]
+		],
+		opBanned: true
 	},
 	{
 		type: "crew",
@@ -9129,7 +9132,8 @@ module.exports = [
 		eraTNG: true,
 		factions: [
 			"federation"
-		]
+		],
+		opBanned: true
 	},
 	{
 		type: "weapon",
@@ -10059,7 +10063,8 @@ module.exports = [
 		eraTMP: true,
 		factions: [
 			"federation"
-		]
+		],
+		opBanned: true
 	},
 	{
 		type: "weapon",
@@ -12493,7 +12498,8 @@ module.exports = [
 		talents: 0,
 		attack: 0,
 		range: "",
-		eraTMP: true
+		eraTMP: true,
+		opBanned: true
 	},
 	{
 		type: "crew",
@@ -12665,7 +12671,8 @@ module.exports = [
 		talents: 0,
 		attack: 0,
 		range: "",
-		eraTOS: true
+		eraTOS: true,
+		opBanned: true
 	},
 	{
 		type: "crew",
@@ -12687,7 +12694,8 @@ module.exports = [
 		talents: 0,
 		attack: 0,
 		range: "",
-		eraTOS: true
+		eraTOS: true,
+		opBanned: true
 	},
 	{
 		type: "crew",
@@ -14109,7 +14117,8 @@ module.exports = [
 		talents: 0,
 		attack: 0,
 		range: "",
-		eraTMP: true
+		eraTMP: true,
+		opBanned: true
 	},
 	{
 		type: "crew",
@@ -14153,7 +14162,8 @@ module.exports = [
 		talents: 0,
 		attack: 0,
 		range: "",
-		eraTMP: true
+		eraTMP: true,
+		opBanned: true
 	},
 	{
 		type: "tech",
@@ -14482,7 +14492,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		opBanned: true
 	},
 	{
 		type: "talent",
@@ -16179,7 +16190,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		opBanned: true
 	},
 	{
 		type: "crew",
@@ -16543,7 +16555,8 @@ module.exports = [
 		talents: 0,
 		attack: 0,
 		range: "",
-		eraTMP: true
+		eraTMP: true,
+		opBanned: true
 	},
 	{
 		type: "crew",
@@ -16564,7 +16577,8 @@ module.exports = [
 		talents: 0,
 		attack: 0,
 		range: "",
-		eraTMP: true
+		eraTMP: true,
+		opBanned: true
 	},
 	{
 		type: "crew",
@@ -17351,7 +17365,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		opBanned: true
 	},
 	{
 		type: "crew",
@@ -17477,7 +17492,8 @@ module.exports = [
 		talents: 0,
 		attack: 0,
 		range: "",
-		eraENT: true
+		eraENT: true,
+		opBanned: true
 	},
 	{
 		type: "talent",
@@ -18544,7 +18560,8 @@ module.exports = [
 		talents: 0,
 		attack: 0,
 		range: "",
-		eraTNG: true
+		eraTNG: true,
+		opBanned: true
 	},
 	{
 		type: "crew",
@@ -18751,7 +18768,8 @@ module.exports = [
 		talents: 0,
 		attack: 0,
 		range: "",
-		eraTNG: true
+		eraTNG: true,
+		opBanned: true
 	},
 	{
 		type: "crew",
@@ -18773,7 +18791,8 @@ module.exports = [
 		talents: 0,
 		attack: 0,
 		range: "",
-		eraTNG: true
+		eraTNG: true,
+		opBanned: true
 	},
 	{
 		type: "crew",
@@ -18936,7 +18955,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: null,
-		range: "1 - 2"
+		range: "1 - 2",
+		opBanned: true
 	},
 	{
 		type: "weapon",
@@ -19632,7 +19652,8 @@ module.exports = [
 		talents: 0,
 		attack: 0,
 		range: "",
-		eraDSV: true
+		eraDSV: true,
+		opBanned: true
 	},
 	{
 		type: "weapon",
@@ -20137,7 +20158,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		opBanned: true
 	},
 	{
 		type: "tech",
@@ -20856,7 +20878,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 3,
-		range: "1 - 2"
+		range: "1 - 2",
+		opBanned: true
 	},
 	{
 		type: "weapon",
@@ -20937,7 +20960,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		opBanned: true
 	},
 	{
 		type: "weapon",
@@ -21590,7 +21614,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		opBanned: true
 	},
 	{
 		type: "tech",
@@ -21877,7 +21902,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		opBanned: true
 	},
 	{
 		type: "crew",
@@ -22099,7 +22125,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		opBanned: true
 	},
 	{
 		type: "tech",
@@ -22119,7 +22146,8 @@ module.exports = [
 		skill: 0,
 		talents: 0,
 		attack: 0,
-		range: ""
+		range: "",
+		opBanned: true
 	},
 	{
 		type: "weapon",
@@ -22440,7 +22468,8 @@ module.exports = [
 		unique: false,
 		factions: [
 			"romulan"
-		]
+		],
+		opBanned: true
 	},
 	{
 		type: "talent",
@@ -22507,7 +22536,8 @@ module.exports = [
 		unique: false,
 		factions: [
 			"federation"
-		]
+		],
+		opBanned: true
 	},
 	{
 		type: "talent",
@@ -23446,7 +23476,8 @@ module.exports = [
 		eraDSV: true,
 		factions: [
 			"federation"
-		]
+		],
+		opBanned: true
 	},
 	{
 		type: "tech",
@@ -23462,7 +23493,8 @@ module.exports = [
 		unique: false,
 		factions: [
 			"federation"
-		]
+		],
+		opBanned: true
 	},
 	{
 		type: "weapon",
