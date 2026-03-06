@@ -4876,7 +4876,8 @@ module.exports = [
 		cost: 4,
 		skill: 6,
 		talents: 1,
-		eraTNG: true
+		eraTNG: true,
+		opBanned: true
 	},
 	{
 		type: "captain",
@@ -5110,7 +5111,8 @@ module.exports = [
 		talents: 1,
 		eraTOS: true,
 		eraTMP: true,
-		eraTNG: true
+		eraTNG: true,
+		opBanned: true
 	},
 	{
 		type: "captain",
@@ -6915,7 +6917,8 @@ module.exports = [
 		cost: 5,
 		skill: 8,
 		talents: 2,
-		eraDSV: true
+		eraDSV: true,
+		opBanned: true
 	},
 	{
 		type: "captain",

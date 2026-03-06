@@ -422,7 +422,8 @@ module.exports = [
 		cost: 3,
 		skill: 1,
 		talents: 0,
-		eraENT: true
+		eraENT: true,
+		opBanned: true
 	},
 	{
 		type: "admiral",
