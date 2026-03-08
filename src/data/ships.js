@@ -660,7 +660,7 @@ module.exports = [
 		"agility": 1,
 		"hull": 4,
 		"shields": 4,
-		"cost": 24,
+		"cost": 22,
 		"text": "<b>WHEN ATTACKING:</b> If there is a [scan] Token beside your ship. \n\n Roll +1 Attack die (+2 if the defending ship is Cloaked) <hr> <b>Planning Phase:</b> If the Captain equipped to this ship has a <img src='img/text/unique.png' width='20' height='20' title='Unique'> <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [talent_text] Upgrade equipped to it: You may discard that Upgrade. \n\n Equip 1 other <img src='img/text/unique.png' width='20' height='20' title='Unique'> <img src='img/text/faction-federation.png' width='20' height='20' title='Federation'> [talent_text] Upgrade with a cost of 4 or less that is not already in your fleet to the Captain and place any Tokens that were on the discarded Upgrade on the new Upgrade.",
 		"unique": true,
 		"alliance": false,
